@@ -7,7 +7,7 @@ class Intro1 extends Component {
   state = { };
   render() {
     return (
-      <section className="section section-intro1">
+      <section className="section section-intro1" id="intro1">
         <div className="container">
           <Grid container spacing={24}>
             <Grid item md={6}>
@@ -57,7 +57,7 @@ class Intro1 extends Component {
             </Grid>
             <Grid item md={6} >
               <div className="intro-product">
-                <a href="" className="intro-product-link">
+                <a href="#product" className="intro-product-link">
                   <div className="price">$24</div>
                   <span className="price-text">Buy On ThemeForest</span>
                 </a>

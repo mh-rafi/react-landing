@@ -1,9 +1,14 @@
 import React, { Component } from "react";
-import { debounce } from "../../Utils";
+import { debounce, classList } from "../../Utils";
+import Icon from "@material-ui/core/Icon";
+import IconButton from "@material-ui/core/IconButton";
+import { NavLink } from "react-router-dom";
+import ScrollTo from "../ScrollTo";
 
 class TopBar extends Component {
   state = {
-    isTop: true
+    isTop: true,
+    isClosed: false
   };
   handleScrollRef;
 
@@ -24,21 +29,60 @@ class TopBar extends Component {
     return debounce(() => {
       if (window) {
         let isTop = window.scrollY < 100;
-        if (isTop != this.state.isTop) {
+        if (isTop !== this.state.isTop) {
           this.setState({ isTop });
         }
       }
-      // console.log("on scroll", this.state.isTop, window.scrollY);
     }, 20);
   }
+
+  close = () => {
+    this.setState({ isClosed: true });
+  };
+
   render() {
+    let toggleIcon = this.state.isClosed ? "menu" : "close";
     return (
-      <section className={this.state.isTop ? "header" : "header header-fixed"}>
+      <section
+        className={classList({
+          header: true,
+          "header-fixed": !this.state.isTop,
+          closed: this.state.isClosed
+        })}
+      >
         <div className="container header-container">
           <div className="brand">
-            <img src="/assets/images/logo-full.png" alt=""/>
+            <img src="/assets/images/logo-full.png" alt="" />
           </div>
-          <div className="navigation"></div>
+          <ul className="navigation">
+            <li>
+              <NavLink to="/">Demos</NavLink>
+            </li>
+            <li>
+              <ScrollTo to="intro1" onScroll={this.close}>
+                Home
+              </ScrollTo>
+            </li>
+            <li>
+              <a href="#works">Works</a>
+            </li>
+          </ul>
+          <div className="m-auto" />
+          <ul className="navigation">
+            <li>
+              <a href="/dashboard">
+                <Icon className="mr-16">person</Icon> My Account
+              </a>
+            </li>
+          </ul>
+          <IconButton
+            className="header__toggle"
+            onClick={() => {
+              this.setState({ isClosed: !this.state.isClosed });
+            }}
+          >
+            <Icon>{toggleIcon}</Icon>
+          </IconButton>
         </div>
       </section>
     );
