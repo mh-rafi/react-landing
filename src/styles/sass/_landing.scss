@@ -1,0 +1,161 @@
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: $black;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.landing {
+  // Global styles for landing page
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  div, section {
+    box-sizing: border-box;
+  }
+
+  // Typography
+  .text-center {
+    text-align: center;
+  }
+
+  // Card styles
+  .card {
+    transition: all 0.3s ease;
+    img {
+      min-width: 100%;
+    }
+    &:hover {
+      box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // Section styles
+  .section {
+    padding: 80px 0;
+  }
+  .section-header {
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+    p {
+      font-size: 16px;
+      max-width: 36rem;
+      margin: 0;
+    }
+  }
+
+  // Custom buttons
+  .btn-action {
+    padding: 0 24px !important;
+    font-size: 18px !important;
+  }
+  .btn-white {
+    background: $white !important;
+    color: $black !important;
+    &:hover {
+      background: darken($white, 5) !important;
+    }
+  }
+}
+
+// Header
+.header {
+  position: fixed;
+  width: 100%;
+  background: $white;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 22px 0;
+  // height: 80px;
+  transition: padding .3s linear;
+  -webkit-transition: padding .3s linear;
+  z-index: 999;
+
+  &.header-fixed {
+    // height: 60px;
+    padding: 10px 0 !important;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  }
+}
+
+// Intro section 1
+.section-intro1 {
+  background: url(/assets/images/home-bg.jpg) center center/cover no-repeat;
+  padding: 180px 0 !important;
+  color: #fff;
+  overflow: hidden;
+  .intro-title {
+    margin: 0 0 24px;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 52px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.22);
+  }
+  .intro-subtitle {
+    margin: 0 0 40px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  .intro-list {
+    margin: 0 0 30px;
+
+    .intro-list-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      .material-icons {
+        margin-right: 7px;
+      }
+    }
+  }
+  .intro-product {
+    position: relative;
+    top: 100px;
+    left: 60px;
+    img {
+      width: 100%;
+    }
+    .intro-product-link {
+      position: absolute;
+      top: -110px;
+      left: -45px;
+      text-align: center;
+      display: block;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: $white;
+      color: $black;
+      padding: 37px 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      &:hover {
+        box-shadow: 0 19px 32px rgba(0, 0, 0, 0.4);
+      }
+      .price {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      .price-text {
+        font-size: 14px;
+      }
+    }
+  }
+}
