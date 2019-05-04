@@ -20,8 +20,14 @@ body {
   img {
     max-width: 100%;
   }
-  div, section {
+  div,
+  section {
     box-sizing: border-box;
+  }
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
   // Typography
@@ -80,15 +86,13 @@ body {
   left: 0;
   right: 0;
   padding: 20px 0;
-  // height: 80px;
-  transition: padding .3s linear;
-  -webkit-transition: padding .3s linear;
+  transition: padding 0.3s linear;
+  -webkit-transition: padding 0.3s linear;
   z-index: 999;
 
   &.header-fixed {
-    // height: 60px;
     padding: 10px 0;
-    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
   }
 
   .header-container {
@@ -107,7 +111,7 @@ body {
       list-style: none;
       margin: 0 0 0 30px;
       padding: 0;
-      li { 
+      li {
         display: inline-block;
         a {
           display: flex;
@@ -116,7 +120,7 @@ body {
           padding: 8px 15px;
           font-weight: 700;
           border-radius: 4px;
-          transition: all .3s ease-in;
+          transition: all 0.3s ease-in;
           &:hover {
             background: darken($white, 6);
           }
@@ -124,7 +128,7 @@ body {
       }
     }
     .header__toggle {
-        display: none;
+      display: none;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -134,7 +138,7 @@ body {
     right: 0;
     padding: 20px 0 !important;
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.14), -2px 4px 8px rgba(0, 0, 0, 0.28) !important;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &.closed {
       right: -220px;
@@ -148,8 +152,7 @@ body {
       color: $black;
       position: fixed;
       display: inline-block !important;
-      transition: all .3s ease-in-out;
-
+      transition: all 0.3s ease-in-out;
     }
     .header-container {
       flex-direction: column;
@@ -165,13 +168,12 @@ body {
         li {
           display: block;
           a {
-            padding: 15px 20px
+            padding: 15px 20px;
           }
         }
       }
     }
   }
-
 }
 
 // Intro section 1
@@ -180,23 +182,23 @@ body {
   padding: 180px 0 !important;
   color: #fff;
   overflow: hidden;
-  .intro-title {
+  .section-intro1__title {
     margin: 0 0 24px;
     font-size: 48px;
     font-weight: 900;
     line-height: 52px;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.22);
   }
-  .intro-subtitle {
+  .section-intro1__subtitle {
     margin: 0 0 40px;
     font-size: 22px;
     font-weight: 400;
     line-height: 32px;
   }
-  .intro-list {
+  .section-intro1__list {
     margin: 0 0 30px;
 
-    .intro-list-item {
+    .section-intro1__list__item {
       display: flex;
       align-items: center;
       margin-bottom: 1rem;
@@ -205,14 +207,14 @@ body {
       }
     }
   }
-  .intro-product {
+  .section-intro1__product {
     position: relative;
     top: 100px;
     left: 60px;
     img {
       width: 100%;
     }
-    .intro-product-link {
+    .section-intro1__product__link {
       position: absolute;
       top: -110px;
       left: -45px;
@@ -235,9 +237,22 @@ body {
         font-size: 32px;
         font-weight: 700;
       }
-      .price-text {
+      .price__text {
         font-size: 14px;
       }
+    }
+  }
+
+  @media only screen and (max-width: 959px) {
+    text-align: center;
+    .section-intro1__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .section-intro1__product {
+      top: 140px;
+      left: 40px;
     }
   }
 }

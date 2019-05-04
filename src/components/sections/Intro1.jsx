@@ -11,23 +11,23 @@ class Intro1 extends Component {
         <div className="container">
           <Grid container spacing={24}>
             <Grid item md={6}>
-              <h1 className="intro-title">
+              <h1 className="section-intro1__title">
                 Your complete React App Development kit
               </h1>
-              <div className="intro-subtitle">
+              <div className="section-intro1__subtitle">
                 Egret implements the official Angular Material Design components
                 and built with Angular CLI. <br />
                 No Bootstrap!, No jQuery! and Only TypeScript!{" "}
               </div>
 
-              <div className="intro-list">
-                <div className="intro-list-item">
+              <div className="section-intro1__list">
+                <div className="section-intro1__list__item">
                   <Icon color="secondary">check</Icon> Lorem ipsum dolor sit.
                 </div>
-                <div className="intro-list-item">
+                <div className="section-intro1__list__item">
                   <Icon color="secondary">check</Icon> Lorem ipsum dolor sit.
                 </div>
-                <div className="intro-list-item">
+                <div className="section-intro1__list__item">
                   <Icon color="secondary">check</Icon> Lorem ipsum dolor sit.
                 </div>
               </div>
@@ -38,7 +38,7 @@ class Intro1 extends Component {
                   size="large"
                   color="primary"
                   aria-label="Buy"
-                  className="btn-action"
+                  className="btn-action m-8"
                 >
                   <Icon className="mr-16">add_shopping_cart</Icon>
                   Buy Egret
@@ -48,7 +48,7 @@ class Intro1 extends Component {
                   variant="extended"
                   size="large"
                   aria-label="Download"
-                  className="btn-action btn-white mx-16"
+                  className="btn-action btn-white m-8"
                 >
                   <Icon className="mr-16">get_app</Icon>
                   React Landing
@@ -56,10 +56,10 @@ class Intro1 extends Component {
               </div>
             </Grid>
             <Grid item md={6} >
-              <div className="intro-product">
-                <a href="#product" className="intro-product-link">
+              <div className="section-intro1__product">
+                <a href="#product" className="section-intro1__product__link">
                   <div className="price">$24</div>
-                  <span className="price-text">Buy On ThemeForest</span>
+                  <span className="price__text">Buy On ThemeForest</span>
                 </a>
                 <img src="/assets/images/egret-screen.png" alt=""/>
               </div>

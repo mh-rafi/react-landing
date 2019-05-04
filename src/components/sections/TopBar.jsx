@@ -8,7 +8,7 @@ import ScrollTo from "../ScrollTo";
 class TopBar extends Component {
   state = {
     isTop: true,
-    isClosed: false
+    isClosed: true
   };
   handleScrollRef;
 
