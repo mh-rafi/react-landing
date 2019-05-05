@@ -1,0 +1,39 @@
+.protfolio-container {
+  max-width: 1170px;
+  margin: 80px auto;
+  padding: 0 15px;
+
+  .protfolio-header {
+    margin-bottom: 2rem;
+    p {
+      max-width: 36rem;
+      font-size: 16px;
+      margin: 0px;
+    }
+  }
+
+  .card {
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+      //   margin-bottom: 1rem;
+    }
+    h5 {
+      margin: 0px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    .card-actions {
+      padding-top: 16px;
+    }
+  }
+
+  .load-more {
+    text-align: center;
+    padding-top: 36px;
+  }
+}
