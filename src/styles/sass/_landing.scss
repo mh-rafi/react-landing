@@ -24,6 +24,9 @@ body {
   section {
     box-sizing: border-box;
   }
+  .light-gray {
+    background: rgba(0, 0, 0, 0.024);
+  }
   .container {
     max-width: 1170px;
     margin: 0 auto;
@@ -49,17 +52,19 @@ body {
   // Section styles
   .section {
     padding: 80px 0;
-  }
-  .section-header {
-    h2 {
-      font-size: 32px;
-      font-weight: 700;
-      margin: 0 0 16px;
-    }
-    p {
-      font-size: 16px;
-      max-width: 36rem;
-      margin: 0;
+
+    .section__header {
+      margin: 0 0 32px;
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0 0 16px;
+      }
+      p {
+        font-size: 16px;
+        max-width: 36rem;
+        margin: 0;
+      }
     }
   }
 
@@ -253,6 +258,68 @@ body {
     .section-intro1__product {
       top: 140px;
       left: 40px;
+    }
+  }
+}
+
+// protfolio1
+.section-portfolio1 {
+  .section-portfolio1__card {
+    position: relative;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      //   margin-bottom: 1rem;
+    }
+    h5 {
+      margin: 0px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+
+    .section-portfolio1__card_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+// service1
+.section-service1 {
+  .section-service1__card {
+    border-top: 2px solid black;
+    height: 100%;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+
+    .section-service1__card__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+
+      .section-service1__card__content__icon {
+        font-size: 64px !important;
+        width: 64px;
+        height: 64px;
+      }
+    }
+
+    &:hover {
+      border-top: 2px solid green;
+
+      .section-service1__card__content__icon {
+        color: green !important;
+      }
     }
   }
 }
