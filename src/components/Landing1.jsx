@@ -4,6 +4,7 @@ import Intro1 from "./sections/Intro1";
 import TopBar from "./sections/TopBar";
 import Services1 from "./sections/services1";
 import Portfolio1 from "./sections/protfolio1";
+import Testimonial1 from "./sections/testimonial1";
 
 class Landing1 extends Component {
   state = {};
@@ -14,6 +15,7 @@ class Landing1 extends Component {
         <Intro1 />
         <Portfolio1 />
         <Services1 />
+        <Testimonial1 />
       </div>
     );
   }

@@ -24,7 +24,7 @@ class Portfolio1 extends Component {
           </div>
           <Grid container spacing={24}>
             {[1, 2, 5].map(portfolio => (
-              <Grid item md={4} sm={6}>
+              <Grid item md={4} sm={6} key={portfolio}>
                 <Card className="section-portfolio1__card card">
                   <img src="/assets/images/sq-12.jpg" />
                   <CardContent className="section-portfolio1__card_content">
