@@ -15,9 +15,9 @@ class Testimonial1 extends Component {
     allowSlidePrev: true,
     slidesPerView: 3,
     spaceBetween: 32,
-    // autoplay: {
-    //   delay: 5000
-    // },
+    autoplay: {
+      delay: 5000
+    },
 
     pagination: {
       el: ".swiper-pagination",
