@@ -37,8 +37,18 @@ body {
   .text-center {
     text-align: center;
   }
+  .text-sm {
+    font-size: 0.813rem;
+  }
+  .fs-1 {
+    font-size: 1rem !important;
+  }
+  .fw-400 {
+    font-weight: 400;
+  }
 
-  .position-relative {
+  // positioning
+  .relative {
     position: relative;
   }
 
@@ -277,7 +287,7 @@ body {
 
 // protfolio1
 .section-portfolio1 {
-  .section-portfolio1__card {
+  .portfolio1__card {
     position: relative;
     height: 100%;
 
@@ -295,7 +305,7 @@ body {
       margin-bottom: 16px;
     }
 
-    .section-portfolio1__card_content {
+    .portfolio1__card__content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -305,7 +315,7 @@ body {
 
 // service1
 .section-service1 {
-  .section-service1__card {
+  .service1__card {
     border-top: 2px solid black;
     height: 100%;
 
@@ -314,13 +324,13 @@ body {
       font-weight: normal;
     }
 
-    .section-service1__card__content {
+    .service1__card__content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       min-height: 100%;
 
-      .section-service1__card__content__icon {
+      .service1__card__icon {
         font-size: 64px !important;
         width: 64px;
         height: 64px;
@@ -330,7 +340,7 @@ body {
     &:hover {
       border-top: 2px solid green;
 
-      .section-service1__card__content__icon {
+      .service1__card__icon {
         color: green !important;
       }
     }
@@ -339,11 +349,23 @@ body {
 
 // testimonial
 .section-testimonial1 {
+  // swiper built in styles
   .swiper-slide {
     height: auto;
   }
 
-  .section-testimonial1__card-content {
+  .swiper-pagination-bullet {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.55);
+    transition: transform 400ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+
+  .bullet-active {
+    transform: scale(1.8);
+  }
+  // --------------------------
+
+  .testimonial1__card-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -360,7 +382,7 @@ body {
       }
     }
 
-    .card-content__user-detail {
+    .card__user {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -375,17 +397,107 @@ body {
     }
   }
 
-  .section-testimonial1__button-next,
-  .section-testimonial1__button-prev {
+  .testimonial1__button-next,
+  .testimonial1__button-prev {
     position: absolute;
     top: 50%;
     transform: translateY(calc(-50% - 32px));
     z-index: 1;
   }
-  .section-testimonial1__button-prev {
+  .testimonial1__button-prev {
     left: 0px;
   }
-  .section-testimonial1__button-next {
+  .testimonial1__button-next {
     right: 0px;
+  }
+}
+
+// call to acitons
+.section-cta1 {
+  color: #fff;
+  background: url(/assets/images/home-bg.jpg) center center/cover no-repeat;
+  h2 {
+    font-size: 1.75rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+// pricing
+.section-pricing1 {
+  .pricing1__card-header {
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.024);
+
+    span:first-child {
+      font-size: 1rem !important;
+    }
+    span:last-child {
+      font-size: 0.813rem;
+    }
+  }
+
+  .pricing1__highlighted {
+    background: #2196f3 !important;
+    span {
+      color: #fff;
+    }
+  }
+
+  .pricing1__card-content {
+    h1 {
+      margin: 0;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    div {
+      padding: 10px;
+    }
+  }
+}
+
+// footer1
+.section-footer1 {
+  h4 {
+    font-size: 1.25rem;
+    margin: 0 0 24px;
+    position: relative;
+  }
+  h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 64px;
+    background-color: #ffc107;
+  }
+
+  .footer1__contact {
+    h5 {
+      font-size: 1rem;
+    }
+    & > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .footer1__contact__icon {
+      color: #ffc107;
+    }
+  }
+
+  .footer1__disclaimer__link {
+    img {
+      height: 24px;
+      width: 24px;
+    }
   }
 }

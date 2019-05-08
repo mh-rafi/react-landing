@@ -1,0 +1,90 @@
+import React, { Component } from "react";
+import { Grid, Button, Icon } from "@material-ui/core";
+import Mail from "@material-ui/icons/Mail";
+import LocationOn from "@material-ui/icons/LocationOn";
+
+class Footer1 extends Component {
+  state = {};
+  render() {
+    return (
+      <div className="section section-footer1 light-dark" id="footer1">
+        <div className="container">
+          <Grid container spacing={32}>
+            <Grid item lg={6} md={6}>
+              <div className="footer1__about">
+                <h4>About Us</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Officiis perferendis rem, aut aliquam neque nam? dolor sit
+                  amet, consectetur adipisicing elit consectetur adipisicing
+                  elit. Officiis perferendis rem, aut aliquam.
+                </p>
+                <Button variant="contained" color="secondary">
+                  Contact Us
+                </Button>
+              </div>
+            </Grid>
+            <Grid item lg md>
+              <div className="footer1__contact">
+                <h4>Contact</h4>
+                <div className="px-16 my-32">
+                  <Icon className="footer1__contact__icon">
+                    <Mail />
+                  </Icon>
+                  <div className="pl-16">
+                    <h5 className="m-0 p-0">Email</h5>
+                    <p className="m-0 p-0">email@abc.com</p>
+                  </div>
+                </div>
+                <div className="px-16 my-32">
+                  <Icon className="footer1__contact__icon">
+                    <LocationOn />
+                  </Icon>
+                  <div className="pl-16">
+                    <h5 className="m-0 p-0">Adress</h5>
+                    <p className="m-0 p-0">Topoban, Akhalia Sylhet 3114, BD</p>
+                  </div>
+                </div>
+              </div>
+            </Grid>
+            <Grid item lg md>
+              <div className="footer1__disclaimer">
+                <h4>Disclaimer</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Officiis perferendis rem, aut aliquam neque nam?
+                </p>
+
+                <div className="mt-32 footer1__disclaimer__link">
+                  <a href="#" className="px-8">
+                    <img src="/assets/images/social-linkedin.png" alt="" />
+                  </a>
+                  <a href="#" className="px-8">
+                    <img src="/assets/images/social-twitter.png" alt="" />
+                  </a>
+                  <a href="#" className="px-8">
+                    <img src="/assets/images/social-facebook.png" alt="" />
+                  </a>
+                  {/* <Icon className="mr-16 text-light-white">
+                    <Mail />
+                  </Icon>
+                  <Icon className="mr-16 text-light-white">
+                    <LocationOn />
+                  </Icon>
+                  <Icon className="mr-16 text-light-white">
+                    <Mail />
+                  </Icon>
+                  <Icon className="mr-16 text-light-white">
+                    <LocationOn />
+                  </Icon> */}
+                </div>
+              </div>
+            </Grid>
+          </Grid>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Footer1;

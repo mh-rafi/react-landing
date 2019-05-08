@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Swiper from "swiper";
 
-import { Card, CardContent, Fab, IconButton } from "@material-ui/core";
+import { Card, CardContent, Fab } from "@material-ui/core";
 import NavigateNext from "@material-ui/icons/NavigateNext";
 import NavigateBefore from "@material-ui/icons/NavigateBefore";
 
@@ -10,17 +10,31 @@ class Testimonial1 extends Component {
 
   swiperOptions = {
     direction: "horizontal",
-    loop: true,
     allowSlideNext: true,
     allowSlidePrev: true,
     slidesPerView: 3,
     spaceBetween: 32,
+
     autoplay: {
-      delay: 5000
+      delay: 5000,
+      disableOnInteraction: false
+    },
+
+    breakpoints: {
+      // when window width is <= 480px
+      480: {
+        slidesPerView: 1
+      },
+      // when window width is <= 640px
+      768: {
+        slidesPerView: 2
+      }
     },
 
     pagination: {
       el: ".swiper-pagination",
+      type: "bullets",
+      bulletActiveClass: "bullet-active",
       clickable: true
     },
 
@@ -31,7 +45,7 @@ class Testimonial1 extends Component {
   };
 
   initializeSwiper = () => {
-    let mySwiper = new Swiper(".swiper-container", this.swiperOptions);
+    new Swiper(".swiper-container", this.swiperOptions);
   };
 
   componentDidMount() {
@@ -50,14 +64,14 @@ class Testimonial1 extends Component {
             </p>
           </div>
 
-          <div className="position-relative w-100">
+          <div className="relative w-100">
             {/* swiper */}
-            <div className="swiper-container m-28">
+            <div className="swiper-container mx-28">
               <div className="swiper-wrapper">
                 {[1, 2, 3, 4, 5].map(card => (
                   <div className="swiper-slide p-4 pb-24" key={card}>
                     <Card className="h-100 px-24 card">
-                      <CardContent className="section-testimonial1__card-content">
+                      <CardContent className="testimonial1__card-content">
                         <div>
                           <img
                             className="p-0 m-0 pb-24"
@@ -72,7 +86,7 @@ class Testimonial1 extends Component {
                           </p>
                         </div>
 
-                        <div className="card-content__user-detail">
+                        <div className="card__user">
                           <img
                             className="p-0 m-0"
                             src="/assets/images/face-2.jpg"
@@ -92,14 +106,14 @@ class Testimonial1 extends Component {
               </div>
 
               {/* pagination */}
-              <div className="swiper-pagination position-relative mt-24" />
+              <div className="swiper-pagination relative mt-24" />
             </div>
 
             {/* navigation */}
-            <Fab className="section-testimonial1__button-prev bg-white">
+            <Fab className="testimonial1__button-prev bg-white">
               <NavigateBefore />
             </Fab>
-            <Fab className="section-testimonial1__button-next bg-white">
+            <Fab className="testimonial1__button-next bg-white">
               <NavigateNext />
             </Fab>
           </div>
