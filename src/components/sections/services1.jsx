@@ -3,35 +3,31 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Grid from "@material-ui/core/Grid";
 import { Button, Icon } from "@material-ui/core";
-import Dashboard from "@material-ui/icons/Dashboard";
-import PermDataSetting from "@material-ui/icons/PermDataSetting";
-import Storage from "@material-ui/icons/Storage";
-import StayPrimaryPortrait from "@material-ui/icons/StayPrimaryPortrait";
 
 class Services1 extends Component {
   state = {};
 
   serviceList = [
     {
-      icon: <Dashboard fontSize="inherit" />,
+      icon: "dashboard",
       title: "Business Application",
       text:
         "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."
     },
     {
-      icon: <PermDataSetting fontSize="inherit" />,
+      icon: "perm_data_setting",
       title: "Custom System Integration",
       text:
         "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."
     },
     {
-      icon: <Storage fontSize="inherit" />,
+      icon: "storage",
       title: "Database Administration",
       text:
         "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."
     },
     {
-      icon: <StayPrimaryPortrait fontSize="inherit" />,
+      icon: "stay_primary_portrait",
       title: "Custom Mobile Application",
       text:
         "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."

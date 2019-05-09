@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
-import { Fab } from "@material-ui/core";
-import Send from "@material-ui/icons/Send";
+import { Fab, Icon } from "@material-ui/core";
+
 
 class Contact1 extends Component {
   state = {
@@ -78,7 +78,7 @@ class Contact1 extends Component {
               errorMessages={["this field is required"]}
             />
             <Fab color="primary" type="submit">
-              <Send />
+              <Icon>send</Icon>
             </Fab>
           </ValidatorForm>
         </div>

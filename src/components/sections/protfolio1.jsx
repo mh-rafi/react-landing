@@ -5,9 +5,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
-import Link from "@material-ui/icons/Link";
-import Share from "@material-ui/icons/Share";
-import { Button } from "@material-ui/core";
+import { Button, Icon } from "@material-ui/core";
 
 class Portfolio1 extends Component {
   state = {};
@@ -17,36 +15,18 @@ class Portfolio1 extends Component {
       imageUrl: "/assets/images/sq-12.jpg",
       name: "Project One",
       description: `Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.
-      Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.
-      Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.
-      Adipisci quas repellat sed. Quasi quaerat aut nam
       possimus vitae dignissimos, sapiente est atque tenetur.`
     },
     {
       imageUrl: "/assets/images/sq-10.jpg",
       name: "Project Two",
       description: `Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.
-      Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.
-      Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.
-      Adipisci quas repellat sed. Quasi quaerat aut nam
       possimus vitae dignissimos, sapiente est atque tenetur.`
     },
     {
       imageUrl: "/assets/images/sq-9.jpg",
       name: "Project Three",
       description: `Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.
-      Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.
-      Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.
-      Adipisci quas repellat sed. Quasi quaerat aut nam
       possimus vitae dignissimos, sapiente est atque tenetur.`
     }
   ];
@@ -63,7 +43,7 @@ class Portfolio1 extends Component {
           </div>
           <Grid container spacing={24}>
             {this.portfoioList.map((portfolio, index) => (
-              <Grid item md={4} sm={6} key={index}>
+              <Grid item md={4} sm={4} key={index}>
                 <Card className="portfolio1__card card">
                   <img src={portfolio.imageUrl} alt="portfolio" />
                   <CardContent className="portfolio1__card__content">
@@ -74,10 +54,10 @@ class Portfolio1 extends Component {
                     </div>
                     <div className="pt-16">
                       <IconButton>
-                        <Link />
+                        <Icon>link</Icon>
                       </IconButton>
                       <IconButton>
-                        <Share />
+                        <Icon>share</Icon>
                       </IconButton>
                     </div>
                   </CardContent>

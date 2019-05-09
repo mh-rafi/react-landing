@@ -103,7 +103,7 @@ class Pricing1 extends Component {
               let { title, subtitle, price, allowedOfferIndexList } = plan;
 
               return (
-                <Grid item lg md sm={12} xs={12} key={title}>
+                <Grid item lg={3} md={3} sm={6} xs={12} key={title}>
                   <Card className="text-center card">
                     <CardHeader
                       className={

@@ -59,10 +59,6 @@ body {
       0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   }
 
-  .bg-white {
-    background: white;
-  }
-
   // Card styles
   .card {
     transition: all 0.3s ease;
@@ -351,22 +347,6 @@ body {
 
 // testimonial
 .section-testimonial1 {
-  // swiper built in styles
-  .swiper-slide {
-    height: auto;
-  }
-
-  .swiper-pagination-bullet {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.55);
-    transition: transform 400ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  }
-
-  .bullet-active {
-    transform: scale(1.8);
-  }
-  // --------------------------
-
   .testimonial1__card-content {
     display: flex;
     flex-direction: column;
@@ -397,20 +377,6 @@ body {
         overflow: hidden;
       }
     }
-  }
-
-  .testimonial1__button-next,
-  .testimonial1__button-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(calc(-50% - 32px));
-    z-index: 1;
-  }
-  .testimonial1__button-prev {
-    left: 0px;
-  }
-  .testimonial1__button-next {
-    right: 0px;
   }
 }
 

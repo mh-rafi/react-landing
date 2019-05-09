@@ -2,47 +2,10 @@ import React, { Component } from "react";
 import Swiper from "swiper";
 
 import { Card, CardContent, Fab } from "@material-ui/core";
-import NavigateNext from "@material-ui/icons/NavigateNext";
-import NavigateBefore from "@material-ui/icons/NavigateBefore";
+import Carousel from "./common/carousel";
 
 class Testimonial1 extends Component {
   state = {};
-
-  swiperOptions = {
-    direction: "horizontal",
-    allowSlideNext: true,
-    allowSlidePrev: true,
-    slidesPerView: 3,
-    spaceBetween: 32,
-
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-
-    breakpoints: {
-      // when window width is <= 480px
-      480: {
-        slidesPerView: 1
-      },
-      // when window width is <= 640px
-      768: {
-        slidesPerView: 2
-      }
-    },
-
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      bulletActiveClass: "bullet-active",
-      clickable: true
-    },
-
-    navigation: {
-      nextEl: ".testimonial1__button-next",
-      prevEl: ".testimonial1__button-prev"
-    }
-  };
 
   testimonialList = [
     {
@@ -95,14 +58,6 @@ class Testimonial1 extends Component {
     }
   ];
 
-  initializeSwiper = () => {
-    new Swiper(".swiper-container", this.swiperOptions);
-  };
-
-  componentDidMount() {
-    this.initializeSwiper();
-  }
-
   render() {
     return (
       <div className="section section-testimonial1" id="testimonial1">
@@ -115,56 +70,36 @@ class Testimonial1 extends Component {
             </p>
           </div>
 
-          <div className="relative w-100">
-            {/* swiper */}
-            <div className="swiper-container mx-28">
-              <div className="swiper-wrapper">
-                {this.testimonialList.map((testimonial, index) => (
-                  <div className="swiper-slide p-4 pb-24" key={index}>
-                    <Card className="h-100 px-24 card">
-                      <CardContent className="testimonial1__card-content">
-                        <div className="pb-16">
-                          <img
-                            className="p-0 m-0 pb-24 pt-16"
-                            src={testimonial.companyLogoUrl}
-                            alt="logo"
-                          />
-                          <p className="m-0">{testimonial.comment}</p>
-                        </div>
-
-                        <div className="card__user">
-                          <img
-                            className="p-0 m-0"
-                            src={testimonial.user.imageUrl}
-                            alt="user"
-                          />
-                          <div className="pl-16">
-                            <p className="m-0">
-                              <strong>{testimonial.user.name}</strong>
-                            </p>
-                            <p className="m-0">
-                              {testimonial.user.designation}
-                            </p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
+          <Carousel>
+            {this.testimonialList.map((testimonial, index) => (
+              <Card className="h-100 px-24 card" key={index}>
+                <CardContent className="testimonial1__card-content">
+                  <div className="pb-16">
+                    <img
+                      className="p-0 m-0 pb-24 pt-16"
+                      src={testimonial.companyLogoUrl}
+                      alt="logo"
+                    />
+                    <p className="m-0">{testimonial.comment}</p>
                   </div>
-                ))}
-              </div>
 
-              {/* pagination */}
-              <div className="swiper-pagination relative mt-24" />
-            </div>
-
-            {/* navigation */}
-            <Fab className="testimonial1__button-prev bg-white">
-              <NavigateBefore />
-            </Fab>
-            <Fab className="testimonial1__button-next bg-white">
-              <NavigateNext />
-            </Fab>
-          </div>
+                  <div className="card__user">
+                    <img
+                      className="p-0 m-0"
+                      src={testimonial.user.imageUrl}
+                      alt="user"
+                    />
+                    <div className="pl-16">
+                      <p className="m-0">
+                        <strong>{testimonial.user.name}</strong>
+                      </p>
+                      <p className="m-0">{testimonial.user.designation}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </Carousel>
         </div>
       </div>
     );
