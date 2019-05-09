@@ -7,9 +7,9 @@ class Footer1 extends Component {
   state = {};
   render() {
     return (
-      <div className="section section-footer1 light-dark" id="footer1">
+      <div className="section-footer1 light-dark" id="footer1">
         <div className="container">
-          <Grid container spacing={32}>
+          <Grid container>
             <Grid item lg={6} md={6}>
               <div className="footer1__about">
                 <h4>About Us</h4>
@@ -36,7 +36,7 @@ class Footer1 extends Component {
                     <p className="m-0 p-0">email@abc.com</p>
                   </div>
                 </div>
-                <div className="px-16 my-32">
+                <div className="px-16 mt-32">
                   <Icon className="footer1__contact__icon">
                     <LocationOn />
                   </Icon>

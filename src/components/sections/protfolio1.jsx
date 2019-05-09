@@ -11,6 +11,45 @@ import { Button } from "@material-ui/core";
 
 class Portfolio1 extends Component {
   state = {};
+
+  portfoioList = [
+    {
+      imageUrl: "/assets/images/sq-12.jpg",
+      name: "Project One",
+      description: `Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.
+      Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.
+      Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.
+      Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.`
+    },
+    {
+      imageUrl: "/assets/images/sq-10.jpg",
+      name: "Project Two",
+      description: `Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.
+      Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.
+      Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.
+      Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.`
+    },
+    {
+      imageUrl: "/assets/images/sq-9.jpg",
+      name: "Project Three",
+      description: `Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.
+      Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.
+      Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.
+      Adipisci quas repellat sed. Quasi quaerat aut nam
+      possimus vitae dignissimos, sapiente est atque tenetur.`
+    }
+  ];
   render() {
     return (
       <section className="section section-portfolio1" id="portfolio1">
@@ -23,23 +62,14 @@ class Portfolio1 extends Component {
             </p>
           </div>
           <Grid container spacing={24}>
-            {[1, 2, 5].map(portfolio => (
-              <Grid item md={4} sm={6} key={portfolio}>
+            {this.portfoioList.map((portfolio, index) => (
+              <Grid item md={4} sm={6} key={index}>
                 <Card className="portfolio1__card card">
-                  <img src="/assets/images/sq-12.jpg" alt="developer" />
+                  <img src={portfolio.imageUrl} alt="portfolio" />
                   <CardContent className="portfolio1__card__content">
                     <div>
-                      <h5>Project One</h5>
-                      <p>
-                        Adipisci quas repellat sed. Quasi quaerat aut nam
-                        possimus vitae dignissimos, sapiente est atque tenetur.
-                        Adipisci quas repellat sed. Quasi quaerat aut nam
-                        possimus vitae dignissimos, sapiente est atque tenetur.
-                        Adipisci quas repellat sed. Quasi quaerat aut nam
-                        possimus vitae dignissimos, sapiente est atque tenetur.
-                        Adipisci quas repellat sed. Quasi quaerat aut nam
-                        possimus vitae dignissimos, sapiente est atque tenetur.
-                      </p>
+                      <h5>{portfolio.name}</h5>
+                      <p>{portfolio.description}</p>
                       <Divider />
                     </div>
                     <div className="pt-16">

@@ -46,7 +46,9 @@ body {
   .fw-400 {
     font-weight: 400;
   }
-
+  .font-light {
+    font-weight: 300 !important;
+  }
   // positioning
   .relative {
     position: relative;
@@ -373,8 +375,8 @@ body {
 
     & > div:first-child {
       img {
-        width: 48px !important;
-        height: auto;
+        height: 36px !important;
+        width: auto;
       }
       p {
         font-size: 1rem;
@@ -499,5 +501,13 @@ body {
       height: 24px;
       width: 24px;
     }
+  }
+
+  .footer1__contact,
+  .footer1__disclaimer,
+  .footer1__about {
+    padding: 30px;
+    height: 100%;
+    box-shadow: 3px 0 4px rgba(0, 0, 0, 0.2);
   }
 }

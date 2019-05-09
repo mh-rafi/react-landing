@@ -16,7 +16,7 @@ class Services1 extends Component {
       icon: <Dashboard fontSize="inherit" />,
       title: "Business Application",
       text:
-        "Lorem ipsum dolorng elit.adipi sicing elit.adiping elit.adipi sicing elit.adiping elit.adipi sicing elit.adiping elit.adipi sicing elit.adiping elit.adipi sicing elit.adiping elit.adipi sicing elit.adiping elit.adipi sicing elit.adiping elit.adipi sicing elit.adiping elit.adipi sicing elit.adiping elit.adipi sicing elit.adiping elit.adipi sicing elit.adipi sicing elit.adipi sicing elit.adipi sicing elit. Doloribus numquam quis."
+        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."
     },
     {
       icon: <PermDataSetting fontSize="inherit" />,
@@ -61,7 +61,7 @@ class Services1 extends Component {
                           {service.icon}
                         </Icon>
                       </div>
-                      <h3>{service.title}</h3>
+                      <h3 className="font-light">{service.title}</h3>
                       <p>{service.text}</p>
                     </div>
                     <div className="pt-16">
