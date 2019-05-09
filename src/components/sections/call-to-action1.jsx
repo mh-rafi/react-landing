@@ -5,7 +5,7 @@ class CallToAction1 extends Component {
   state = {};
   render() {
     return (
-      <div className="section section-cta1">
+      <div className="section section-cta1" id="cta1">
         <div className="container">
           <Grid
             container

@@ -82,7 +82,7 @@ class Pricing1 extends Component {
 
   render() {
     return (
-      <div className="section section-pricing1">
+      <div className="section section-pricing1" id="pricing1">
         <div className="container">
           <div className="section__header">
             <h2>Choose a Plan</h2>

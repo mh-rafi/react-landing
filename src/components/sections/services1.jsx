@@ -40,7 +40,7 @@ class Services1 extends Component {
 
   render() {
     return (
-      <section className="section section-service1 light-gray">
+      <section className="section section-service1 light-gray" id="service1">
         <div className="container">
           <div className="section__header">
             <h2>Our Services</h2>
