@@ -158,7 +158,7 @@ body {
     }
   }
   @media only screen and (max-width: 767px) {
-    width: 220px;
+    width: $topbar-mobile-width;
     height: 100vh;
     left: auto;
     right: 0;
@@ -167,7 +167,7 @@ body {
     transition: all 0.3s ease-in-out;
 
     &.closed {
-      right: -220px;
+      right: calc(-#{$topbar-mobile-width} - 5px);
       .header__toggle {
         color: $white;
       }
@@ -341,10 +341,10 @@ body {
     }
 
     &:hover {
-      border-top: 2px solid green;
+      border-top: 2px solid $brand;
 
       .service1__card__icon {
-        color: green !important;
+        color: $brand !important;
       }
     }
   }
@@ -416,7 +416,7 @@ body {
   }
 
   .pricing1__highlighted {
-    background: #2196f3 !important;
+    background: $brand !important;
     span {
       color: #fff;
     }
