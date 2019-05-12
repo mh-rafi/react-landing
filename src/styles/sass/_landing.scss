@@ -269,6 +269,11 @@ body {
     }
   }
 
+  .intro1__description {
+    max-width: 570px;
+    margin: 0 auto 24px;
+  }
+
   @media only screen and (max-width: 959px) {
     text-align: center;
     .section-intro1__list {
@@ -475,5 +480,33 @@ body {
     padding: 30px;
     height: 100%;
     box-shadow: 3px 0 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// =====================================================================
+// Landing Page 2
+// =====================================================================
+
+.section-intro2 {
+  padding: 180px 0 0 !important;
+  overflow: visible !important;
+
+  .section-intro2__product {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: -102px;
+  }
+
+  @include media(767px) {
+    .section-intro2__product {
+      bottom: -63px;
+    }
+  }
+
+  @include media(580px) {
+    .section-intro2__product {
+      bottom: -39px;
+    }
   }
 }

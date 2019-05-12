@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
-import { Card, CardContent, Fab } from "@material-ui/core";
-import Carousel from "./../common/carousel";
+import { Card, CardContent, Grid, Button } from "@material-ui/core";
 
-class Testimonial1 extends Component {
+class Testimonial2 extends Component {
   state = {};
 
   testimonialList = [
@@ -42,24 +41,12 @@ class Testimonial1 extends Component {
         name: "John White",
         designation: "Software Engineer"
       }
-    },
-    {
-      companyLogoUrl: "/assets/images/mock-logo-4.png",
-      comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Fugit modi voluptas vero iusto fuga quos totam
-      eius, atis magnam tempora doloribus ducimus dolorem
-      culpa animi beatae tenetur! Sapiente, quia tempora."`,
-      user: {
-        imageUrl: "/assets/images/face-4.jpg",
-        name: "Jessica Hiche",
-        designation: "CEO"
-      }
     }
   ];
 
   render() {
     return (
-      <div className="section section-testimonial1" id="testimonial1">
+      <div className="section section-testimonial1" id="testimonial2">
         <div className="container">
           <div className="section__header">
             <h2>What our customers says</h2>
@@ -69,40 +56,48 @@ class Testimonial1 extends Component {
             </p>
           </div>
 
-          <Carousel>
+          <Grid container spacing={24}>
             {this.testimonialList.map((testimonial, index) => (
-              <Card className="h-100 px-24 card" key={index}>
-                <CardContent className="testimonial1__card-content">
-                  <div className="pb-16">
-                    <img
-                      className="p-0 m-0 pb-24 pt-16"
-                      src={testimonial.companyLogoUrl}
-                      alt="logo"
-                    />
-                    <p className="m-0">{testimonial.comment}</p>
-                  </div>
-
-                  <div className="card__user">
-                    <img
-                      className="p-0 m-0"
-                      src={testimonial.user.imageUrl}
-                      alt="user"
-                    />
-                    <div className="pl-16">
-                      <p className="m-0">
-                        <strong>{testimonial.user.name}</strong>
-                      </p>
-                      <p className="m-0">{testimonial.user.designation}</p>
+              <Grid item md={4} sm={4} key={index}>
+                <Card className="h-100 px-24 card">
+                  <CardContent className="testimonial1__card-content">
+                    <div className="pb-16">
+                      <img
+                        className="p-0 m-0 pb-24 pt-16"
+                        src={testimonial.companyLogoUrl}
+                        alt="logo"
+                      />
+                      <p className="m-0">{testimonial.comment}</p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+
+                    <div className="card__user">
+                      <img
+                        className="p-0 m-0"
+                        src={testimonial.user.imageUrl}
+                        alt="user"
+                      />
+                      <div className="pl-16">
+                        <p className="m-0">
+                          <strong>{testimonial.user.name}</strong>
+                        </p>
+                        <p className="m-0">{testimonial.user.designation}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Grid>
             ))}
-          </Carousel>
+          </Grid>
+
+          <div className="text-center pt-40">
+            <Button variant="contained" size="large" color="secondary">
+              load more
+            </Button>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default Testimonial1;
+export default Testimonial2;
