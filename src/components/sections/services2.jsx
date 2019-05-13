@@ -55,13 +55,14 @@ class Services2 extends Component {
 
           <Carousel>
             {this.serviceList.map((service, index) => (
-              <Card className="service1__card px-24 card" key={index}>
+              <Card
+                className="service1__card service__card px-24 card"
+                key={index}
+              >
                 <CardContent className="service1__card__content">
                   <div>
                     <div className="text-center">
-                      <Icon className="service1__card__icon">
-                        {service.icon}
-                      </Icon>
+                      <Icon className="card__icon-64">{service.icon}</Icon>
                     </div>
                     <h3 className="font-light">{service.title}</h3>
                     <p>{service.text}</p>

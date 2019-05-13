@@ -7,6 +7,7 @@ body {
   font-weight: 400;
   font-size: 0.875rem;
   color: $black;
+  overflow-x: hidden !important;
   line-height: 1.5;
   letter-spacing: 0.3px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -31,6 +32,9 @@ body {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+
+    @include media(1170px) {
+    }
   }
 
   // Typography
@@ -288,6 +292,30 @@ body {
   }
 }
 
+.section-intro2 {
+  padding: 180px 0 0 !important;
+  overflow: visible !important;
+
+  .section-intro2__product {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: -102px;
+  }
+
+  @include media(767px) {
+    .section-intro2__product {
+      bottom: -63px;
+    }
+  }
+
+  @include media(580px) {
+    .section-intro2__product {
+      bottom: -39px;
+    }
+  }
+}
+
 // protfolio1
 .section-portfolio1 {
   .portfolio1__card {
@@ -317,6 +345,19 @@ body {
 }
 
 // service1
+.card__icon-64 {
+  font-size: 64px !important;
+  height: 64px;
+  width: 64px;
+}
+.service__card {
+  &:hover {
+    .card__icon-64 {
+      color: $brand;
+    }
+  }
+}
+
 .section-service1 {
   .service1__card {
     border-top: 2px solid black;
@@ -332,19 +373,48 @@ body {
       flex-direction: column;
       justify-content: space-between;
       min-height: 100%;
-
-      .service1__card__icon {
-        font-size: 64px !important;
-        width: 64px;
-        height: 64px;
-      }
     }
 
     &:hover {
       border-top: 2px solid $brand;
+    }
+  }
+}
 
-      .service1__card__icon {
-        color: $brand !important;
+.section-service4 {
+  transition: transform 400ms #{bezier()};
+
+  .service4__card {
+    position: relative;
+    overflow: hidden;
+
+    .service4__card__icon {
+      position: absolute;
+      font-size: 200px;
+      height: 200px;
+      width: 200px;
+      left: -80px;
+      bottom: -80px;
+      z-index: 1;
+      opacity: 0.24;
+      transition: transform 400ms #{bezier()};
+    }
+
+    .service4__card__description {
+      max-width: 370px;
+      text-align: left;
+      vertical-align: middle;
+      padding: 32px;
+      margin-left: 96px;
+      z-index: 2;
+    }
+
+    &:hover {
+      transform: translateY(-16px);
+
+      .service4__card__icon {
+        transform: translateY(-16px);
+        color: $brand;
       }
     }
   }
@@ -480,33 +550,5 @@ body {
     padding: 30px;
     height: 100%;
     box-shadow: 3px 0 4px rgba(0, 0, 0, 0.2);
-  }
-}
-
-// =====================================================================
-// Landing Page 2
-// =====================================================================
-
-.section-intro2 {
-  padding: 180px 0 0 !important;
-  overflow: visible !important;
-
-  .section-intro2__product {
-    position: relative;
-    top: auto;
-    left: auto;
-    bottom: -102px;
-  }
-
-  @include media(767px) {
-    .section-intro2__product {
-      bottom: -63px;
-    }
-  }
-
-  @include media(580px) {
-    .section-intro2__product {
-      bottom: -39px;
-    }
   }
 }

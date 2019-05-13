@@ -25,9 +25,18 @@ class Demo extends Component {
                   </Card>
                 </NavLink>
               </Grid>
-              
+
               <Grid item md={4} xs={12}>
                 <NavLink to="/landing2" className="mx-4">
+                  <Card className="card text-center">
+                    <p>Version 1</p>
+                    <img src="/assets/images/demo_home_two.jpg" alt="" />
+                  </Card>
+                </NavLink>
+              </Grid>
+
+              <Grid item md={4} xs={12}>
+                <NavLink to="/landing3" className="mx-4">
                   <Card className="card text-center">
                     <p>Version 1</p>
                     <img src="/assets/images/demo_home_two.jpg" alt="" />

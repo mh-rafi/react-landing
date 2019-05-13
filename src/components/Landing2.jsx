@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Intro2 from "./sections/intro2";
-import TopBar from "./sections/TopBar";
 import Portfolio2 from "./sections/portfolio2";
 import Testimonial2 from "./sections/testimonial2";
 import Services2 from "./sections/services2";
