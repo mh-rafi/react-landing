@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Service3 from "./sections/services3";
 import Service4 from "./sections/services4";
-import Service5 from "./sections/service5";
+import Service5 from "./sections/services5";
+import Service6 from "./sections/services6";
 
 class Landing3 extends Component {
   state = {};
@@ -11,6 +12,7 @@ class Landing3 extends Component {
         <Service3 />
         <Service4 />
         <Service5 />
+        <Service6 />
       </div>
     );
   }

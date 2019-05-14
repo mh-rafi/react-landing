@@ -43,7 +43,7 @@ class Service3 extends Component {
               </Grid>
             </Grid>
             <Grid item lg={6} md={6} sm={12}>
-              <h3 className="color-brand">
+              <h3 className="text-brand">
                 Made by business people for business people
               </h3>
               <p>

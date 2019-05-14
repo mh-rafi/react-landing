@@ -420,6 +420,34 @@ body {
   }
 }
 
+.section-service5 {
+  .service5__image-holder {
+    img {
+      max-width: 370px;
+    }
+  }
+
+  p {
+    white-space: pre-line;
+  }
+
+  .service5__link-icon {
+    font-size: inherit;
+    vertical-align: middle;
+  }
+}
+
+.section-service6 {
+  .sevice6__circle {
+    width: 112px;
+    height: 112px;
+    margin: 0px auto;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
 // testimonial
 .section-testimonial1 {
   .testimonial1__card-content {
