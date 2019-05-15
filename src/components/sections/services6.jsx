@@ -8,7 +8,7 @@ class Service6 extends Component {
       <div className="section section-service6 light-gray">
         <div className="container">
           <div className="section__header">
-            <h2>Grow your Business</h2>
+            <h2>Grow Your Business</h2>
             <p>Access integrations and new features in a matter of seconds</p>
           </div>
           <Grid container justify="center" alignItems="center" spacing={32}>

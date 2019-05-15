@@ -34,7 +34,7 @@ class Service4 extends Component {
       <div className="section section-service4">
         <div className="container">
           <div className="section__header">
-            <h2>Integrate your Process</h2>
+            <h2>Integrate Your Process</h2>
             <p>Access integrations and new features in a matter of seconds</p>
           </div>
           <div className="text-center">

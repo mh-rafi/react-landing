@@ -30,7 +30,7 @@ class Service7 extends Component {
       <div className="section section-service7">
         <div className="container">
           <div className="section__header">
-            <h2>We got you covered</h2>
+            <h2>We Got You Covered</h2>
             <p>Every business matters, learn how we handle it.</p>
           </div>
           <Grid container alignItems="center" spacing="40">

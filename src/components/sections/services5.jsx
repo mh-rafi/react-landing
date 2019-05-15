@@ -39,7 +39,7 @@ class Service5 extends Component {
       <div className="section section-service5">
         <div className="container">
           <div className="section__header">
-            <h2>Key features</h2>
+            <h2>Key Features</h2>
             <p>Access integrations and new features in a matter of seconds</p>
           </div>
           {/* tab view */}

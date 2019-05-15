@@ -27,8 +27,7 @@ class Service3 extends Component {
       <div className="section section-service3">
         <div className="container">
           <div className="section__header">
-            {" "}
-            <h2>Sales just got Simple</h2>
+            <h2>Sales Just Got Simple</h2>
             <p>Access integrations and new features in a matter of seconds</p>
           </div>
           <Grid container spacing={40} alignItems="center">

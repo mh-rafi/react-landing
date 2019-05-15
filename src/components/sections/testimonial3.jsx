@@ -52,7 +52,7 @@ class Testimonial3 extends Component {
       <div className="section section-testimonial3">
         <div className="container">
           <div className="section__header">
-            <h2>We are Trusted</h2>
+            <h2>We Are Trusted</h2>
             <p>Access integrations and new features in a matter of seconds</p>
           </div>
           <Grid container spacing={32}>
