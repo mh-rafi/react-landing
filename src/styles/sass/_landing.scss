@@ -448,6 +448,23 @@ body {
   }
 }
 
+.section-service7 {
+  .service7__card__description {
+    max-width: 370px;
+    text-align: left;
+
+    p {
+      white-space: pre-line;
+    }
+  }
+
+  .service7__card {
+    .service7__card__icon {
+      font-size: 48px;
+    }
+  }
+}
+
 // testimonial
 .section-testimonial1 {
   .testimonial1__card-content {
@@ -480,6 +497,21 @@ body {
         overflow: hidden;
       }
     }
+  }
+}
+
+.section-testimonial3 {
+  img {
+    margin: 0px;
+    padding: 0px;
+    height: 48px;
+    width: 48px;
+    vertical-align: middle;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .test {
+    background: red;
   }
 }
 

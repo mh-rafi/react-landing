@@ -12,19 +12,19 @@ class Service6 extends Component {
 
           <Grid container justify="center" alignItems="center" spacing={32}>
             <Grid item lg={4} md={4} sm={12} xs={12} className="text-center">
-              <div className="sevice6__circle service__card p-24">
+              <div className="sevice6__circle service__card p-24 card">
                 <Icon className="card__icon-64">account_balance</Icon>
               </div>
               <p>Sell everywhere</p>
             </Grid>
             <Grid item lg={4} md={4} sm={12} xs={12} className="text-center">
-              <div className="sevice6__circle service__card p-24">
+              <div className="sevice6__circle service__card p-24 card">
                 <Icon className="card__icon-64">security</Icon>
               </div>
               <p>Secured payments</p>
             </Grid>
             <Grid item lg={4} md={4} sm={12} xs={12} className="text-center">
-              <div className="sevice6__circle service__card p-24">
+              <div className="sevice6__circle service__card p-24 card">
                 <Icon className="card__icon-64">language</Icon>
               </div>
               <p>Smart pricing</p>
