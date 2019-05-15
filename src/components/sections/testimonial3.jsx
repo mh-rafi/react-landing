@@ -51,9 +51,10 @@ class Testimonial3 extends Component {
     return (
       <div className="section section-testimonial3">
         <div className="container">
-          <h2>We are Trusted</h2>
-          <p>Access integrations and new features in a matter of seconds</p>
-
+          <div className="section__header">
+            <h2>We are Trusted</h2>
+            <p>Access integrations and new features in a matter of seconds</p>
+          </div>
           <Grid container spacing={32}>
             {this.cardList.map((card, index) => (
               <Grid item lg={6} md={6} sm={12} xs={12} key={index}>

@@ -29,9 +29,10 @@ class Service7 extends Component {
     return (
       <div className="section section-service7">
         <div className="container">
-          <h2>We got you covered</h2>
-          <p>Every business matters, learn how we handle it.</p>
-
+          <div className="section__header">
+            <h2>We got you covered</h2>
+            <p>Every business matters, learn how we handle it.</p>
+          </div>
           <Grid container alignItems="center" spacing="40">
             <Grid item lg={6} md={6} sm={12} xs={12}>
               <div className="service7__card__description">
