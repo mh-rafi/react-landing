@@ -410,10 +410,10 @@ body {
     }
 
     &:hover {
-      transform: translateY(-16px);
+      transform: translateY(-8px);
 
       .service4__card__icon {
-        transform: translateY(-16px);
+        transform: translateY(-8px);
         color: $brand;
       }
     }
@@ -424,6 +424,8 @@ body {
   .service5__image-holder {
     img {
       max-width: 370px;
+      border-radius: 4px;
+      overflow: hidden;
     }
   }
 
@@ -449,6 +451,9 @@ body {
 }
 
 .section-service7 {
+  img {
+    max-height: 280px;
+  }
   .service7__card__description {
     max-width: 370px;
     text-align: left;
@@ -459,6 +464,10 @@ body {
   }
 
   .service7__card {
+    background-image: url("/assets/images/illustrations/1.svg");
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: center right;
     .service7__card__icon {
       font-size: 48px;
     }

@@ -29,16 +29,10 @@ class Service7 extends Component {
     return (
       <div className="section section-service7">
         <div className="container">
-          <div className="section__header">
-            <h2>We Got You Covered</h2>
-            <p>Every business matters, learn how we handle it.</p>
-          </div>
           <Grid container alignItems="center" spacing="40">
             <Grid item lg={6} md={6} sm={12} xs={12}>
               <div className="service7__card__description">
-                <h3 className="text-brand">
-                  Every business matters. We give you tools to succeed.
-                </h3>
+                <h2>Every business matters. We give you tools to succeed.</h2>
                 <p>{`Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.
               \nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea.`}</p>
 
@@ -48,7 +42,8 @@ class Service7 extends Component {
               </div>
             </Grid>
             <Grid item lg={6} md={6} sm={12} xs={12}>
-              <Card className="service7__card card p-32">
+              <img src="/assets/images/illustrations/1.svg" alt="analyze" />
+              {/* <Card className="service7__card card p-32">
                 {this.itemList.map((item, index) => (
                   <Grid container alignItems="center" spacing={32} key={index}>
                     <Grid item>
@@ -57,7 +52,7 @@ class Service7 extends Component {
                     <Grid item>{item.text}</Grid>
                   </Grid>
                 ))}
-              </Card>
+              </Card> */}
             </Grid>
           </Grid>
         </div>

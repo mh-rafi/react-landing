@@ -64,7 +64,7 @@ class Service5 extends Component {
           >
             <Grid item lg={5} md={7} sm={12} xs={12}>
               <div className="service5__image-holder">
-                <img src={feature.imageUrl} alt="building" />
+                <img className="card" src={feature.imageUrl} alt="building" />
               </div>
             </Grid>
             <Grid item lg={5} md={7} sm={12} xs={12}>
@@ -73,19 +73,12 @@ class Service5 extends Component {
                 <p>{feature.text}</p>
 
                 <a className="text-brand" href="#">
-                  Learn more about reporting{" "}
+                  Learn more about reporting
                   <Icon className="service5__link-icon">navigate_next</Icon>
                 </a>
               </div>
             </Grid>
           </Grid>
-
-          {/* {value === 0 && <div>Item One</div>}
-          {value === 1 && <div>Item Two</div>}
-          {value === 2 && <div>Item Three</div>}
-          {value === 3 && <div>Item Four</div>}
-          {value === 4 && <div>Item Five</div>}
-          {value === 5 && <div>Item Six</div>} */}
         </div>
       </div>
     );
