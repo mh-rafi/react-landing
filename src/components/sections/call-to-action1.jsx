@@ -15,7 +15,7 @@ class CallToAction1 extends Component {
             justify="flex-start"
           >
             <Grid item lg={8} md={8} sm={12} xs={12}>
-              <h2>Egret Is A Complete UI Framework For Angular</h2>
+              <h2>Dont miss the best management tool of the world</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
                 nam, illum et quis officiis beatae.
@@ -23,7 +23,7 @@ class CallToAction1 extends Component {
             </Grid>
             <Grid item lg={4} md={4} sm={12} xs={12} className="text-center">
               <Button size="large" color="secondary" variant="contained">
-                BUY EGRET NOW
+                Start 14 days Trial
               </Button>
             </Grid>
           </Grid>

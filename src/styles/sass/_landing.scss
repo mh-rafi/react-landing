@@ -63,6 +63,7 @@ body {
       0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   }
 
+  
   // Card styles
   .card {
     transition: all 0.3s ease;
@@ -243,6 +244,7 @@ body {
     left: 60px;
     img {
       width: 100%;
+      border-radius: .5rem;
     }
     .section-intro1__product__link {
       position: absolute;
@@ -286,8 +288,11 @@ body {
       align-items: center;
     }
     .section-intro1__product {
-      top: 140px;
-      left: 40px;
+      top: 0;
+      left: 0;
+    }
+    .section-intro1__product__link {
+      display: none !important;
     }
   }
 }

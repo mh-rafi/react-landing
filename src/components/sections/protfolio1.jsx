@@ -35,7 +35,7 @@ class Portfolio1 extends Component {
       <section className="section section-portfolio1" id="portfolio1">
         <div className="container">
           <div className="section__header">
-            <h2>Our Works</h2>
+            <h2>Works & Case studies</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
               unde inventore molestias ab adipisci eius nisi placeat at.
