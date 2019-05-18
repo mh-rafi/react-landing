@@ -25,9 +25,17 @@ body {
   section {
     box-sizing: border-box;
   }
+  // Background
   .light-gray {
     background: rgba(0, 0, 0, 0.024);
   }
+  .bg-img-indigo {
+    background: url(/assets/images/home-bg.jpg) center center/cover no-repeat !important;
+  }
+  .bg-img-black {
+    background: url(/assets/images/home-bg-black.png) center center/cover no-repeat !important;
+  }
+  
   .container {
     max-width: 1170px;
     margin: 0 auto;
@@ -53,6 +61,13 @@ body {
   .font-light {
     font-weight: 300 !important;
   }
+  .text-capitalize {
+    text-transform: capitalize;
+  }
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+
   // positioning
   .relative {
     position: relative;
@@ -72,6 +87,53 @@ body {
     // }
     &:hover {
       box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // Subscribe input
+  .subscribe-input {
+    display: inline-flex;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding: .25rem .25rem .25rem 1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: $white;
+    min-width: 480px;
+    .email-input {
+      border: 0;
+      font-size: 1rem;
+      flex-grow: 1;
+      padding: 0;
+      line-height: 1;
+      margin: 0;
+      background: inherit;
+      &:focus {
+        outline: 0;
+      }
+    }
+    .btn-action {
+      margin: 0 !important;
+    }
+  }
+
+  // Rounded icon
+  .rounded-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 64px;
+    border: 2px solid rgba($brand, .8);
+    color: $brand;
+    background: rgba($brand, .2);
+    .material-icons {
+      font-size: 1.5rem;
+    }
+    &.secondary {
+      border: 2px solid rgba($secondary, .8);
+      color: $secondary;
+      background: rgba($secondary, .2);
     }
   }
 
@@ -174,7 +236,9 @@ body {
     &.closed {
       right: calc(-#{$topbar-mobile-width} - 5px);
       .header__toggle {
-        color: $white;
+        color: $black;
+        background: $white;
+        box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
       }
     }
     .header__toggle {
@@ -300,12 +364,21 @@ body {
 .section-intro2 {
   padding: 180px 0 0 !important;
   overflow: visible !important;
+  background: url(/assets/images/home-bg-black.png) center center/cover no-repeat;
 
   .section-intro2__product {
     position: relative;
     top: auto;
     left: auto;
-    bottom: -102px;
+    right: auto;
+    margin: auto;
+    bottom: -80px;
+    max-width: 780px;
+    margin-bottom: 5rem;
+    img {
+      border-radius: .5rem;
+      box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+    }
   }
 
   @include media(767px) {
@@ -317,6 +390,27 @@ body {
   @include media(580px) {
     .section-intro2__product {
       bottom: -39px;
+    }
+  }
+}
+
+.section-intro3 {
+  background: $white;
+  color: $black;
+  .section-intro1__title {
+    color: $brand;
+  }
+  .subscribe-input {
+    min-width: 480px;
+  }
+
+  .intro3__product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5rem;
+    img {
+      max-width: 65%;
     }
   }
 }
@@ -419,7 +513,8 @@ body {
 
       .service4__card__icon {
         transform: translateY(-8px);
-        color: $brand;
+        color: $secondary;
+        opacity: 0.6;
       }
     }
   }
@@ -545,6 +640,10 @@ body {
   }
 }
 
+.section-cta3 {
+  
+}
+
 // pricing
 .section-pricing1 {
   .pricing1__card-header {
@@ -588,11 +687,11 @@ body {
   h4::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -8px;
     left: 0;
     height: 2px;
     width: 64px;
-    background-color: #ffc107;
+    background-color: $secondary;
   }
 
   .footer1__contact {
@@ -607,7 +706,7 @@ body {
     }
 
     .footer1__contact__icon {
-      color: #ffc107;
+      color: $secondary;
     }
   }
 

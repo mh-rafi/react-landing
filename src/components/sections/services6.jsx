@@ -23,9 +23,9 @@ class Service6 extends Component {
   state = {};
   render() {
     return (
-      <div className="section section-service6 light-gray">
+      <div className="section section-service6">
         <div className="container">
-          <div className="section__header">
+          <div className="section__header mb-48">
             <h2>Grow Your Business</h2>
             <p>Access integrations and new features in a matter of seconds</p>
           </div>
@@ -35,7 +35,7 @@ class Service6 extends Component {
                 <div className="sevice6__circle service__card p-24 card">
                   <Icon className="card__icon-64"> {card.icon} </Icon>
                 </div>
-                <p>{card.text}</p>
+                <p className="text-uppercase">{card.text}</p>
               </Grid>
             ))}
           </Grid>

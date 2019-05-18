@@ -4,8 +4,10 @@ import { Grid, Button } from "@material-ui/core";
 class CallToAction1 extends Component {
   state = {};
   render() {
+    let { bg } = this.props;
+    let classes = "section section-cta1 "+(bg ? bg : '');
     return (
-      <div className="section section-cta1" id="cta1">
+      <div className={classes} id="cta1">
         <div className="container">
           <Grid
             container

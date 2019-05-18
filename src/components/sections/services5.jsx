@@ -36,12 +36,9 @@ class Service5 extends Component {
     let feature = this.featureList[value];
 
     return (
-      <div className="section section-service5">
+      <div className="section section-service5 light-gray">
         <div className="container">
-          <div className="section__header">
-            <h2>Key Features</h2>
-            <p>Access integrations and new features in a matter of seconds</p>
-          </div>
+          
           {/* tab view */}
           <Tabs
             value={value}
@@ -69,7 +66,7 @@ class Service5 extends Component {
             </Grid>
             <Grid item lg={5} md={7} sm={12} xs={12}>
               <div className="service5__details">
-                <h3 className="text-brand">{feature.title}</h3>
+                <h3>{feature.title}</h3>
                 <p>{feature.text}</p>
 
                 <a className="text-brand" href="#">

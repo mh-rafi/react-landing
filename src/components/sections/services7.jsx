@@ -27,7 +27,7 @@ class Service7 extends Component {
   state = {};
   render() {
     return (
-      <div className="section section-service7">
+      <div className="section section-service7 light-gray">
         <div className="container">
           <Grid container alignItems="center" spacing="40">
             <Grid item lg={6} md={6} sm={12} xs={12}>

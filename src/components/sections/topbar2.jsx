@@ -74,16 +74,6 @@ class TopBar2 extends Component {
               </ScrollTo>
             </li>
             <li>
-              <ScrollTo to="testimonial2" onScroll={this.close}>
-                Testimonial
-              </ScrollTo>
-            </li>
-            <li>
-              <ScrollTo to="cta1" onScroll={this.close}>
-                Action
-              </ScrollTo>
-            </li>
-            <li>
               <ScrollTo to="pricing1" onScroll={this.close}>
                 Pricing
               </ScrollTo>

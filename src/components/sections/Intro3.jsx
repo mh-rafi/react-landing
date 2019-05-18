@@ -3,13 +3,13 @@ import Grid from "@material-ui/core/Grid";
 import Icon from "@material-ui/core/Icon";
 import Fab from "@material-ui/core/Fab";
 
-class Intro1 extends Component {
-  state = { };
+class Intro3 extends Component {
+  state = {};
   render() {
     return (
-      <section className="section section-intro1" id="intro1">
+      <section className="section section-intro1 section-intro3" id="intro1">
         <div className="container">
-          <Grid container spacing={24}>
+          <Grid container spacing={24} justify="center">
             <Grid item md={6}>
               <h1 className="section-intro1__title">
                 Better Management; Less Expense
@@ -19,18 +19,19 @@ class Intro1 extends Component {
               </div>
 
               <div className="section-intro1__list">
-                <div className="section-intro1__list__item">
+                <div className="section-intro1__list__item text-muted">
                   <Icon color="secondary">check</Icon> Unlimited Projects.
                 </div>
-                <div className="section-intro1__list__item">
+                <div className="section-intro1__list__item text-muted">
                   <Icon color="secondary">check</Icon> Unlimited Team Members.
                 </div>
-                <div className="section-intro1__list__item">
+                <div className="section-intro1__list__item text-muted">
                   <Icon color="secondary">check</Icon> Unlimited Disk Space.
                 </div>
               </div>
 
-              <div>
+              <div className="subscribe-input">
+                <input className="email-input" type="text" placeholder="Your email"/>
                 <Fab
                   variant="extended"
                   size="large"
@@ -39,27 +40,16 @@ class Intro1 extends Component {
                   className="btn-action m-8"
                 >
                   <Icon className="mr-16">flight_takeoff</Icon>
-                  Take off
-                </Fab>
-
-                <Fab
-                  variant="extended"
-                  size="large"
-                  aria-label="Download"
-                  className="btn-action btn-white m-8"
-                >
-                  <Icon className="mr-16">alarm_on</Icon>
-                  14 days free trial
+                  Subscribe
                 </Fab>
               </div>
             </Grid>
-            <Grid item md={6} >
-              <div className="section-intro1__product">
-                <a href="#product" className="section-intro1__product__link">
-                  <div className="price">$24</div>
-                  <span className="price__text">Buy On ThemeForest</span>
-                </a>
-                <img src="/assets/images/screenshots/landing-intro.png" alt=""/>
+            <Grid item md={6}>
+              <div className="intro3__product">
+                <img
+                  src="/assets/images/illustrations/2.svg"
+                  alt=""
+                />
               </div>
             </Grid>
           </Grid>
@@ -69,4 +59,4 @@ class Intro1 extends Component {
   }
 }
 
-export default Intro1;
+export default Intro3;

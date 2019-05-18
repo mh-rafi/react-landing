@@ -11,15 +11,14 @@ class Intro2 extends Component {
         <div className="container">
           <div className="text-center">
             <div className="section-intro1__subtitle mb-24">
-              Angular Landing + Egret Admin
+              Build More; Sell More;
             </div>
             <h1 className="section-intro1__title">
-              Your complete React App Development kit
+              Marketing Automation Redefined
             </h1>
             <p className="intro1__description">
-              Egret implements the official Angular Material Design components
-              and built with Angular CLI. No Bootstrap!, No jQuery! and Only
-              TypeScript!
+             The most poerfull marketing automation platform you have ever used.
+             No hidden charge, pay as you use!
             </p>
             <div>
               <Button
@@ -28,13 +27,13 @@ class Intro2 extends Component {
                 size="large"
                 aria-label="Buy"
               >
-                <Icon className="mr-16">add_shopping_cart</Icon>
-                Buy Egret
+                <Icon className="mr-16">flight_takeoff</Icon>
+                Start 7 day trial
               </Button>
             </div>
           </div>
           <div className="section-intro2__product text-center">
-            <img src="/assets/images/egret-screen.png" alt="" />
+            <img src="/assets/images/screenshots/landing-intro.png" alt="" />
           </div>
         </div>
       </section>

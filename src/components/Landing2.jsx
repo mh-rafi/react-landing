@@ -19,7 +19,7 @@ class Landing2 extends Component {
         <Portfolio2 />
         <Testimonial2 />
         <Services2 />
-        <CallToAction1 />
+        <CallToAction1 bg="bg-img-black"/>
         <Pricing1 />
         <Contact1 />
         <Footer1 />

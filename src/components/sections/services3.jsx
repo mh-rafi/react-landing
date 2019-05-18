@@ -24,29 +24,28 @@ class Service3 extends Component {
 
   render() {
     return (
-      <div className="section section-service3">
+      <div className="section section-service3 light-gray">
         <div className="container">
-          <div className="section__header">
-            <h2>Sales Just Got Simple</h2>
-            <p>Access integrations and new features in a matter of seconds</p>
-          </div>
+          
           <Grid container spacing={40} alignItems="center">
             <Grid item lg={6} md={6} sm={12}>
               <Grid container spacing={32}>
                 {this.cardList.map((card, index) => (
                   <Grid item lg={6} md={6} sm={6} xs={12} key={index}>
-                    <Card className="service__card p-16 card text-center h-100">
-                      <Icon className="card__icon-64">{card.icon}</Icon>
-                      <p>{card.text}</p>
+                    <Card className="service__card p-24 card text-center h-100">
+                      <div className="rounded-icon secondary mb-16">
+                        <Icon>{card.icon}</Icon>
+                      </div>
+                      <p className="m-0 text-uppercase">{card.text} </p>
                     </Card>
                   </Grid>
                 ))}
               </Grid>
             </Grid>
             <Grid item lg={6} md={6} sm={12}>
-              <h3 className="text-brand">
+              <h2 className="">
                 Made by business people for business people
-              </h3>
+              </h2>
               <p>
                 Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no,
                 has eu lorem convenire incorrupte. Lorem ipsum dolor sit amet,
