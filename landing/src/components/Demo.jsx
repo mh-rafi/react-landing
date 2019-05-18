@@ -13,15 +13,14 @@ class Demo extends Component {
             <div className="section-header mb-24">
               <h2>Choose a demo</h2>
               <p>
-                Each section is a component, so it's super easy to customize
+                Each section is a component, so it's super easy to customize <br/> & create new landing page version
               </p>
             </div>
-            <Grid container spacing={24}>
+            <Grid container spacing={24} className="demo-container">
               <Grid item md={4} xs={12}>
                 <NavLink to="/landing1" className="mx-4">
                   <Card className="card text-center">
-                    <p>Version 1</p>
-                    <img src="/assets/images/demo_home_one.jpg" alt="" />
+                    <img src="/assets/images/screenshots/landing-1.png" alt="" />
                   </Card>
                 </NavLink>
               </Grid>
@@ -29,8 +28,7 @@ class Demo extends Component {
               <Grid item md={4} xs={12}>
                 <NavLink to="/landing2" className="mx-4">
                   <Card className="card text-center">
-                    <p>Version 1</p>
-                    <img src="/assets/images/demo_home_two.jpg" alt="" />
+                    <img src="/assets/images/screenshots/landing-2.png" alt="" />
                   </Card>
                 </NavLink>
               </Grid>
@@ -38,8 +36,7 @@ class Demo extends Component {
               <Grid item md={4} xs={12}>
                 <NavLink to="/landing3" className="mx-4">
                   <Card className="card text-center">
-                    <p>Version 1</p>
-                    <img src="/assets/images/demo_home_two.jpg" alt="" />
+                    <img src="/assets/images/screenshots/landing-3.png" alt="" />
                   </Card>
                 </NavLink>
               </Grid>

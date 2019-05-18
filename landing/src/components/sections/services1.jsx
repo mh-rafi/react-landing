@@ -52,7 +52,7 @@ class Services1 extends Component {
                 <Card className="service1__card service__card card">
                   <CardContent className="service1__card__content">
                     <div>
-                      <div className="text-center">
+                      <div className="text-center mb-16">
                         <Icon className="card__icon-64">{service.icon}</Icon>
                       </div>
                       <h3 className="font-light">{service.title}</h3>

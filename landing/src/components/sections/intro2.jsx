@@ -10,7 +10,7 @@ class Intro2 extends Component {
       <section className="section section-intro1 section-intro2" id="intro2">
         <div className="container">
           <div className="text-center">
-            <div className="section-intro1__subtitle mb-24">
+            <div className="section-intro1__subtitle mb-24 text-secondary">
               Build More; Sell More;
             </div>
             <h1 className="section-intro1__title">

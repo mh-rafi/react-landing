@@ -1,0 +1,14 @@
+$white:               #ffffff;
+$black:               rgba(0, 0, 0, .87);
+
+$body-color:            rgba($black, .7);
+$heading-color:         $black;
+
+$primary:             #3f51b5;
+$secondary:           #ff9100;
+
+
+$brand:                 $primary;
+$brand-active:          darken($brand, 10);
+
+$topbar-mobile-width:   220px;

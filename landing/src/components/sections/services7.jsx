@@ -29,7 +29,7 @@ class Service7 extends Component {
     return (
       <div className="section section-service7 light-gray">
         <div className="container">
-          <Grid container alignItems="center" spacing="40">
+          <Grid container alignItems="center" spacing={40}>
             <Grid item lg={6} md={6} sm={12} xs={12}>
               <div className="service7__card__description">
                 <h2>Every business matters. We give you tools to succeed.</h2>
@@ -43,16 +43,6 @@ class Service7 extends Component {
             </Grid>
             <Grid item lg={6} md={6} sm={12} xs={12}>
               <img src="/assets/images/illustrations/1.svg" alt="analyze" />
-              {/* <Card className="service7__card card p-32">
-                {this.itemList.map((item, index) => (
-                  <Grid container alignItems="center" spacing={32} key={index}>
-                    <Grid item>
-                      <Icon className="service7__card__icon">{item.icon}</Icon>
-                    </Grid>
-                    <Grid item>{item.text}</Grid>
-                  </Grid>
-                ))}
-              </Card> */}
             </Grid>
           </Grid>
         </div>

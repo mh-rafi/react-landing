@@ -9,13 +9,13 @@ class Intro1 extends Component {
     return (
       <section className="section section-intro1" id="intro1">
         <div className="container">
-          <Grid container spacing={24}>
+          <Grid container spacing={24} justify="center">
             <Grid item md={6}>
               <h1 className="section-intro1__title">
                 Better Management; Less Expense
               </h1>
               <div className="section-intro1__subtitle">
-                Dont wast money! Try free version first.
+                Not sure about Pro? Try trial first!
               </div>
 
               <div className="section-intro1__list">
@@ -55,8 +55,8 @@ class Intro1 extends Component {
             </Grid>
             <Grid item md={6} >
               <div className="section-intro1__product">
-                <a href="#product" className="section-intro1__product__link">
-                  <div className="price">$24</div>
+                <a href="https://themeforest.net/user/mh_rafi/portfolio" className="section-intro1__product__link" target="_blank">
+                  <div className="price">$16</div>
                   <span className="price__text">Buy On ThemeForest</span>
                 </a>
                 <img src="/assets/images/screenshots/landing-intro.png" alt=""/>

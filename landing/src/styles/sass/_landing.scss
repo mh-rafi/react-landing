@@ -6,7 +6,6 @@ body {
   padding: 0;
   font-weight: 400;
   font-size: 0.875rem;
-  color: $black;
   overflow-x: hidden !important;
   line-height: 1.5;
   letter-spacing: 0.3px;
@@ -14,6 +13,13 @@ body {
 }
 
 .landing {
+  color: $body-color;
+
+  h1,h2,h3,h4,h5,h6 {
+    color: $heading-color;
+  }
+
+
   // Global styles for landing page
   a {
     text-decoration: none;
@@ -61,11 +67,19 @@ body {
   .font-light {
     font-weight: 300 !important;
   }
+
   .text-capitalize {
     text-transform: capitalize;
   }
   .text-uppercase {
     text-transform: uppercase;
+  }
+
+  .text-primary {
+    color: $primary;
+  }
+  .text-secondary {
+    color: $secondary;
   }
 
   // positioning
@@ -264,6 +278,7 @@ body {
           display: block;
           a {
             padding: 15px 20px;
+            border-radius: 0;
           }
         }
       }
@@ -275,8 +290,11 @@ body {
 .section-intro1 {
   background: url(/assets/images/home-bg.jpg) center center/cover no-repeat;
   padding: 180px 0 !important;
-  color: #fff;
+  color: $white;
   overflow: hidden;
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
   .section-intro1__title {
     margin: 0 0 24px;
     font-size: 48px;
@@ -305,15 +323,16 @@ body {
   .section-intro1__product {
     position: relative;
     top: 100px;
-    left: 60px;
+    // left: 60px;
     img {
       width: 100%;
       border-radius: .5rem;
+      box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)
     }
     .section-intro1__product__link {
       position: absolute;
-      top: -110px;
-      left: -45px;
+      top: -100px;
+      left: -30px;
       text-align: center;
       display: block;
       width: 160px;
@@ -365,7 +384,9 @@ body {
   padding: 180px 0 0 !important;
   overflow: visible !important;
   background: url(/assets/images/home-bg-black.png) center center/cover no-repeat;
-
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
   .section-intro2__product {
     position: relative;
     top: auto;
@@ -628,6 +649,9 @@ body {
 .section-cta1 {
   color: #fff;
   background: url(/assets/images/home-bg.jpg) center center/cover no-repeat;
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
   h2 {
     font-size: 1.75rem;
     margin: 0;
@@ -641,7 +665,7 @@ body {
 }
 
 .section-cta3 {
-  
+
 }
 
 // pricing
@@ -679,6 +703,9 @@ body {
 
 // footer1
 .section-footer1 {
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
   h4 {
     font-size: 1.25rem;
     margin: 0 0 24px;

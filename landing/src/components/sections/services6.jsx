@@ -31,7 +31,7 @@ class Service6 extends Component {
           </div>
           <Grid container justify="center" alignItems="center" spacing={32}>
             {this.cardList.map((card, index) => (
-              <Grid item lg={3} md={3} sm={12} xs={12} className="text-center">
+              <Grid item lg={3} md={3} sm={12} xs={12} key={index} className="text-center">
                 <div className="sevice6__circle service__card p-24 card">
                   <Icon className="card__icon-64"> {card.icon} </Icon>
                 </div>
