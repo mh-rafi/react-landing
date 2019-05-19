@@ -6,7 +6,7 @@ class Service4 extends Component {
   cardList = [
     {
       icon: "alarm",
-      title: "React Faster",
+      title: "Choose Technology",
       text:
         "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte."
     },
@@ -31,7 +31,7 @@ class Service4 extends Component {
   ];
   render() {
     return (
-      <div className="section section-service4">
+      <div className="section section-service4" id="service4">
         <div className="container">
           <div className="section__header">
             <h2>Integrate Your Process</h2>

@@ -49,7 +49,7 @@ class Testimonial3 extends Component {
 
   render() {
     return (
-      <div className="section section-testimonial3">
+      <div className="section section-testimonial3" id="testimonial3">
         <div className="container">
           <div className="section__header">
             <h2>We Are Trusted</h2>

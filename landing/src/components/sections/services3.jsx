@@ -24,7 +24,7 @@ class Service3 extends Component {
 
   render() {
     return (
-      <div className="section section-service3 light-gray">
+      <div className="section section-service3 light-gray" id="service3">
         <div className="container">
           
           <Grid container spacing={40} alignItems="center">

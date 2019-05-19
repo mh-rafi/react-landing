@@ -23,7 +23,7 @@ class Service6 extends Component {
   state = {};
   render() {
     return (
-      <div className="section section-service6">
+      <div className="section section-service6" id="service6">
         <div className="container">
           <div className="section__header mb-48">
             <h2>Grow Your Business</h2>

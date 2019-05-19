@@ -7,7 +7,7 @@ class Intro3 extends Component {
   state = {};
   render() {
     return (
-      <section className="section section-intro1 section-intro3" id="intro1">
+      <section className="section section-intro1 section-intro3" id="intro3">
         <div className="container">
           <Grid container spacing={24} justify="center">
             <Grid item md={6}>
@@ -35,7 +35,7 @@ class Intro3 extends Component {
                 <Fab
                   variant="extended"
                   size="large"
-                  color="primary"
+                  color="secondary"
                   aria-label="Buy"
                   className="btn-action m-8"
                 >

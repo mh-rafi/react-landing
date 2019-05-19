@@ -36,7 +36,7 @@ class Service5 extends Component {
     let feature = this.featureList[value];
 
     return (
-      <div className="section section-service5 light-gray">
+      <div className="section section-service5 light-gray" id="service5">
         <div className="container">
           
           {/* tab view */}

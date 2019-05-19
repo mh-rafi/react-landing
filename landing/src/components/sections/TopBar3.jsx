@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { debounce, classList } from "../../Utils";
 import Icon from "@material-ui/core/Icon";
+import Fab from "@material-ui/core/Fab";
 import IconButton from "@material-ui/core/IconButton";
 import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
@@ -58,18 +59,19 @@ class TopBar3 extends Component {
               <NavLink to="/">Demos</NavLink>
             </li>
             <li>
-              <ScrollTo to="intro2" onScroll={this.close}>
+              <ScrollTo to="intro3" onScroll={this.close}>
                 Home
               </ScrollTo>
             </li>
+            
             <li>
-              <ScrollTo to="portfoli2" onScroll={this.close}>
-                Works
+              <ScrollTo to="service3" onScroll={this.close}>
+                Service
               </ScrollTo>
             </li>
             <li>
-              <ScrollTo to="service2" onScroll={this.close}>
-                Service
+              <ScrollTo to="service5" onScroll={this.close}>
+                Features
               </ScrollTo>
             </li>
             <li>
@@ -84,13 +86,16 @@ class TopBar3 extends Component {
             </li>
           </ul>
           <div className="m-auto" />
-          <ul className="navigation">
-            <li>
-              <a href="/dashboard">
-                <Icon className="mr-16">person</Icon> My Account
-              </a>
-            </li>
-          </ul>
+          <Fab
+                  variant="extended"
+                  size="medium"
+                  color="secondary"
+                  aria-label="Buy"
+                  className=""
+                >
+                  <Icon className="mr-16">flight_takeoff</Icon>
+                  Sign Up
+                </Fab>
           <IconButton
             className="header__toggle"
             onClick={() => {
