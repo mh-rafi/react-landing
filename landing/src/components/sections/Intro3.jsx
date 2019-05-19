@@ -15,7 +15,7 @@ class Intro3 extends Component {
                 Better Management; Less Expense
               </h1>
               <div className="section-intro1__subtitle">
-                Dont wast money! Try free version first.
+                Not sure about Pro? Try trial first!
               </div>
 
               <div className="section-intro1__list">
