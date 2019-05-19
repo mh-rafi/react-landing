@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid, Card, Icon, Button } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 
 class Service7 extends Component {
   itemList = [

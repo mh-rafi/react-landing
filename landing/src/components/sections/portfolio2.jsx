@@ -3,10 +3,9 @@ import Card from "@material-ui/core/Card";
 
 import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
-import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
-import { Button, Icon } from "@material-ui/core";
-import Carousel from "./../common/carousel";
+import { Icon } from "@material-ui/core";
+import Carousel from "../common/Carousel";
 
 class Portfolio2 extends Component {
   state = {};

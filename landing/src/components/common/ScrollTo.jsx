@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { scrollTo } from "../Utils";
+import { scrollTo } from "../../Utils";
 
 class ScrollTo extends Component {
   state = {};
@@ -7,10 +7,11 @@ class ScrollTo extends Component {
     let { to, onScroll } = this.props;
     return (
       <a
-        href={`#`}
+        href={`#${to}`}
         onClick={e => {
           scrollTo(to);
           if (onScroll) {
+            e.preventDefault();
             onScroll(e);
           }
         }}

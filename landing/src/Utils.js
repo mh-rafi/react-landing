@@ -26,8 +26,7 @@ function currentYPosition() {
   return 0;
 }
 
-function elmYPosition(eID) {
-  var elm = document.getElementById(eID);
+function elmYPosition(elm) {
   var y = elm.offsetTop;
   var node = elm;
   while (node.offsetParent && node.offsetParent !== document.body) {
@@ -38,11 +37,12 @@ function elmYPosition(eID) {
 }
 
 export function scrollTo(elmID) {
-  if (!elmID) {
+  var elm = document.getElementById(elmID);
+  if (!elmID || !elm) {
     return;
   }
   var startY = currentYPosition();
-  var stopY = elmYPosition(elmID);
+  var stopY = elmYPosition(elm);
   var distance = stopY > startY ? stopY - startY : startY - stopY;
   if (distance < 100) {
     scrollTo(0, stopY);
@@ -55,15 +55,29 @@ export function scrollTo(elmID) {
   var timer = 0;
   if (stopY > startY) {
     for (var i = startY; i < stopY; i += step) {
-      setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+      setTimeout(
+        (function(leapY) {
+          return () => {
+            window.scrollTo(0, leapY);
+          };
+        })(leapY),
+        timer * speed
+      );
       leapY += step;
       if (leapY > stopY) leapY = stopY;
       timer++;
     }
     return;
   }
-  for (var i = startY; i > stopY; i -= step) {
-    setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+  for (let i = startY; i > stopY; i -= step) {
+    setTimeout(
+      (function(leapY) {
+        return () => {
+          window.scrollTo(0, leapY);
+        };
+      })(leapY),
+      timer * speed
+    );
     leapY -= step;
     if (leapY < stopY) leapY = stopY;
     timer++;

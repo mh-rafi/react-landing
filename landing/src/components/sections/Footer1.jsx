@@ -50,27 +50,16 @@ class Footer1 extends Component {
                 </p>
 
                 <div className="mt-32 footer1__disclaimer__link">
-                  <a href="#" className="px-8">
+                  <a href="#linkedin" className="px-8">
                     <img src="/assets/images/social-linkedin.png" alt="" />
                   </a>
-                  <a href="#" className="px-8">
+                  <a href="#twitter" className="px-8">
                     <img src="/assets/images/social-twitter.png" alt="" />
                   </a>
-                  <a href="#" className="px-8">
+                  <a href="#facebook" className="px-8">
                     <img src="/assets/images/social-facebook.png" alt="" />
                   </a>
-                  {/* <Icon className="mr-16 text-light-white">
-                    <Mail />
-                  </Icon>
-                  <Icon className="mr-16 text-light-white">
-                    <LocationOn />
-                  </Icon>
-                  <Icon className="mr-16 text-light-white">
-                    <Mail />
-                  </Icon>
-                  <Icon className="mr-16 text-light-white">
-                    <LocationOn />
-                  </Icon> */}
+                  
                 </div>
               </div>
             </Grid>

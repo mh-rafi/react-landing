@@ -3,9 +3,9 @@ import { debounce, classList } from "../../Utils";
 import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
 import { NavLink } from "react-router-dom";
-import ScrollTo from "../ScrollTo";
+import ScrollTo from "../common/ScrollTo";
 
-class TopBar extends Component {
+class TopBar3 extends Component {
   state = {
     isTop: true,
     isClosed: true
@@ -39,7 +39,6 @@ class TopBar extends Component {
   close = () => {
     this.setState({ isClosed: true });
   };
-
   render() {
     let toggleIcon = this.state.isClosed ? "menu" : "close";
     return (
@@ -59,21 +58,20 @@ class TopBar extends Component {
               <NavLink to="/">Demos</NavLink>
             </li>
             <li>
-              <ScrollTo to="intro1" onScroll={this.close}>
+              <ScrollTo to="intro2" onScroll={this.close}>
                 Home
               </ScrollTo>
             </li>
             <li>
-              <ScrollTo to="portfolio1" onScroll={this.close}>
+              <ScrollTo to="portfoli2" onScroll={this.close}>
                 Works
               </ScrollTo>
             </li>
             <li>
-              <ScrollTo to="service1" onScroll={this.close}>
+              <ScrollTo to="service2" onScroll={this.close}>
                 Service
               </ScrollTo>
             </li>
-            
             <li>
               <ScrollTo to="pricing1" onScroll={this.close}>
                 Pricing
@@ -107,4 +105,4 @@ class TopBar extends Component {
   }
 }
 
-export default TopBar;
+export default TopBar3;

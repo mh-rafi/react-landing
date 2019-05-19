@@ -69,7 +69,7 @@ class Service5 extends Component {
                 <h3>{feature.title}</h3>
                 <p>{feature.text}</p>
 
-                <a className="text-brand" href="#">
+                <a className="text-brand" href="#details">
                   View details 
                   <Icon className="service5__link-icon">navigate_next</Icon>
                 </a>

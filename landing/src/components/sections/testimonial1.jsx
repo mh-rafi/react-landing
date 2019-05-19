@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import { Card, CardContent, Fab } from "@material-ui/core";
-import Carousel from "./../common/carousel";
+import { Card, CardContent } from "@material-ui/core";
+import Carousel from "../common/Carousel";
 
 class Testimonial1 extends Component {
   state = {};

@@ -55,7 +55,7 @@ class Intro1 extends Component {
             </Grid>
             <Grid item md={6} >
               <div className="section-intro1__product">
-                <a href="https://themeforest.net/user/mh_rafi/portfolio" className="section-intro1__product__link" target="_blank">
+                <a href="https://themeforest.net/user/mh_rafi/portfolio" className="section-intro1__product__link" target="_blank" rel="noopener noreferrer">
                   <div className="price">$16</div>
                   <span className="price__text">Buy On ThemeForest</span>
                 </a>

@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-import Intro2 from "./sections/intro2";
-import Portfolio2 from "./sections/portfolio2";
-import Testimonial2 from "./sections/testimonial2";
-import Services2 from "./sections/services2";
-import CallToAction1 from "./sections/call-to-action1";
-import Pricing1 from "./sections/pricing1";
-import Contact1 from "./sections/contact1";
-import Footer1 from "./footer1";
-import TopBar2 from "./sections/topbar2";
+import { scrollTo } from "../Utils";
+import Intro2 from "./sections/Intro2";
+import Portfolio2 from "./sections/Portfolio2";
+import Testimonial2 from "./sections/Testimonial2";
+import Services2 from "./sections/Services2";
+import CallToAction1 from "./sections/CallToAction1";
+import Pricing1 from "./sections/Pricing1";
+import Contact1 from "./sections/Contact1";
+import Footer1 from "./sections/Footer1";
+import TopBar2 from "./sections/TopBar2";
 
 class Landing2 extends Component {
   state = {};
+  componentWillUnmount() {
+    scrollTo('root');
+  }
   render() {
     return (
       <div className="landing">

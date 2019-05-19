@@ -7,7 +7,7 @@ import Landing1 from "./components/Landing1";
 import Landing2 from "./components/Landing2";
 import Demo from "./components/Demo";
 import Theme from "./Theme";
-import Landing3 from "./components/landing3";
+import Landing3 from "./components/Landing3";
 
 function App() {
   return (

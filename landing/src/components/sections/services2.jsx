@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Grid from "@material-ui/core/Grid";
 import { Button, Icon } from "@material-ui/core";
-import Carousel from "../common/carousel";
+import Carousel from "../common/Carousel";
 
 class Services2 extends Component {
   state = {};

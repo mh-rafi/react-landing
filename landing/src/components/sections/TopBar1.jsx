@@ -5,7 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
 
-class TopBar2 extends Component {
+class TopBar extends Component {
   state = {
     isTop: true,
     isClosed: true
@@ -59,20 +59,21 @@ class TopBar2 extends Component {
               <NavLink to="/">Demos</NavLink>
             </li>
             <li>
-              <ScrollTo to="intro2" onScroll={this.close}>
+              <ScrollTo to="intro1" onScroll={this.close}>
                 Home
               </ScrollTo>
             </li>
             <li>
-              <ScrollTo to="portfoli2" onScroll={this.close}>
+              <ScrollTo to="portfolio1" onScroll={this.close}>
                 Works
               </ScrollTo>
             </li>
             <li>
-              <ScrollTo to="service2" onScroll={this.close}>
+              <ScrollTo to="service1" onScroll={this.close}>
                 Service
               </ScrollTo>
             </li>
+            
             <li>
               <ScrollTo to="pricing1" onScroll={this.close}>
                 Pricing
@@ -106,4 +107,4 @@ class TopBar2 extends Component {
   }
 }
 
-export default TopBar2;
+export default TopBar;

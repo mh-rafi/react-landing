@@ -1,21 +1,27 @@
 import React, { Component } from "react";
-import Service3 from "./sections/services3";
-import Service4 from "./sections/services4";
-import Service5 from "./sections/services5";
-import Service6 from "./sections/services6";
-import Service7 from "./sections/services7";
-import Testimonial3 from "./sections/testimonial3";
+import { scrollTo } from "../Utils";
+import Service3 from "./sections/Services3";
+import Service4 from "./sections/Services4";
+import Service5 from "./sections/Services5";
+import Service6 from "./sections/Services6";
+import Service7 from "./sections/Services7";
+import Testimonial3 from "./sections/Testimonial3";
 import Intro3 from "./sections/Intro3";
-import TopBar2 from "./sections/topbar2";
+import TopBar3 from "./sections/TopBar3";
 import CallToAction2 from "./sections/CallToAction2";
-import Footer1 from "./footer1";
+import Pricing1 from "./sections/Pricing1";
+import Footer1 from "./sections/Footer1";
 
 class Landing3 extends Component {
   state = {};
+  componentWillUnmount() {
+    scrollTo('root');
+  }
+  
   render() {
     return (
       <div className="landing">
-        <TopBar2/>
+        <TopBar3/>
         <Intro3/>
         <Service3 />
         <Service4 />
@@ -24,6 +30,7 @@ class Landing3 extends Component {
         <Service7 />
         <Testimonial3 />
         <CallToAction2 />
+        <Pricing1 />
         <Footer1 />
       </div>
     );
