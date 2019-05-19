@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.a01f2cfe.chunk.css",
-    "main.js": "/static/js/main.17de6638.chunk.js",
-    "main.js.map": "/static/js/main.17de6638.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.79f0fbff.chunk.css": "/static/css/2.79f0fbff.chunk.css",
-    "static/js/2.a5488c87.chunk.js": "/static/js/2.a5488c87.chunk.js",
-    "static/js/2.a5488c87.chunk.js.map": "/static/js/2.a5488c87.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.30f1eba4d1d28e936aff7a2f569bba79.js": "/precache-manifest.30f1eba4d1d28e936aff7a2f569bba79.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.79f0fbff.chunk.css.map": "/static/css/2.79f0fbff.chunk.css.map",
-    "static/css/main.a01f2cfe.chunk.css.map": "/static/css/main.a01f2cfe.chunk.css.map"
+    "main.css": "/react-landing/static/css/main.c3d2bea9.chunk.css",
+    "main.js": "/react-landing/static/js/main.efe9f76c.chunk.js",
+    "main.js.map": "/react-landing/static/js/main.efe9f76c.chunk.js.map",
+    "runtime~main.js": "/react-landing/static/js/runtime~main.d2321c84.js",
+    "runtime~main.js.map": "/react-landing/static/js/runtime~main.d2321c84.js.map",
+    "static/css/2.49e49c99.chunk.css": "/react-landing/static/css/2.49e49c99.chunk.css",
+    "static/js/2.a626c1e3.chunk.js": "/react-landing/static/js/2.a626c1e3.chunk.js",
+    "static/js/2.a626c1e3.chunk.js.map": "/react-landing/static/js/2.a626c1e3.chunk.js.map",
+    "index.html": "/react-landing/index.html",
+    "precache-manifest.4cc72fea97d26dcc9bb0eaa939af083b.js": "/react-landing/precache-manifest.4cc72fea97d26dcc9bb0eaa939af083b.js",
+    "service-worker.js": "/react-landing/service-worker.js",
+    "static/css/2.49e49c99.chunk.css.map": "/react-landing/static/css/2.49e49c99.chunk.css.map",
+    "static/css/main.c3d2bea9.chunk.css.map": "/react-landing/static/css/main.c3d2bea9.chunk.css.map"
   }
 }
