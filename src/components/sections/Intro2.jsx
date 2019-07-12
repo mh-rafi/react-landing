@@ -6,7 +6,8 @@ class Intro2 extends Component {
   state = {};
   render() {
     return (
-      <section className="section section-intro1 section-intro2" id="intro2">
+      <section className="section section-intro1 section-intro2" id="intro2"
+      style={{background: 'url(./assets/images/home-bg-black.png) center center/cover no-repeat'}}>
         <div className="container">
           <div className="text-center">
             <div className="section-intro1__subtitle mb-24 text-secondary">
@@ -32,7 +33,7 @@ class Intro2 extends Component {
             </div>
           </div>
           <div className="section-intro2__product text-center">
-            <img src="/assets/images/screenshots/landing-intro.png" alt="" />
+            <img src="./assets/images/screenshots/landing-intro.png" alt="" />
           </div>
         </div>
       </section>

@@ -52,7 +52,7 @@ class TopBar3 extends Component {
       >
         <div className="container header-container">
           <div className="brand">
-            <img src="/assets/images/logo-full.png" alt="" />
+            <img src="./assets/images/logo-full.png" alt="" />
           </div>
           <ul className="navigation">
             <li>

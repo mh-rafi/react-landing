@@ -23,7 +23,7 @@ class Landing2 extends Component {
         <Portfolio2 />
         <Testimonial2 />
         <Services2 />
-        <CallToAction1 bg="bg-img-black"/>
+        <CallToAction1 bg="./assets/images/home-bg-black.png"/>
         <Pricing1 />
         <Contact1 />
         <Footer1 />

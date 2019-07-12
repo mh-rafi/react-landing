@@ -42,7 +42,7 @@ class Service7 extends Component {
               </div>
             </Grid>
             <Grid item lg={6} md={6} sm={12} xs={12}>
-              <img src="/assets/images/illustrations/1.svg" alt="analyze" />
+              <img src="./assets/images/illustrations/1.svg" alt="analyze" />
             </Grid>
           </Grid>
         </div>

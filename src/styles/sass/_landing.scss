@@ -128,6 +128,10 @@ body {
     .btn-action {
       margin: 0 !important;
     }
+    @media only screen and (max-width: 767px) {
+      max-width: 90%;
+      min-width: auto;
+    }
   }
 
   // Rounded icon
@@ -288,7 +292,6 @@ body {
 
 // Intro section 1
 .section-intro1 {
-  background: url(/assets/images/home-bg.jpg) center center/cover no-repeat;
   padding: 180px 0 !important;
   color: $white;
   overflow: hidden;
@@ -362,7 +365,9 @@ body {
     max-width: 570px;
     margin: 0 auto 24px;
   }
-
+  @media only screen and (max-width: 767px) {
+    padding: 100px 0 !important;
+  }
   @media only screen and (max-width: 959px) {
     text-align: center;
     .section-intro1__list {
@@ -383,7 +388,6 @@ body {
 .section-intro2 {
   padding: 180px 0 0 !important;
   overflow: visible !important;
-  background: url(/assets/images/home-bg-black.png) center center/cover no-repeat;
   h1, h2, h3, h4, h5, h6 {
     color: $white;
   }
@@ -403,6 +407,7 @@ body {
   }
 
   @include media(767px) {
+    padding: 100px 0 0 !important;
     .section-intro2__product {
       bottom: -63px;
     }
@@ -420,9 +425,6 @@ body {
   color: $black;
   .section-intro1__title {
     color: $brand;
-  }
-  .subscribe-input {
-    min-width: 480px;
   }
 
   .intro3__product {
@@ -544,7 +546,6 @@ body {
 .section-service5 {
   .service5__image-holder {
     img {
-      max-width: 370px;
       border-radius: 4px;
       overflow: hidden;
     }

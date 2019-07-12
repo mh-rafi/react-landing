@@ -20,7 +20,7 @@ class Demo extends Component {
               <Grid item md={4} xs={12}>
                 <NavLink to="/landing1" className="mx-4">
                   <Card className="card text-center">
-                    <img src="/assets/images/screenshots/landing-1.png" alt="" />
+                    <img src="./assets/images/screenshots/landing-1.png" alt="" />
                   </Card>
                 </NavLink>
               </Grid>
@@ -28,7 +28,7 @@ class Demo extends Component {
               <Grid item md={4} xs={12}>
                 <NavLink to="/landing2" className="mx-4">
                   <Card className="card text-center">
-                    <img src="/assets/images/screenshots/landing-2.png" alt="" />
+                    <img src="./assets/images/screenshots/landing-2.png" alt="" />
                   </Card>
                 </NavLink>
               </Grid>
@@ -36,7 +36,7 @@ class Demo extends Component {
               <Grid item md={4} xs={12}>
                 <NavLink to="/landing3" className="mx-4">
                   <Card className="card text-center">
-                    <img src="/assets/images/screenshots/landing-3.png" alt="" />
+                    <img src="./assets/images/screenshots/landing-3.png" alt="" />
                   </Card>
                 </NavLink>
               </Grid>

@@ -7,7 +7,8 @@ class Intro1 extends Component {
   state = { };
   render() {
     return (
-      <section className="section section-intro1" id="intro1">
+      <section className="section section-intro1" id="intro1"
+      style={{background: 'url(./assets/images/home-bg.jpg) center center/cover no-repeat'}}>
         <div className="container">
           <Grid container spacing={24} justify="center">
             <Grid item md={6}>
@@ -59,7 +60,7 @@ class Intro1 extends Component {
                   <div className="price">$16</div>
                   <span className="price__text">Buy On ThemeForest</span>
                 </a>
-                <img src="/assets/images/screenshots/landing-intro.png" alt=""/>
+                <img src="./assets/images/screenshots/landing-intro.png" alt=""/>
               </div>
             </Grid>
           </Grid>

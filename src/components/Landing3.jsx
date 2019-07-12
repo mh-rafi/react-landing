@@ -11,6 +11,7 @@ import TopBar3 from "./sections/TopBar3";
 import CallToAction2 from "./sections/CallToAction2";
 import Pricing1 from "./sections/Pricing1";
 import Footer1 from "./sections/Footer1";
+import Contact1 from "./sections/Contact1";
 
 class Landing3 extends Component {
   state = {};
@@ -31,6 +32,7 @@ class Landing3 extends Component {
         <Testimonial3 />
         <CallToAction2 />
         <Pricing1 />
+        <Contact1 />
         <Footer1 />
       </div>
     );

@@ -47,7 +47,7 @@ class Intro3 extends Component {
             <Grid item md={6}>
               <div className="intro3__product">
                 <img
-                  src="/assets/images/illustrations/2.svg"
+                  src="./assets/images/illustrations/2.svg"
                   alt=""
                 />
               </div>

@@ -5,9 +5,9 @@ class CallToAction1 extends Component {
   state = {};
   render() {
     let { bg } = this.props;
-    let classes = "section section-cta1 "+(bg ? bg : '');
     return (
-      <div className={classes} id="cta1">
+      <div className="section section-cta1" id="cta1"
+      style={{background: `url(${bg || './assets/images/home-bg.jpg'}) center center/cover no-repeat`}}>
         <div className="container">
           <Grid
             container

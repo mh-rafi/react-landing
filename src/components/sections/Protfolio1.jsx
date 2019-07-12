@@ -12,19 +12,19 @@ class Portfolio1 extends Component {
 
   portfoioList = [
     {
-      imageUrl: "/assets/images/sq-12.jpg",
+      imageUrl: "./assets/images/sq-12.jpg",
       name: "Project One",
       description: `Adipisci quas repellat sed. Quasi quaerat aut nam
       possimus vitae dignissimos, sapiente est atque tenetur.`
     },
     {
-      imageUrl: "/assets/images/sq-10.jpg",
+      imageUrl: "./assets/images/sq-10.jpg",
       name: "Project Two",
       description: `Adipisci quas repellat sed. Quasi quaerat aut nam
       possimus vitae dignissimos, sapiente est atque tenetur.`
     },
     {
-      imageUrl: "/assets/images/sq-9.jpg",
+      imageUrl: "./assets/images/sq-9.jpg",
       name: "Project Three",
       description: `Adipisci quas repellat sed. Quasi quaerat aut nam
       possimus vitae dignissimos, sapiente est atque tenetur.`

@@ -8,49 +8,49 @@ class Testimonial1 extends Component {
 
   testimonialList = [
     {
-      companyLogoUrl: "/assets/images/mock-logo-1.png",
+      companyLogoUrl: "./assets/images/mock-logo-1.png",
       comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
       elit. Fugit modi voluptas vero iusto fuga quos totam
       eius, atis magnam tempora doloribus ducimus dolorem
       culpa animi beatae tenetur! Sapiente, quia tempora."`,
       user: {
-        imageUrl: "/assets/images/face-1.jpg",
+        imageUrl: "./assets/images/face-1.jpg",
         name: "John Doe",
         designation: "Product Manager"
       }
     },
     {
-      companyLogoUrl: "/assets/images/mock-logo-2.png",
+      companyLogoUrl: "./assets/images/mock-logo-2.png",
       comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
       elit. Fugit modi voluptas vero iusto fuga quos totam
       eius, atis magnam tempora doloribus ducimus dolorem
       culpa animi beatae tenetur! Sapiente, quia tempora."`,
       user: {
-        imageUrl: "/assets/images/face-2.jpg",
+        imageUrl: "./assets/images/face-2.jpg",
         name: "Adam Smith",
         designation: "CEO"
       }
     },
     {
-      companyLogoUrl: "/assets/images/mock-logo-3.png",
+      companyLogoUrl: "./assets/images/mock-logo-3.png",
       comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
       elit. Fugit modi voluptas vero iusto fuga quos totam
       eius, atis magnam tempora doloribus ducimus dolorem
       culpa animi beatae tenetur! Sapiente, quia tempora."`,
       user: {
-        imageUrl: "/assets/images/face-3.jpg",
+        imageUrl: "./assets/images/face-3.jpg",
         name: "John White",
         designation: "Software Engineer"
       }
     },
     {
-      companyLogoUrl: "/assets/images/mock-logo-4.png",
+      companyLogoUrl: "./assets/images/mock-logo-4.png",
       comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
       elit. Fugit modi voluptas vero iusto fuga quos totam
       eius, atis magnam tempora doloribus ducimus dolorem
       culpa animi beatae tenetur! Sapiente, quia tempora."`,
       user: {
-        imageUrl: "/assets/images/face-4.jpg",
+        imageUrl: "./assets/images/face-4.jpg",
         name: "Jessica Hiche",
         designation: "CEO"
       }

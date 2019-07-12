@@ -51,13 +51,13 @@ class Footer1 extends Component {
 
                 <div className="mt-32 footer1__disclaimer__link">
                   <a href="#linkedin" className="px-8">
-                    <img src="/assets/images/social-linkedin.png" alt="" />
+                    <img src="./assets/images/social-linkedin.png" alt="" />
                   </a>
                   <a href="#twitter" className="px-8">
-                    <img src="/assets/images/social-twitter.png" alt="" />
+                    <img src="./assets/images/social-twitter.png" alt="" />
                   </a>
                   <a href="#facebook" className="px-8">
-                    <img src="/assets/images/social-facebook.png" alt="" />
+                    <img src="./assets/images/social-facebook.png" alt="" />
                   </a>
                   
                 </div>

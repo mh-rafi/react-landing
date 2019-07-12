@@ -12,7 +12,8 @@ import Landing3 from "./components/Landing3";
 function App() {
   return (
     <MuiThemeProvider theme={Theme}>
-      <Router>
+      {/* <Router basename="/react-landing"> */}
+      <Router basename="/">
         <Switch>
           <Route path="/" component={Demo} exact />
           <Route path="/landing1" component={Landing1} />
