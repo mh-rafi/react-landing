@@ -56,7 +56,7 @@ class Testimonial2 extends Component {
             </p>
           </div>
 
-          <Grid container spacing={24}>
+          <Grid container spacing={3}>
             {this.testimonialList.map((testimonial, index) => (
               <Grid item md={4} sm={4} key={index}>
                 <Card className="h-100 px-24 card">

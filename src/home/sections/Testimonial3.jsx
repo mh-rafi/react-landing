@@ -55,13 +55,13 @@ class Testimonial3 extends Component {
             <h2>We Are Trusted</h2>
             <p>Access integrations and new features in a matter of seconds</p>
           </div>
-          <Grid container spacing={32}>
+          <Grid container spacing={4}>
             {this.cardList.map((card, index) => (
               <Grid item lg={6} md={6} sm={12} xs={12} key={index}>
                 <Card className="py-32 px-24 card">
                   <h4 className="text-gray">{card.title}</h4>
                   <p>{card.text}</p>
-                  <Grid container spacing={16} alignItems="center">
+                  <Grid container spacing={2} alignItems="center">
                     <Grid item>
                       <img src={card.user.imageUrl} alt="face" />
                     </Grid>

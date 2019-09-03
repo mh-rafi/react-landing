@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { debounce, classList } from "../../Utils";
+import { debounce, classList } from "utils";
 import Icon from "@material-ui/core/Icon";
 import Fab from "@material-ui/core/Fab";
 import IconButton from "@material-ui/core/IconButton";
@@ -12,24 +12,29 @@ class TopBar3 extends Component {
     isClosed: true
   };
   handleScrollRef;
-
+  scrollableElement;
   componentDidMount() {
-    if (window) {
+    this.scrollableElement = document.querySelector(".scrollable-content");
+    if (!this.scrollableElement) this.scrollableElement = window;
+    if (this.scrollableElement) {
       this.handleScrollRef = this.handleScroll();
-      window.addEventListener("scroll", this.handleScrollRef);
+      this.scrollableElement.addEventListener("scroll", this.handleScrollRef);
     }
   }
 
   componentWillUnmount() {
-    if (window) {
-      window.removeEventListener("scroll", this.handleScrollRef);
+    if (this.scrollableElement) {
+      this.scrollableElement.removeEventListener(
+        "scroll",
+        this.handleScrollRef
+      );
     }
   }
 
   handleScroll() {
     return debounce(() => {
-      if (window) {
-        let isTop = window.scrollY < 100;
+      if (this.scrollableElement) {
+        let isTop = this.scrollableElement.scrollY < 100;
         if (isTop !== this.state.isTop) {
           this.setState({ isTop });
         }
@@ -63,7 +68,7 @@ class TopBar3 extends Component {
                 Home
               </ScrollTo>
             </li>
-            
+
             <li>
               <ScrollTo to="service3" onScroll={this.close}>
                 Service
@@ -87,15 +92,15 @@ class TopBar3 extends Component {
           </ul>
           <div className="m-auto" />
           <Fab
-                  variant="extended"
-                  size="medium"
-                  color="secondary"
-                  aria-label="Buy"
-                  className=""
-                >
-                  <Icon className="mr-16">flight_takeoff</Icon>
-                  Sign Up
-                </Fab>
+            variant="extended"
+            size="medium"
+            color="secondary"
+            aria-label="Buy"
+            className=""
+          >
+            <Icon className="mr-16">flight_takeoff</Icon>
+            Sign Up
+          </Fab>
           <IconButton
             className="header__toggle"
             onClick={() => {

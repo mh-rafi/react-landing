@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { scrollTo } from "../Utils";
+import { scrollTo } from "utils";
 import Service3 from "./sections/Services3";
 import Service4 from "./sections/Services4";
 import Service5 from "./sections/Services5";
@@ -16,14 +16,14 @@ import Contact1 from "./sections/Contact1";
 class Landing3 extends Component {
   state = {};
   componentWillUnmount() {
-    scrollTo('root');
+    scrollTo("root");
   }
-  
+
   render() {
     return (
       <div className="landing">
-        <TopBar3/>
-        <Intro3/>
+        <TopBar3 />
+        <Intro3 />
         <Service3 />
         <Service4 />
         <Service5 />

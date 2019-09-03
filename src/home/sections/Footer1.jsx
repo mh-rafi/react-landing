@@ -5,7 +5,7 @@ class Footer1 extends Component {
   state = {};
   render() {
     return (
-      <div className="section-footer1 light-dark" id="footer1">
+      <div className="section-footer1 bg-light-dark" id="footer1">
         <div className="container">
           <Grid container>
             <Grid item lg={6} md={6} sm={12}>
@@ -59,7 +59,6 @@ class Footer1 extends Component {
                   <a href="#facebook" className="px-8">
                     <img src="./assets/images/social-facebook.png" alt="" />
                   </a>
-                  
                 </div>
               </div>
             </Grid>

@@ -38,7 +38,6 @@ class Service5 extends Component {
     return (
       <div className="section section-service5 light-gray" id="service5">
         <div className="container">
-          
           {/* tab view */}
           <Tabs
             value={value}
@@ -55,13 +54,17 @@ class Service5 extends Component {
 
           <Grid
             container
-            spacing={32}
+            spacing={4}
             className="mt-16 fade-in"
             alignItems="center"
           >
             <Grid item lg={5} md={7} sm={12} xs={12}>
               <div className="service5__image-holder">
-                <img className="elevation-3" src={feature.imageUrl} alt="building" />
+                <img
+                  className="elevation-3"
+                  src={feature.imageUrl}
+                  alt="building"
+                />
               </div>
             </Grid>
             <Grid item lg={5} md={7} sm={12} xs={12}>
@@ -70,7 +73,7 @@ class Service5 extends Component {
                 <p>{feature.text}</p>
 
                 <a className="text-brand" href="#details">
-                  View details 
+                  View details
                   <Icon className="service5__link-icon">navigate_next</Icon>
                 </a>
               </div>

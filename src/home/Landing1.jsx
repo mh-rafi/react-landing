@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { scrollTo } from "../Utils";
+import { scrollTo } from "utils";
 import Intro1 from "./sections/Intro1";
 import TopBar from "./sections/TopBar1";
 import Services1 from "./sections/Services1";
@@ -13,7 +13,7 @@ import Footer1 from "./sections/Footer1";
 class Landing1 extends Component {
   state = {};
   componentWillUnmount() {
-    scrollTo('root');
+    scrollTo("root");
   }
   render() {
     return (

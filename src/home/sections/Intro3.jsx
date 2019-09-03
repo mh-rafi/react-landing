@@ -9,7 +9,7 @@ class Intro3 extends Component {
     return (
       <section className="section section-intro1 section-intro3" id="intro3">
         <div className="container">
-          <Grid container spacing={24} justify="center">
+          <Grid container spacing={3} justify="center">
             <Grid item md={6}>
               <h1 className="section-intro1__title">
                 Better Management; Less Expense
@@ -31,7 +31,11 @@ class Intro3 extends Component {
               </div>
 
               <div className="subscribe-input">
-                <input className="email-input" type="text" placeholder="Your email"/>
+                <input
+                  className="email-input"
+                  type="text"
+                  placeholder="Your email"
+                />
                 <Fab
                   variant="extended"
                   size="large"
@@ -46,10 +50,7 @@ class Intro3 extends Component {
             </Grid>
             <Grid item md={6}>
               <div className="intro3__product">
-                <img
-                  src="./assets/images/illustrations/2.svg"
-                  alt=""
-                />
+                <img src="./assets/images/illustrations/2.svg" alt="" />
               </div>
             </Grid>
           </Grid>

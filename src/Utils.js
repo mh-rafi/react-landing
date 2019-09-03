@@ -36,7 +36,7 @@ function elmYPosition(elm) {
   return y;
 }
 
-export function scrollTo(elmID) {
+export function scrollTo(scrollableElement, elmID) {
   var elm = document.getElementById(elmID);
   if (!elmID || !elm) {
     return;
@@ -58,7 +58,7 @@ export function scrollTo(elmID) {
       setTimeout(
         (function(leapY) {
           return () => {
-            window.scrollTo(0, leapY);
+            scrollableElement.scrollTo(0, leapY);
           };
         })(leapY),
         timer * speed
@@ -73,7 +73,7 @@ export function scrollTo(elmID) {
     setTimeout(
       (function(leapY) {
         return () => {
-          window.scrollTo(0, leapY);
+          scrollableElement.scrollTo(0, leapY);
         };
       })(leapY),
       timer * speed

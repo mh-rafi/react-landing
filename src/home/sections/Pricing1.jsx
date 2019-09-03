@@ -98,7 +98,7 @@ class Pricing1 extends Component {
             />
           </div>
 
-          <Grid container spacing={16}>
+          <Grid container spacing={2}>
             {this.getPriceList().map(plan => {
               let { title, subtitle, price, allowedOfferIndexList } = plan;
 

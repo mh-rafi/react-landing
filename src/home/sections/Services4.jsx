@@ -38,7 +38,7 @@ class Service4 extends Component {
             <p>Access integrations and new features in a matter of seconds</p>
           </div>
           <div className="text-center">
-            <Grid container spacing={40}>
+            <Grid container spacing={5}>
               {this.cardList.map((card, index) => (
                 <Grid item lg={6} md={6} sm={12} xs={12} key={index}>
                   <Card className="service4__card card">

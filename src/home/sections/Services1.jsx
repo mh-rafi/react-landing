@@ -46,7 +46,7 @@ class Services1 extends Component {
             </p>
           </div>
 
-          <Grid container spacing={24} alignContent="stretch">
+          <Grid container spacing={3} alignContent="stretch">
             {this.serviceList.map(service => (
               <Grid item md={3} sm={6} key={service.title}>
                 <Card className="service1__card service__card card">

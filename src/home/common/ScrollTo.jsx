@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import { scrollTo } from "../../Utils";
+import { scrollTo } from "utils";
 
 class ScrollTo extends Component {
   state = {};
+  appContainer = document.querySelector(".scrollable-content");
   render() {
     let { to, onScroll } = this.props;
+
     return (
       <a
         href={`#${to}`}
         onClick={e => {
-          scrollTo(to);
+          scrollTo(this.appContainer ? this.appContainer : window, to);
           if (onScroll) {
             e.preventDefault();
             onScroll(e);

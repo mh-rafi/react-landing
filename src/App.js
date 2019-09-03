@@ -3,11 +3,11 @@ import "./styles/sass/app.scss";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 
-import Landing1 from "./components/Landing1";
-import Landing2 from "./components/Landing2";
-import Demo from "./components/Demo";
-import Theme from "./Theme";
-import Landing3 from "./components/Landing3";
+import Landing1 from "./home/Landing1";
+import Landing2 from "./home/Landing2";
+import Landing3 from "./home/Landing3";
+import Demo from "./home/Demo";
+import Theme from "./theme";
 
 function App() {
   return (

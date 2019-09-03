@@ -26,10 +26,9 @@ class Service3 extends Component {
     return (
       <div className="section section-service3 light-gray" id="service3">
         <div className="container">
-          
-          <Grid container spacing={40} alignItems="center">
+          <Grid container spacing={5} alignItems="center">
             <Grid item lg={6} md={6} sm={12}>
-              <Grid container spacing={32}>
+              <Grid container spacing={4}>
                 {this.cardList.map((card, index) => (
                   <Grid item lg={6} md={6} sm={6} xs={12} key={index}>
                     <Card className="service__card p-24 card text-center h-100">
@@ -43,9 +42,7 @@ class Service3 extends Component {
               </Grid>
             </Grid>
             <Grid item lg={6} md={6} sm={12}>
-              <h2 className="">
-                Made by business people for business people
-              </h2>
+              <h2 className="">Made by business people for business people</h2>
               <p>
                 Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no,
                 has eu lorem convenire incorrupte. Lorem ipsum dolor sit amet,

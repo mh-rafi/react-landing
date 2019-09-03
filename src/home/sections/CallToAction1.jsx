@@ -6,12 +6,18 @@ class CallToAction1 extends Component {
   render() {
     let { bg } = this.props;
     return (
-      <div className="section section-cta1" id="cta1"
-      style={{background: `url(${bg || './assets/images/home-bg.jpg'}) center center/cover no-repeat`}}>
+      <div
+        className="section section-cta1"
+        id="cta1"
+        style={{
+          background: `url(${bg ||
+            "./assets/images/home-bg.jpg"}) center center/cover no-repeat`
+        }}
+      >
         <div className="container">
           <Grid
             container
-            spacing={24}
+            spacing={3}
             direction="row"
             alignItems="center"
             justify="flex-start"

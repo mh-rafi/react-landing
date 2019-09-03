@@ -29,7 +29,7 @@ class Service7 extends Component {
     return (
       <div className="section section-service7 light-gray" id="service7">
         <div className="container">
-          <Grid container alignItems="center" spacing={40}>
+          <Grid container alignItems="center" spacing={5}>
             <Grid item lg={6} md={6} sm={12} xs={12}>
               <div className="service7__card__description">
                 <h2>Every business matters. We give you tools to succeed.</h2>

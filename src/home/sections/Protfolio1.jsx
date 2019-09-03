@@ -41,7 +41,7 @@ class Portfolio1 extends Component {
               unde inventore molestias ab adipisci eius nisi placeat at.
             </p>
           </div>
-          <Grid container spacing={24}>
+          <Grid container spacing={3}>
             {this.portfoioList.map((portfolio, index) => (
               <Grid item md={4} sm={4} key={index}>
                 <Card className="portfolio1__card card">
