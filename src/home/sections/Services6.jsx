@@ -40,7 +40,7 @@ class Service6 extends Component {
                 key={index}
                 className="text-center"
               >
-                <div className="sevice6__circle service__card p-24 card">
+                <div className="sevice6__circle service__card p-6 card">
                   <Icon className="card__icon-64"> {card.icon} </Icon>
                 </div>
                 <p className="text-uppercase">{card.text}</p>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { Fab, Icon } from "@material-ui/core";
 
-
 class Contact1 extends Component {
   state = {
     name: "",
@@ -40,7 +39,7 @@ class Contact1 extends Component {
             onError={errors => null}
           >
             <TextValidator
-              className="mb-16 w-100"
+              className="mb-4 w-full"
               label="Name"
               onChange={this.handleChange}
               name="name"
@@ -49,7 +48,7 @@ class Contact1 extends Component {
               errorMessages={["this field is required"]}
             />
             <TextValidator
-              className="my-16 w-100"
+              className="my-4 w-full"
               label="Email"
               onChange={this.handleChange}
               name="email"
@@ -59,7 +58,7 @@ class Contact1 extends Component {
               errorMessages={["this field is required", "email is not valid"]}
             />
             <TextValidator
-              className="my-16 w-100"
+              className="my-4 w-full"
               label="Subject"
               onChange={this.handleChange}
               name="subject"
@@ -68,7 +67,7 @@ class Contact1 extends Component {
               errorMessages={["this field is required"]}
             />
             <TextValidator
-              className="my-16 mb-32 w-100"
+              className="my-4 mb-8 w-full"
               label="Message"
               onChange={this.handleChange}
               name="message"

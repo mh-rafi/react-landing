@@ -94,7 +94,7 @@ class TopBar extends Component {
           <ul className="navigation">
             <li>
               <a href="/dashboard">
-                <Icon className="mr-16">person</Icon> My Account
+                <Icon className="mr-4">person</Icon> My Account
               </a>
             </li>
           </ul>

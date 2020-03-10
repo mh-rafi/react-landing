@@ -43,9 +43,9 @@ class Intro1 extends Component {
                   size="large"
                   color="primary"
                   aria-label="Buy"
-                  className="btn-action m-8"
+                  className="btn-action m-2"
                 >
-                  <Icon className="mr-16">flight_takeoff</Icon>
+                  <Icon className="mr-4">flight_takeoff</Icon>
                   Take off
                 </Fab>
 
@@ -53,9 +53,9 @@ class Intro1 extends Component {
                   variant="extended"
                   size="large"
                   aria-label="Download"
-                  className="btn-action btn-white m-8"
+                  className="btn-action btn-white m-2"
                 >
-                  <Icon className="mr-16">alarm_on</Icon>
+                  <Icon className="mr-4">alarm_on</Icon>
                   14 days free trial
                 </Fab>
               </div>

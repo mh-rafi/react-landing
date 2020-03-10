@@ -15,7 +15,7 @@ body {
 @import "~swiper/dist/css/swiper.min.css";
 
 .landing {
-  // color: $black;
+  color: $black;
 
   // h1,h2,h3,h4,h5,h6 {
   //   color: $black;
@@ -144,16 +144,16 @@ body {
     height: 3.5rem;
     width: 3.5rem;
     border-radius: 64px;
-    border: 2px solid rgba($brand, 0.8);
+    border: 2px solid rgba($brand-rgb, 0.8);
     color: $brand;
-    background: rgba($brand, 0.2);
+    background: rgba($brand-rgb, 0.2);
     .material-icons {
       font-size: 1.5rem;
     }
     &.secondary {
-      border: 2px solid rgba($secondary, 0.8);
+      border: 2px solid rgba($secondary-rgb, 0.8);
       color: $secondary;
-      background: rgba($secondary, 0.2);
+      background: rgba($secondary-rgb, 0.2);
     }
   }
 

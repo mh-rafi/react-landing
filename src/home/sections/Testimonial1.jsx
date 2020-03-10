@@ -71,11 +71,11 @@ class Testimonial1 extends Component {
 
           <Carousel>
             {this.testimonialList.map((testimonial, index) => (
-              <Card className="h-100 px-24 card" key={index}>
+              <Card className="h-full px-6 card" key={index}>
                 <CardContent className="testimonial1__card-content">
-                  <div className="pb-16">
+                  <div className="pb-4">
                     <img
-                      className="p-0 m-0 pb-24 pt-16"
+                      className="pb-6 pt-4"
                       src={testimonial.companyLogoUrl}
                       alt="logo"
                     />
@@ -88,7 +88,7 @@ class Testimonial1 extends Component {
                       src={testimonial.user.imageUrl}
                       alt="user"
                     />
-                    <div className="pl-16">
+                    <div className="pl-4">
                       <p className="m-0">
                         <strong>{testimonial.user.name}</strong>
                       </p>

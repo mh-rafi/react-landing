@@ -64,7 +64,7 @@ class Portfolio2 extends Component {
                     <p>{portfolio.description}</p>
                     <Divider />
                   </div>
-                  <div className="pt-16">
+                  <div className="pt-4">
                     <IconButton>
                       <Icon>link</Icon>
                     </IconButton>

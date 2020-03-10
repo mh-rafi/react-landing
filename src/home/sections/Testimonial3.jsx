@@ -58,7 +58,7 @@ class Testimonial3 extends Component {
           <Grid container spacing={4}>
             {this.cardList.map((card, index) => (
               <Grid item lg={6} md={6} sm={12} xs={12} key={index}>
-                <Card className="py-32 px-24 card">
+                <Card className="py-8 px-6 card">
                   <h4 className="text-gray">{card.title}</h4>
                   <p>{card.text}</p>
                   <Grid container spacing={2} alignItems="center">

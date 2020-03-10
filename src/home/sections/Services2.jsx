@@ -55,7 +55,7 @@ class Services2 extends Component {
           <Carousel>
             {this.serviceList.map((service, index) => (
               <Card
-                className="service1__card service__card px-24 card"
+                className="service1__card service__card px-6 card"
                 key={index}
               >
                 <CardContent className="service1__card__content">
@@ -66,7 +66,7 @@ class Services2 extends Component {
                     <h3 className="font-light">{service.title}</h3>
                     <p>{service.text}</p>
                   </div>
-                  <div className="pt-16">
+                  <div className="pt-4">
                     <Button>READ MORE</Button>
                   </div>
                 </CardContent>

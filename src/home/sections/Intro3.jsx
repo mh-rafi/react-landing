@@ -43,7 +43,7 @@ class Intro3 extends Component {
                   aria-label="Buy"
                   className="btn-action m-8"
                 >
-                  <Icon className="mr-16">flight_takeoff</Icon>
+                  <Icon className="mr-4">flight_takeoff</Icon>
                   Subscribe
                 </Fab>
               </div>

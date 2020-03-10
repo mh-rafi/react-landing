@@ -8,7 +8,7 @@ class CallToAction2 extends Component {
     return (
       <section className="section section-cta2 light-gray" id="cta2">
         <div className="container text-center">
-          <h2 className="mb-32">Subscribe & Request a demo</h2>
+          <h2 className="mb-8">Subscribe & Request a demo</h2>
           <div className="subscribe-input">
             <input
               className="email-input"
@@ -22,7 +22,7 @@ class CallToAction2 extends Component {
               aria-label="Buy"
               className="btn-action m-8"
             >
-              <Icon className="mr-16">flight_takeoff</Icon>
+              <Icon className="mr-4">flight_takeoff</Icon>
               Subscribe
             </Fab>
           </div>

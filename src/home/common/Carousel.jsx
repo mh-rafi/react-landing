@@ -51,16 +51,16 @@ class Carousel extends Component {
     let { children } = this.props;
 
     return (
-      <div className="relative w-100">
-        <div className="swiper-container mx-28">
+      <div className="relative w-full">
+        <div className="swiper-container mx-7">
           <div className="swiper-wrapper">
             {Children.map(children, (child, index) => (
-              <div className="swiper-slide p-4 pb-24">{child}</div>
+              <div className="swiper-slide p-1 pb-6">{child}</div>
             ))}
           </div>
 
           {/* pagination */}
-          <div className="swiper-pagination relative mt-24" />
+          <div className="swiper-pagination relative mt-6" />
         </div>
 
         {/* navigation */}

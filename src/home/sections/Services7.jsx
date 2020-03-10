@@ -36,7 +36,7 @@ class Service7 extends Component {
                 <p>{`Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.
               \nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea.`}</p>
 
-                <Button variant="contained" color="secondary" className="mt-16">
+                <Button variant="contained" color="secondary" className="mt-4">
                   Try it free
                 </Button>
               </div>

@@ -25,16 +25,16 @@ class Footer1 extends Component {
             <Grid item lg={3} md={3} sm={12}>
               <div className="footer1__contact">
                 <h4>Contact</h4>
-                <div className="px-16 my-32">
+                <div className="px-4 my-8">
                   <Icon className="footer1__contact__icon">mail</Icon>
-                  <div className="pl-16">
+                  <div className="pl-4">
                     <h5 className="m-0 p-0">Email</h5>
                     <p className="m-0 p-0">email@abc.com</p>
                   </div>
                 </div>
-                <div className="px-16 mt-32">
+                <div className="px-4 mt-8">
                   <Icon className="footer1__contact__icon">location_on</Icon>
-                  <div className="pl-16">
+                  <div className="pl-4">
                     <h5 className="m-0 p-0">Adress</h5>
                     <p className="m-0 p-0">Topoban, Akhalia Sylhet 3114, BD</p>
                   </div>
@@ -49,14 +49,14 @@ class Footer1 extends Component {
                   Officiis perferendis rem, aut aliquam neque nam?
                 </p>
 
-                <div className="mt-32 footer1__disclaimer__link">
-                  <a href="#linkedin" className="px-8">
+                <div className="mt-8 footer1__disclaimer__link">
+                  <a href="#linkedin" className="px-2">
                     <img src="./assets/images/social-linkedin.png" alt="" />
                   </a>
-                  <a href="#twitter" className="px-8">
+                  <a href="#twitter" className="px-2">
                     <img src="./assets/images/social-twitter.png" alt="" />
                   </a>
-                  <a href="#facebook" className="px-8">
+                  <a href="#facebook" className="px-2">
                     <img src="./assets/images/social-facebook.png" alt="" />
                   </a>
                 </div>

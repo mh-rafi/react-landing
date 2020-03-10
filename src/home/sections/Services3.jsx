@@ -31,8 +31,8 @@ class Service3 extends Component {
               <Grid container spacing={4}>
                 {this.cardList.map((card, index) => (
                   <Grid item lg={6} md={6} sm={6} xs={12} key={index}>
-                    <Card className="service__card p-24 card text-center h-100">
-                      <div className="rounded-icon secondary mb-16">
+                    <Card className="service__card p-6 card text-center h-full">
+                      <div className="rounded-icon secondary mb-4">
                         <Icon>{card.icon}</Icon>
                       </div>
                       <p className="m-0 text-uppercase">{card.text} </p>

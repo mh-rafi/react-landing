@@ -52,7 +52,7 @@ class Portfolio1 extends Component {
                       <p>{portfolio.description}</p>
                       <Divider />
                     </div>
-                    <div className="pt-16">
+                    <div className="pt-4">
                       <IconButton>
                         <Icon>link</Icon>
                       </IconButton>
@@ -66,7 +66,7 @@ class Portfolio1 extends Component {
             ))}
           </Grid>
 
-          <div className="text-center pt-40">
+          <div className="text-center pt-9">
             <Button variant="contained" size="large" color="secondary">
               load more
             </Button>

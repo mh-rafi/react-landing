@@ -8,20 +8,25 @@ import Landing2 from "./home/Landing2";
 import Landing3 from "./home/Landing3";
 import Demo from "./home/Demo";
 import Theme from "./theme";
+import CssVars from "./home/common/CssVars";
+import Landing4 from "./home/Landing4";
 
 function App() {
   return (
     <MuiThemeProvider theme={Theme}>
-      {/* <Router basename="/react-landing"> */}
-      <Router basename="/">
-        <Switch>
-          <Route path="/" component={Demo} exact />
-          <Route path="/landing1" component={Landing1} />
-          <Route path="/landing2" component={Landing2} />
-          <Route path="/landing3" component={Landing3} />
-          {/* <Route component={Error} /> */}
-        </Switch>
-      </Router>
+      <CssVars>
+        {/* <Router basename="/react-landing"> */}
+        <Router basename="/">
+          <Switch>
+            <Route path="/" component={Demo} exact />
+            <Route path="/landing1" component={Landing1} />
+            <Route path="/landing2" component={Landing2} />
+            <Route path="/landing3" component={Landing3} />
+            <Route path="/landing4" component={Landing4} />
+            {/* <Route component={Error} /> */}
+          </Switch>
+        </Router>
+      </CssVars>
     </MuiThemeProvider>
   );
 }

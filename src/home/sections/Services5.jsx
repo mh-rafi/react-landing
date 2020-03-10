@@ -55,7 +55,7 @@ class Service5 extends Component {
           <Grid
             container
             spacing={4}
-            className="mt-16 fade-in"
+            className="mt-4 fade-in"
             alignItems="center"
           >
             <Grid item lg={5} md={7} sm={12} xs={12}>

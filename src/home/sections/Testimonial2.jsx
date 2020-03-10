@@ -59,11 +59,11 @@ class Testimonial2 extends Component {
           <Grid container spacing={3}>
             {this.testimonialList.map((testimonial, index) => (
               <Grid item md={4} sm={4} key={index}>
-                <Card className="h-100 px-24 card">
+                <Card className="h-full px-6 card">
                   <CardContent className="testimonial1__card-content">
-                    <div className="pb-16">
+                    <div className="pb-4">
                       <img
-                        className="p-0 m-0 pb-24 pt-16"
+                        className="p-0 m-0 pb-6 pt-4"
                         src={testimonial.companyLogoUrl}
                         alt="logo"
                       />
@@ -76,7 +76,7 @@ class Testimonial2 extends Component {
                         src={testimonial.user.imageUrl}
                         alt="user"
                       />
-                      <div className="pl-16">
+                      <div className="pl-4">
                         <p className="m-0">
                           <strong>{testimonial.user.name}</strong>
                         </p>
@@ -89,7 +89,7 @@ class Testimonial2 extends Component {
             ))}
           </Grid>
 
-          <div className="text-center pt-40">
+          <div className="text-center pt-10">
             <Button variant="contained" size="large" color="secondary">
               load more
             </Button>

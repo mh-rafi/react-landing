@@ -98,7 +98,7 @@ class TopBar3 extends Component {
             aria-label="Buy"
             className=""
           >
-            <Icon className="mr-16">flight_takeoff</Icon>
+            <Icon className="mr-4">flight_takeoff</Icon>
             Sign Up
           </Fab>
           <IconButton
