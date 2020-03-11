@@ -57,7 +57,7 @@ class TopBar extends Component {
       >
         <div className="container header-container">
           <div className="brand">
-            <img src="./assets/images/logo-full.png" alt="" />
+            <img src="./assets/images/react-logo.svg" alt="" />
           </div>
           <ul className="navigation">
             <li>

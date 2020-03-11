@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React, { useState, useEffect } from "react";
 import { debounce, classList } from "utils";
 import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
@@ -7,89 +6,63 @@ import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
 import { Button } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
-  className: props => ({
-    //   color: theme
-  })
-}));
-
 const TopBar4 = props => {
   const [isTop, setIsTop] = useState(true);
   const [isClosed, setIsClosed] = useState(true);
 
-  let scrollableElement = useRef(null);
-  let handleScrollRef = useRef(null);
+  let scrollableElement = document.querySelector(".scrollable-content");
+  if (!scrollableElement) scrollableElement = window;
 
+  let handleScrollRef = null;
   let toggleIcon = isClosed ? "menu" : "close";
-
-  const classes = useStyles(props);
-
-  const setTopBar = () => {
-    if (scrollableElement) {
-      let isCurrentTop = scrollableElement.scrollY < 100;
-      if (isCurrentTop !== isTop) {
-        setIsTop({ isTop: isCurrentTop });
-      }
-    }
-  };
 
   const handleScroll = () => {
     return debounce(() => {
-      console.log("scrolling");
+      if (scrollableElement) {
+        let isCurrentTop = scrollableElement.scrollY < 100;
 
-      setTopBar();
+        if (isCurrentTop !== isTop) {
+          setIsTop(isCurrentTop);
+        }
+      }
     }, 20);
   };
+  handleScrollRef = handleScroll();
 
   const close = () => {
     setIsClosed(false);
   };
 
   useEffect(() => {
-    scrollableElement.current = document.querySelector(".scrollable-content");
-
-    if (!scrollableElement.current) scrollableElement.current = window;
-
-    if (scrollableElement.current) {
-      handleScrollRef.current = handleScroll();
-      scrollableElement.current.addEventListener(
-        "scroll",
-        handleScrollRef.current
-      );
+    if (scrollableElement) {
+      scrollableElement.addEventListener("scroll", handleScrollRef);
     }
 
     return () => {
-      if (scrollableElement.current) {
-        scrollableElement.current.removeEventListener(
-          "scroll",
-          handleScrollRef.current
-        );
+      if (scrollableElement) {
+        scrollableElement.removeEventListener("scroll", handleScrollRef);
       }
     };
-  }, [handleScroll]);
-
-  useEffect(() => {
-    setTopBar();
-  }, []);
+  }, [scrollableElement, handleScrollRef]);
 
   return (
     <section
       className={classList({
         header: true,
-        "header-fixed": isTop,
+        "header-fixed": !isTop,
         closed: isClosed
       })}
     >
       <div className="container header-container">
         <div className="brand">
-          <img src="./assets/images/logo-full.png" alt="" />
+          <img src="./assets/images/react-logo.svg" alt="" />
         </div>
         <ul className="navigation">
           <li>
             <NavLink to="/">Demos</NavLink>
           </li>
           <li>
-            <ScrollTo to="intro1" onScroll={close}>
+            <ScrollTo to="intro4" onScroll={close}>
               Home
             </ScrollTo>
           </li>
@@ -119,7 +92,7 @@ const TopBar4 = props => {
         <div className="navigation flex">
           <NavLink to="/login" className="mr-1">
             <Button
-              className="box-shadow-none px-8 rounded-l hover-bg-primary"
+              className="box-shadow-none px-8 rounded-l hover-bg-primary capitalize"
               variant="outlined"
               color="primary"
             >
@@ -128,7 +101,7 @@ const TopBar4 = props => {
           </NavLink>
           <NavLink to="/signup">
             <Button
-              className="box-shadow-none px-8 rounded-r hover-bg-primary"
+              className="box-shadow-none px-8 rounded-r hover-bg-primary capitalize"
               variant="outlined"
               color="primary"
             >

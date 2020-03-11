@@ -9,6 +9,7 @@ import Pricing1 from "./sections/Pricing1";
 import Contact1 from "./sections/Contact1";
 import Footer1 from "./sections/Footer1";
 import TopBar4 from "./sections/TopBar4";
+import Intro4 from "./sections/Intro4";
 
 class Landing4 extends Component {
   state = {};
@@ -19,7 +20,7 @@ class Landing4 extends Component {
     return (
       <div className="landing">
         <TopBar4 />
-        <Intro1 />
+        <Intro4 />
         <Portfolio1 />
         <Services1 />
         <Testimonial1 />
