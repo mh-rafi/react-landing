@@ -7,7 +7,8 @@ import {
   CardHeader,
   CardContent,
   Button,
-  Divider
+  Divider,
+  makeStyles
 } from "@material-ui/core";
 
 class Pricing1 extends Component {
@@ -70,6 +71,9 @@ class Pricing1 extends Component {
       });
     }
 
+    const useStyles = makeStyles(theme => ({
+      test: props => ({})
+    }));
     return this.pricingList;
   }
 
