@@ -17,6 +17,18 @@ const Theme = createMuiTheme({
   },
   typography: {
     useNextVariants: true
+  },
+  overrides: {
+    MuiButton: {
+      root: {
+        textTransform: "none"
+      }
+    },
+    MuiFab: {
+      root: {
+        textTransform: "none"
+      }
+    }
   }
 });
 

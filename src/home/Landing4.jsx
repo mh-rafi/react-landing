@@ -21,13 +21,13 @@ class Landing4 extends Component {
       <div className="landing">
         <TopBar4 />
         <Intro4 />
-        <Portfolio1 />
+        {/* <Portfolio1 />
         <Services1 />
         <Testimonial1 />
         <CallToAction1 />
         <Pricing1 />
         <Contact1 />
-        <Footer1 />
+        <Footer1 /> */}
       </div>
     );
   }
