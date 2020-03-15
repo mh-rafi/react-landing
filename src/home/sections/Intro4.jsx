@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, useMediaQuery, Button, Fab, Icon } from "@material-ui/core";
-import AppleIcon from "../common/AppleIcon";
+import AppleIcon from "../common/icons/AppleIcon";
 
 const useStyles = makeStyles(theme => ({
   description: props => ({
@@ -13,32 +13,20 @@ const useStyles = makeStyles(theme => ({
   },
 
   musicImage: {
-    boxShadow:
-      "0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)",
-    borderRadius: 26,
-    maxHeight: "500px",
     [theme.breakpoints.down("xs")]: {
       width: "100%"
     }
   },
 
-  dropShadow: {
-    marginTop: 32,
-    height: 36,
-    opacity: 0.75,
-    background:
-      "radial-gradient(ellipse at center,  rgba(0,0,0,0.65) -25%,rgba(0,0,0,0) 55%);"
-  },
-
-  test: {
+  musicImageWrapper: {
     position: "relative",
     display: "inline-block",
-    marginLeft: "100px",
+    // marginLeft: "100px",
     "&::before": {
       content: '" "',
       position: "absolute",
       display: "block",
-      height: "50%",
+      height: "70%",
       left: 0,
       right: 0,
       margin: "0 100px 0 -2000px",
@@ -48,13 +36,28 @@ const useStyles = makeStyles(theme => ({
       transformOrigin: "right bottom",
       transform: "rotate(45deg)",
       zIndex: -1,
-      opacity: 0.1,
+      opacity: 0.1
+    },
 
-      [theme.breakpoints.only("sm")]: {
-        // transform: "rotateX(155deg)"
+    "&::after": {
+      content: '" "',
+      position: "absolute",
+      display: "block",
+      height: 36,
+      width: "75%",
+      marginTop: 32,
+      left: "15%",
+      opacity: 0.75,
+      background:
+        "radial-gradient(ellipse at center,  rgba(0,0,0,0.65) -25%,rgba(0,0,0,0) 55%);"
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+      "&::after": {
+        display: "none"
       },
-
-      [theme.breakpoints.down("xs")]: {
+      "&::before": {
         display: "none"
       }
     }
@@ -70,20 +73,14 @@ const Intro4 = () => {
     <section className="section" id="intro4">
       <div className="relative w-full">
         <div className="container pt-10">
-          <Grid
-            container
-            spacing={isMobile ? 3 : 0}
-            // justify="space-between"
-            alignItems="center"
-          >
+          <Grid container spacing={3} alignItems="center">
             <Grid item lg={6} md={6} sm={6} xs={12}>
-              <div className={classes.test}>
+              <div className={classes.musicImageWrapper}>
                 <img
                   className={classes.musicImage}
-                  src="/assets/images/mobile-1.png"
+                  src="/assets/images/mobile-1.svg"
                   alt="mobile-1"
                 />
-                <div className={classes.dropShadow}></div>
               </div>
             </Grid>
             <Grid item lg={6} md={6} sm={6} xs={12}>
@@ -110,7 +107,7 @@ const Intro4 = () => {
                     variant="extended"
                     color="primary"
                   >
-                    <Icon className="mr-3" fontSize="small">
+                    <Icon fontSize="small" className="mr-3">
                       android
                     </Icon>
                     Play Store
