@@ -38,6 +38,16 @@
 .bg-green {
   background: #08ad6c !important;
 }
+.hover-bg-primary {
+  transition: all 250ms;
+  &:hover {
+    background: $primary !important;
+    color: white !important;
+    [class^="MuiSvgIcon-"] {
+      fill: white !important;
+    }
+  }
+}
 .bg-light-primary {
   &::after {
     background: $primary;

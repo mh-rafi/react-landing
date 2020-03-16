@@ -3,7 +3,7 @@ import { SvgIcon } from "@material-ui/core";
 
 const PcMobileIcon = props => {
   return (
-    <SvgIcon {...props} viewBox="0 0 58 50">
+    <SvgIcon {...props} viewBox="0 0 57.16 49.54">
       <g id="Group_602" data-name="Group 602">
         <g id="Group_601" data-name="Group 601">
           <g id="Group_600" data-name="Group 600">

@@ -67,18 +67,18 @@ const TopBar4 = props => {
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="portfolio1" onScroll={close}>
+            <ScrollTo to="feature4" onScroll={close}>
               Works
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="service1" onScroll={close}>
+            <ScrollTo to="product-analytics" onScroll={close}>
               Service
             </ScrollTo>
           </li>
 
           <li>
-            <ScrollTo to="pricing1" onScroll={close}>
+            <ScrollTo to="pricing2" onScroll={close}>
               Pricing
             </ScrollTo>
           </li>

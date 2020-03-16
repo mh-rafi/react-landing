@@ -3,7 +3,7 @@ import { SvgIcon } from "@material-ui/core";
 
 const RetinaIcon = props => {
   return (
-    <SvgIcon {...props} viewBox="0 0 100 50">
+    <SvgIcon {...props} viewBox="0 0 99.31 49.42">
       <g id="Group_594" data-name="Group 594">
         <path
           id="Path_2417"

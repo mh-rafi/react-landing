@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Button, Fab, Icon } from "@material-ui/core";
-import AppleIcon from "../common/icons/AppleIcon";
+import { Grid, Button, Icon } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   description: props => ({
@@ -26,15 +25,15 @@ const useStyles = makeStyles(theme => ({
       content: '" "',
       position: "absolute",
       display: "block",
-      height: "70%",
+      height: "50%",
+      top: "calc(25% - 34px)",
       left: 0,
       right: 0,
-      margin: "0 100px 0 -2000px",
+      margin: "0 -100px 0 -2000px",
       bottom: 0,
       borderRadius: "300px",
       background: theme.palette.primary.main,
       transformOrigin: "right bottom",
-      transform: "rotate(45deg)",
       zIndex: -1,
       opacity: 0.1
     },
@@ -64,54 +63,47 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Intro4 = () => {
+const ProductAnalytics = () => {
   const classes = useStyles();
 
   return (
-    <section className="section" id="intro4">
-      <div className="container pt-10">
+    <section className="section" id="product-analytics">
+      <div className="container">
         <Grid container spacing={3} alignItems="center">
           <Grid item lg={6} md={6} sm={6} xs={12}>
             <div className={classes.musicImageWrapper}>
               <img
                 className={classes.musicImage}
-                src="/assets/images/mobile-1.svg"
+                src="/assets/images/mobile-3.svg"
                 alt="mobile-1"
               />
             </div>
           </Grid>
           <Grid item lg={6} md={6} sm={6} xs={12}>
             <div>
-              <p className="text-primary m-0 mb-2 text-20">Evalynn Music</p>
-              <h1 className="font-normal text-48 mt-0">Best Music App 2020</h1>
-              <p className={classes.description}>
+              <h1 className="mt-0 font-normal text-44">
+                Great Product Analytics
+              </h1>
+              <p className="mb-6">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet. Lorem
               </p>
-              <Button
-                className={classes.themeText + " rounded px-12 text-black"}
-                variant="outlined"
-                color="primary"
-              >
-                CLICK TO WATCH A VIDEO
-              </Button>
-
-              <div className="mt-25 flex flex-wrap">
-                <Fab
-                  className="mr-6 px-6 mb-4"
-                  variant="extended"
-                  color="primary"
-                >
-                  <Icon fontSize="small" className="mr-3">
-                    android
+              {[1, 2, 3].map(item => (
+                <div key={item} className="flex items-center">
+                  <Icon className="mr-4" color="primary">
+                    done
                   </Icon>
-                  Play Store
-                </Fab>
-                <Fab className="px-6 mb-4" variant="extended" color="primary">
-                  <AppleIcon fontSize="small" className="mr-3" />
-                  App Store
-                </Fab>
-              </div>
+                  <p className="my-2">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  </p>
+                </div>
+              ))}
+              <Button className="mt-6" variant="text" color="primary">
+                CLICK TO WATCH A VIDEO <Icon>navigate_next</Icon>
+              </Button>
             </div>
           </Grid>
         </Grid>
@@ -120,4 +112,4 @@ const Intro4 = () => {
   );
 };
 
-export default Intro4;
+export default ProductAnalytics;

@@ -3,7 +3,7 @@ import { SvgIcon } from "@material-ui/core";
 
 const CheckedIcon = props => {
   return (
-    <SvgIcon {...props} viewBox="0 0 56 50">
+    <SvgIcon {...props} viewBox="0 0 55.57 49.54">
       <path
         id="Path_2421"
         data-name="Path 2421"

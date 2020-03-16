@@ -77,171 +77,149 @@ const Feature4 = () => {
   const isMobile = useMediaQuery("(max-width: 768px");
 
   return (
-    <section className="section" id="intro4">
-      <div className="relative w-full">
-        <div className="container pt-10">
-          <Grid container spacing={isMobile ? 3 : 10} alignItems="center">
-            <Grid item lg={8} md={8} sm={6} xs={12}>
-              <div className="max-w-400 mb-14">
-                <h1 className="mt-0 text-44">App Features</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                </p>
-              </div>
+    <section className="section" id="feature4">
+      <div className="container">
+        <Grid container spacing={isMobile ? 3 : 10} alignItems="center">
+          <Grid item lg={8} md={8} sm={6} xs={12}>
+            <div className="max-w-400 mb-14">
+              <h1 className="mt-0 font-normal text-44">App Features</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+              </p>
+            </div>
 
-              <Grid container spacing={isMobile ? 3 : 4}>
-                <Grid
-                  item
-                  lg={4}
-                  md={4}
-                  sm={6}
-                  xs={12}
-                  className={classes.feature}
-                >
-                  <div className="relative">
-                    <Feature4IconCreator>
-                      <DesktopIcon color="primary" className="text-54" />
-                    </Feature4IconCreator>
-                  </div>
-                  <div>
-                    <h4 className="mt-6 font-normal mb-0">Use on Any Device</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore
-                    </p>
-                  </div>
-                </Grid>
+            <Grid container spacing={isMobile ? 3 : 4}>
+              <Grid
+                item
+                lg={4}
+                md={4}
+                sm={6}
+                xs={12}
+                className={classes.feature}
+              >
+                <div className="relative">
+                  <Feature4IconCreator>
+                    <DesktopIcon color="primary" className="text-54" />
+                  </Feature4IconCreator>
+                </div>
+                <div>
+                  <h4 className="mt-6 font-normal mb-0">Use on Any Device</h4>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                </div>
+              </Grid>
 
-                <Grid
-                  item
-                  lg={4}
-                  md={4}
-                  sm={6}
-                  xs={12}
-                  className={classes.feature}
-                >
-                  <div className="relative">
-                    <Feature4IconCreator>
-                      <CubeIcon color="primary" className="text-54" />
-                    </Feature4IconCreator>
-                  </div>
-                  <div>
-                    <h4 className="mt-6 font-normal mb-0">
-                      Material Design Icon
-                    </h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore
-                    </p>
-                  </div>
-                </Grid>
+              <Grid
+                item
+                lg={4}
+                md={4}
+                sm={6}
+                xs={12}
+                className={classes.feature}
+              >
+                <div className="relative">
+                  <Feature4IconCreator>
+                    <CubeIcon color="primary" className="text-54" />
+                  </Feature4IconCreator>
+                </div>
+                <div>
+                  <h4 className="mt-6 font-normal mb-0">
+                    Material Design Icon
+                  </h4>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                </div>
+              </Grid>
 
-                <Grid
-                  item
-                  lg={4}
-                  md={4}
-                  sm={6}
-                  xs={12}
-                  className={classes.feature}
-                >
-                  <div className="relative">
-                    <Feature4IconCreator>
-                      <RetinaIcon color="primary" className="text-54" />
-                    </Feature4IconCreator>
-                  </div>
-                  <div>
-                    <h4 className="mt-6 font-normal mb-0">Retina Ready</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore
-                    </p>
-                  </div>
-                </Grid>
+              <Grid
+                item
+                lg={4}
+                md={4}
+                sm={6}
+                xs={12}
+                className={classes.feature}
+              >
+                <div className="relative">
+                  <Feature4IconCreator>
+                    <RetinaIcon color="primary" className="text-54" />
+                  </Feature4IconCreator>
+                </div>
+                <div>
+                  <h4 className="mt-6 font-normal mb-0">Retina Ready</h4>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                </div>
+              </Grid>
 
-                <Grid
-                  item
-                  lg={4}
-                  md={4}
-                  sm={6}
-                  xs={12}
-                  className={classes.feature}
-                >
-                  <div className="relative">
-                    <Feature4IconCreator>
-                      <CheckedIcon color="primary" className="text-54" />
-                    </Feature4IconCreator>
-                  </div>
-                  <div>
-                    <h4 className="mt-6 font-normal mb-0">W3c Valid Code</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore
-                    </p>
-                  </div>
-                </Grid>
+              <Grid
+                item
+                lg={4}
+                md={4}
+                sm={6}
+                xs={12}
+                className={classes.feature}
+              >
+                <div className="relative">
+                  <Feature4IconCreator>
+                    <CheckedIcon color="primary" className="text-54" />
+                  </Feature4IconCreator>
+                </div>
+                <div>
+                  <h4 className="mt-6 font-normal mb-0">W3c Valid Code</h4>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                </div>
+              </Grid>
 
-                <Grid
-                  item
-                  lg={4}
-                  md={4}
-                  sm={6}
-                  xs={12}
-                  className={classes.feature}
-                >
-                  <div className="relative">
-                    <Feature4IconCreator>
-                      <PcMobileIcon color="primary" className="text-54" />
-                    </Feature4IconCreator>
-                  </div>
-                  <div>
-                    <h4 className="mt-6 font-normal mb-0">Fully Responsive</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore
-                    </p>
-                  </div>
-                </Grid>
+              <Grid
+                item
+                lg={4}
+                md={4}
+                sm={6}
+                xs={12}
+                className={classes.feature}
+              >
+                <div className="relative">
+                  <Feature4IconCreator>
+                    <PcMobileIcon color="primary" className="text-54" />
+                  </Feature4IconCreator>
+                </div>
+                <div>
+                  <h4 className="mt-6 font-normal mb-0">Fully Responsive</h4>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                </div>
+              </Grid>
 
-                <Grid
-                  item
-                  lg={4}
-                  md={4}
-                  sm={6}
-                  xs={12}
-                  className={classes.feature}
-                >
-                  <div className="relative">
-                    <Feature4IconCreator>
-                      <HeartIcon color="primary" className="text-54" />
-                    </Feature4IconCreator>
-                  </div>
-                  <div>
-                    <h4 className="mt-6 font-normal mb-0">
-                      Browser Compatibility
-                    </h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore
-                    </p>
-                  </div>
-                </Grid>
+              <Grid
+                item
+                lg={4}
+                md={4}
+                sm={6}
+                xs={12}
+                className={classes.feature}
+              >
+                <div className="relative">
+                  <Feature4IconCreator>
+                    <HeartIcon color="primary" className="text-54" />
+                  </Feature4IconCreator>
+                </div>
+                <div>
+                  <h4 className="mt-6 font-normal mb-0">
+                    Browser Compatibility
+                  </h4>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                </div>
               </Grid>
             </Grid>
-            <Grid item lg={4} md={4} sm={6} xs={12} className={classes.feature}>
-              <div className={classes.musicImageWrapper}>
-                <img
-                  className={classes.musicImage}
-                  src="/assets/images/mobile-2.svg"
-                  alt="mobile-1"
-                />
-              </div>
-            </Grid>
           </Grid>
-        </div>
+          <Grid item lg={4} md={4} sm={6} xs={12} className={classes.feature}>
+            <div className={classes.musicImageWrapper}>
+              <img
+                className={classes.musicImage}
+                src="/assets/images/mobile-2.svg"
+                alt="mobile-1"
+              />
+            </div>
+          </Grid>
+        </Grid>
       </div>
     </section>
   );

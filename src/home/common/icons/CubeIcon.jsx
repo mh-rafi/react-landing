@@ -3,7 +3,7 @@ import { SvgIcon } from "@material-ui/core";
 
 const CubeIcon = props => {
   return (
-    <SvgIcon {...props} viewBox="0 0 46 50">
+    <SvgIcon {...props} viewBox="0 0 45.97 49.54">
       <g id="noun_cube_3154393">
         <g id="Group_598" data-name="Group 598" transform="translate(0 0)">
           <path

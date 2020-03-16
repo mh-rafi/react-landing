@@ -3,7 +3,7 @@ import { SvgIcon } from "@material-ui/core";
 
 const DesktopIcon = props => {
   return (
-    <SvgIcon {...props} viewBox="0 0 69 50">
+    <SvgIcon {...props} viewBox="0 0 68.92 49.54">
       <rect
         id="Rectangle_848"
         data-name="Rectangle 848"
