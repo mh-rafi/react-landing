@@ -14,6 +14,21 @@ import TieIcon from "../common/icons/TieIcon";
 import CompanyIcon from "../common/icons/CompanyIcon";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
+  cardWrapper: {
+    position: "relative",
+    "&:after": {
+      content: '" "',
+      display: "block",
+      position: "absolute",
+      height: "60%",
+      left: "-50%",
+      right: "-50%",
+      top: "20%",
+      background: palette.primary.main,
+      opacity: 0.1,
+      zIndex: -1
+    }
+  },
   card: {
     padding: "1.5rem 1.5rem 2rem",
     border: `1px solid ${palette.background.default}`,
@@ -70,58 +85,59 @@ const Pricing2 = () => {
     <section className="section" id="pricing2">
       <div className="container">
         <div className="max-w-400 mb-14 text-center mx-auto">
-          <h1 className="mt-0 font-normal text-44">App Features</h1>
+          <h1 className="mt-0 font-normal text-44">Our Services</h1>
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
+            nonumy eirmod tempor invidunt ut labore et dolore
           </p>
         </div>
 
-        <Grid container spacing={2}>
-          {planList.map((plan, ind) => (
-            <Grid key={ind} item lg={3} md={3} sm={6} xs={12}>
-              <Card className={classes.card} elevation={2}>
-                <div className="flex items-center mb-6">
-                  <IconButton className="mr-4 p-3 bg-light-primary rounded hover-bg-primary">
-                    <plan.icon color="primary" fontSize="large" />
-                  </IconButton>
-                  <div>
-                    <h3 className="text-primary m-0">{plan.title}</h3>
-                    <p className="m-0">
-                      ${" "}
-                      <span className="text-32 font-medium text-primary">
-                        {plan.price}
-                      </span>
-                      /mo
-                    </p>
-                  </div>
-                </div>
-
-                <Divider className="bg-primary"></Divider>
-
-                <div className="my-8">
-                  {featureList.map((item, ind) => (
-                    <div key={ind} className="flex items-center">
-                      <Icon className="mr-4" color="primary">
-                        done
-                      </Icon>
-                      <p className="my-2">{item}</p>
+        <div className={classes.cardWrapper}>
+          <Grid container spacing={2}>
+            {planList.map((plan, ind) => (
+              <Grid key={ind} item lg={3} md={3} sm={6} xs={12}>
+                <Card className={classes.card} elevation={2}>
+                  <div className="flex items-center mb-6">
+                    <IconButton className="mr-4 p-3 bg-light-primary rounded hover-bg-primary">
+                      <plan.icon color="primary" fontSize="large" />
+                    </IconButton>
+                    <div>
+                      <h3 className="text-primary m-0">{plan.title}</h3>
+                      <p className="m-0">
+                        ${" "}
+                        <span className="text-32 font-medium text-primary">
+                          {plan.price}
+                        </span>
+                        /mo
+                      </p>
                     </div>
-                  ))}
-                </div>
+                  </div>
 
-                <Button
-                  className="rounded px-6"
-                  variant="contained"
-                  color="primary"
-                >
-                  Buy Now
-                </Button>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+                  <Divider className="bg-primary"></Divider>
+
+                  <div className="my-8">
+                    {featureList.map((item, ind) => (
+                      <div key={ind} className="flex items-center">
+                        <Icon className="mr-4" color="primary">
+                          done
+                        </Icon>
+                        <p className="my-2">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Button
+                    className="rounded px-6"
+                    variant="contained"
+                    color="primary"
+                  >
+                    Buy Now
+                  </Button>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </div>
       </div>
     </section>
   );

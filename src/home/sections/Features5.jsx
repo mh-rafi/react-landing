@@ -116,11 +116,9 @@ const Feature5 = () => {
               <div
                 className={`flex flex-wrap items-center border-radius-8 ${classes.buttonGroupBG}`}
               >
-                <div className="px-6 py-2 mr-2 box-shadow-none">Community</div>
-                <div className="px-6 py-2 mr-2 box-shadow-none">
-                  Self Service
-                </div>
-                <div className="px-6 py-2 mr-2 box-shadow-none">Teamwork</div>
+                <div className="px-6 py-2 box-shadow-none">Community</div>
+                <div className="px-6 py-2 box-shadow-none">Self Service</div>
+                <div className="px-6 py-2 box-shadow-none">Teamwork</div>
               </div>
             </div>
 

@@ -53,7 +53,13 @@
   overflow: auto !important;
 }
 .overflow-hidden {
-  overflow: hidden;
+  overflow: hidden !important;
+}
+.overflow-unset {
+  overflow: unset !important;
+}
+.overflow-visible {
+  overflow: visible !important;
 }
 .scroll-y {
   overflow-x: hidden;

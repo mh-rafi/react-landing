@@ -1,20 +1,28 @@
-import React, { Component, Children } from "react";
+import React, { Children, useEffect } from "react";
 import Swiper from "swiper";
 
 import { Fab } from "@material-ui/core";
 import NavigateNext from "@material-ui/icons/NavigateNext";
 import NavigateBefore from "@material-ui/icons/NavigateBefore";
 
-class Carousel extends Component {
-  swiperOptions = {
+const Carousel = ({
+  slidesPerView = 3,
+  spacing = 32,
+  allowSlideNext = true,
+  allowSlidePrev = true,
+  delay = 5000,
+  navigation = true,
+  children
+}) => {
+  const swiperOptions = {
     direction: "horizontal",
-    allowSlideNext: true,
-    allowSlidePrev: true,
-    slidesPerView: 3,
-    spaceBetween: 32,
+    allowSlideNext,
+    allowSlidePrev,
+    slidesPerView,
+    spaceBetween: spacing,
 
     autoplay: {
-      delay: 5000,
+      delay,
       disableOnInteraction: false
     },
 
@@ -43,36 +51,36 @@ class Carousel extends Component {
     }
   };
 
-  componentDidMount() {
-    new Swiper(".swiper-container", this.swiperOptions);
-  }
+  useEffect(() => {
+    new Swiper(".swiper-container", swiperOptions);
+  });
 
-  render() {
-    let { children } = this.props;
-
-    return (
-      <div className="relative w-full">
-        <div className="swiper-container mx-7">
-          <div className="swiper-wrapper">
-            {Children.map(children, (child, index) => (
-              <div className="swiper-slide p-1 pb-6">{child}</div>
-            ))}
-          </div>
-
-          {/* pagination */}
-          <div className="swiper-pagination relative mt-6" />
+  return (
+    <div className="relative w-full">
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+          {Children.map(children, (child, index) => (
+            <div className="swiper-slide p-1 pb-6">{child}</div>
+          ))}
         </div>
 
-        {/* navigation */}
+        {/* pagination */}
+        <div className="swiper-pagination relative mt-6" />
+      </div>
+
+      {/* navigation */}
+      {navigation && (
         <Fab className="carousel__button-prev bg-white">
           <NavigateBefore />
         </Fab>
+      )}
+      {navigation && (
         <Fab className="carousel__button-next bg-white">
           <NavigateNext />
         </Fab>
-      </div>
-    );
-  }
-}
+      )}
+    </div>
+  );
+};
 
 export default Carousel;

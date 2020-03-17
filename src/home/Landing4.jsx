@@ -6,6 +6,7 @@ import Feature4 from "./sections/Feature4";
 import ProductAnalytics from "./sections/ProductAnalytics";
 import Feature5 from "./sections/Features5";
 import Pricing2 from "./sections/Pricing2";
+import Testimonial4 from "./sections/Testimonial4";
 
 class Landing4 extends Component {
   state = {};
@@ -21,6 +22,7 @@ class Landing4 extends Component {
         <ProductAnalytics />
         <Feature5 />
         <Pricing2 />
+        <Testimonial4 />
       </div>
     );
   }
