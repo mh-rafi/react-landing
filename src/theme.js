@@ -3,12 +3,11 @@ import indigo from "@material-ui/core/colors/indigo";
 import orange from "@material-ui/core/colors/orange";
 import red from "@material-ui/core/colors/red";
 
-const Theme = createMuiTheme({
+const themeOptions = {
   palette: {
     primary: indigo,
     secondary: orange,
     error: red,
-
     contrastThreshold: 3,
     // Used to shift a color's luminance by approximately
     // two indexes within its tonal palette.
@@ -30,6 +29,13 @@ const Theme = createMuiTheme({
       }
     }
   }
+};
+
+export const Theme = createMuiTheme({
+  ...themeOptions
 });
 
-export default Theme;
+export const FooterTheme = createMuiTheme({
+  type: "dark",
+  ...themeOptions
+});

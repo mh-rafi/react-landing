@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Card, Avatar, Divider, Icon } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, lighten } from "@material-ui/core/styles";
 import Carousel from "../common/Carousel";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import FacebookIcon from "../common/icons/FacebookIcon";
@@ -9,13 +9,14 @@ import FacebookIcon from "../common/icons/FacebookIcon";
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   card: {
     border: `1px solid ${palette.primary.contrastText}`,
-    "& [class^='MuiAvatar-']": {
+    "& [class^='MuiAvatar-root']": {
+      border: `1px solid ${palette.primary.main}`,
       background: palette.primary.contrastText
     },
     "&:hover": {
       border: `1px solid ${palette.primary.main}`,
       "& [class^='MuiAvatar-']": {
-        background: palette.primary.light
+        background: lighten(palette.primary.main, 0.75)
       },
       "& [class^='MuiSvgIcon-']": {
         color: `${palette.primary.main} !important`
@@ -39,6 +40,32 @@ const Testimonial4 = () => {
         imageUrl: "./assets/images/face-1.png",
         name: "John Doe",
         designation: "Product Manager"
+      }
+    },
+    {
+      companyLogoUrl: "./assets/images/mock-logo-2.png",
+      comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Fugit modi voluptas vero iusto fuga quos totam
+          eius, atis magnam tempora doloribus ducimus dolorem
+          culpa animi beatae tenetur! Sapiente, quia tempora."`,
+      icon: FacebookIcon,
+      user: {
+        imageUrl: "./assets/images/face-2.png",
+        name: "Adam Smith",
+        designation: "CEO"
+      }
+    },
+    {
+      companyLogoUrl: "./assets/images/mock-logo-3.png",
+      comment: `"Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Fugit modi voluptas vero iusto fuga quos totam
+          eius, atis magnam tempora doloribus ducimus dolorem
+          culpa animi beatae tenetur! Sapiente, quia tempora."`,
+      icon: TwitterIcon,
+      user: {
+        imageUrl: "./assets/images/face-3.png",
+        name: "John White",
+        designation: "Software Engineer"
       }
     },
     {
@@ -120,7 +147,7 @@ const Testimonial4 = () => {
 
                 <div className="flex flex-wrap mb-6">
                   {[1, 2, 3, 4, 5].map(i => (
-                    <Icon fontSize="small" color="primary">
+                    <Icon key={i} fontSize="small" color="primary">
                       start
                     </Icon>
                   ))}
