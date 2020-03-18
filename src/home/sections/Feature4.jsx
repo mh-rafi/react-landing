@@ -17,6 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   musicImage: {
+    width: "362px",
     [theme.breakpoints.down("xs")]: {
       width: "100%"
     }
@@ -31,11 +32,11 @@ const useStyles = makeStyles(theme => ({
       content: '" "',
       position: "absolute",
       display: "block",
-      height: "50%",
-      top: "calc(25% - 34px)",
+      height: "72%",
+      top: "14%",
       left: 0,
       right: 0,
-      margin: "0 -2000px 0 -100px",
+      margin: "0 -2000px 0 -80px",
       borderRadius: "300px",
       background: theme.palette.primary.main,
       zIndex: -1,

@@ -21,6 +21,7 @@ class Demo extends Component {
                 <NavLink to="/landing1" className="mx-1">
                   <Card className="card text-center">
                     <img
+                      className="max-w-full"
                       src="./assets/images/screenshots/landing-1.png"
                       alt=""
                     />
@@ -32,6 +33,7 @@ class Demo extends Component {
                 <NavLink to="/landing2" className="mx-1">
                   <Card className="card text-center">
                     <img
+                      className="max-w-full"
                       src="./assets/images/screenshots/landing-2.png"
                       alt=""
                     />
@@ -43,6 +45,7 @@ class Demo extends Component {
                 <NavLink to="/landing3" className="mx-1">
                   <Card className="card text-center">
                     <img
+                      className="max-w-full"
                       src="./assets/images/screenshots/landing-3.png"
                       alt=""
                     />
@@ -54,6 +57,7 @@ class Demo extends Component {
                 <NavLink to="/landing4" className="mx-1">
                   <Card className="card text-center">
                     <img
+                      className="max-w-full"
                       src="./assets/images/screenshots/calendar.jpg"
                       alt=""
                     />

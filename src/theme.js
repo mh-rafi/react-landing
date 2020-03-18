@@ -4,6 +4,7 @@ import orange from "@material-ui/core/colors/orange";
 import red from "@material-ui/core/colors/red";
 
 const themeOptions = {
+  type: "light",
   palette: {
     primary: indigo,
     secondary: orange,
@@ -36,6 +37,8 @@ export const Theme = createMuiTheme({
 });
 
 export const FooterTheme = createMuiTheme({
-  type: "dark",
-  ...themeOptions
+  ...themeOptions,
+  palette: {
+    type: "dark"
+  }
 });

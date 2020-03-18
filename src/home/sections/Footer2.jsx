@@ -1,6 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Icon, Grid, Button, TextField } from "@material-ui/core";
+import {
+  Icon,
+  Grid,
+  Button,
+  TextField,
+  InputAdornment,
+  darken
+} from "@material-ui/core";
 import FacebookIcon from "../common/icons/FacebookIcon";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import InstagramIcon from "../common/icons/InstagramIcon";
@@ -21,6 +28,12 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     marginRight: 12,
     border: `1px solid ${palette.primary.contrastText}`,
     cursor: "pointer"
+  },
+  link: {
+    borderRadius: 4,
+    "&:hover": {
+      background: darken("#011C3A", 0.2)
+    }
   }
 }));
 
@@ -53,7 +66,7 @@ const Footer2 = () => {
           <Grid item lg={3} md={3} sm={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">About Us</h4>
-              <p className="my-6">
+              <p className="my-6 max-w-200">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Officiis perferendis rem, aut aliquam neque nam? dolor sit amet,
                 consectetur adipisicing elit consectetur adipisicing elit.
@@ -82,11 +95,13 @@ const Footer2 = () => {
           <Grid item lg={3} md={3} sm={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">Company</h4>
-              <div className="my-6">
+              <div className="mt-4 mb-6">
                 {companyOption.map((item, ind) => (
                   <div
                     key={ind}
-                    className="flex items-center pb-4 cursor-pointer"
+                    className={
+                      "flex items-center py-2 cursor-pointer " + classes.link
+                    }
                   >
                     <Icon>navigate_next</Icon>
                     <span>{item}</span>
@@ -98,11 +113,13 @@ const Footer2 = () => {
           <Grid item lg={3} md={3} sm={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">Useful Links</h4>
-              <div className="my-6">
+              <div className="mt-4 mb-6">
                 {userfulLink.map((item, ind) => (
                   <div
                     key={ind}
-                    className="flex items-center pb-4 cursor-pointer"
+                    className={
+                      "flex items-center py-2 cursor-pointer " + classes.link
+                    }
                   >
                     <Icon>navigate_next</Icon>
                     <span>{item}</span>
@@ -115,8 +132,26 @@ const Footer2 = () => {
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">Newsletter</h4>
               <p className="my-6">Sign Up for the latest news</p>
-              <TextField variant="outlined" />
-              <Button variant="contained" color="primary">
+              <TextField
+                className="mb-4"
+                size="small"
+                placeholder="Your Email"
+                variant="outlined"
+                fullWidth
+                inputProps={{
+                  style: {
+                    paddingLeft: 12
+                  }
+                }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="end">
+                      <Icon fontSize="small">email</Icon>
+                    </InputAdornment>
+                  )
+                }}
+              />
+              <Button className="w-full" variant="contained" color="primary">
                 SUBSCRIBE
               </Button>
             </div>
