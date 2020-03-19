@@ -83,7 +83,7 @@ const TopBar4 = props => {
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="contact1" onScroll={close}>
+            <ScrollTo to="contact4" onScroll={close}>
               Contact
             </ScrollTo>
           </li>

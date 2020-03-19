@@ -23,7 +23,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    padding: 2,
+    padding: 4,
     borderRadius: 4,
     marginRight: 12,
     border: `1px solid ${palette.primary.contrastText}`,
@@ -43,9 +43,6 @@ const companyOption = [
   "Team",
   "Pricing",
   "Project",
-  "Career",
-  "Blog",
-  "Login"
 ];
 
 const userfulLink = [
@@ -60,7 +57,7 @@ const Footer2 = () => {
   const classes = useStyles();
 
   return (
-    <section className={`section ${classes.section}`}>
+    <section className={`section ${classes.section}`} id="contact4">
       <div className="container">
         <Grid container spacing={3}>
           <Grid item lg={3} md={3} sm={12}>
@@ -69,25 +66,20 @@ const Footer2 = () => {
               <p className="my-6 max-w-200">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Officiis perferendis rem, aut aliquam neque nam? dolor sit amet,
-                consectetur adipisicing elit consectetur adipisicing elit.
-                Officiis perferendis rem, aut aliquam. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. Officiis perferendis rem,
-                aut aliquam neque nam? dolor sit amet, consectetur adipisicing
-                elit consectetur adipisicing elit. Officiis perferendis rem, aut
-                aliquam.
+                consectetur adipisicing elit consectetur adipisicing.
               </p>
               <div className="flex flex-wrap">
                 <div className={classes.iconWrapper}>
-                  <FacebookIcon fontSize="small" />
+                  <FacebookIcon className="text-13" fontSize="small" />
                 </div>
                 <div className={classes.iconWrapper}>
-                  <TwitterIcon fontSize="small" />
+                  <TwitterIcon className="text-13" fontSize="small" />
                 </div>
                 <div className={classes.iconWrapper}>
-                  <InstagramIcon fontSize="small" />
+                  <InstagramIcon className="text-13" fontSize="small" />
                 </div>
                 <div className={classes.iconWrapper}>
-                  <LinkedinIcon fontSize="small" />
+                  <LinkedinIcon className="text-13" fontSize="small" />
                 </div>
               </div>
             </div>

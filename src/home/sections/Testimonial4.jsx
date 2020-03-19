@@ -161,7 +161,7 @@ const Testimonial4 = () => {
                     </small>
                   </div>
                   <testimonial.icon
-                    className="mb-5px text-muted"
+                    className="mb-5px text-muted text-14 cursor-pointer"
                     fontSize="small"
                   />
                 </div>

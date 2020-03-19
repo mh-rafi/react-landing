@@ -52,9 +52,9 @@ const useStyles = makeStyles(theme => ({
       position: "absolute",
       display: "block",
       height: 36,
-      width: "75%",
+      width: "80%",
       marginTop: 32,
-      left: "16%",
+      left: "calc(10% + 20px)",
       opacity: 0.75,
       background:
         "radial-gradient(ellipse at center,  rgba(0,0,0,0.65) -25%,rgba(0,0,0,0) 55%);"
