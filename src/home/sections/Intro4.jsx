@@ -22,7 +22,6 @@ const useStyles = makeStyles(theme => ({
   musicImageWrapper: {
     position: "relative",
     display: "inline-block",
-    // marginLeft: "100px",
     "&::before": {
       content: '" "',
       position: "absolute",

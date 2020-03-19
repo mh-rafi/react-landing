@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import ThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import { scrollTo } from "utils";
 import TopBar4 from "./sections/TopBar4";
 import Intro4 from "./sections/Intro4";
@@ -11,6 +10,7 @@ import Testimonial4 from "./sections/Testimonial4";
 import CallToAction3 from "./sections/CallToAction3";
 import Footer2 from "./sections/Footer2";
 import { FooterTheme } from "../theme";
+import { ThemeProvider } from "@material-ui/core";
 
 const Landing4 = () => {
   useEffect(() => {
