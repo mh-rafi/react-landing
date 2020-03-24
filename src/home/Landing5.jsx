@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { scrollTo } from "utils";
 import TopBar4 from "./sections/TopBar4";
-import Feature4 from "./sections/Feature4";
-import ProductAnalytics from "./sections/ProductAnalytics";
 import Feature5 from "./sections/Features5";
 import Pricing2 from "./sections/Pricing2";
 import Testimonial4 from "./sections/Testimonial4";
@@ -11,6 +9,8 @@ import Footer2 from "./sections/Footer2";
 import { FooterTheme } from "../theme";
 import { ThemeProvider } from "@material-ui/core";
 import Intro5 from "./sections/Intro5";
+import About1 from "./sections/About1";
+import Gallery1 from "./sections/Gallery1";
 
 const Landing5 = () => {
   useEffect(() => {
@@ -21,8 +21,8 @@ const Landing5 = () => {
     <div className="landing">
       <TopBar4 />
       <Intro5 />
-      <Feature4 />
-      <ProductAnalytics />
+      <About1 />
+      <Gallery1 />
       <Feature5 />
       <Pricing2 />
       <Testimonial4 />

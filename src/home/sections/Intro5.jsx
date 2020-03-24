@@ -12,9 +12,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     position: "relative",
     background:
       "url(./assets/images/happy-face-1.png) center center/cover no-repeat",
-    height: "100%",
-    overflow: "hidden",
-    zIndex: -2
+    height: "100%"
   },
   lightWhiteBG: {
     position: "absolute",
@@ -26,15 +24,15 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     [theme.breakpoints.down("xs")]: {
       right: 0
     },
-    background: "rgba(255,255,255,0.9)",
-    zIndex: -1
+    background: "rgba(255,255,255,0.9)"
   },
   intro: {
     position: "relative",
     padding: "5rem 0rem",
     [theme.breakpoints.down("sm")]: {
       padding: "2rem 0rem"
-    }
+    },
+    zIndex: 5
   }
 }));
 

@@ -10,7 +10,6 @@ export const colorStyles = makeStyles(({ palette, ...theme }) => ({
     },
     ".bg-error": {
       background: `${palette.error.main} !important`,
-      fallbacks: [{ background: `${palette.error.main} !important` }],
       color: "white !important"
     },
     ".bg-white": { background: "#fff !important", color: "inherit" },
@@ -56,6 +55,9 @@ export const colorStyles = makeStyles(({ palette, ...theme }) => ({
     ".gray-on-hover": { transition: "background 250ms ease" },
     ".gray-on-hover:hover": { background: "rgba(0, 0, 0, 0.054)" },
     ".border-color-white": { borderColor: "#ffffff !important" },
+    ".border-color-primary": {
+      borderColor: `${palette.primary.main} !important`
+    },
     ".border-color-default": {
       borderColor: `${palette.background.default} !important`
     },
