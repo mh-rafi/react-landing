@@ -4,16 +4,46 @@ import Swiper from "swiper";
 import { Fab } from "@material-ui/core";
 import NavigateNext from "@material-ui/icons/NavigateNext";
 import NavigateBefore from "@material-ui/icons/NavigateBefore";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
-const Carousel = ({
-  slidesPerView = 3,
-  spacing = 32,
-  allowSlideNext = true,
-  allowSlidePrev = true,
-  delay = 5000,
-  navigation = true,
-  children
-}) => {
+let globalBulletColor = "red";
+
+const useStyles = makeStyles(({ palette, ...theme }) => ({
+  bulletClass: {
+    opacity: 1,
+    background: globalBulletColor,
+    transition: "transform 400ms cubic-bezier(0.17, 0.67, 0.83, 0.67)",
+    width: 8,
+    height: 8,
+    display: "inline-block",
+    borderRadius: "100%",
+    cursor: "pointer",
+    margin: "0 4px"
+  },
+  bulletActiveClass: {
+    transform: "scale(1.8)"
+  }
+}));
+
+const Carousel = props => {
+  let theme = useTheme();
+  let {
+    slidesPerView = 3,
+    spacing = 32,
+    allowSlideNext = true,
+    allowSlidePrev = true,
+    delay = 5000,
+    navigation = true,
+    bulletColor = theme.palette.primary.main,
+    children
+  } = props;
+
+  globalBulletColor = bulletColor;
+
+  let { bulletClass, bulletActiveClass } = useStyles();
+
+  console.log(bulletClass);
+
   const swiperOptions = {
     direction: "horizontal",
     allowSlideNext,
@@ -41,7 +71,8 @@ const Carousel = ({
     pagination: {
       el: ".swiper-pagination",
       type: "bullets",
-      bulletActiveClass: "bullet-active",
+      bulletClass,
+      bulletActiveClass,
       clickable: true
     },
 
@@ -53,7 +84,7 @@ const Carousel = ({
 
   useEffect(() => {
     new Swiper(".swiper-container", swiperOptions);
-  });
+  }, [swiperOptions]);
 
   return (
     <div className="relative w-full">

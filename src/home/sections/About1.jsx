@@ -81,7 +81,7 @@ const About1 = () => {
         <Grid container spacing={3} alignItems="center">
           <Grid item sm={6} xs={12}>
             <div>
-              <h1 className="font-medium text-48 mt-0">About Me</h1>
+              <h1 className="font-normal text-48 mt-0">About Me</h1>
               <p className="max-w-400 my-6">
                 I am a{" "}
                 <span className="text-primary">
