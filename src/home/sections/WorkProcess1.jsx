@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Card, CardHeader, CardContent, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   card: {
@@ -43,10 +44,10 @@ const WorkProcess1 = () => {
   ];
 
   return (
-    <section className="section">
+    <section className="section" id="work-process1">
       <div className="container">
         <div>
-          <h1 className="font-normal text-48 mt-0">My Work Process</h1>
+          <h1 className="font-normal text-44 mt-0">My Work Process</h1>
           <p className="max-w-400 mb-8">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -56,7 +57,7 @@ const WorkProcess1 = () => {
         <Grid container spacing={3}>
           {processList.map((item, ind) => (
             <Grid key={ind} item sm={4} xs={12}>
-              <Card elevation={3} className={classes.card}>
+              <Card elevation={3} className={clsx(classes.card, "card")}>
                 <div className={classes.cardHeader}>{item}</div>
                 <div className={classes.cardContent}>
                   <p className="mb-8 mt-0">

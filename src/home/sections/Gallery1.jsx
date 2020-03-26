@@ -67,10 +67,10 @@ const Gallery1 = () => {
   ];
 
   return (
-    <section className="section">
+    <section className="section" id="gallery1">
       <div className="container">
         <div className="mb-8">
-          <h1 className="font-normal text-48 mt-0">My Works And Portfolios</h1>
+          <h1 className="font-normal text-44 mt-0">My Works And Portfolios</h1>
           <p className="max-w-400">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore

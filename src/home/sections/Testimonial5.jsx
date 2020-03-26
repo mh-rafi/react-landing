@@ -104,9 +104,9 @@ const Testimonial5 = () => {
   ];
 
   return (
-    <div className={clsx("section", classes.section)} id="testimonial1">
+    <div className={clsx("section", classes.section)} id="testimonial5">
       <div className="container text-center">
-        <h1 className="font-normal text-48 mt-0 text-white mx-auto mb-12">
+        <h1 className="font-normal text-44 mt-0 text-white mx-auto mb-12">
           Client Review
         </h1>
         <Carousel
@@ -114,6 +114,7 @@ const Testimonial5 = () => {
           slidesPerView={1}
           spacing={0}
           navigation={false}
+          paginationClass="mt-12"
         >
           {testimonialList.map((testimonial, index) => (
             <div className={clsx("mx-auto", classes.card)} key={index}>
@@ -131,17 +132,19 @@ const Testimonial5 = () => {
                 <p
                   className={clsx({
                     "text-white": true,
-                    "text-left mt-0 ml-8": !isMobile
+                    "text-left my-0 ml-8": !isMobile
                   })}
                 >
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor invidunt ut labore et dolore magna
                   aliquyam erat, sed diam voluptua. At vero eos et accusam et
                   justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
                   sea takimata sanctus est"
                 </p>
               </div>
-              <div className="flex flex-wrap justify-center mt-4 mb-2">
+              <div className="flex flex-wrap mt-4 justify-center mb-2">
                 {[1, 2, 3, 4, 5].map(i => (
                   <Icon
                     key={i}

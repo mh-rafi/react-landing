@@ -35,6 +35,7 @@ const Carousel = props => {
     delay = 5000,
     navigation = true,
     bulletColor = theme.palette.primary.main,
+    paginationClass = "mt-6",
     children
   } = props;
 
@@ -96,7 +97,7 @@ const Carousel = props => {
         </div>
 
         {/* pagination */}
-        <div className="swiper-pagination relative mt-6" />
+        <div className={`swiper-pagination relative ${paginationClass}`} />
       </div>
 
       {/* navigation */}
