@@ -194,8 +194,8 @@ body {
 .header {
   position: fixed;
   width: 100%;
-  background: transparent;
   top: 0;
+  background: var(--bg-paper);
   left: 0;
   right: 0;
   padding: 20px 0;

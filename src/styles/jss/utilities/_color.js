@@ -38,7 +38,7 @@ export const colorStyles = makeStyles(({ palette, ...theme }) => ({
       background: `${lighten(palette.error.main, 0.85)} !important`
     },
     ".bg-light-green": { background: "rgba(8, 173, 108, 0.5) !important" },
-    ".bg-transperant": { background: "transparent !important" },
+    ".bg-transparent": { background: "transparent !important" },
     ".text-white": { color: "#fff !important" },
     ".text-black": { color: "rgba(0, 0, 0, 0.87) !important" },
     ".text-white-secondary": { color: "rgba(255, 255, 255, 0.87) !important" },

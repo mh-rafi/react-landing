@@ -70,7 +70,19 @@ class Demo extends Component {
                   <Card className="card text-center">
                     <img
                       className="max-w-full"
-                      src="./assets/images/screenshots/calendar.jpg"
+                      src="./assets/images/screenshots/landing-5.png"
+                      alt=""
+                    />
+                  </Card>
+                </NavLink>
+              </Grid>
+
+              <Grid item md={4} xs={12}>
+                <NavLink to="/landing6" className="mx-1">
+                  <Card className="card text-center">
+                    <img
+                      className="max-w-full"
+                      src="./assets/images/screenshots/landing-6.png"
                       alt=""
                     />
                   </Card>

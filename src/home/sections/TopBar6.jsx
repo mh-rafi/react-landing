@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
 import { Button } from "@material-ui/core";
 
-const TopBar4 = props => {
+const TopBar6 = props => {
   const [isTop, setIsTop] = useState(true);
   const [isClosed, setIsClosed] = useState(true);
 
@@ -49,7 +49,6 @@ const TopBar4 = props => {
     <section
       className={classList({
         header: true,
-        "bg-transparent": isTop,
         "header-fixed": !isTop,
         closed: isClosed
       })}
@@ -63,29 +62,33 @@ const TopBar4 = props => {
             <NavLink to="/">Demos</NavLink>
           </li>
           <li>
-            <ScrollTo to="intro4" onScroll={close}>
+            <ScrollTo to="intro6" onScroll={close}>
               Home
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="feature4" onScroll={close}>
+            <ScrollTo to="services8" onScroll={close}>
               Works
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="product-analytics" onScroll={close}>
+            <ScrollTo to="testimonial6" onScroll={close}>
+              Review
+            </ScrollTo>
+          </li>
+          <li>
+            <ScrollTo to="pricing2" onScroll={close}>
               Service
             </ScrollTo>
           </li>
-
           <li>
-            <ScrollTo to="pricing2" onScroll={close}>
-              Pricing
+            <ScrollTo to="blog1" onScroll={close}>
+              Blog
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="contact4" onScroll={close}>
-              Contact
+            <ScrollTo to="subscription1" onScroll={close}>
+              Subscribe
             </ScrollTo>
           </li>
         </ul>
@@ -123,4 +126,4 @@ const TopBar4 = props => {
   );
 };
 
-export default TopBar4;
+export default TopBar6;
