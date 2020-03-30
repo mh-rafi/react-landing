@@ -12,6 +12,7 @@ import Landing3 from "./home/Landing3";
 import Landing4 from "./home/Landing4";
 import Landing5 from "./home/Landing5";
 import Landing6 from "./home/Landing6";
+import Landing7 from "./home/Landing7";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/landing4" component={Landing4} />
             <Route path="/landing5" component={Landing5} />
             <Route path="/landing6" component={Landing6} />
+            <Route path="/landing7" component={Landing7} />
             {/* <Route component={Error} /> */}
           </Switch>
         </Router>

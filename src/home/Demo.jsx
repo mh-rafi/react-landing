@@ -88,6 +88,18 @@ class Demo extends Component {
                   </Card>
                 </NavLink>
               </Grid>
+
+              <Grid item md={4} xs={12}>
+                <NavLink to="/landing7" className="mx-1">
+                  <Card className="card text-center">
+                    <img
+                      className="max-w-full"
+                      src="./assets/images/screenshots/landing-6.png"
+                      alt=""
+                    />
+                  </Card>
+                </NavLink>
+              </Grid>
             </Grid>
           </div>
         </section>
