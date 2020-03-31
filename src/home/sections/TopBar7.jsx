@@ -72,18 +72,18 @@ const TopBar7 = props => {
             </ScrollTo>
           </li>
           <li>
+            <ScrollTo to="courseList1" onScroll={close}>
+              Courses
+            </ScrollTo>
+          </li>
+          <li>
+            <ScrollTo to="marketing2" onScroll={close}>
+              Admission
+            </ScrollTo>
+          </li>
+          <li>
             <ScrollTo to="testimonial1" onScroll={close}>
               Review
-            </ScrollTo>
-          </li>
-          <li>
-            <ScrollTo to="pricing2" onScroll={close}>
-              Service
-            </ScrollTo>
-          </li>
-          <li>
-            <ScrollTo to="blog1" onScroll={close}>
-              Courses
             </ScrollTo>
           </li>
           <li>

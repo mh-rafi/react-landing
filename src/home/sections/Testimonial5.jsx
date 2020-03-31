@@ -152,7 +152,7 @@ const Testimonial5 = () => {
                     fontSize="small"
                     color="secondary"
                   >
-                    start
+                    star
                   </Icon>
                 ))}
               </div>

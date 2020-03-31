@@ -94,7 +94,7 @@ class Demo extends Component {
                   <Card className="card text-center">
                     <img
                       className="max-w-full"
-                      src="./assets/images/screenshots/landing-6.png"
+                      src="./assets/images/screenshots/landing-7.png"
                       alt=""
                     />
                   </Card>
