@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export const positioningStyles = makeStyles(({ palette, ...theme }) => ({
   "@global": {
     ".hidden": { display: "none" },
-    ".block": { display: "block" },
+    ".block": { display: "block !important" },
     ".inline-block": { display: "inline-block !important" },
     ".flex": { display: "flex" },
     ".flex-column": { display: "flex", flexDirection: "column" },
