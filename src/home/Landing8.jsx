@@ -13,6 +13,7 @@ import CourseList1 from "./sections/CourseList1";
 import Speakers1 from "./sections/Speakers1";
 import Marketing2 from "./sections/Marketing2";
 import Features6 from "./sections/Features6";
+import Features7 from "./sections/Feature7";
 
 const Landing8 = () => {
   return (
@@ -20,6 +21,7 @@ const Landing8 = () => {
       <TopBar8 />
       <Intro8 />
       <Features6 />
+      <Features7 />
       <Services9 />
       <Story1 />
       <OnlineClass1 />
