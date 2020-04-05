@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
 import { Button } from "@material-ui/core";
 
-const TopBar8 = props => {
+const TopBar8 = (props) => {
   const [isTop, setIsTop] = useState(true);
   const [isClosed, setIsClosed] = useState(true);
 
@@ -50,7 +50,7 @@ const TopBar8 = props => {
       className={classList({
         header: true,
         "header-fixed": !isTop,
-        closed: isClosed
+        closed: isClosed,
       })}
     >
       <div className="container header-container">
@@ -72,8 +72,8 @@ const TopBar8 = props => {
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="courseList1" onScroll={close}>
-              Courses
+            <ScrollTo to="features7" onScroll={close}>
+              Features
             </ScrollTo>
           </li>
           <li>

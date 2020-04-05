@@ -1,16 +1,16 @@
 import React from "react";
 import { Grid, IconButton, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
 import {
   FilterCenterFocus,
   CameraAlt,
-  FlipCameraIos
+  FlipCameraIos,
 } from "@material-ui/icons";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   gridWrapper: {
     position: "relative",
+    margin: "5rem 0",
     "&:after": {
       content: '" "',
       position: "absolute",
@@ -22,16 +22,16 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       transform: "rotate(63deg)",
       transformOrigin: "center center",
       borderRadius: "20%",
-      zIndex: -1
-    }
+      zIndex: -1,
+    },
   },
   image: {
     float: "right",
     [theme.breakpoints.down("sm")]: {
       float: "unset",
-      width: "100%"
-    }
-  }
+      width: "100%",
+    },
+  },
 }));
 
 const Features7 = () => {
@@ -40,31 +40,23 @@ const Features7 = () => {
     {
       icon: CameraAlt,
       title: "24mp",
-      subtitle: "Rear"
+      subtitle: "Rear",
     },
     {
       icon: FlipCameraIos,
       title: "12mp",
-      subtitle: "Front"
+      subtitle: "Front",
     },
     {
       icon: FilterCenterFocus,
       title: "Auto Focus",
-      subtitle: "Continuous"
-    }
+      subtitle: "Continuous",
+    },
   ];
 
   return (
-    <section className="section">
+    <section className="section" id="features7">
       <div className="container">
-        <div className="max-w-400 mb-25 mx-auto text-center">
-          <h1 className="mt-0 font-normal text-44">App Features</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et
-          </p>
-        </div>
-
         <div className={classes.gridWrapper}>
           <Grid container spacing={3} alignItems="center">
             <Grid item sm={6} xs={12}>

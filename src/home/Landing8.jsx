@@ -13,7 +13,11 @@ import CourseList1 from "./sections/CourseList1";
 import Speakers1 from "./sections/Speakers1";
 import Marketing2 from "./sections/Marketing2";
 import Features6 from "./sections/Features6";
-import Features7 from "./sections/Feature7";
+import Features7 from "./sections/Features7";
+import Features8 from "./sections/Features8";
+import Testimonial7 from "./sections/Testimonial7";
+import Features9 from "./sections/Features9";
+import Features10 from "./sections/Features10";
 
 const Landing8 = () => {
   return (
@@ -22,6 +26,10 @@ const Landing8 = () => {
       <Intro8 />
       <Features6 />
       <Features7 />
+      <Testimonial7 />
+      <Features8 />
+      <Features9 />
+      <Features10 />
       <Services9 />
       <Story1 />
       <OnlineClass1 />

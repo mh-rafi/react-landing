@@ -6,7 +6,7 @@ import {
   Button,
   TextField,
   InputAdornment,
-  darken
+  darken,
 } from "@material-ui/core";
 import FacebookIcon from "../common/icons/FacebookIcon";
 import TwitterIcon from "../common/icons/TwitterIcon";
@@ -16,7 +16,7 @@ import LinkedinIcon from "../common/icons/LinkedinIcon";
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
     background: "#011C3A",
-    color: palette.primary.contrastText
+    color: palette.primary.contrastText,
   },
   iconWrapper: {
     display: "flex",
@@ -27,30 +27,24 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     borderRadius: 4,
     marginRight: 12,
     border: `1px solid ${palette.primary.contrastText}`,
-    cursor: "pointer"
+    cursor: "pointer",
   },
   link: {
     borderRadius: 4,
     "&:hover": {
-      background: darken("#011C3A", 0.2)
-    }
-  }
+      background: darken("#011C3A", 0.2),
+    },
+  },
 }));
 
-const companyOption = [
-  "About Us",
-  "Services",
-  "Team",
-  "Pricing",
-  "Project",
-];
+const companyOption = ["About Us", "Services", "Team", "Pricing", "Project"];
 
 const userfulLink = [
   "Terms of Services",
   "Privacy Policy",
   "Documentation",
   "Changelog",
-  "Components"
+  "Components",
 ];
 
 const Footer2 = () => {
@@ -60,7 +54,7 @@ const Footer2 = () => {
     <section className={`section ${classes.section}`} id="contact4">
       <div className="container">
         <Grid container spacing={3}>
-          <Grid item lg={3} md={3} sm={12}>
+          <Grid item lg={3} md={3} sm={6} xs={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">About Us</h4>
               <p className="my-6 max-w-200">
@@ -84,7 +78,7 @@ const Footer2 = () => {
               </div>
             </div>
           </Grid>
-          <Grid item lg={3} md={3} sm={12}>
+          <Grid item lg={3} md={3} sm={6} xs={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">Company</h4>
               <div className="mt-4 mb-6">
@@ -102,7 +96,7 @@ const Footer2 = () => {
               </div>
             </div>
           </Grid>
-          <Grid item lg={3} md={3} sm={12}>
+          <Grid item lg={3} md={3} sm={6} xs={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">Useful Links</h4>
               <div className="mt-4 mb-6">
@@ -120,7 +114,7 @@ const Footer2 = () => {
               </div>
             </div>
           </Grid>
-          <Grid item lg={3} md={3} sm={12}>
+          <Grid item lg={3} md={3} sm={6} xs={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">Newsletter</h4>
               <p className="my-6">Sign Up for the latest news</p>
@@ -132,15 +126,15 @@ const Footer2 = () => {
                 fullWidth
                 inputProps={{
                   style: {
-                    paddingLeft: 12
-                  }
+                    paddingLeft: 12,
+                  },
                 }}
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="end">
                       <Icon fontSize="small">email</Icon>
                     </InputAdornment>
-                  )
+                  ),
                 }}
               />
               <Button className="w-full" variant="contained" color="primary">
