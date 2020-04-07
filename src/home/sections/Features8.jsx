@@ -39,26 +39,9 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 
 const Features8 = () => {
   const classes = useStyles();
-  const featureList = [
-    {
-      icon: ThicknessIcon,
-      title: "0.4",
-      subtitle: "Rear",
-    },
-    {
-      icon: WidthIcon,
-      title: "12mp",
-      subtitle: "Front",
-    },
-    {
-      icon: WeightIcon,
-      title: "Auto Focus",
-      subtitle: "Continuous",
-    },
-  ];
 
   return (
-    <section className="section" id="features7">
+    <section className="section" id="features8">
       <div className="container">
         <div className={classes.gridWrapper}>
           <Grid container spacing={3} alignItems="center">

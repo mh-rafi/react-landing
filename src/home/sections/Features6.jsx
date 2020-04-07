@@ -22,9 +22,9 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       background: "rgba(var(--primary), 0.1)",
       transform: "rotate(30deg)",
       borderRadius: 12,
-      zIndex: -1
-    }
-  }
+      zIndex: -1,
+    },
+  },
 }));
 
 const Features6 = () => {
@@ -32,40 +32,40 @@ const Features6 = () => {
   const featureList = [
     {
       icon: SSDIcon,
-      title: "SSD"
+      title: "SSD",
     },
     {
       icon: DesktopIcon,
-      title: "19 inch OLED Display"
+      title: "19 inch OLED Display",
     },
     {
       icon: RAMIcon,
-      title: "12 GB Ram"
+      title: "12 GB Ram",
     },
     {
       icon: FingerPrintIcon,
-      title: "Fingerprint Scanner"
+      title: "Fingerprint Scanner",
     },
     {
       icon: BatteryChargingFull,
-      title: "6 Hrs. Battery Backup "
+      title: "6 Hrs. Battery Backup ",
     },
     {
       icon: ProcessorIcon,
-      title: "Core i9"
+      title: "Core i9",
     },
     {
       icon: LinkedCamera,
-      title: "12MP Camera"
+      title: "12MP Camera",
     },
     {
       icon: MetalicIcon,
-      title: "Metallic Finish"
-    }
+      title: "Metallic Finish",
+    },
   ];
 
   return (
-    <section className="section">
+    <section className="section" id="features6">
       <div className="container">
         <div className="max-w-400 mb-20 mx-auto text-center">
           <h1 className="mt-0 font-normal text-44">App Features</h1>

@@ -62,7 +62,7 @@ const Features9 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section">
+    <section className="section" id="feature9">
       <div className="container">
         <Grid container spacing={4}>
           <Grid item sm={6} xs={12}>

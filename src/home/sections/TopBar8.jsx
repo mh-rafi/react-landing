@@ -62,33 +62,33 @@ const TopBar8 = (props) => {
             <NavLink to="/">Demos</NavLink>
           </li>
           <li>
-            <ScrollTo to="intro7" onScroll={close}>
+            <ScrollTo to="intro8" onScroll={close}>
               Home
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="services8" onScroll={close}>
-              Works
-            </ScrollTo>
-          </li>
-          <li>
-            <ScrollTo to="features7" onScroll={close}>
+            <ScrollTo to="features6" onScroll={close}>
               Features
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="marketing2" onScroll={close}>
-              Admission
-            </ScrollTo>
-          </li>
-          <li>
-            <ScrollTo to="testimonial1" onScroll={close}>
+            <ScrollTo to="testimonial7" onScroll={close}>
               Review
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="subscription1" onScroll={close}>
-              Subscribe
+            <ScrollTo to="features8" onScroll={close}>
+              Design
+            </ScrollTo>
+          </li>
+          <li>
+            <ScrollTo to="feature9" onScroll={close}>
+              Specification
+            </ScrollTo>
+          </li>
+          <li>
+            <ScrollTo to="contact3" onScroll={close}>
+              Contact
             </ScrollTo>
           </li>
         </ul>

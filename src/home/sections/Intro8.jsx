@@ -15,7 +15,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       width: 450,
       background: "rgba(var(--primary),0.15)",
       borderRadius: "50%",
-      zIndex: -1
+      zIndex: -1,
     },
     "&:before": {
       content: '" "',
@@ -25,36 +25,36 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       width: 390,
       background: "rgba(var(--primary),0.2)",
       borderRadius: "50%",
-      zIndex: -2
+      zIndex: -2,
     },
     [theme.breakpoints.down("xs")]: {
       "&:after": {
         height: 300,
-        width: 300
+        width: 300,
       },
       "&:before": {
         height: 240,
-        width: 240
-      }
+        width: 240,
+      },
     },
     [theme.breakpoints.down("sm")]: {
       "&:after": {
         height: 350,
-        width: 350
+        width: 350,
       },
       "&:before": {
         height: 290,
-        width: 290
-      }
-    }
-  }
+        width: 290,
+      },
+    },
+  },
 }));
 
 const Intro8 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section mt-12">
+    <section className="section mt-12" id="intro8">
       <div className="container">
         <Grid container spacing={10} justify="space-between">
           <Grid item sm={6} xs={12}>
@@ -82,7 +82,7 @@ const Intro8 = () => {
               erat
             </p>
 
-            {[1, 2, 3].map(item => (
+            {[1, 2, 3].map((item) => (
               <div key={item} className="flex items-center">
                 <Icon className="mr-4" color="primary">
                   done

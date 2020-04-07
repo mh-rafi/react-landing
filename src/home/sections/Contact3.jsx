@@ -54,7 +54,7 @@ const Contact3 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section" id="contact2">
+    <section className="section" id="contact3">
       <div className="container text-center">
         <h1 className="mt-0 font-normal text-44 mx-auto">
           Preorder <span className="text-primary">Today</span>

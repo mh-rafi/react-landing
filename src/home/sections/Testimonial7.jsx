@@ -26,7 +26,10 @@ const Testimonial7 = () => {
   const classes = useStyles();
 
   return (
-    <section className={clsx("section my-20", classes.section)}>
+    <section
+      className={clsx("section my-20", classes.section)}
+      id="testimonial7"
+    >
       <div className="container">
         <div className={clsx("text-center text-white", classes.card)}>
           <h1 className="m-0 text-48 font-normal inline-block mx-auto">
