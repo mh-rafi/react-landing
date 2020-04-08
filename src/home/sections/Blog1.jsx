@@ -5,24 +5,24 @@ import {
   Button,
   Divider,
   Icon,
-  IconButton
+  IconButton,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   sectionBG: {
-    background: "rgba(var(--primary),0.035)"
+    background: "rgba(var(--primary),0.035)",
   },
   card: {
     borderRadius: 20,
     border: `1px solid transparent`,
     "&:hover": {
-      border: `1px solid ${palette.primary.main}`
+      border: `1px solid ${palette.primary.main}`,
     },
     "&:hover $imageOverlay": {
-      opacity: 1
-    }
+      opacity: 1,
+    },
   },
   imageOverlay: {
     position: "absolute",
@@ -36,15 +36,15 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     zIndex: 1,
     opacity: 0,
     background: "rgba(var(--primary),0.4)",
-    transition: "all 250ms ease"
+    transition: "all 250ms ease",
   },
   dateHolder: {
     borderRadius: 4,
     padding: "0.3rem 0.6rem",
     background: "rgba(var(--primary),0.4)",
     textAlign: "center",
-    marginRight: "1rem"
-  }
+    marginRight: "1rem",
+  },
 }));
 
 const Blog1 = () => {
@@ -91,8 +91,7 @@ const Blog1 = () => {
                   </div>
                   <p className="mt-6 mb-8">
                     Lorem ipsum dolor sit elitdo eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud...
+                    labore et dolore magna aliqua.
                   </p>
                   <Divider className="bg-light-primary" />
                   <div className="flex justify-between items-center my-1">

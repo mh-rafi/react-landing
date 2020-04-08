@@ -8,8 +8,8 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     borderRadius: 8,
     overflow: "hidden",
     "&:hover $cardOverlay": {
-      opacity: 1
-    }
+      opacity: 1,
+    },
   },
   cardOverlay: {
     padding: "0px 1rem",
@@ -20,14 +20,14 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     position: "absolute",
     borderRadius: 8,
     top: 0,
-    bottom: 6,
+    bottom: 0,
     left: 0,
     right: 0,
     opacity: 0,
     color: palette.primary.contrastText,
     background: "rgba(var(--primary),0.5)",
-    zIndex: 5
-  }
+    zIndex: 5,
+  },
 }));
 
 const Gallery1 = () => {
@@ -37,33 +37,33 @@ const Gallery1 = () => {
     {
       title: "Firepox",
       subtitle: "Branding",
-      image: "/assets/images/random-6.png"
+      image: "/assets/images/random-6.png",
     },
     {
       title: "Brillian",
       subtitle: "Branding",
-      image: "/assets/images/random-7.png"
+      image: "/assets/images/random-7.png",
     },
     {
       title: "Creative",
       subtitle: "Branding",
-      image: "/assets/images/random-8.png"
+      image: "/assets/images/random-8.png",
     },
     {
       title: "Persistent",
       subtitle: "Branding",
-      image: "/assets/images/random-9.png"
+      image: "/assets/images/random-9.png",
     },
     {
       title: "Firepox",
       subtitle: "Branding",
-      image: "/assets/images/random-10.png"
+      image: "/assets/images/random-10.png",
     },
     {
       title: "Creative",
       subtitle: "Branding",
-      image: "/assets/images/random-5.png"
-    }
+      image: "/assets/images/random-5.png",
+    },
   ];
 
   return (
@@ -80,7 +80,7 @@ const Gallery1 = () => {
           {imageList.map((item, ind) => (
             <Grid key={ind} item lg={4} md={4} sm={4} xs={12}>
               <div className={classes.cardHolder}>
-                <img className="w-full" src={item.image} alt="random" />
+                <img className="w-full block" src={item.image} alt="random" />
                 <div className={classes.cardOverlay}>
                   <h3 className="m-0">{item.title}</h3>
                   <p>{item.subtitle}</p>

@@ -6,11 +6,11 @@ export const colorStyles = makeStyles(({ palette, ...theme }) => ({
     ".bg-secondary": { background: `${palette.secondary.main} !important` },
     ".bg-green": {
       backgroundColor: "rgba(0, 128, 0, 0.75) !important",
-      background: "#08ad6c !important"
+      background: "#08ad6c !important",
     },
     ".bg-error": {
       background: `${palette.error.main} !important`,
-      color: "white !important"
+      color: "white !important",
     },
     ".bg-white": { background: "#fff !important", color: "inherit" },
     ".bg-default": { background: `${palette.background.default} !important` },
@@ -23,19 +23,19 @@ export const colorStyles = makeStyles(({ palette, ...theme }) => ({
       background: `${palette.primary.main} !important`,
       color: "#ffffff",
       backgroundColor: `${palette.primary.main} !important`,
-      fallbacks: [{ color: "white !important" }]
+      fallbacks: [{ color: "white !important" }],
     },
     '.hover-bg-primary:hover [class^="MuiSvgIcon-"]': {
-      fill: "white !important"
+      fill: "white !important",
     },
     ".bg-light-primary": {
-      background: `rgba(var(--primary), 0.15) !important`
+      background: `rgba(var(--primary), 0.15) !important`,
     },
     ".bg-light-secondary": {
-      background: `${lighten(palette.secondary.main, 0.85)} !important`
+      background: `${lighten(palette.secondary.main, 0.85)} !important`,
     },
     ".bg-light-error": {
-      background: `${lighten(palette.error.main, 0.85)} !important`
+      background: `${lighten(palette.error.main, 0.85)} !important`,
     },
     ".bg-light-green": { background: "rgba(8, 173, 108, 0.5) !important" },
     ".bg-transparent": { background: "transparent !important" },
@@ -52,17 +52,18 @@ export const colorStyles = makeStyles(({ palette, ...theme }) => ({
     ".text-secondary": { color: `${palette.secondary.main} !important` },
     ".text-error": { color: `${palette.error.main} !important` },
     ".text-green": { color: "#08ad6c !important" },
+    ".text-inherit": { color: "inherit !important" },
     ".gray-on-hover": { transition: "background 250ms ease" },
     ".gray-on-hover:hover": { background: "rgba(0, 0, 0, 0.054)" },
     ".border-color-white": { borderColor: "#ffffff !important" },
     ".border-color-primary": {
-      borderColor: `${palette.primary.main} !important`
+      borderColor: `${palette.primary.main} !important`,
     },
     ".border-color-default": {
-      borderColor: `${palette.background.default} !important`
+      borderColor: `${palette.background.default} !important`,
     },
     ".border-color-paper": {
-      borderColor: `${palette.background.paper} !important`
-    }
-  }
+      borderColor: `${palette.background.paper} !important`,
+    },
+  },
 }));
