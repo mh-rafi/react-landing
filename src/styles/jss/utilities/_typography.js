@@ -5,7 +5,7 @@ export const typographyStyles = makeStyles(({ palette, ...theme }) => ({
     ".h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6": {
       margin: "0 0 0.5rem",
       lineHeight: "1.1",
-      color: "inherit"
+      color: "inherit",
     },
     ".h1, h1": { fontSize: "2rem" },
     ".h2, h2": { fontSize: "1.75rem" },
@@ -38,6 +38,7 @@ export const typographyStyles = makeStyles(({ palette, ...theme }) => ({
     ".text-20": { fontSize: "20px !important" },
     ".text-22": { fontSize: "22px !important" },
     ".text-24": { fontSize: "24px !important" },
+    ".text-28": { fontSize: "28px !important" },
     ".text-30": { fontSize: "30px !important" },
     ".text-32": { fontSize: "32px !important" },
     ".text-44": { fontSize: "44px !important" },
@@ -49,6 +50,6 @@ export const typographyStyles = makeStyles(({ palette, ...theme }) => ({
     ".text-small": { fontSize: "0.8125rem !important" },
     ".whitespace-pre-wrap": { whiteSpace: "pre-wrap", wordBreak: "break-word" },
     ".whitespace-pre": { whiteSpace: "pre" },
-    ".whitespace-no-wrap": { whiteSpace: "nowrap" }
-  }
+    ".whitespace-no-wrap": { whiteSpace: "nowrap" },
+  },
 }));
