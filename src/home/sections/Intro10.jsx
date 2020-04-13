@@ -46,7 +46,7 @@ const Intro10 = () => {
   const classes = useStyles();
 
   return (
-    <section className={clsx("section", classes.section)} id="intro9">
+    <section className={clsx("section", classes.section)} id="intro10">
       <div className="container">
         <div
           className={clsx(

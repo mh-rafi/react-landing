@@ -12,6 +12,12 @@ import Services10 from "./sections/Services10";
 import Blog1 from "./sections/Blog1";
 import Testimonial8 from "./sections/Testimonial8";
 import Conference1 from "./sections/Conference1";
+import EventSchedule1 from "./sections/EventSchedule1";
+import Speakers1 from "./sections/Speakers1";
+import EventDetails1 from "./sections/EventDetails1";
+import Pricing3 from "./sections/Pricing3";
+import Testimonial9 from "./sections/Testimonial9";
+import Subscription1 from "./sections/Subscription1";
 
 const Landing10 = () => {
   return (
@@ -19,13 +25,13 @@ const Landing10 = () => {
       <TopBar10 />
       <Intro10 />
       <Conference1 />
-      <Booking1 />
-      <Gallery2 />
-      <HotelTour />
-      <Services10 />
+      <Speakers1 />
+      <EventSchedule1 />
+      <EventDetails1 />
+      <Pricing3 />
+      <Testimonial9 />
       <Blog1 />
-      <Testimonial8 />
-      <Contact2 />
+      <Subscription1 />
       <ThemeProvider theme={FooterTheme}>
         <Footer2 />
       </ThemeProvider>

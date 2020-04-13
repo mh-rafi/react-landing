@@ -25,7 +25,7 @@ const Conference1 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section">
+    <section className="section" id="conference1">
       <div className="container">
         <div className={clsx(classes.content, classes.borderRounded)}>
           <Grid container spacing={0} alignItems="center">

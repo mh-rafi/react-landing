@@ -1,0 +1,19 @@
+<svg id="Component_59_1" data-name="Component 59 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="281" height="259" viewBox="0 0 281 259">
+  <defs>
+    <filter id="Cards_Elements_Surface_Outlined_Resting" x="-4.5" y="-3.5" width="290" height="268" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Cards_Elements_Surface_Outlined_Resting)">
+        <rect id="Cards_Elements_Surface_Outlined_Resting-2" data-name="Cards / Elements / Surface / Outlined / Resting" width="281" height="259" rx="4" transform="translate(0 0)" fill="#fff"/>
+      </g>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_61" data-name="Mask Group 61" clip-path="url(#clip-path)">
+    <path id="Path_2610" data-name="Path 2610" d="M0,0,441.479-2.167l-.766,153.4L-.766,153.4Z" transform="matrix(0.966, 0.259, -0.259, 0.966, -58.967, -0.537)" fill="#3f51b5"/>
+  </g>
+</svg>

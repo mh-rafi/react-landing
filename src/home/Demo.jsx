@@ -130,7 +130,7 @@ class Demo extends Component {
                   <Card className="card text-center">
                     <img
                       className="max-w-full"
-                      src="./assets/images/screenshots/landing-9.png"
+                      src="./assets/images/screenshots/landing-10.png"
                       alt=""
                     />
                   </Card>

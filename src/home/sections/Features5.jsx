@@ -1,32 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles, lighten } from "@material-ui/core/styles";
-import {
-  Grid,
-  useMediaQuery,
-  Icon,
-  Button,
-  ButtonGroup
-} from "@material-ui/core";
-import Feature4IconCreator from "../common/icons/Feature4IconCreator";
-import CubeIcon from "../common/icons/CubeIcon";
-import RetinaIcon from "../common/icons/RetinaIcon";
-import DesktopIcon from "../common/icons/DesktopIcon";
-import CheckedIcon from "../common/icons/CheckedIcon";
-import PcMobileIcon from "../common/icons/PcMobileIcon";
-import HeartIcon from "../common/icons/HeartIcon";
+import { Grid, useMediaQuery, Icon, Button } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   feature: {
     [theme.breakpoints.down("xs")]: {
-      textAlign: "center !important"
-    }
+      textAlign: "center !important",
+    },
   },
 
   musicImage: {
     width: "362px",
     [theme.breakpoints.down("xs")]: {
-      width: "100%"
-    }
+      width: "100%",
+    },
   },
 
   musicImageWrapper: {
@@ -49,8 +36,8 @@ const useStyles = makeStyles(theme => ({
       opacity: 0.1,
 
       [theme.breakpoints.down("xs")]: {
-        display: "none"
-      }
+        display: "none",
+      },
     },
 
     "&::after": {
@@ -63,18 +50,18 @@ const useStyles = makeStyles(theme => ({
       left: "calc(10% + 20px)",
       opacity: 0.75,
       background:
-        "radial-gradient(ellipse at center,  rgba(0,0,0,0.65) -25%,rgba(0,0,0,0) 55%);"
+        "radial-gradient(ellipse at center,  rgba(0,0,0,0.65) -25%,rgba(0,0,0,0) 55%);",
     },
 
     [theme.breakpoints.down("sm")]: {
       display: "block",
       "&::after": {
-        display: "none"
+        display: "none",
       },
       "&::before": {
-        display: "none"
-      }
-    }
+        display: "none",
+      },
+    },
   },
 
   buttonGroupBG: {
@@ -84,14 +71,14 @@ const useStyles = makeStyles(theme => ({
       "&:hover": {
         background: theme.palette.primary.main,
         color: theme.palette.primary.contrastText,
-        borderRadius: 8
+        borderRadius: 8,
       },
       [theme.breakpoints.down("sm")]: {
         textAlign: "center",
-        width: "100%"
-      }
-    }
-  }
+        width: "100%",
+      },
+    },
+  },
 }));
 
 const Feature5 = () => {
@@ -134,7 +121,7 @@ const Feature5 = () => {
                 justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
                 takimata sanctus est Lorem ipsum dolor sit amet. Lorem
               </p>
-              {[1, 2, 3].map(item => (
+              {[1, 2, 3].map((item) => (
                 <div key={item} className="flex items-center">
                   <Icon className="mr-4" color="primary">
                     done

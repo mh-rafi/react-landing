@@ -41,6 +41,8 @@ export const typographyStyles = makeStyles(({ palette, ...theme }) => ({
     ".text-28": { fontSize: "28px !important" },
     ".text-30": { fontSize: "30px !important" },
     ".text-32": { fontSize: "32px !important" },
+    ".text-36": { fontSize: "36px !important" },
+    ".text-40": { fontSize: "40px !important" },
     ".text-44": { fontSize: "44px !important" },
     ".text-48": { fontSize: "48px !important" },
     ".text-54": { fontSize: "54px !important" },

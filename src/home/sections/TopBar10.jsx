@@ -62,18 +62,28 @@ const TopBar10 = (props) => {
             <NavLink to="/">Demos</NavLink>
           </li>
           <li>
-            <ScrollTo to="intro9" onScroll={close}>
+            <ScrollTo to="intro10" onScroll={close}>
               Home
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="gallery2" onScroll={close}>
-              Rooms
+            <ScrollTo to="conference1" onScroll={close}>
+              Conference
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="services10" onScroll={close}>
-              Services
+            <ScrollTo to="schedule1" onScroll={close}>
+              Schedules
+            </ScrollTo>
+          </li>
+          <li>
+            <ScrollTo to="pricing3" onScroll={close}>
+              Buy Ticket
+            </ScrollTo>
+          </li>
+          <li>
+            <ScrollTo to="testimonial9" onScroll={close}>
+              Review
             </ScrollTo>
           </li>
           <li>
@@ -82,13 +92,8 @@ const TopBar10 = (props) => {
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="testimonial8" onScroll={close}>
-              Review
-            </ScrollTo>
-          </li>
-          <li>
-            <ScrollTo to="contact2" onScroll={close}>
-              Contact
+            <ScrollTo to="subscription1" onScroll={close}>
+              Subscribe
             </ScrollTo>
           </li>
         </ul>
