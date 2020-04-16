@@ -1,6 +1,6 @@
 import React, { Children, useEffect } from "react";
 import Swiper from "swiper";
-
+import PropTypes from "prop-types";
 import { Fab } from "@material-ui/core";
 import NavigateNext from "@material-ui/icons/NavigateNext";
 import NavigateBefore from "@material-ui/icons/NavigateBefore";
@@ -18,14 +18,14 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     display: "inline-block",
     borderRadius: "100%",
     cursor: "pointer",
-    margin: "0 4px"
+    margin: "0 4px",
   },
   bulletActiveClass: {
-    transform: "scale(1.8)"
-  }
+    transform: "scale(1.8)",
+  },
 }));
 
-const Carousel = props => {
+const Carousel = (props) => {
   let theme = useTheme();
   let {
     slidesPerView = 3,
@@ -36,7 +36,8 @@ const Carousel = props => {
     navigation = true,
     bulletColor = theme.palette.primary.main,
     paginationClass = "mt-6",
-    children
+    carouselId = "swiper-1",
+    children,
   } = props;
 
   globalBulletColor = bulletColor;
@@ -54,19 +55,19 @@ const Carousel = props => {
 
     autoplay: {
       delay,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
 
     breakpoints: {
       // when window width is <= 480px
       480: {
         slidesPerView: 1,
-        spaceBetween: 0
+        spaceBetween: 0,
       },
       // when window width is <= 640px
       768: {
-        slidesPerView: 2
-      }
+        slidesPerView: 2,
+      },
     },
 
     pagination: {
@@ -74,22 +75,22 @@ const Carousel = props => {
       type: "bullets",
       bulletClass,
       bulletActiveClass,
-      clickable: true
+      clickable: true,
     },
 
     navigation: {
       nextEl: ".carousel__button-next",
-      prevEl: ".carousel__button-prev"
-    }
+      prevEl: ".carousel__button-prev",
+    },
   };
 
   useEffect(() => {
-    new Swiper(".swiper-container", swiperOptions);
+    new Swiper(`#${carouselId}`, swiperOptions);
   }, [swiperOptions]);
 
   return (
     <div className="relative w-full">
-      <div className="swiper-container">
+      <div className="swiper-container" id={carouselId}>
         <div className="swiper-wrapper">
           {Children.map(children, (child, index) => (
             <div className="swiper-slide p-1 pb-6">{child}</div>
@@ -113,6 +114,10 @@ const Carousel = props => {
       )}
     </div>
   );
+};
+
+Carousel.propTypes = {
+  carouselId: PropTypes.string.isRequired,
 };
 
 export default Carousel;

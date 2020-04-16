@@ -58,7 +58,7 @@ const Intro9 = () => {
   const classes = useStyles();
 
   return (
-    <section className={clsx("section", classes.section)} id="intro9">
+    <section className={clsx("section mt-8", classes.section)} id="intro9">
       <div className="container">
         <div className={classes.intro}>
           <h4 className="font-normal m-0 mb-6">

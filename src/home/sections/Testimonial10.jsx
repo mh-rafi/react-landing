@@ -25,7 +25,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
 }));
 
-const Testimonial4 = () => {
+const Testimonial10 = () => {
   const classes = useStyles();
 
   const testimonialList = [
@@ -124,7 +124,7 @@ const Testimonial4 = () => {
         </div>
 
         <Carousel
-          carouselId="swiper-1"
+          carouselId="swiper-2"
           slidesPerView={4}
           spacing={16}
           navigation={false}
@@ -179,4 +179,4 @@ const Testimonial4 = () => {
   );
 };
 
-export default Testimonial4;
+export default Testimonial10;
