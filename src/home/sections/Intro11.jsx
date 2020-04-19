@@ -43,9 +43,9 @@ const Intro11 = () => {
               GET STARTED
             </Button>
             <Button
-              variant="outlined"
+              variant="contained"
               color="primary"
-              className="border-radius-8 hover-bg-primary"
+              className="border-radius-8"
             >
               CONTACT US
             </Button>

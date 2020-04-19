@@ -44,8 +44,6 @@ const Carousel = (props) => {
 
   let { bulletClass, bulletActiveClass } = useStyles();
 
-  console.log(bulletClass);
-
   const swiperOptions = {
     direction: "horizontal",
     allowSlideNext,

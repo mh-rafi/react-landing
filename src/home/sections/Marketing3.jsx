@@ -1,10 +1,9 @@
 import React from "react";
 import { Grid, Icon, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 
 const Marketing3 = () => {
   return (
-    <section className="section mt-12" id="intro8">
+    <section className="section mt-12" id="marketing3">
       <div className="container">
         <Grid
           container

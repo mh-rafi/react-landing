@@ -110,7 +110,7 @@ const Testimonial10 = () => {
   ];
 
   return (
-    <div className="section" id="testimonial1">
+    <div className="section" id="testimonial10">
       <div className="container">
         <div className="mb-14 text-center mx-auto">
           <h1 className="mt-0 font-normal text-44">

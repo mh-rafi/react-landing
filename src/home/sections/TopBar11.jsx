@@ -62,38 +62,38 @@ const TopBar11 = (props) => {
             <NavLink to="/">Demos</NavLink>
           </li>
           <li>
-            <ScrollTo to="intro10" onScroll={close}>
+            <ScrollTo to="intro11" onScroll={close}>
               Home
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="conference1" onScroll={close}>
-              Conference
+            <ScrollTo to="clients1" onScroll={close}>
+              Clients
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="schedule1" onScroll={close}>
-              Schedules
+            <ScrollTo to="features11" onScroll={close}>
+              Features
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="pricing3" onScroll={close}>
-              Buy Ticket
+            <ScrollTo to="marketing3" onScroll={close}>
+              Marketing
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="testimonial9" onScroll={close}>
+            <ScrollTo to="testimonial10" onScroll={close}>
               Review
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="blog1" onScroll={close}>
-              Blog
+            <ScrollTo to="services11" onScroll={close}>
+              Achievement
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="subscription1" onScroll={close}>
-              Subscribe
+            <ScrollTo to="faq1" onScroll={close}>
+              FAQ
             </ScrollTo>
           </li>
         </ul>
