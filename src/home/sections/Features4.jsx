@@ -9,18 +9,18 @@ import CheckedIcon from "../common/icons/CheckedIcon";
 import PcMobileIcon from "../common/icons/PcMobileIcon";
 import HeartIcon from "../common/icons/HeartIcon";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   feature: {
     [theme.breakpoints.down("xs")]: {
-      textAlign: "center !important"
-    }
+      textAlign: "center !important",
+    },
   },
 
   musicImage: {
     width: "362px",
     [theme.breakpoints.down("xs")]: {
-      width: "100%"
-    }
+      width: "100%",
+    },
   },
 
   musicImageWrapper: {
@@ -43,8 +43,8 @@ const useStyles = makeStyles(theme => ({
       opacity: 0.1,
 
       [theme.breakpoints.down("xs")]: {
-        display: "none"
-      }
+        display: "none",
+      },
     },
 
     "&::after": {
@@ -57,19 +57,19 @@ const useStyles = makeStyles(theme => ({
       left: "calc(10% + 20px)",
       opacity: 0.75,
       background:
-        "radial-gradient(ellipse at center,  rgba(0,0,0,0.65) -25%,rgba(0,0,0,0) 55%);"
+        "radial-gradient(ellipse at center,  rgba(0,0,0,0.65) -25%,rgba(0,0,0,0) 55%);",
     },
 
     [theme.breakpoints.down("sm")]: {
       display: "block",
       "&::after": {
-        display: "none"
+        display: "none",
       },
       "&::before": {
-        display: "none"
-      }
-    }
-  }
+        display: "none",
+      },
+    },
+  },
 }));
 
 const Feature4 = () => {
