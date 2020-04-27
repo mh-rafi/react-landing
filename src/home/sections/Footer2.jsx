@@ -12,6 +12,7 @@ import FacebookIcon from "../common/icons/FacebookIcon";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import InstagramIcon from "../common/icons/InstagramIcon";
 import LinkedinIcon from "../common/icons/LinkedinIcon";
+import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
@@ -57,7 +58,7 @@ const Footer2 = () => {
           <Grid item lg={3} md={3} sm={6} xs={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">About Us</h4>
-              <p className="my-6 max-w-200">
+              <p className="my-6 max-w-200 text-inherit">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Officiis perferendis rem, aut aliquam neque nam? dolor sit amet,
                 consectetur adipisicing elit consectetur adipisicing.
@@ -81,13 +82,14 @@ const Footer2 = () => {
           <Grid item lg={3} md={3} sm={6} xs={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">Company</h4>
-              <div className="mt-4 mb-6">
+              <div className="mt-4 mb-6 ml--4">
                 {companyOption.map((item, ind) => (
                   <div
                     key={ind}
-                    className={
-                      "flex items-center py-2 cursor-pointer " + classes.link
-                    }
+                    className={clsx(
+                      "flex items-center py-2 cursor-pointer px-4 w-full",
+                      classes.link
+                    )}
                   >
                     <Icon>navigate_next</Icon>
                     <span>{item}</span>
@@ -99,13 +101,14 @@ const Footer2 = () => {
           <Grid item lg={3} md={3} sm={6} xs={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">Useful Links</h4>
-              <div className="mt-4 mb-6">
+              <div className="mt-4 mb-6 ml--4">
                 {userfulLink.map((item, ind) => (
                   <div
                     key={ind}
-                    className={
-                      "flex items-center py-2 cursor-pointer " + classes.link
-                    }
+                    className={clsx(
+                      "flex items-center py-2 cursor-pointer px-4 w-full",
+                      classes.link
+                    )}
                   >
                     <Icon>navigate_next</Icon>
                     <span>{item}</span>
@@ -117,7 +120,7 @@ const Footer2 = () => {
           <Grid item lg={3} md={3} sm={6} xs={12}>
             <div className="footer1__about">
               <h4 className="text-24 font-normal m-0">Newsletter</h4>
-              <p className="my-6">Sign Up for the latest news</p>
+              <p className="my-6 text-inherit">Sign Up for the latest news</p>
               <TextField
                 className="mb-4"
                 size="small"

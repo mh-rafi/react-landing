@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
   musicImage: {
     width: "362px",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       width: "100%",
     },
   },
@@ -81,26 +81,25 @@ const Feature4 = () => {
     <section className="section" id="feature4">
       <div className="container">
         <Grid container spacing={isMobile ? 3 : 10} alignItems="center">
-          <Grid item lg={8} md={8} sm={6} xs={12}>
-            <div className="max-w-400 mb-14">
+          <Grid item lg={8} md={6} sm={6} xs={12}>
+            <div className="max-w-400 mb-16">
               <h1 className="mt-0 font-normal text-44">App Features</h1>
               <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                diam nonumy eirmod tempor
               </p>
             </div>
 
-            <Grid container spacing={isMobile ? 3 : 4}>
+            <Grid container spacing={isMobile ? 5 : 8}>
               <Grid
                 item
                 lg={4}
-                md={4}
+                md={6}
                 sm={6}
                 xs={12}
                 className={classes.feature}
               >
-                <div className="relative">
+                <div className="relative mx-4">
                   <Feature4IconCreator>
                     <DesktopIcon color="primary" className="text-54" />
                   </Feature4IconCreator>
@@ -114,12 +113,12 @@ const Feature4 = () => {
               <Grid
                 item
                 lg={4}
-                md={4}
+                md={6}
                 sm={6}
                 xs={12}
                 className={classes.feature}
               >
-                <div className="relative">
+                <div className="relative mx-4">
                   <Feature4IconCreator>
                     <CubeIcon color="primary" className="text-54" />
                   </Feature4IconCreator>
@@ -135,12 +134,12 @@ const Feature4 = () => {
               <Grid
                 item
                 lg={4}
-                md={4}
+                md={6}
                 sm={6}
                 xs={12}
                 className={classes.feature}
               >
-                <div className="relative">
+                <div className="relative mx-4">
                   <Feature4IconCreator>
                     <RetinaIcon color="primary" className="text-54" />
                   </Feature4IconCreator>
@@ -154,12 +153,12 @@ const Feature4 = () => {
               <Grid
                 item
                 lg={4}
-                md={4}
+                md={6}
                 sm={6}
                 xs={12}
                 className={classes.feature}
               >
-                <div className="relative">
+                <div className="relative mx-4">
                   <Feature4IconCreator>
                     <CheckedIcon color="primary" className="text-54" />
                   </Feature4IconCreator>
@@ -173,12 +172,12 @@ const Feature4 = () => {
               <Grid
                 item
                 lg={4}
-                md={4}
+                md={6}
                 sm={6}
                 xs={12}
                 className={classes.feature}
               >
-                <div className="relative">
+                <div className="relative mx-4">
                   <Feature4IconCreator>
                     <PcMobileIcon color="primary" className="text-54" />
                   </Feature4IconCreator>
@@ -192,12 +191,12 @@ const Feature4 = () => {
               <Grid
                 item
                 lg={4}
-                md={4}
+                md={6}
                 sm={6}
                 xs={12}
                 className={classes.feature}
               >
-                <div className="relative">
+                <div className="relative mx-4">
                   <Feature4IconCreator>
                     <HeartIcon color="primary" className="text-54" />
                   </Feature4IconCreator>
@@ -211,7 +210,7 @@ const Feature4 = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item lg={4} md={4} sm={6} xs={12} className={classes.feature}>
+          <Grid item lg={4} md={6} sm={6} xs={12} className={classes.feature}>
             <div className={classes.musicImageWrapper}>
               <img
                 className={classes.musicImage}

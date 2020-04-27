@@ -91,7 +91,7 @@ const Feature5 = () => {
       <div className="container">
         <Grid container spacing={isMobile ? 3 : 10} alignItems="center">
           <Grid item lg={8} md={8} sm={6} xs={12}>
-            <div className="max-w-400 mb-14">
+            <div className="max-w-400 mb-16">
               <h1 className="mt-0 font-normal text-44">App Features</h1>
               <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
@@ -100,7 +100,7 @@ const Feature5 = () => {
               </p>
             </div>
 
-            <div className="mb-14 inline-block">
+            <div className="mb-16 inline-block">
               <div
                 className={`flex flex-wrap items-center border-radius-8 ${classes.buttonGroupBG}`}
               >
@@ -114,7 +114,7 @@ const Feature5 = () => {
               <h1 className="mt-0 font-normal text-44">
                 Great Product Analytics
               </h1>
-              <p className="mb-6 mr-4">
+              <p className="mb-8 mr-4">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et
@@ -131,8 +131,8 @@ const Feature5 = () => {
                   </p>
                 </div>
               ))}
-              <Button className="mt-6" variant="text" color="primary">
-                CLICK TO WATCH A VIDEO <Icon>navigate_next</Icon>
+              <Button className="mt-8" variant="text" color="primary">
+                CLICK TO VIEW MORE <Icon>navigate_next</Icon>
               </Button>
             </div>
           </Grid>

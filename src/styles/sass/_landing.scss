@@ -20,7 +20,9 @@ body {
   // h1,h2,h3,h4,h5,h6 {
   //   color: $black;
   // }
-
+  p {
+    color: rgba(var(--body), 0.74);
+  }
   // Global styles for landing page
   a {
     text-decoration: none;
@@ -48,9 +50,6 @@ body {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
-
-    @include media(1170px) {
-    }
   }
 
   // Typography

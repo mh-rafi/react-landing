@@ -1,22 +1,18 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Button, Fab, Icon } from "@material-ui/core";
+import { Grid, Button, Icon } from "@material-ui/core";
 import AppleIcon from "../common/icons/AppleIcon";
 
-const useStyles = makeStyles(theme => ({
-  description: props => ({
-    maxWidth: "420px",
-    paddingBottom: "12px"
-  }),
+const useStyles = makeStyles((theme) => ({
   themeText: {
-    color: theme.palette.text.primary
+    color: theme.palette.text.primary,
   },
 
   musicImage: {
     width: "362px",
     [theme.breakpoints.down("xs")]: {
-      width: "100%"
-    }
+      width: "100%",
+    },
   },
 
   musicImageWrapper: {
@@ -36,7 +32,7 @@ const useStyles = makeStyles(theme => ({
       transformOrigin: "right bottom",
       transform: "rotate(45deg)",
       zIndex: -1,
-      opacity: 0.1
+      opacity: 0.1,
     },
 
     "&::after": {
@@ -49,19 +45,19 @@ const useStyles = makeStyles(theme => ({
       left: "10%",
       opacity: 0.75,
       background:
-        "radial-gradient(ellipse at center,  rgba(0,0,0,0.65) -25%,rgba(0,0,0,0) 55%);"
+        "radial-gradient(ellipse at center,  rgba(0,0,0,0.65) -25%,rgba(0,0,0,0) 55%);",
     },
 
     [theme.breakpoints.down("sm")]: {
       display: "block",
       "&::after": {
-        display: "none"
+        display: "none",
       },
       "&::before": {
-        display: "none"
-      }
-    }
-  }
+        display: "none",
+      },
+    },
+  },
 }));
 
 const Intro4 = () => {
@@ -82,9 +78,9 @@ const Intro4 = () => {
           </Grid>
           <Grid item lg={6} md={6} sm={6} xs={12}>
             <div>
-              <p className="text-primary m-0 mb-2 text-20">Evalynn Music</p>
-              <h1 className="font-normal text-48 mt-0">Best Music App 2020</h1>
-              <p className={classes.description}>
+              <p className="text-primary m-0 mb-4 text-20">Evalynn Music</p>
+              <h1 className="font-normal text-44 mt-0">Best Music App 2020</h1>
+              <p className="max-w-400 mb-8">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
               </p>
@@ -97,20 +93,24 @@ const Intro4 = () => {
               </Button>
 
               <div className="mt-25 flex flex-wrap">
-                <Fab
-                  className="mr-6 px-6 mb-4"
-                  variant="extended"
+                <Button
+                  className="mr-6 px-6 mb-4 rounded py-3"
+                  variant="contained"
                   color="primary"
                 >
                   <Icon fontSize="small" className="mr-3">
                     android
                   </Icon>
                   Play Store
-                </Fab>
-                <Fab className="px-6 mb-4" variant="extended" color="primary">
+                </Button>
+                <Button
+                  className="px-6 mb-4 rounded py-3"
+                  variant="contained"
+                  color="primary"
+                >
                   <AppleIcon fontSize="small" className="mr-3" />
                   App Store
-                </Fab>
+                </Button>
               </div>
             </div>
           </Grid>

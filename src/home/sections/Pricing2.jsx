@@ -6,7 +6,7 @@ import {
   IconButton,
   Divider,
   Icon,
-  Button
+  Button,
 } from "@material-ui/core";
 import EuroIcon from "../common/icons/EuroIcon";
 import StarterIcon from "../common/icons/StarterIcon";
@@ -26,11 +26,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       top: "20%",
       background: palette.primary.main,
       opacity: 0.1,
-      zIndex: -1
-    }
+      zIndex: -1,
+    },
   },
   card: {
-    padding: "1.5rem 1.5rem 2rem",
+    padding: "2rem",
     border: `1px solid ${palette.background.default}`,
     borderRadius: 8,
     zIndex: 1,
@@ -41,11 +41,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       "& [class^='MuiButtonBase-']": {
         background: palette.primary.main + "!important",
         "& [class^='MuiSvgIcon-']": {
-          fill: palette.primary.contrastText + "!important"
-        }
-      }
-    }
-  }
+          fill: palette.primary.contrastText + "!important",
+        },
+      },
+    },
+  },
 }));
 
 const Pricing2 = () => {
@@ -55,40 +55,41 @@ const Pricing2 = () => {
     "Source Files",
     "Code Upload",
     "Enhanced Security",
-    "Free Installment"
+    "Free Installment",
   ];
 
   const planList = [
     {
       title: "Free",
       icon: EuroIcon,
-      price: 0
+      price: 0,
     },
     {
       title: "Starter",
       icon: StarterIcon,
-      price: 19
+      price: 19,
     },
     {
       title: "Business",
       icon: TieIcon,
-      price: 39
+      price: 39,
     },
     {
       title: "Ultimate",
       icon: CompanyIcon,
-      price: 59
-    }
+      price: 59,
+    },
   ];
 
   return (
     <section className="section" id="pricing2">
       <div className="container">
-        <div className="max-w-400 mb-14 text-center mx-auto">
+        <div className="max-w-400 mb-16 text-center mx-auto">
           <h1 className="mt-0 font-normal text-44">Our Services</h1>
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.
           </p>
         </div>
 

@@ -5,6 +5,7 @@ import { makeStyles, lighten } from "@material-ui/core/styles";
 import Carousel from "../common/Carousel";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import FacebookIcon from "../common/icons/FacebookIcon";
+import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   card: {
@@ -112,7 +113,7 @@ const Testimonial4 = () => {
   return (
     <div className="section" id="testimonial1">
       <div className="container">
-        <div className="mb-14 text-center mx-auto">
+        <div className="mb-16 text-center mx-auto">
           <h1 className="mt-0 font-normal text-44">
             What our Customers Have to Say
           </h1>
@@ -132,10 +133,10 @@ const Testimonial4 = () => {
           {testimonialList.map((testimonial, index) => (
             <div className="pt-13" key={index}>
               <Card
-                className={
-                  classes.card +
-                  " h-full card px-6 overflow-visible border-radius-8"
-                }
+                className={clsx(
+                  classes.card,
+                  "h-full card px-6 overflow-visible border-radius-8"
+                )}
                 elevation={3}
               >
                 <Avatar

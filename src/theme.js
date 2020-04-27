@@ -4,8 +4,8 @@ import orange from "@material-ui/core/colors/orange";
 import red from "@material-ui/core/colors/red";
 
 const themeOptions = {
-  type: "light",
   palette: {
+    type: "light",
     primary: indigo,
     secondary: orange,
     error: red,
@@ -13,32 +13,32 @@ const themeOptions = {
     // Used to shift a color's luminance by approximately
     // two indexes within its tonal palette.
     // E.g., shift from Red 500 to Red 300 or Red 700.
-    tonalOffset: 0.2
+    tonalOffset: 0.2,
   },
   typography: {
-    useNextVariants: true
+    useNextVariants: true,
   },
   overrides: {
     MuiButton: {
       root: {
-        textTransform: "none"
-      }
+        textTransform: "none",
+      },
     },
     MuiFab: {
       root: {
-        textTransform: "none"
-      }
-    }
-  }
+        textTransform: "none",
+      },
+    },
+  },
 };
 
 export const Theme = createMuiTheme({
-  ...themeOptions
+  ...themeOptions,
 });
 
 export const FooterTheme = createMuiTheme({
   ...themeOptions,
   palette: {
-    type: "dark"
-  }
+    type: "dark",
+  },
 });

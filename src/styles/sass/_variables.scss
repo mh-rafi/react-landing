@@ -1,6 +1,6 @@
 // Colors
 $white: #ffffff;
-$black: rgba(0, 0, 0, 0.87);
+$black: rgba(var(--body), 0.87);
 $muted: var(--text-muted);
 
 $primary-rgb: var(--primary);
@@ -79,16 +79,3 @@ $elevation-z21: var(--elevation-z21);
 $elevation-z22: var(--elevation-z22);
 $elevation-z23: var(--elevation-z23);
 $elevation-z24: var(--elevation-z24);
-
-// $white: #ffffff;
-// $black: rgba(0, 0, 0, 0.87);
-
-// $body-color: rgba($black, 0.7);
-// $heading-color: $black;
-
-// $primary: #3f51b5;
-// $secondary: #ff9100;
-
-// $brand: $primary;
-
-// $topbar-mobile-width: 220px;

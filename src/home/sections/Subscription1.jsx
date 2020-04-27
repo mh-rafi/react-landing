@@ -8,42 +8,55 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     border: `1px solid ${palette.text.hint}`,
     outline: "none",
     paddingLeft: "1.25rem",
-    paddingRight: 145
+    paddingRight: 145,
   },
   button: {
     position: "absolute",
     right: 3,
-    zIndex: 2
-  }
+    zIndex: 2,
+  },
 }));
 
 const Subscription1 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section" id="subscription1">
+    <section className="section bg-light-primary" id="subscription1">
       <div className="container">
-        <div className="max-w-550 mx-auto text-center">
-          <h1 className="text-48 mt-0 font-normal">Get Notified Instantly</h1>
-          <p className="mb-12">
+        <div className="max-w-770 mx-auto text-center">
+          <h1 className="text-44 mt-0 font-normal mb-6">
+            Sign up for our newsletter
+          </h1>
+          <p className="mb-16 max-w-400 mx-auto">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
+            nonumy eirmod tempor invidunt ut labore
           </p>
           <div className="flex items-center relative">
-            <input
+            <TextField
               variant="outlined"
-              className={clsx("rounded h-40 flex-grow text-18", classes.input)}
+              size="small"
+              placeholder="Your Email:"
+              fullWidth
+              InputProps={{
+                style: {
+                  borderRadius: 300,
+                  paddingTop: 5,
+                  paddingBottom: 5,
+                  paddingLeft: "0.75rem",
+                  background: "rgba(255,255,255,0.87)",
+                },
+                endAdornment: (
+                  <Button
+                    className={clsx(
+                      "bg-primary rounded text-13 text-white px-8 py-11px",
+                      classes.button
+                    )}
+                  >
+                    SUBSCRIBE
+                  </Button>
+                ),
+              }}
             />
-            <Button
-              className={clsx(
-                "bg-primary rounded text-white px-8 py-2",
-                classes.button
-              )}
-            >
-              SUBSCRIBE
-            </Button>
           </div>
         </div>
       </div>

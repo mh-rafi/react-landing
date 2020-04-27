@@ -1,12 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export const variableStyles = makeStyles(theme => ({
+export const variableStyles = makeStyles((theme) => ({
   "@global": {
     ":root": {
       ...{
         "--primary": convertHexToRGB(theme.palette.primary.main),
         "--secondary": convertHexToRGB(theme.palette.secondary.main),
         "--error": convertHexToRGB(theme.palette.error.main),
+        "--body": convertHexToRGB(theme.palette.text.primary),
         "--bg-default": theme.palette.background.default,
         "--bg-paper": theme.palette.background.paper,
         "--text-body": theme.palette.text.primary,
@@ -32,13 +33,16 @@ export const variableStyles = makeStyles(theme => ({
         "--font-display-1": "400 34px/40px var(--font)",
         "--font-display-2": "400 45px/48px var(--font)",
         "--font-display-3": "400 56px/56px var(--font)",
-        "--font-display-4": "300 112px/112px var(--font)"
-      }
-    }
-  }
+        "--font-display-4": "300 112px/112px var(--font)",
+      },
+    },
+  },
 }));
 
-const convertHexToRGB = hex => {
+const convertHexToRGB = (hex) => {
+  // check if it's a rgba
+  if (hex.match("rgba")) return hex.slice(5, 12).replace(/ /g, "");
+
   let c;
   if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
     c = hex.substring(1).split("");
@@ -46,10 +50,11 @@ const convertHexToRGB = hex => {
       c = [c[0], c[0], c[1], c[1], c[2], c[2]];
     }
     c = "0x" + c.join("");
+
     return [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",");
   }
 };
 
-const generateFontProperty = fontObject => {
+const generateFontProperty = (fontObject) => {
   return `${fontObject.fontWeight} ${fontObject.fontSize}/${fontObject.lineHeight} ${fontObject.fontFamily}`;
 };
