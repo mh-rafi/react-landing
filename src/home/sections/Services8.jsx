@@ -9,25 +9,25 @@ const Services8 = () => {
   const serviceList = [
     {
       title: "Strategy & Research",
-      icon: StrategyIcon
+      icon: StrategyIcon,
     },
     {
       title: "Design & Development",
-      icon: PenIcon
+      icon: PenIcon,
     },
     {
       title: "Management & Marketing",
-      icon: ManagementIcon
-    }
+      icon: ManagementIcon,
+    },
   ];
 
   return (
     <section className="section" id="services8">
       <div className="container">
-        <Grid container spacing={3} justify="space-between">
+        <Grid container spacing={6} justify="space-between">
           {serviceList.map((item, ind) => (
             <Grid key={ind} item sm={4} xs={12}>
-              <div className="text-center">
+              <div className="text-center max-w-252 mx-auto">
                 <Feature4IconCreator>
                   <item.icon color="primary" className="text-72" />
                 </Feature4IconCreator>

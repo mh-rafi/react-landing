@@ -5,7 +5,7 @@ import {
   Button,
   Card,
   TextField,
-  IconButton
+  IconButton,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
@@ -18,7 +18,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     backgroundImage: `linear-gradient(rgba(var(--primary), 0.75 ), rgba(var(--primary), 0.75 )), 
        url('./assets/images/study-bg-1.jpg')`,
     backgroundSize: "cover",
-    backgroundRepeat: "no-repeat"
+    backgroundRepeat: "no-repeat",
   },
   iconWrapper: {
     position: "relative",
@@ -34,15 +34,15 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       top: "calc(50% - 42px)",
       left: 10,
       background: "rgba(var(--primary),0.45)",
-      zIndex: -1
-    }
+      zIndex: -1,
+    },
   },
   doneIcon: {
     position: "absolute",
     bottom: 0,
     right: "calc(50% - 32px)",
-    zIndex: 3
-  }
+    zIndex: 3,
+  },
 }));
 
 const Marketing2 = () => {
@@ -51,23 +51,23 @@ const Marketing2 = () => {
     {
       icon: School,
       title: "97%",
-      subtitle: "Happy Clients"
+      subtitle: "Happy Clients",
     },
     {
       icon: BookIcon,
       title: "15+",
-      subtitle: "Awards"
+      subtitle: "Awards",
     },
     {
       icon: PersonOutline,
       title: "2K",
-      subtitle: "Job Placement"
+      subtitle: "Job Placement",
     },
     {
       icon: MessangerIcon,
       title: "98%",
-      subtitle: "Project Complete"
-    }
+      subtitle: "Project Complete",
+    },
   ];
 
   return (
@@ -76,15 +76,15 @@ const Marketing2 = () => {
         <Grid container spacing={3} justify="space-between" alignItems="center">
           <Grid item md={9} sm={7} xs={12}>
             <h1 className="font-normal text-48 mt-0">Admission Now</h1>
-            <p className="mb-12 max-w-400">
+            <p className="mb-16 max-w-400 text-inherit">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et
             </p>
-            <div className="mb-6 max-w-550">
-              <Grid container spacing={3}>
+            <div className="mb-6 max-w-600">
+              <Grid container spacing={6}>
                 {achievementList.map((item, ind) => (
-                  <Grid key={ind} item md={3} sm={6} xs={12}>
+                  <Grid key={ind} item md={3} sm={6} xs={6}>
                     <div className="text-center">
                       <div className="relative mb-8">
                         <div className={classes.iconWrapper}>
@@ -98,7 +98,9 @@ const Marketing2 = () => {
                         </IconButton>
                       </div>
                       <h1 className="font-normal inline-block">{item.title}</h1>
-                      <p className="text-center m-0">{item.subtitle}</p>
+                      <p className="text-center m-0 text-inherit">
+                        {item.subtitle}
+                      </p>
                     </div>
                   </Grid>
                 ))}
@@ -119,7 +121,7 @@ const Marketing2 = () => {
                     <Icon fontSize="small" className="text-muted mr-2">
                       person
                     </Icon>
-                  )
+                  ),
                 }}
               />
               <TextField
@@ -134,7 +136,7 @@ const Marketing2 = () => {
                     <Icon fontSize="small" className="text-muted mr-2">
                       mail
                     </Icon>
-                  )
+                  ),
                 }}
               />
               <TextField
@@ -149,7 +151,7 @@ const Marketing2 = () => {
                     <Icon fontSize="small" className="text-muted mr-2">
                       vpn_key
                     </Icon>
-                  )
+                  ),
                 }}
               />
               <Button className="w-full text-white bg-primary">LOGIN</Button>

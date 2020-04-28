@@ -9,15 +9,15 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     border: "1px solid transparent",
     borderRadius: 12,
     "&:hover": {
-      border: "1px solid rgba(var(--primary),1)"
-    }
+      border: "1px solid rgba(var(--primary),1)",
+    },
   },
   nextButton: {
     position: "absolute",
     right: 0,
     top: 0,
-    color: "white"
-  }
+    color: "white",
+  },
 }));
 
 const CourseList1 = () => {
@@ -28,12 +28,12 @@ const CourseList1 = () => {
       <div className="container">
         <div className="mb-8 text-center mx-auto">
           <h1 className="mt-0 font-normal text-44">Our Courses</h1>
-          <p className="max-w-400 mx-auto mb-12">
+          <p className="max-w-400 mx-auto mb-16">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore
           </p>
 
-          <div className="mb-12">
+          <div className="mb-16">
             <Grid container spacing={4}>
               {[2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, ind) => (
                 <Grid key={ind} item md={4} sm={6} xs={12}>
@@ -52,7 +52,7 @@ const CourseList1 = () => {
                         Advance Diagnostic Research
                       </p>
                       <div className="flex flex-wrap mb-4 justify-start mb-2">
-                        {[1, 2, 3, 4, 5].map(i => (
+                        {[1, 2, 3, 4, 5].map((i) => (
                           <Icon key={i} color="primary" className="mr-1">
                             star
                           </Icon>

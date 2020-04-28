@@ -4,7 +4,7 @@ import { FooterTheme } from "../theme";
 import { ThemeProvider } from "@material-ui/core";
 import TopBar7 from "./sections/TopBar7";
 import Intro7 from "./sections/Intro7";
-import Subscription1 from "./sections/Subscription1";
+import Subscription3 from "./sections/Subscription3";
 import Testimonial4 from "./sections/Testimonial4";
 import Services9 from "./sections/Services9";
 import Story1 from "./sections/Story1";
@@ -25,7 +25,7 @@ const Landing7 = () => {
       <Speakers1 />
       <Marketing2 />
       <Testimonial4 />
-      <Subscription1 />
+      <Subscription3 />
       <ThemeProvider theme={FooterTheme}>
         <Footer2 />
       </ThemeProvider>

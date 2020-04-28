@@ -8,7 +8,7 @@ const Marketing1 = () => {
         <Grid container spacing={3} justify="space-between" alignItems="center">
           <Grid item md={9} sm={7} xs={12}>
             <h1 className="font-normal text-48 mt-0">For a Better Marketing</h1>
-            <p className="mb-6 max-w-550">
+            <p className="mb-8 max-w-550">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
@@ -16,8 +16,8 @@ const Marketing1 = () => {
               sanctus est Lorem ipsum dolor sit amet. Lorem
             </p>
 
-            <div className="mb-6">
-              {[1, 2, 3].map(item => (
+            <div className="mb-8">
+              {[1, 2, 3].map((item) => (
                 <div key={item} className="flex items-center">
                   <Icon className="mr-4" color="primary">
                     done
@@ -50,7 +50,7 @@ const Marketing1 = () => {
                     <Icon fontSize="small" className="text-muted mr-2">
                       person
                     </Icon>
-                  )
+                  ),
                 }}
               />
               <TextField
@@ -65,7 +65,7 @@ const Marketing1 = () => {
                     <Icon fontSize="small" className="text-muted mr-2">
                       mail
                     </Icon>
-                  )
+                  ),
                 }}
               />
               <TextField
@@ -80,7 +80,7 @@ const Marketing1 = () => {
                     <Icon fontSize="small" className="text-muted mr-2">
                       vpn_key
                     </Icon>
-                  )
+                  ),
                 }}
               />
               <Button className="w-full text-white bg-primary">LOGIN</Button>

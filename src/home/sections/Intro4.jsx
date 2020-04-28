@@ -64,8 +64,8 @@ const Intro4 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section" id="intro4">
-      <div className="container pt-10">
+    <section className="section section-intro" id="intro4">
+      <div className="container">
         <Grid container spacing={3} alignItems="center">
           <Grid item lg={6} md={6} sm={6} xs={12}>
             <div className={classes.musicImageWrapper}>

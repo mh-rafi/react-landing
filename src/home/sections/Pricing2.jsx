@@ -86,7 +86,7 @@ const Pricing2 = () => {
       <div className="container">
         <div className="max-w-400 mb-16 text-center mx-auto">
           <h1 className="mt-0 font-normal text-44">Our Services</h1>
-          <p>
+          <p className="mb-16">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua.

@@ -35,7 +35,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     left: 0,
     zIndex: 1,
     opacity: 0,
-    background: "rgba(var(--primary),0.4)",
+    background: "rgba(var(--body),0.67)",
     transition: "all 250ms ease",
   },
   dateHolder: {
@@ -53,7 +53,7 @@ const Blog1 = () => {
   return (
     <section className={clsx("section", classes.sectionBG)} id="blog1">
       <div className="container">
-        <div className="max-w-400 mb-8 text-center mx-auto">
+        <div className="max-w-400 mb-16 text-center mx-auto">
           <h1 className="mt-0 font-normal text-44">Latest News</h1>
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

@@ -14,7 +14,7 @@ const Story1 = () => {
             <img
               src="/assets/images/graduate-1.jpg"
               alt="graduate"
-              className="max-h-550 max-w-full"
+              className="max-h-550 max-w-full border-radius-12"
             />
           </Grid>
           <Grid item sm={6} xs={12}>
@@ -28,7 +28,7 @@ const Story1 = () => {
               dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
               sanctus est.
             </p>
-            {[1, 2, 3].map(item => (
+            {[1, 2, 3].map((item) => (
               <div key={item} className="flex items-center">
                 <Icon className="mr-4" color="primary">
                   done
@@ -39,7 +39,7 @@ const Story1 = () => {
               </div>
             ))}
             <Button
-              className="mt-10 px-7 bg-primary text-white rounded"
+              className="mt-16 px-7 bg-primary text-white rounded"
               variant="text"
               color="primary"
             >

@@ -8,21 +8,21 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     borderRadius: 8,
     "&:hover $cardHeader": {
       background: palette.primary.main,
-      color: "white"
+      color: "white",
     },
     "&:hover $largeText": {
-      color: "rgba(var(--primary),0.3)"
-    }
+      color: "rgba(var(--primary),0.3)",
+    },
   },
   cardHeader: {
-    padding: "1.25rem 1.5rem",
+    padding: "1.25rem 2rem",
     fontSize: "1rem",
     fontWeight: 500,
     background: "rgba(var(--primary),0.3)",
-    transition: "all 250ms ease"
+    transition: "all 250ms ease",
   },
   cardContent: {
-    padding: "1.25rem 1.5rem"
+    padding: "1.5rem 2rem",
   },
   largeText: {
     textAlign: "right",
@@ -31,8 +31,8 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     lineHeight: 1,
     marginTop: "1.5rem",
     color: "rgba(var(--primary),0.1)",
-    transition: "all 250ms ease"
-  }
+    transition: "all 250ms ease",
+  },
 }));
 
 const WorkProcess1 = () => {
@@ -40,7 +40,7 @@ const WorkProcess1 = () => {
   const processList = [
     "Discuss The Project",
     "Working on The Project",
-    "Revision, Correction & Delivery"
+    "Revision, Correction & Delivery",
   ];
 
   return (
@@ -48,7 +48,7 @@ const WorkProcess1 = () => {
       <div className="container">
         <div>
           <h1 className="font-normal text-44 mt-0">My Work Process</h1>
-          <p className="max-w-400 mb-8">
+          <p className="max-w-400 mb-16">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
           </p>

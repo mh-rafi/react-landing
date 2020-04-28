@@ -6,7 +6,7 @@ const Contact2 = () => {
   return (
     <section className="section" id="contact2">
       <div className="container text-center">
-        <h1 className="mt-0 mb-12 font-normal text-44 mx-auto">
+        <h1 className="mt-0 mb-16 font-normal text-44 mx-auto">
           Get in touch with us
         </h1>
         <Grid container spacing={3}>

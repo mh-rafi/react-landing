@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles, lighten } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   iconWrapper: {
     position: "relative",
     display: "inline-block",
@@ -9,27 +9,27 @@ const useStyles = makeStyles(theme => ({
       content: '" "',
       position: "absolute",
       height: "78px",
-      width: "48px",
+      width: "38px",
       borderRadius: "300px",
       transform: "rotate(45deg)",
       top: "calc(50% - 42px)",
-      left: -8,
-      background: lighten(theme.palette.primary.light, 0.9),
-      zIndex: -2
+      left: 6,
+      background: lighten(theme.palette.primary.light, 0.85),
+      zIndex: -2,
     },
     "&::after": {
       content: '" "',
       position: "absolute",
       height: "78px",
-      width: "48px",
+      width: "38px",
       top: "calc(50% - 42px)",
-      left: 12,
+      left: 20,
       borderRadius: "300px",
       transform: "rotate(45deg)",
-      background: lighten(theme.palette.primary.light, 0.6),
-      zIndex: -1
-    }
-  }
+      background: lighten(theme.palette.primary.light, 0.55),
+      zIndex: -1,
+    },
+  },
 }));
 
 const Feature4IconCreator = ({ children }) => {

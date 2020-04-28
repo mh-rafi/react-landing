@@ -9,10 +9,15 @@ import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   card: {
+    transition: "all 250ms ease-in-out",
     border: `1px solid ${palette.primary.contrastText}`,
     "& [class^='MuiAvatar-root']": {
       border: `1px solid ${palette.primary.main}`,
       background: palette.primary.contrastText,
+      transition: "all 250ms ease-in-out",
+    },
+    "& .divider": {
+      transition: "all 250ms ease-in-out",
     },
     "&:hover": {
       border: `1px solid ${palette.primary.main}`,
@@ -21,6 +26,9 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       },
       "& [class^='MuiSvgIcon-']": {
         color: `${palette.primary.main} !important`,
+      },
+      "& .divider": {
+        background: `rgba(var(--primary),0.54) !important`,
       },
     },
   },
@@ -149,7 +157,7 @@ const Testimonial4 = () => {
                   diam nonumy eirmod tempor invidunt ut labore et dolore"
                 </p>
 
-                <Divider className="mb-4"></Divider>
+                <Divider className="mb-4 divider"></Divider>
 
                 <div className="flex flex-wrap mb-6">
                   {[1, 2, 3, 4, 5].map((i) => (

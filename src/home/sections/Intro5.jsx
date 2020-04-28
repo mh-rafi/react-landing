@@ -46,19 +46,19 @@ const Intro5 = () => {
           <Grid container spacing={0} alignItems="center">
             <Grid item sm={7} xs={12}>
               <div className={classes.intro}>
-                <h1 className="font-medium text-48 mt-0">Evelynn Designs</h1>
-                <p className="max-w-400 my-6">
+                <h1 className="font-bold text-48 mt-0">Evelynn Designs</h1>
+                <p className="max-w-400 text-18 my-6">
                   Looking for a{" "}
                   <span className="text-primary">
                     world class graphics designer ?
                   </span>
                 </p>
-                <p className="max-w-400 mb-8">
+                <p className="max-w-400 mb-15">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor invidunt ut labore et
                 </p>
-                <p>FEATURED PHOTOS</p>
-                <div className="max-w-550 mb-4">
+                <p className="mb-6">FEATURED PHOTOS</p>
+                <div className="max-w-550 mb-6">
                   <Grid container spacing={3}>
                     {imageList.map((item, ind) => (
                       <Grid key={ind} item sm={4} xs={12}>
@@ -75,7 +75,7 @@ const Intro5 = () => {
                 </div>
                 <Button
                   className={clsx(
-                    "rounded pl-6 pr-4 text-black mb-12",
+                    "rounded pl-6 pr-4 text-black mb-15",
                     classes.themeText
                   )}
                   variant="outlined"

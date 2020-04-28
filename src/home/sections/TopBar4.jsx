@@ -4,11 +4,14 @@ import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
 import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
-import { Button } from "@material-ui/core";
+import { Button, useTheme, useMediaQuery } from "@material-ui/core";
 
-const TopBar4 = props => {
+const TopBar4 = (props) => {
   const [isTop, setIsTop] = useState(true);
   const [isClosed, setIsClosed] = useState(true);
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   let scrollableElement = document.querySelector(".scrollable-content");
   if (!scrollableElement) scrollableElement = window;
@@ -49,9 +52,9 @@ const TopBar4 = props => {
     <section
       className={classList({
         header: true,
-        "bg-transparent": isTop,
+        "bg-transparent": isTop && !isMobile,
         "header-fixed": !isTop,
-        closed: isClosed
+        closed: isClosed,
       })}
     >
       <div className="container header-container">

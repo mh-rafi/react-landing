@@ -6,7 +6,7 @@ import {
   Icon,
   lighten,
   LinearProgress,
-  withStyles
+  withStyles,
 } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -16,11 +16,11 @@ const RoundedLinearProgressbar = withStyles(({ palette }) => ({
   root: {
     borderRadius: 300,
     height: 6,
-    background: "transparent"
+    background: "transparent",
   },
   bar: {
-    borderRadius: 300
-  }
+    borderRadius: 300,
+  },
 }))(LinearProgress);
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
@@ -30,14 +30,14 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     borderStyle: "solid",
     borderColor: palette.primary.main,
     color: palette.primary.main,
-    fontSize: 16,
-    fontWeight: "bold",
-    height: 29,
-    width: 29,
+    fontSize: 14,
+    fontWeight: 600,
+    height: 26,
+    width: 26,
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
 }));
 
 const About1 = () => {
@@ -46,49 +46,46 @@ const About1 = () => {
     {
       title: "Adobe Photoshop",
       icon: "Ps",
-      skill: 98
+      skill: 98,
     },
     {
       title: "Adobe Illustrator",
       icon: "Ai",
-      skill: 95
+      skill: 95,
     },
     {
       title: "Adobe Premiere Pro",
       icon: "Pr",
-      skill: 90
+      skill: 90,
     },
     {
       title: "Adobe After Effects",
       icon: "Ae",
-      skill: 85
+      skill: 85,
     },
     {
       title: "Adobe Indesign",
       icon: "Id",
-      skill: 90
+      skill: 90,
     },
     {
       title: "Adobe XD",
       icon: "Xd",
-      skill: 95
-    }
+      skill: 95,
+    },
   ];
 
   return (
     <section className="section" id="about1">
       <div className="container">
-        <Grid container spacing={3} alignItems="center">
+        <Grid container spacing={6} alignItems="center">
           <Grid item sm={6} xs={12}>
             <div>
               <h1 className="font-normal text-44 mt-0">About Me</h1>
-              <p className="max-w-400 my-6">
-                I am a{" "}
-                <span className="text-primary">
-                  professional graphics designer ?
-                </span>
+              <p className="max-w-400 my-6 text-primary text-18 font-meidum">
+                I am a professional graphics designer
               </p>
-              <p className="max-w-400 mb-8">
+              <p className="max-w-400 mb-15">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et
@@ -114,10 +111,10 @@ const About1 = () => {
                 key={ind}
                 className={clsx({
                   "flex items-center flex-wrap": true,
-                  "mb-4": ind !== skillList.length - 1
+                  "mb-6": ind !== skillList.length - 1,
                 })}
               >
-                <IconButton className="bg-light-primary mr-4">
+                <IconButton className="bg-light-primary mr-4 p-11px">
                   <div className={classes.skillIcon}>{item.icon}</div>
                 </IconButton>
                 <div className="flex-grow">

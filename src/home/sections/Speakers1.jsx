@@ -14,9 +14,9 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       border: "1px solid rgba(var(--primary),1)",
       color: palette.primary.main,
       "& $iconContainer": {
-        opacity: 1
-      }
-    }
+        opacity: 1,
+      },
+    },
   },
   iconContainer: {
     position: "absolute",
@@ -32,11 +32,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       marginTop: "calc(-50% - 4px)",
       height: 128,
       width: 128,
-      background: "rgba(0,0,0,0.5)",
+      background: "rgba(0,0,0,0.67)",
       borderRadius: 300,
       overflow: "hidden",
-      zIndex: -1
-    }
+      zIndex: -1,
+    },
   },
   iconWrapper: {
     display: "flex",
@@ -47,8 +47,8 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     borderRadius: 4,
     marginRight: 4,
     border: `1px solid ${palette.primary.contrastText}`,
-    cursor: "pointer"
-  }
+    cursor: "pointer",
+  },
 }));
 
 const Speakers1 = () => {
@@ -56,27 +56,27 @@ const Speakers1 = () => {
   const speakerList = [
     {
       name: "John Doe",
-      imgUrl: "/assets/images/face-1.jpg"
+      imgUrl: "/assets/images/face-1.jpg",
     },
     {
       name: "Samantha",
-      imgUrl: "/assets/images/face-4.jpg"
+      imgUrl: "/assets/images/face-4.jpg",
     },
     {
       name: "Kelly Brown",
-      imgUrl: "/assets/images/face-5.jpg"
+      imgUrl: "/assets/images/face-5.jpg",
     },
     {
       name: "John Smith",
-      imgUrl: "/assets/images/face-2.jpg"
-    }
+      imgUrl: "/assets/images/face-2.jpg",
+    },
   ];
 
   return (
     <section className="section">
       <div className="container text-center">
         <h1 className="mt-0 font-normal text-44">Our Speakers</h1>
-        <p className="max-w-400 mx-auto mb-12">
+        <p className="max-w-400 mx-auto mb-16">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua

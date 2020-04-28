@@ -200,7 +200,7 @@ body {
   padding: 20px 0;
   transition: padding 0.3s linear;
   -webkit-transition: padding 0.3s linear;
-  z-index: 2;
+  z-index: 999999;
 
   &.header-fixed {
     padding: 10px 0;
@@ -294,7 +294,12 @@ body {
     }
   }
 }
-
+.section-intro {
+  padding-top: 7.5rem !important;
+  @media screen and (max-width: 767px) {
+    padding-top: 5rem !important;
+  }
+}
 // Intro section 1
 .section-intro1 {
   padding: 180px 0 !important;

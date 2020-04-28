@@ -25,7 +25,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     right: 0,
     opacity: 0,
     color: palette.primary.contrastText,
-    background: "rgba(var(--primary),0.5)",
+    background: "rgba(var(--body),0.67)",
     zIndex: 5,
   },
 }));
@@ -71,7 +71,7 @@ const Gallery1 = () => {
       <div className="container">
         <div className="mb-8">
           <h1 className="font-normal text-44 mt-0">My Works And Portfolios</h1>
-          <p className="max-w-400">
+          <p className="max-w-400 mb-16">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore
           </p>
@@ -83,7 +83,7 @@ const Gallery1 = () => {
                 <img className="w-full block" src={item.image} alt="random" />
                 <div className={classes.cardOverlay}>
                   <h3 className="m-0">{item.title}</h3>
-                  <p>{item.subtitle}</p>
+                  <p className="text-inherit">{item.subtitle}</p>
                 </div>
               </div>
             </Grid>
@@ -91,7 +91,7 @@ const Gallery1 = () => {
         </Grid>
 
         <Button
-          className="rounded px-10 mt-8"
+          className="rounded px-10 mt-16"
           variant="contained"
           color="primary"
         >

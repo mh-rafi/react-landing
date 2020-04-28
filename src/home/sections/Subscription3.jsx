@@ -17,15 +17,15 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
 }));
 
-const Subscription1 = () => {
+const Subscription3 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section" id="subscription1">
+    <section className="section bg-light-primary" id="subscription1">
       <div className="container">
         <div className="max-w-770 mx-auto text-center">
           <h1 className="text-44 mt-0 font-normal mb-6">
-            Get Notified Instantly
+            Sign up for our newsletter
           </h1>
           <p className="mb-16 max-w-400 mx-auto">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -65,4 +65,4 @@ const Subscription1 = () => {
   );
 };
 
-export default Subscription1;
+export default Subscription3;
