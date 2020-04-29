@@ -5,7 +5,7 @@ import { Button, IconButton, Icon, Avatar } from "@material-ui/core";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
-    backgroundImage: `linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), 
+    backgroundImage: `linear-gradient(rgba(0,0,0, 0.67), rgba(0,0,0, 0.67)), 
        url('./assets/images/scene-1.jpg')`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -21,7 +21,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     "&:after": {
       content: '" "',
       position: "absolute",
-      background: "rgba(255,255,255,0.3)",
+      background: "rgba(255,255,255,0.17)",
       right: -2000,
       left: -2000,
       bottom: 0,
@@ -38,7 +38,7 @@ const HotelTour = () => {
     <section className={clsx("section", classes.section)} id="hotel-tour">
       <div className="container">
         <div className={classes.intro}>
-          <h1 className="font-normal text-center text-36 text-white mt-0 mb-4">
+          <h1 className="font-normal text-center text-36 text-white mt-0 mb-8">
             Take a Virtual Tour !
           </h1>
           <IconButton className="bg-white">

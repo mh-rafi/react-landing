@@ -16,7 +16,7 @@ const Booking1 = () => {
     <section className={clsx("section", classes.section)} id="booking1">
       <div className="container">
         <Card elevation={0} className="p-12 border-radius-8">
-          <h4 className="font-normal m-0 mb-6">Book Now !</h4>
+          <h4 className="font-normal m-0 mb-8">Book Now !</h4>
 
           <div className="flex flex-wrap items-center ml--2">
             <TextField variant="outlined" label="Check" className="m-2" />

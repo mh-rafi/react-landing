@@ -10,24 +10,28 @@ import {
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   gridWrapper: {
     position: "relative",
-    margin: "5rem 0",
+    margin: "2rem 0",
     "&:after": {
       content: '" "',
       position: "absolute",
-      height: 550,
-      width: 550,
       right: "20%",
-      top: "0rem",
+      top: 0,
+      height: 550,
+      width: 650,
       background: "rgba(var(--primary), 0.1)",
-      transform: "rotate(63deg)",
-      transformOrigin: "center center",
+      transform: "rotate(-15deg)",
+      transformOrigin: "center top",
       borderRadius: "20%",
       zIndex: -1,
+    },
+    [theme.breakpoints.down("sm")]: {
+      right: 0,
     },
   },
   image: {
     float: "right",
-    [theme.breakpoints.down("sm")]: {
+    width: "120%",
+    [theme.breakpoints.down("xs")]: {
       float: "unset",
       width: "100%",
     },
@@ -58,7 +62,7 @@ const Features7 = () => {
     <section className="section" id="features7">
       <div className="container">
         <div className={classes.gridWrapper}>
-          <Grid container spacing={3} alignItems="center">
+          <Grid container spacing={6} alignItems="center">
             <Grid item sm={6} xs={12}>
               <img
                 src="/assets/images/laptop-2.png"
@@ -80,16 +84,16 @@ const Features7 = () => {
                   </div>
                 ))}
               </div>
-              <h1 className="m-0 text-primary font-normal text-48 max-w-400">
+              <h1 className="m-0 text-primary font-normal text-44 max-w-200">
                 Best Camera
               </h1>
-              <p className="my-8 max-w-400">
+              <p className="my-8 max-w-340">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et
                 justo duo dolores
               </p>
-              <Button className="px-8 text-white bg-primary rounded">
+              <Button className="px-6 text-white bg-primary rounded">
                 EXPERIENCE
               </Button>
             </Grid>

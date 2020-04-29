@@ -5,7 +5,7 @@ import { IconButton, Icon } from "@material-ui/core";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
-    background: "url(./assets/images/home-work.jpg) rgba(var(--body), 0.67)",
+    background: "url(./assets/images/home-work.jpg) rgba(0,0,0, 0.67)",
     backgroundSize: "cover",
     backgroundBlendMode: "multiply",
   },

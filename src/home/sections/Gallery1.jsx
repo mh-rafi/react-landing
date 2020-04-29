@@ -25,7 +25,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     right: 0,
     opacity: 0,
     color: palette.primary.contrastText,
-    background: "rgba(var(--body),0.67)",
+    background: "rgba(0,0,0,0.67)",
     zIndex: 5,
   },
 }));

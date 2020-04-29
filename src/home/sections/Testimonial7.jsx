@@ -5,7 +5,7 @@ import { IconButton, Icon } from "@material-ui/core";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
-    backgroundImage: `linear-gradient(rgba(var(--primary), 0.75), rgba(var(--primary), 0.75)), 
+    backgroundImage: `linear-gradient(rgba(0,0,0, 0.67), rgba(0,0,0, 0.67)), 
        url('./assets/images/study-bg-2.jpg')`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -13,7 +13,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   card: {
     margin: "2.5rem auto",
     padding: "2.5rem",
-    background: "rgba(255,255,255,0.25)",
+    background: "rgba(255,255,255,0.17)",
     maxWidth: 550,
     borderRadius: 32,
   },
@@ -35,7 +35,7 @@ const Testimonial7 = () => {
           <h1 className="m-0 text-48 font-normal inline-block mx-auto">
             See a review
           </h1>
-          <p className="my-8 max-w-400 mx-auto">
+          <p className="my-8 max-w-400 mx-auto text-inherit">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore
           </p>

@@ -7,6 +7,15 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   imageWrapper: {
     position: "relative",
     zIndex: 3,
+    "& .price": {
+      position: "absolute",
+      right: 24,
+      top: -12,
+      height: 100,
+      width: 100,
+      borderRadius: "50%",
+      boxShadow: "0px 10px 6px rgba(0,0,0,0.17)",
+    },
     "&:after": {
       content: '" "',
       position: "absolute",
@@ -27,16 +36,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       borderRadius: "50%",
       zIndex: -2,
     },
-    [theme.breakpoints.down("xs")]: {
-      "&:after": {
-        height: 300,
-        width: 300,
-      },
-      "&:before": {
-        height: 240,
-        width: 240,
-      },
-    },
     [theme.breakpoints.down("sm")]: {
       "&:after": {
         height: 350,
@@ -45,6 +44,19 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       "&:before": {
         height: 290,
         width: 290,
+      },
+      "& .price": {
+        right: 0,
+      },
+    },
+    [theme.breakpoints.down("xs")]: {
+      "&:after": {
+        height: 300,
+        width: 300,
+      },
+      "&:before": {
+        height: 240,
+        width: 240,
       },
     },
   },
@@ -64,16 +76,21 @@ const Intro8 = () => {
                 classes.imageWrapper
               )}
             >
-              <img
-                src="/assets/images/Laptop-1.png"
-                alt="Laptop"
-                className={clsx("w-full block")}
-              />
+              <div className="relative">
+                <img
+                  src="/assets/images/Laptop-1.png"
+                  alt="Laptop"
+                  className="w-full block mt-6"
+                />
+                <div className="price flex items-center justify-center bg-paper">
+                  <h4 className="text-18 font-normal m-0">$ 499.99</h4>
+                </div>
+              </div>
             </div>
           </Grid>
           <Grid item sm={6} xs={12}>
             <h1 className="mt-0 mb-4 font-normal text-48">Evelynn Laptop</h1>
-            <h4 className="text-primary font-normal">
+            <h4 className="text-primary font-normal text-20 m-0">
               Best performance in the lowest price
             </h4>
             <p className="my-8 max-w-400">

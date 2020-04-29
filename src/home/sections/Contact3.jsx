@@ -59,7 +59,7 @@ const Contact3 = () => {
         <h1 className="mt-0 font-normal text-44 mx-auto">
           Preorder <span className="text-primary">Today</span>
         </h1>
-        <p className="mb-12 max-w-400 mx-auto">
+        <p className="mb-16 max-w-400 mx-auto">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua.

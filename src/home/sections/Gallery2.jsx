@@ -14,7 +14,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
   cardOverlay: {
     padding: "0px 1rem",
-    transition: "all 250ms ease",
+    transition: "all 250ms ease-in-out",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
@@ -26,7 +26,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     right: 0,
     opacity: 0,
     color: palette.primary.contrastText,
-    background: "rgba(var(--primary),0.5)",
+    background: "rgba(0,0,0,0.67)",
     zIndex: 5,
   },
   cardTitle: {
@@ -40,7 +40,7 @@ const Gallery2 = () => {
   return (
     <section className="section" id="gallery2">
       <div className="container">
-        <div className="mb-12 text-center">
+        <div className="mb-16 text-center">
           <h1 className="font-normal text-44 mt-0">Rooms & Suits</h1>
           <p className="max-w-400 mx-auto">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

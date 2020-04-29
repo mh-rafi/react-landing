@@ -1,15 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Icon } from "@material-ui/core";
-import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
+  introWrapper: {
     position: "relative",
     background:
       "url(./assets/images/scene-3.jpg) center center/cover no-repeat",
-    height: "100%",
-    overflow: "hidden",
+    padding: "2.5rem 0rem",
   },
   lightWhiteBG: {
     position: "absolute",
@@ -58,46 +56,48 @@ const Intro9 = () => {
   const classes = useStyles();
 
   return (
-    <section className={clsx("section mt-8", classes.section)} id="intro9">
-      <div className="container">
-        <div className={classes.intro}>
-          <h4 className="font-normal m-0 mb-6">
-            Enjoy the best relaxation space with
-          </h4>
-          <h1 className="font-medium text-48 text-primary mt-0">
-            Evelynn Resort
-          </h1>
-          <p className="mb-12">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Laborum, et ratione, labore corrupti facilis ab
-            tempore nobis qui assumenda repellendus voluptatum tenetur! Sequi a
-            fugiat libero officiis velit amet. Harum.
-          </p>
-          <div className="flex flex-wrap">
-            <Button
-              variant="outlined"
-              color="primary"
-              className="mr-4 border-radius-8 text-inherit"
-            >
-              Watch Video
-              <Icon className="ml-2" color="primary">
-                play_arrow
-              </Icon>
-            </Button>
-            <Button
-              variant="contained"
-              color="primary"
-              className="mr-4 border-radius-8"
-            >
-              Book Now
-            </Button>
+    <section className="section pb-0" id="intro9">
+      <div className={classes.introWrapper}>
+        <div className="container">
+          <div className={classes.intro}>
+            <h4 className="font-normal m-0 mb-6">
+              Enjoy the best relaxation space with
+            </h4>
+            <h1 className="font-medium text-48 text-primary mt-0">
+              Evelynn Resort
+            </h1>
+            <p className="mb-16">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Laborum, et ratione, labore corrupti
+              facilis ab tempore nobis qui assumenda repellendus voluptatum
+              tenetur! Sequi a fugiat libero officiis velit amet. Harum.
+            </p>
+            <div className="flex flex-wrap">
+              <Button
+                variant="outlined"
+                color="primary"
+                className="mr-4 border-radius-8 text-inherit"
+              >
+                Watch Video
+                <Icon className="ml-2" color="primary">
+                  play_arrow
+                </Icon>
+              </Button>
+              <Button
+                variant="contained"
+                color="primary"
+                className="mr-4 border-radius-8"
+              >
+                Book Now
+              </Button>
+            </div>
           </div>
+          <div className={classes.lightWhiteBG}></div>
         </div>
-        <div className={classes.lightWhiteBG}></div>
       </div>
     </section>
   );

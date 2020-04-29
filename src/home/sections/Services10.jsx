@@ -69,17 +69,17 @@ const Services10 = () => {
   return (
     <section className="section" id="services10">
       <div className="container">
-        <div className="mb-12 text-center">
-          <h1 className="font-normal text-44 mt-0">Rooms & Suits</h1>
+        <div className="mb-16 text-center">
+          <h1 className="font-normal text-44 mt-0">Services for you</h1>
           <p className="max-w-400 mx-auto">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore
           </p>
         </div>
-        <Grid container spacing={5} justify="space-between" alignItems="center">
+        <Grid container spacing={6} justify="space-between" alignItems="center">
           {serviceList.map((item, ind) => (
             <Grid key={ind} item md={4} sm={2} xs={12}>
-              <div className="text-center">
+              <div className="text-center max-w-252 mx-auto">
                 <div className="relative mb-8">
                   <div className={classes.iconWrapper}>
                     <item.icon className="text-62" />
@@ -94,7 +94,7 @@ const Services10 = () => {
                 <h1 className="font-normal inline-block">{item.title}</h1>
                 <p className="text-center m-0">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt
+                  diam
                 </p>
               </div>
             </Grid>

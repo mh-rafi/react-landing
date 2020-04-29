@@ -35,7 +35,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     left: 0,
     zIndex: 1,
     opacity: 0,
-    background: "rgba(var(--body),0.67)",
+    background: "rgba(0,0,0,0.67)",
     transition: "all 250ms ease",
   },
   dateHolder: {

@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
-    background: "url(./assets/images/bg-1.png) rgba(var(--body), 0.67)",
+    background: "url(./assets/images/bg-1.png) rgba(0,0,0, 0.67)",
     backgroundSize: "cover",
     backgroundBlendMode: "multiply",
   },

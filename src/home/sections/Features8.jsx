@@ -16,20 +16,21 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       position: "absolute",
       top: 0,
       right: 0,
-      left: 0,
-      bottom: 0,
+      height: 650,
+      width: 650,
       background: "rgba(var(--primary), 0.1)",
-      transform: "rotate(28deg)",
-      transformOrigin: "center center",
+      transform: "rotate(30deg)",
+      transformOrigin: "63% top",
       borderRadius: "15%",
       zIndex: -1,
     },
   },
   image: {
     float: "left",
-    transform: "rotate(28deg)",
+    transform: "rotate(30deg)",
+    maxHeight: 400,
     transformOrigin: "center center",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       float: "unset",
       width: "100%",
       transform: "rotate(0deg)",
@@ -44,7 +45,7 @@ const Features8 = () => {
     <section className="section" id="features8">
       <div className="container">
         <div className={classes.gridWrapper}>
-          <Grid container spacing={3} alignItems="center">
+          <Grid container spacing={6} alignItems="center">
             <Grid item sm={6} xs={12}>
               <div className="flex justify-between flex-wrap mb-6 max-w-320">
                 <div className="text-center my-4">
@@ -75,10 +76,10 @@ const Features8 = () => {
                   <p className="max-w-400 text-center m-0">Weight</p>
                 </div>
               </div>
-              <h1 className="m-0 text-primary font-normal text-48 max-w-400">
-                Slick Body
+              <h1 className="m-0 text-primary font-normal text-48 max-w-200">
+                Slick Design
               </h1>
-              <p className="my-8 max-w-400">
+              <p className="my-8 max-w-360">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et

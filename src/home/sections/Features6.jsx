@@ -67,11 +67,13 @@ const Features6 = () => {
   return (
     <section className="section" id="features6">
       <div className="container">
-        <div className="max-w-400 mb-20 mx-auto text-center">
-          <h1 className="mt-0 font-normal text-44">App Features</h1>
+        <div className="max-w-400 mb-24 mx-auto text-center">
+          <h1 className="mt-0 font-normal text-44 text-primary">
+            Amazing Features
+          </h1>
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et
+            nonumy eirmod tempor invidunt ut labore
           </p>
         </div>
         <Grid container spacing={8}>

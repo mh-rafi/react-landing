@@ -112,15 +112,15 @@ const Testimonial8 = () => {
   return (
     <div className={clsx("section", classes.section)} id="testimonial8">
       <div className="container text-center">
-        <h1 className="font-normal text-44 mt-0 text-white mx-auto mb-12">
-          What our customers say
+        <h1 className="font-normal text-44 mt-0 text-white mx-auto mb-16">
+          What our guests have to say
         </h1>
         <Carousel
           bulletColor={theme.palette.primary.contrastText}
           slidesPerView={1}
           spacing={0}
           navigation={false}
-          paginationClass="mt-12"
+          paginationClass="mt-16"
         >
           {testimonialList.map((testimonial, index) => (
             <div className={clsx("mx-auto", classes.card)} key={index}>
