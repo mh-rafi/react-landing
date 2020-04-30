@@ -1,9 +1,9 @@
 import React from "react";
-import { Grid, Icon, Button, Avatar } from "@material-ui/core";
+import { Grid, Icon, Button } from "@material-ui/core";
 
 const Services13 = () => {
   return (
-    <section className="section mt-12" id="services13">
+    <section className="section" id="services13">
       <div className="container">
         <Grid container spacing={10} justify="space-between">
           <Grid item sm={6} xs={12}>
@@ -17,7 +17,7 @@ const Services13 = () => {
           </Grid>
           <Grid item sm={6} xs={12}>
             <h1 className="text-primary font-normal text-48">CRM Support</h1>
-            <p className="mt-6 mb-4 max-w-400">
+            <p className="mb-8 max-w-400">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat
@@ -34,7 +34,7 @@ const Services13 = () => {
               </div>
             ))}
 
-            <div className="mt-12">
+            <div className="mt-8">
               <Button variant="text" color="primary">
                 <span className="pl-5 pr-2">CLICK TO VIEW MORE</span>
                 <Icon>navigate_next</Icon>

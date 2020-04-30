@@ -35,7 +35,7 @@ const FAQ1 = () => {
   return (
     <section className="section" id="faq1">
       <div className="container">
-        <div className="mb-14 text-center mx-auto">
+        <div className="mb-16 text-center mx-auto">
           <h1 className="mt-0 font-normal text-44 text-primary">FAQs</h1>
           <p className="max-w-400 mx-auto">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

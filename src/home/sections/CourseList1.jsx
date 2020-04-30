@@ -6,10 +6,12 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   card: {
     position: "relative",
-    border: "1px solid transparent",
     borderRadius: 12,
+    border: "1px solid rgba(0,0,0,0.17)",
+    transition: "border 250ms ease-in-out",
     "&:hover": {
-      border: "1px solid rgba(var(--primary),1)",
+      // margin: "-1px !important",
+      border: "1px solid rgba(var(--primary), 1)",
     },
   },
   nextButton: {
@@ -41,7 +43,7 @@ const CourseList1 = () => {
                     <img
                       src={`/assets/images/study-${item}.jpg`}
                       alt="study"
-                      className="w-full block"
+                      className="h-352 min-w-full block"
                     />
                     <IconButton className={classes.nextButton}>
                       <Icon>navigate_next</Icon>

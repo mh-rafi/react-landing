@@ -17,7 +17,7 @@ import Speakers1 from "./sections/Speakers1";
 import EventDetails1 from "./sections/EventDetails1";
 import Pricing3 from "./sections/Pricing3";
 import Testimonial9 from "./sections/Testimonial9";
-import Subscription1 from "./sections/Subscription1";
+import Subscription4 from "./sections/Subscription4";
 
 const Landing10 = () => {
   return (
@@ -31,7 +31,7 @@ const Landing10 = () => {
       <Pricing3 />
       <Testimonial9 />
       <Blog1 />
-      <Subscription1 />
+      <Subscription4 />
       <ThemeProvider theme={FooterTheme}>
         <Footer2 />
       </ThemeProvider>

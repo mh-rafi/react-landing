@@ -3,7 +3,7 @@ import { Button, Icon, IconButton } from "@material-ui/core";
 
 const Subscription2 = () => {
   return (
-    <section className="section bg-light-primary" id="Subscription2">
+    <section className="section section-bg-light-primary" id="Subscription2">
       <div className="container">
         <div className="text-center mx-auto">
           <h1 className="mt-0 font-normal text-44 text-primary">Get Started</h1>
@@ -18,11 +18,9 @@ const Subscription2 = () => {
               className="mr-4 border-radius-8 px-6"
             >
               WATCH VIDEO
-              <IconButton size="small" className="bg-primary ml-2">
-                <Icon fontSize="sm" className="text-white text-13">
-                  play_arrow
-                </Icon>
-              </IconButton>
+              <div className="bg-primary ml-2 w-20 h-20 rounded flex justify-center items-center">
+                <Icon className="text-white text-13">play_arrow</Icon>
+              </div>
             </Button>
             <Button
               variant="contained"

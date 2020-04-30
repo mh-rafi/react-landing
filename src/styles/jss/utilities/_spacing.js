@@ -69,6 +69,7 @@ export const spacingStyles = makeStyles(({ palette, ...theme }) => ({
     },
     ".w-full": { width: "100%" },
     ".max-w-full": { maxWidth: "100% !important" },
+    ".min-w-full": { minWidth: "100% !important" },
     ".w-full-screen": { width: "100vw" },
     ".min-w-750": { minWidth: "750px" },
     ".max-w-550": { maxWidth: "550px" },

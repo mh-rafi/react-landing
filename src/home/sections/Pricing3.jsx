@@ -7,13 +7,13 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     border: `1px solid ${palette.background.default}`,
     borderRadius: 8,
     textAlign: "center",
-    transition: "all 400ms",
+    transition: "all 400ms ease-in-out",
     zIndex: 1,
 
     "& .title-holder": {
       position: "relative",
       padding: "5rem 1.5rem",
-      transition: "opacity 400ms",
+      transition: "opacity 400ms ease-in-out",
       zIndex: 1,
       "&:after": {
         content: '" "',
@@ -26,7 +26,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
         background: palette.primary.main,
         clipPath: "polygon(0 0, 100% 30%, 100% 100%, 0 70%)",
         WebkitClipPath: "polygon(0 0, 100% 30%, 100% 100%, 0 70%)",
-        opacity: 0.1,
+        opacity: 0.23,
         zIndex: -1,
       },
     },
@@ -101,7 +101,7 @@ const Pricing3 = () => {
                 <Card className={classes.card} elevation={2}>
                   <div className="title-holder my-4">
                     <h4 className="font-normal capitalize m-0">{plan.title}</h4>
-                    <p className="m-0">
+                    <p className="m-0 text-inherit text-18">
                       $
                       <span className="price mx-1 text-44 font-normal text-primary">
                         {plan.price}

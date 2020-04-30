@@ -12,7 +12,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     overflow: "hidden",
   },
   intro: {
-    padding: "5rem 0rem",
+    padding: "7.5rem 0rem",
     maxWidth: 500,
     [theme.breakpoints.down("sm")]: {
       padding: "2.5rem 0rem",
@@ -42,7 +42,7 @@ const Intro10 = () => {
   const classes = useStyles();
 
   return (
-    <section className={clsx("section", classes.section)} id="intro10">
+    <section className="section" id="intro10">
       <div className={classes.introWrapper}>
         <div className="container">
           <div
@@ -64,20 +64,20 @@ const Intro10 = () => {
             </p>
             <div className="flex max-w-400 mx-auto flex-wrap mb-2">
               <div className="text-center mr-8 mb-8">
-                <p className="m-0 text-28">032</p>
-                <p className="m-0">Days</p>
+                <div className="m-0 text-28">032</div>
+                <div className="m-0">Days</div>
               </div>
               <div className="text-center mr-8 mb-8">
-                <p className="m-0 text-28">19</p>
-                <p className="m-0">Hours</p>
+                <div className="m-0 text-28">19</div>
+                <div className="m-0">Hours</div>
               </div>
               <div className="text-center mr-8 mb-8">
-                <p className="m-0 text-28">24</p>
-                <p className="m-0">Minutes</p>
+                <div className="m-0 text-28">24</div>
+                <div className="m-0">Minutes</div>
               </div>
               <div className="text-center mb-8">
-                <p className="m-0 text-28">51</p>
-                <p className="m-0">Seconds</p>
+                <div className="m-0 text-28">51</div>
+                <div className="m-0">Seconds</div>
               </div>
             </div>
             <Button
@@ -90,6 +90,9 @@ const Intro10 = () => {
           </div>
           <div className={classes.lightWhiteBG}></div>
         </div>
+      </div>
+      <div className="flex justify-center mt-4">
+        <p>Next Event : 30th May, 2020</p>
       </div>
     </section>
   );

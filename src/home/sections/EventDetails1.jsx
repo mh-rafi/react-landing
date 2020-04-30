@@ -5,7 +5,7 @@ import { IconButton, Icon } from "@material-ui/core";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   section: {
-    backgroundImage: `linear-gradient(rgba(var(--primary), 0.75), rgba(var(--primary), 0.75)), 
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.67), rgba(0,0,0,0.67)), 
        url('./assets/images/event-2.jpg')`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -25,7 +25,7 @@ const EventDetails1 = () => {
           <h1 className="m-0 text-48 font-normal inline-block mx-auto">
             Know more about the event
           </h1>
-          <p className="my-8 max-w-360 mx-auto">
+          <p className="my-8 max-w-360 mx-auto text-inherit">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore Lorem ipsum dolor sit amet,
             consetetur sadipscing elitr

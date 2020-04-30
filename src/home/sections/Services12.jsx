@@ -41,7 +41,7 @@ const Services12 = () => {
   return (
     <section className="section" id="services12">
       <div className="container">
-        <div className="mb-18 text-center">
+        <div className="mb-16 text-center">
           <h1 className="font-normal text-primary text-44 mt-0">
             Our Services
           </h1>
@@ -50,16 +50,18 @@ const Services12 = () => {
             nonumy eirmod tempor invidunt ut labore et dolore
           </p>
         </div>
-        <Grid container spacing={5} justify="space-between" alignItems="center">
+        <Grid container spacing={6} justify="space-between" alignItems="center">
           {serviceList.map((item, ind) => (
             <Grid key={ind} item md={4} sm={2} xs={12}>
-              <div className="text-center">
+              <div className="text-center max-w-252 mx-auto">
                 <div className="relative mb-8">
                   <Feature4IconCreator>
                     <item.icon className="text-62 text-primary" />
                   </Feature4IconCreator>
                 </div>
-                <h1 className="font-normal inline-block">{item.title}</h1>
+                <h4 className="font-normal text-primary text-20 inline-block">
+                  {item.title}
+                </h4>
                 <p className="text-center m-0">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor invidunt

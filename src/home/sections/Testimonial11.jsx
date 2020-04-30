@@ -1,43 +1,32 @@
 import React from "react";
-import { Card, Avatar, Divider, Icon, useMediaQuery } from "@material-ui/core";
-import { makeStyles, lighten, useTheme } from "@material-ui/core/styles";
+
+import { Card, Avatar, Divider, Icon } from "@material-ui/core";
+import { makeStyles, lighten } from "@material-ui/core/styles";
 import Carousel from "../common/Carousel";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import FacebookIcon from "../common/icons/FacebookIcon";
-import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   card: {
-    maxWidth: 700,
-    "& .image-border": {
-      border: "3px solid rgba(var(--primary),0.3)",
+    border: `1px solid ${palette.primary.contrastText}`,
+    "& [class^='MuiAvatar-root']": {
+      border: `1px solid ${palette.primary.main}`,
       background: palette.primary.contrastText,
     },
-
-    "&:after": {
-      content: '" "',
-      position: "absolute",
-      display: "block",
-      top: 0,
-      bottom: 0,
-      left: "calc(50% - 120px)",
-      right: "calc(50% - 175px)",
-      background: "rgba(var(--primary),0.15)",
-      clipPath: "polygon(35% 0%, 100% 0%, 65% 100%, 0% 100%)",
-      zIndex: -1,
-      [theme.breakpoints.down("xs")]: {
-        right: 0,
-        left: 0,
-        clipPath: "none",
+    "&:hover": {
+      border: `1px solid ${palette.primary.main}`,
+      "& [class^='MuiAvatar-']": {
+        background: lighten(palette.primary.main, 0.75),
+      },
+      "& [class^='MuiSvgIcon-']": {
+        color: `${palette.primary.main} !important`,
       },
     },
   },
 }));
 
-const Testimonial9 = () => {
+const Testimonial11 = () => {
   const classes = useStyles();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
 
   const testimonialList = [
     {
@@ -121,57 +110,67 @@ const Testimonial9 = () => {
   ];
 
   return (
-    <div className="section" id="testimonial9">
-      <div className="container text-center">
-        <h1 className="font-normal text-44 mt-0 mx-auto mb-16">Event Review</h1>
+    <div className="section" id="testimonial10">
+      <div className="container">
+        <div className="mb-16 text-center mx-auto">
+          <h1 className="mt-0 font-normal text-44 text-primary">
+            What our Customers Have to Say
+          </h1>
+          <p className="max-w-400 mx-auto">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          </p>
+        </div>
+
         <Carousel
-          bulletColor={theme.palette.primary.main}
-          slidesPerView={1}
-          spacing={0}
-          navigation={false}
+          carouselId="swiper-11"
           paginationClass="mt-16"
-          carouselId="carousel-9"
+          slidesPerView={4}
+          spacing={16}
+          navigation={false}
         >
           {testimonialList.map((testimonial, index) => (
-            <div className={clsx("mx-auto pt-8", classes.card)} key={index}>
-              <div
-                className={clsx({
-                  "flex justify-center items-center": true,
-                  "flex-wrap": isMobile,
-                })}
+            <div className="pt-13" key={index}>
+              <Card
+                className={
+                  classes.card +
+                  " h-full card px-6 overflow-visible border-radius-8"
+                }
+                elevation={3}
               >
                 <Avatar
-                  className="w-108 h-108 image-border p-3px"
+                  className="w-108 h-108 mt--13 inline-block p-1"
                   src={testimonial.user.imageUrl}
                   alt="user"
                 />
-                <p
-                  className={clsx({
-                    "text-left my-0 ml-8": !isMobile,
-                  })}
-                >
+                <p className="my-6">
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  aliquyam erat, sed diam voluptua.
+                  diam nonumy eirmod tempor invidunt ut labore et dolore"
                 </p>
-              </div>
-              <div className="flex flex-wrap mt-4 justify-center mb-2">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Icon
-                    key={i}
-                    className="mx-1"
+
+                <Divider className="mb-4"></Divider>
+
+                <div className="flex flex-wrap mb-6">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Icon key={i} fontSize="small" color="primary">
+                      start
+                    </Icon>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap justify-between items-end pb-4">
+                  <div>
+                    <h5 className="m-0 font-medium">{testimonial.user.name}</h5>
+                    <small className="text-muted">
+                      {testimonial.user.designation}
+                    </small>
+                  </div>
+                  <testimonial.icon
+                    className="mb-5px text-muted text-14 cursor-pointer"
                     fontSize="small"
-                    color="primary"
-                  >
-                    star
-                  </Icon>
-                ))}
-              </div>
-              <h5 className="inline-block m-0 font-medium">
-                {testimonial.user.name}, {testimonial.user.designation}
-              </h5>
+                  />
+                </div>
+              </Card>
             </div>
           ))}
         </Carousel>
@@ -180,4 +179,4 @@ const Testimonial9 = () => {
   );
 };
 
-export default Testimonial9;
+export default Testimonial11;

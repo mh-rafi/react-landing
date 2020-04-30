@@ -37,6 +37,7 @@ export const colorStyles = makeStyles(({ palette, ...theme }) => ({
     ".bg-light-error": {
       background: `${lighten(palette.error.main, 0.85)} !important`,
     },
+    ".section-bg-light-primary": { background: "rgba(var(--primary),0.1)" },
     ".bg-light-green": { background: "rgba(8, 173, 108, 0.5) !important" },
     ".bg-transparent": { background: "transparent !important" },
     ".text-white": { color: "#fff !important" },

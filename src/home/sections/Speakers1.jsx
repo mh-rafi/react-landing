@@ -10,11 +10,15 @@ import clsx from "clsx";
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   card: {
     border: "1px solid transparent",
+    transition: "all 250ms ease-in-out",
     "&:hover": {
-      border: "1px solid rgba(var(--primary),1)",
+      border: "1px solid rgba(var(--primary), 1)",
       color: palette.primary.main,
       "& $iconContainer": {
         opacity: 1,
+      },
+      "& .description": {
+        color: palette.primary.main,
       },
     },
   },
@@ -32,7 +36,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       marginTop: "calc(-50% - 4px)",
       height: 128,
       width: 128,
-      background: "rgba(0,0,0,0.67)",
+      background: "rgba(0,0,0, 0.67)",
       borderRadius: 300,
       overflow: "hidden",
       zIndex: -1,
@@ -73,7 +77,7 @@ const Speakers1 = () => {
   ];
 
   return (
-    <section className="section">
+    <section className="section section-bg-light-primary">
       <div className="container text-center">
         <h1 className="mt-0 font-normal text-44">Our Speakers</h1>
         <p className="max-w-400 mx-auto mb-16">
@@ -88,7 +92,7 @@ const Speakers1 = () => {
               <Card
                 elevation={3}
                 className={clsx(
-                  "border-radius-12 px-6 py-8 text-center",
+                  "border-radius-12 px-6 pt-8 pb-4 text-center",
                   classes.card
                 )}
               >
@@ -129,8 +133,10 @@ const Speakers1 = () => {
                     </div>
                   </div>
                 </div>
-                <h5 className="mt-0 mb-2 font-medium">{item.name}</h5>
-                <p className="m-0">Lorem ipsum dolor sit amet</p>
+                <h5 className="m-0 font-medium text-18">{item.name}</h5>
+                <p className="description">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitrr
+                </p>
               </Card>
             </Grid>
           ))}

@@ -59,21 +59,30 @@ const EventSchedule1 = () => {
       <div className="container">
         <div className="max-w-400 mx-auto text-center">
           <h1 className="mt-0 font-normal text-44">Event Schedules</h1>
-          <p className="mb-14">
+          <p className="mb-16">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore
           </p>
-          <div className="inline-block mb-8">
+          <div className="inline-block mb-10">
             <div
               className={`flex flex-wrap items-center border-radius-8 ${classes.buttonGroupBG}`}
             >
-              <div className="px-6 py-2" onClick={() => setTabIndex(0)}>
+              <div
+                className="px-6 py-2 cursor-pointer"
+                onClick={() => setTabIndex(0)}
+              >
                 First Day
               </div>
-              <div className="px-6 py-2" onClick={() => setTabIndex(1)}>
+              <div
+                className="px-6 py-2 cursor-pointer"
+                onClick={() => setTabIndex(1)}
+              >
                 Second Day
               </div>
-              <div className="px-6 py-2" onClick={() => setTabIndex(2)}>
+              <div
+                className="px-6 py-2 cursor-pointer"
+                onClick={() => setTabIndex(2)}
+              >
                 Third Day
               </div>
             </div>

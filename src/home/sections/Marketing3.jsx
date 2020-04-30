@@ -3,7 +3,7 @@ import { Grid, Icon, Button } from "@material-ui/core";
 
 const Marketing3 = () => {
   return (
-    <section className="section mt-12" id="marketing3">
+    <section className="section" id="marketing3">
       <div className="container">
         <Grid
           container
@@ -33,7 +33,7 @@ const Marketing3 = () => {
               </div>
             ))}
 
-            <div className="mt-12">
+            <div className="mt-8">
               <Button
                 variant="outlined"
                 color="primary"

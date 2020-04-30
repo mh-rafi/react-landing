@@ -12,7 +12,7 @@ const Clients1 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section bg-light-primary" id="clients1">
+    <section className="section section-bg-light-primary" id="clients1">
       <div className="container text-center">
         <h1 className="font-normal text-primary text-48 mb-4">
           Our Trusted Clients

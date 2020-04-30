@@ -6,8 +6,8 @@ import { Button } from "@material-ui/core";
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   container: {
     backgroundImage: 'url("/assets/images/doted-bg-1.png")',
-    backgroundPosition: "top",
-    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
   },
 }));
@@ -16,7 +16,7 @@ const Intro11 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section mt-14" id="intro11">
+    <section className="section mt-16" id="intro11">
       <div className={clsx("container", classes.container)}>
         <div className="max-w-550 mx-auto text-center">
           <img

@@ -112,7 +112,7 @@ const Testimonial10 = () => {
   return (
     <div className="section" id="testimonial10">
       <div className="container">
-        <div className="mb-14 text-center mx-auto">
+        <div className="mb-16 text-center mx-auto">
           <h1 className="mt-0 font-normal text-44">
             What our Customers Have to Say
           </h1>
@@ -124,7 +124,8 @@ const Testimonial10 = () => {
         </div>
 
         <Carousel
-          carouselId="swiper-2"
+          carouselId="swiper-10"
+          paginationClass="mt-16"
           slidesPerView={4}
           spacing={16}
           navigation={false}

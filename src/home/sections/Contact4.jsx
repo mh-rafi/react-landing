@@ -10,17 +10,22 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
+const inputProps = {
+  style: {
+    borderRadius: 8,
+  },
+};
+
 const Contact4 = () => {
   return (
-    <section className="section bg-light-primary" id="contact4">
+    <section className="section section-bg-light-primary" id="contact4">
       <div className="container text-center">
         <h1 className="font-normal text-primary text-48 mb-4">
           Submit a Ticket
         </h1>
-        <p className="max-w-400 m-auto mb-14">
+        <p className="max-w-400 m-auto mb-16">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
+          nonumy eirmod tempor invidunt ut labore
         </p>
 
         <Grid container spacing={3} alignItems="center">
@@ -42,6 +47,7 @@ const Contact4 = () => {
                       placeholder="First Name"
                       size="small"
                       variant="outlined"
+                      InputProps={inputProps}
                       fullWidth
                     />
                   </Grid>
@@ -52,6 +58,7 @@ const Contact4 = () => {
                       placeholder="Last Name"
                       size="small"
                       variant="outlined"
+                      InputProps={inputProps}
                       fullWidth
                     />
                   </Grid>
@@ -62,6 +69,7 @@ const Contact4 = () => {
                       placeholder="Categories\Reasons"
                       size="small"
                       variant="outlined"
+                      InputProps={inputProps}
                       fullWidth
                       select
                     >
@@ -77,6 +85,7 @@ const Contact4 = () => {
                       placeholder="Subject"
                       size="small"
                       variant="outlined"
+                      InputProps={inputProps}
                       fullWidth
                     />
                   </Grid>
@@ -88,6 +97,7 @@ const Contact4 = () => {
                       placeholder="URL"
                       size="small"
                       variant="outlined"
+                      InputProps={inputProps}
                       fullWidth
                     />
                   </Grid>
@@ -101,6 +111,7 @@ const Contact4 = () => {
                       variant="outlined"
                       multiline
                       rows={8}
+                      InputProps={inputProps}
                       fullWidth
                     />
                   </Grid>

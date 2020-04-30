@@ -11,9 +11,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
-  sectionBG: {
-    background: "rgba(var(--primary),0.035)",
-  },
   card: {
     borderRadius: 20,
     border: `1px solid transparent`,
@@ -51,7 +48,7 @@ const Blog1 = () => {
   const classes = useStyles();
 
   return (
-    <section className={clsx("section", classes.sectionBG)} id="blog1">
+    <section className="section section-bg-light-primary" id="blog1">
       <div className="container">
         <div className="max-w-400 mb-16 text-center mx-auto">
           <h1 className="mt-0 font-normal text-44">Latest News</h1>

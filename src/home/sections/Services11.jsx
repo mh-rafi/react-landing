@@ -64,7 +64,7 @@ const Services11 = () => {
   ];
 
   return (
-    <section className="section bg-light-primary" id="services11">
+    <section className="section section-bg-light-primary" id="services11">
       <div className="container text-center">
         <h1 className="font-normal text-48 mt-0 mb-4 text-primary">
           Achievement

@@ -105,7 +105,7 @@ const Features11 = () => {
           ))}
         </Grid>
 
-        <div className="flex justify-center mt-14">
+        <div className="flex justify-center mt-16">
           <Button variant="contained" color="primary" className="px-7 rounded">
             See More
           </Button>

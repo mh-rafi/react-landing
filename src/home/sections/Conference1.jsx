@@ -4,9 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
-  content: {
-    background: "rgba(var(--primary),0.1)",
-  },
   descriptionCard: {
     padding: "1rem 4rem",
     [theme.breakpoints.down("md")]: {
@@ -27,7 +24,9 @@ const Conference1 = () => {
   return (
     <section className="section" id="conference1">
       <div className="container">
-        <div className={clsx(classes.content, classes.borderRounded)}>
+        <div
+          className={clsx("section-bg-light-primary", classes.borderRounded)}
+        >
           <Grid container spacing={0} alignItems="center">
             <Grid item md={6} sm={12}>
               <img
@@ -38,10 +37,10 @@ const Conference1 = () => {
             </Grid>
             <Grid item md={6} sm={12}>
               <div className={classes.descriptionCard}>
-                <h1 className="mt-0 mb-14 text-48 font-medium">
+                <h1 className="mt-0 mb-16 text-48 font-medium">
                   Digital Conference
                 </h1>
-                <p className="max-w-400 mb-6">
+                <p className="max-w-400 mb-8">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor invidunt ut labore et dolore magna
                   aliquyam erat, sed diam voluptua. At vero eos et accusam et
