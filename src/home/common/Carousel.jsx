@@ -1,3 +1,4 @@
+import "swiper/dist/css/swiper.min.css";
 import React, { Children, useEffect } from "react";
 import Swiper from "swiper";
 import PropTypes from "prop-types";
@@ -5,6 +6,7 @@ import { Fab } from "@material-ui/core";
 import NavigateNext from "@material-ui/icons/NavigateNext";
 import NavigateBefore from "@material-ui/icons/NavigateBefore";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import clsx from "clsx";
 
 let globalBulletColor = "red";
 
@@ -22,6 +24,23 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
   bulletActiveClass: {
     transform: "scale(1.8)",
+  },
+  nextButton: {
+    left: 0,
+    marginLeft: "-24px !important",
+  },
+  prevButton: {
+    right: 0,
+    marginRight: "-24px !important",
+  },
+  navButton: {
+    position: "absolute !important",
+    top: "50%",
+    transform: "translateY(calc(-50% - 50px))",
+    zIndex: 1,
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
 }));
 
@@ -42,7 +61,13 @@ const Carousel = (props) => {
 
   globalBulletColor = bulletColor;
 
-  let { bulletClass, bulletActiveClass } = useStyles();
+  let {
+    bulletClass,
+    bulletActiveClass,
+    nextButton,
+    prevButton,
+    navButton,
+  } = useStyles();
 
   const swiperOptions = {
     direction: "horizontal",
@@ -91,22 +116,34 @@ const Carousel = (props) => {
       <div className="swiper-container" id={carouselId}>
         <div className="swiper-wrapper">
           {Children.map(children, (child, index) => (
-            <div className="swiper-slide p-1 pb-6">{child}</div>
+            <div className="swiper-slide h-auto p-1 pb-6">{child}</div>
           ))}
         </div>
 
         {/* pagination */}
-        <div className={`swiper-pagination relative ${paginationClass}`} />
+        <div className={clsx("swiper-pagination relative", paginationClass)} />
       </div>
 
       {/* navigation */}
       {navigation && (
-        <Fab className="carousel__button-prev bg-white">
+        <Fab
+          className={clsx(
+            "carousel__button-prev bg-white",
+            prevButton,
+            navButton
+          )}
+        >
           <NavigateBefore />
         </Fab>
       )}
       {navigation && (
-        <Fab className="carousel__button-next bg-white">
+        <Fab
+          className={clsx(
+            "carousel__button-next bg-white",
+            nextButton,
+            navButton
+          )}
+        >
           <NavigateNext />
         </Fab>
       )}

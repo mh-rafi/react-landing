@@ -6,20 +6,20 @@ class Service3 extends Component {
   cardList = [
     {
       icon: "account_balance",
-      text: "Invoicing"
+      text: "Invoicing",
     },
     {
       icon: "payment",
-      text: "Payment Gateway"
+      text: "Payment Gateway",
     },
     {
       icon: "receipt",
-      text: "Customer Records"
+      text: "Customer Records",
     },
     {
       icon: "cloud_done",
-      text: "Cloud Sync"
-    }
+      text: "Cloud Sync",
+    },
   ];
 
   render() {
@@ -35,7 +35,7 @@ class Service3 extends Component {
                       <div className="rounded-icon secondary mb-4">
                         <Icon>{card.icon}</Icon>
                       </div>
-                      <p className="m-0 text-uppercase">{card.text} </p>
+                      <p className="m-0 uppercase">{card.text} </p>
                     </Card>
                   </Grid>
                 ))}

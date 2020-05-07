@@ -16,8 +16,8 @@ class Testimonial1 extends Component {
       user: {
         imageUrl: "./assets/images/face-1.jpg",
         name: "John Doe",
-        designation: "Product Manager"
-      }
+        designation: "Product Manager",
+      },
     },
     {
       companyLogoUrl: "./assets/images/mock-logo-2.png",
@@ -28,8 +28,8 @@ class Testimonial1 extends Component {
       user: {
         imageUrl: "./assets/images/face-2.jpg",
         name: "Adam Smith",
-        designation: "CEO"
-      }
+        designation: "CEO",
+      },
     },
     {
       companyLogoUrl: "./assets/images/mock-logo-3.png",
@@ -40,8 +40,8 @@ class Testimonial1 extends Component {
       user: {
         imageUrl: "./assets/images/face-3.jpg",
         name: "John White",
-        designation: "Software Engineer"
-      }
+        designation: "Software Engineer",
+      },
     },
     {
       companyLogoUrl: "./assets/images/mock-logo-4.png",
@@ -52,9 +52,9 @@ class Testimonial1 extends Component {
       user: {
         imageUrl: "./assets/images/face-4.jpg",
         name: "Jessica Hiche",
-        designation: "CEO"
-      }
-    }
+        designation: "CEO",
+      },
+    },
   ];
 
   render() {
@@ -69,9 +69,9 @@ class Testimonial1 extends Component {
             </p>
           </div>
 
-          <Carousel>
+          <Carousel carouselId="swiper-1">
             {this.testimonialList.map((testimonial, index) => (
-              <Card className="h-full px-6 card" key={index}>
+              <Card className="h-full px-6 card w-full" key={index}>
                 <CardContent className="testimonial1__card-content">
                   <div className="pb-4">
                     <img

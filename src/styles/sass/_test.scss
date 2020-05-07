@@ -1,0 +1,107 @@
+@import "./variables";
+@import "./mixins";
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--bg-paper);
+  left: 0;
+  right: 0;
+  padding: 20px 0;
+  transition: padding 0.3s linear;
+  -webkit-transition: padding 0.3s linear;
+  z-index: 999999;
+
+  &.header-fixed {
+    padding: 10px 0;
+    background: $white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    z-index: 999;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .brand {
+      display: flex;
+      align-items: center;
+      img {
+        max-height: 34px;
+      }
+    }
+
+    ul.navigation {
+      list-style: none;
+      margin: 0 0 0 30px;
+      padding: 0;
+      li {
+        display: inline-block;
+        a {
+          display: flex;
+          align-items: center;
+          color: $black;
+          padding: 8px 15px;
+          font-weight: 700;
+          border-radius: 4px;
+          transition: all 0.3s ease-in;
+          &:hover {
+            background: darken($white, 6);
+          }
+        }
+      }
+    }
+    .header__toggle {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    width: var(--topbar-mobile-width) px;
+    height: 100vh;
+    left: auto;
+    right: 0;
+    padding: 20px 0 !important;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.14), -2px 4px 8px rgba(0, 0, 0, 0.28) !important;
+    transition: all 0.3s ease-in-out;
+
+    &.closed {
+      right: calc(-var(--topbar-mobile-width) px - 5px);
+      .header__toggle {
+        color: $black;
+        background: $white;
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+          0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+      }
+    }
+    .header__toggle {
+      top: 10px;
+      right: 15px;
+      color: $black;
+      position: fixed;
+      display: inline-block !important;
+      transition: all 0.3s ease-in-out;
+    }
+    .header-container {
+      flex-direction: column;
+      padding: 0;
+      height: 100%;
+      .brand {
+        padding: 0 20px 20px;
+        width: 100%;
+      }
+      ul.navigation {
+        margin: 0;
+        width: 100%;
+        li {
+          display: block;
+          a {
+            padding: 15px 20px;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}

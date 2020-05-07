@@ -10,8 +10,9 @@ class CallToAction1 extends Component {
         className="section section-cta1"
         id="cta1"
         style={{
-          background: `url(${bg ||
-            "./assets/images/home-bg.jpg"}) center center/cover no-repeat`
+          background: `url(${
+            bg || "./assets/images/home-bg.jpg"
+          }) center center/cover no-repeat`,
         }}
       >
         <div className="container">
@@ -24,7 +25,7 @@ class CallToAction1 extends Component {
           >
             <Grid item lg={8} md={8} sm={12} xs={12}>
               <h2>Dont miss the best management tool of the world</h2>
-              <p>
+              <p className="text-inherit">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
                 nam, illum et quis officiis beatae.
               </p>

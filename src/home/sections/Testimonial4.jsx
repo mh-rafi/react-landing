@@ -133,7 +133,7 @@ const Testimonial4 = () => {
         </div>
 
         <Carousel
-          carouselId="swiper-1"
+          carouselId="swiper-4"
           slidesPerView={4}
           spacing={16}
           navigation={false}

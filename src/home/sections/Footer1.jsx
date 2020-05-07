@@ -11,7 +11,7 @@ class Footer1 extends Component {
             <Grid item lg={6} md={6} sm={12}>
               <div className="footer1__about">
                 <h4>About Us</h4>
-                <p>
+                <p className="text-inherit">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Officiis perferendis rem, aut aliquam neque nam? dolor sit
                   amet, consectetur adipisicing elit consectetur adipisicing
@@ -29,14 +29,16 @@ class Footer1 extends Component {
                   <Icon className="footer1__contact__icon">mail</Icon>
                   <div className="pl-4">
                     <h5 className="m-0 p-0">Email</h5>
-                    <p className="m-0 p-0">email@abc.com</p>
+                    <p className="m-0 p-0 text-inherit">email@abc.com</p>
                   </div>
                 </div>
                 <div className="px-4 mt-8">
                   <Icon className="footer1__contact__icon">location_on</Icon>
                   <div className="pl-4">
                     <h5 className="m-0 p-0">Adress</h5>
-                    <p className="m-0 p-0">Topoban, Akhalia Sylhet 3114, BD</p>
+                    <p className="m-0 p-0 text-inherit">
+                      Topoban, Akhalia Sylhet 3114, BD
+                    </p>
                   </div>
                 </div>
               </div>
@@ -44,7 +46,7 @@ class Footer1 extends Component {
             <Grid item lg={3} md={3} sm={12}>
               <div className="footer1__disclaimer">
                 <h4>Disclaimer</h4>
-                <p>
+                <p className="text-inherit">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Officiis perferendis rem, aut aliquam neque nam?
                 </p>

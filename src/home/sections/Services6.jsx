@@ -5,20 +5,20 @@ class Service6 extends Component {
   cardList = [
     {
       icon: "account_balance",
-      text: "Sell everywhere"
+      text: "Sell everywhere",
     },
     {
       icon: "security",
-      text: "Secured payments"
+      text: "Secured payments",
     },
     {
       icon: "language",
-      text: "Smart pricing"
+      text: "Smart pricing",
     },
     {
       icon: "fastfood",
-      text: "Go beyond"
-    }
+      text: "Go beyond",
+    },
   ];
   state = {};
   render() {
@@ -43,7 +43,7 @@ class Service6 extends Component {
                 <div className="sevice6__circle service__card p-6 card">
                   <Icon className="card__icon-64"> {card.icon} </Icon>
                 </div>
-                <p className="text-uppercase">{card.text}</p>
+                <p className="uppercase">{card.text}</p>
               </Grid>
             ))}
           </Grid>

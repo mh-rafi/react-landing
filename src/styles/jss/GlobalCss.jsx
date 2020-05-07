@@ -8,6 +8,7 @@ import { colorStyles } from "./utilities/_color";
 import { typographyStyles } from "./utilities/_typography";
 import { commonStyles } from "./utilities/_common";
 import { animationStyles } from "./utilities/_animations";
+import { layoutStyles } from "./utilities/_layout";
 
 const GlobalCss = ({ children }) => {
   variableStyles();
@@ -19,6 +20,7 @@ const GlobalCss = ({ children }) => {
   typographyStyles();
   commonStyles();
   animationStyles();
+  layoutStyles();
 
   return children;
 };
