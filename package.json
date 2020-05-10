@@ -8,14 +8,13 @@
     "@material-ui/icons": "^4.9.1",
     "clsx": "^1.1.0",
     "gh-pages": "^2.1.1",
-    "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-dynamic-swiper": "^2.0.2",
     "react-google-maps": "^9.4.5",
     "react-material-ui-form-validator": "^2.0.9",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.0",
+    "react-scripts": "^3.4.1",
     "swiper": "^4.5.0"
   },
   "scripts": {

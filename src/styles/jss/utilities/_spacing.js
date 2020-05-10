@@ -1,12 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const spacingStyles = makeStyles(({ palette, ...theme }) => ({
-  test: {
-    [theme.breakpoints.down("sm")]: {
-      background: "red",
-    },
-  },
-
   "@global": {
     ".px-80": {
       paddingRight: "80px",
@@ -72,9 +66,10 @@ export const spacingStyles = makeStyles(({ palette, ...theme }) => ({
     ".min-w-full": { minWidth: "100% !important" },
     ".w-full-screen": { width: "100vw" },
     ".min-w-750": { minWidth: "750px" },
+    ".max-w-450": { maxWidth: "450px" },
     ".max-w-550": { maxWidth: "550px" },
     ".max-w-600": { maxWidth: "600px" },
-    ".max-h-550": { maxHeight: "500px" },
+    ".max-h-500": { maxHeight: "500px" },
     ".max-w-770": { maxWidth: "770px" },
     ".h-full": { height: "100% !important" },
     ".h-auto": { height: "auto" },

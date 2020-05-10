@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   demoContainer: {
-    ".card": {
+    "& .card": {
       maxHeight: 450,
       overflow: "hidden",
     },

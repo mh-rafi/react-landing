@@ -1,35 +1,54 @@
-import React, { Component } from "react";
-import Icon from "@material-ui/core/Icon";
-import Fab from "@material-ui/core/Fab";
+import React from "react";
+import { TextField, Button, Icon } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import clsx from "clsx";
 
-class CallToAction2 extends Component {
-  state = {};
-  render() {
-    return (
-      <section className="section section-cta2 light-gray" id="cta2">
-        <div className="container text-center">
+const useStyles = makeStyles(({ palette, ...theme }) => ({
+  button: {
+    position: "absolute",
+    right: 3,
+    zIndex: 2,
+  },
+}));
+
+const CallToAction2 = () => {
+  const classes = useStyles();
+
+  return (
+    <section className="section section-cta2 bg-light-gray" id="cta2">
+      <div className="container text-center">
+        <div className="max-w-770 mx-auto">
           <h2 className="mb-8">Subscribe & Request a demo</h2>
-          <div className="subscribe-input">
-            <input
-              className="email-input"
-              type="text"
-              placeholder="Your email"
-            />
-            <Fab
-              variant="extended"
-              size="large"
-              color="primary"
-              aria-label="Buy"
-              className="btn-action m-8"
-            >
-              <Icon className="mr-4">flight_takeoff</Icon>
-              Subscribe
-            </Fab>
-          </div>
+          <TextField
+            variant="outlined"
+            size="small"
+            placeholder="Your Email:"
+            fullWidth
+            InputProps={{
+              style: {
+                borderRadius: 300,
+                paddingTop: 5,
+                paddingBottom: 5,
+                paddingLeft: "0.75rem",
+                background: "rgba(255,255,255,0.87)",
+              },
+              endAdornment: (
+                <Button
+                  className={clsx(
+                    "bg-primary rounded text-13 text-white px-7 py-11px",
+                    classes.button
+                  )}
+                >
+                  <Icon fontSize="small">flight_takeoff</Icon>
+                  <span className="ml-2">SUBSCRIBE</span>
+                </Button>
+              ),
+            }}
+          />
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 
 export default CallToAction2;

@@ -23,13 +23,13 @@ export const positioningStyles = makeStyles(({ palette, ...theme }) => ({
     ".overflow-unset": { overflow: "unset !important" },
     ".overflow-visible": { overflow: "visible !important" },
     ".scroll-y": { overflowX: "hidden", overflowY: "scroll" },
-    ".position-relative": { position: "relative" },
+    ".relative": { position: "relative" },
     ".position-bottom": { position: "absolute", bottom: "0" },
     ".text-center": { textAlign: "center" },
     ".align-middle": { verticalAlign: "middle" },
     ".text-right": { textAlign: "right" },
     ".text-left": { textAlign: "left" },
     ".x-center": { left: "50%", transform: "translateX(-50%)" },
-    ".y-center": { top: "50%", transform: "translateY(-50%)" }
-  }
+    ".y-center": { top: "50%", transform: "translateY(-50%)" },
+  },
 }));

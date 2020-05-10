@@ -3,7 +3,7 @@ import { Tabs, Tab, Grid, Icon } from "@material-ui/core";
 
 class Service5 extends Component {
   state = {
-    value: 0
+    value: 0,
   };
 
   featureList = [
@@ -11,20 +11,20 @@ class Service5 extends Component {
       imageUrl: "./assets/images/screenshots/login.jpg",
       title: "Clean & minimal login UI",
       text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.\n\nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea. Dolorem delicata vis te, aperiam nostrum ut per."
+        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.\n\nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea. Dolorem delicata vis te, aperiam nostrum ut per.",
     },
     {
       imageUrl: "./assets/images/screenshots/dashboard.jpg",
       title: "Minimal & smart dashboard",
       text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.\n\nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea. Dolorem delicata vis te, aperiam nostrum ut per."
+        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.\n\nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea. Dolorem delicata vis te, aperiam nostrum ut per.",
     },
     {
       imageUrl: "./assets/images/screenshots/calendar.jpg",
       title: "Manage your tasks & project efficiently",
       text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.\n\nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea. Dolorem delicata vis te, aperiam nostrum ut per."
-    }
+        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.\n\nLorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad, ipsum prompta ius eu. Sanctus appellantur vim ea. Dolorem delicata vis te, aperiam nostrum ut per.",
+    },
   ];
 
   handleChange = (event, value) => {
@@ -36,7 +36,7 @@ class Service5 extends Component {
     let feature = this.featureList[value];
 
     return (
-      <div className="section section-service5 light-gray" id="service5">
+      <div className="section section-service5 bg-light-gray" id="service5">
         <div className="container">
           {/* tab view */}
           <Tabs
@@ -61,7 +61,7 @@ class Service5 extends Component {
             <Grid item lg={5} md={7} sm={12} xs={12}>
               <div className="service5__image-holder">
                 <img
-                  className="elevation-3"
+                  className="elevation-z3"
                   src={feature.imageUrl}
                   alt="building"
                 />

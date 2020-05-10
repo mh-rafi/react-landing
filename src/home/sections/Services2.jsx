@@ -12,37 +12,37 @@ class Services2 extends Component {
       icon: "dashboard",
       title: "Business Application",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."
+        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
     },
     {
       icon: "perm_data_setting",
       title: "Custom System Integration",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."
+        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
     },
     {
       icon: "storage",
       title: "Database Administration",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."
+        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
     },
     {
       icon: "stay_primary_portrait",
       title: "Custom Mobile Application",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."
+        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
     },
     {
       icon: "person",
       title: "Management Application",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis."
-    }
+        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+    },
   ];
 
   render() {
     return (
-      <section className="section section-service1 light-gray" id="service2">
+      <section className="section section-service1 bg-light-gray" id="service2">
         <div className="container">
           <div className="section__header">
             <h2>Our Services</h2>

@@ -6,14 +6,14 @@ export const commonStyles = makeStyles(({ palette, ...theme }) => ({
       height: "48px",
       width: "48px",
       borderRadius: "50%",
-      overflow: "hidden"
+      overflow: "hidden",
     },
     ".card": { transition: "all 0.3s ease" },
-    ".card:hover": { boxShadow: "var(--elevation-z12)" },
+    ".card:hover": { boxShadow: theme.shadows[12] },
     ".card-title": {
       fontSize: "1rem",
       textTransform: "capitalize",
-      fontWeight: "500"
+      fontWeight: "500",
     },
     ".card-subtitle": { fontSize: "0.875rem", color: "var(--text-muted)" },
     ".theme-dark .card-subtitle": { color: "rgba(255, 255, 255, 0.54)" },
@@ -21,13 +21,13 @@ export const commonStyles = makeStyles(({ palette, ...theme }) => ({
     "@media screen and (max-width: 767px)": {
       ".hide-on-mobile": { display: "none !important" },
       ".show-on-mobile": { display: "inherit !important" },
-      ".invisible-on-pc": { visibility: "visible" }
+      ".invisible-on-pc": { visibility: "visible" },
     },
     "@media screen and (min-width: 1200px)": {
-      ".hide-on-pc": { display: "none !important" }
+      ".hide-on-pc": { display: "none !important" },
     },
     "@media screen and (max-width: 1200px)": {
-      ".show-on-pc": { display: "none !important" }
+      ".show-on-pc": { display: "none !important" },
     },
     ".VictoryContainer svg": { height: "100% !important" },
     ".box-shadow-none": { boxShadow: "none !important" },
@@ -35,7 +35,7 @@ export const commonStyles = makeStyles(({ palette, ...theme }) => ({
     ".circle-32": {
       height: "32px !important",
       minHeight: "32px !important",
-      width: "32px !important"
+      width: "32px !important",
     },
     ".circle-32 .MuiFab-root": { minHeight: "32px !important" },
     ".circle-32 .MuiIcon-root": { fontSize: "13px !important" },
@@ -43,10 +43,10 @@ export const commonStyles = makeStyles(({ palette, ...theme }) => ({
     ".invisible-on-pc": { visibility: "hidden" },
     ".highlight-js pre": { whiteSpace: "pre-line" },
     ".cursor-pointer": {
-      cursor: "pointer"
+      cursor: "pointer",
     },
     ".cursor-move": {
-      cursor: "move"
-    }
-  }
+      cursor: "move",
+    },
+  },
 }));

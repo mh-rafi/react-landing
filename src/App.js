@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles/sass/app.scss";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 
@@ -23,7 +22,6 @@ function App() {
   return (
     <MuiThemeProvider theme={Theme}>
       <GlobalCss>
-        {/* <Router basename="/react-landing"> */}
         <Router basename="/">
           <Switch>
             <Route path="/" component={Demo} exact />

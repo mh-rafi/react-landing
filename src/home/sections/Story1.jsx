@@ -14,7 +14,7 @@ const Story1 = () => {
             <img
               src="/assets/images/graduate-1.jpg"
               alt="graduate"
-              className="max-h-550 max-w-full border-radius-12"
+              className="max-h-500 max-w-full border-radius-12"
             />
           </Grid>
           <Grid item sm={6} xs={12}>

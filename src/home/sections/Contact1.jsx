@@ -7,15 +7,15 @@ class Contact1 extends Component {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     console.log("submitted");
     console.log(event);
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     event.persist();
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -23,7 +23,7 @@ class Contact1 extends Component {
   render() {
     let { name, email, subject, message } = this.state;
     return (
-      <div className="section section-contact1 light-gray" id="contact1">
+      <div className="section section-contact1 bg-light-gray" id="contact1">
         <div className="container">
           <div className="section__header">
             <h2>Send Us an Email</h2>
@@ -36,7 +36,7 @@ class Contact1 extends Component {
           <ValidatorForm
             ref="form"
             onSubmit={this.handleSubmit}
-            onError={errors => null}
+            onError={(errors) => null}
           >
             <TextValidator
               className="mb-4 w-full"

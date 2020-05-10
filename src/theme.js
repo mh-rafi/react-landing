@@ -24,6 +24,11 @@ const themeOptions = {
         textTransform: "none",
       },
     },
+    MuiCard: {
+      root: {
+        borderRadius: 8,
+      },
+    },
     MuiFab: {
       root: {
         textTransform: "none",

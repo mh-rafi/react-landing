@@ -2,22 +2,20 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const layoutStyles = makeStyles(({ palette, ...theme }) => ({
   "@global": {
-    ":root": {
-      ".section": {
-        padding: "5rem 0",
+    ".section": {
+      padding: "5rem 0",
 
-        ".section__header": {
-          margin: "0 0 32px",
-          h2: {
-            fontSize: 32,
-            fontWeight: 700,
-            margin: "0 0 16px",
-          },
-          p: {
-            fontSize: 16,
-            maxWidth: "36rem",
-            margin: 0,
-          },
+      ".section__header": {
+        margin: "0 0 32px",
+        h2: {
+          fontSize: 32,
+          fontWeight: 700,
+          margin: "0 0 16px",
+        },
+        p: {
+          fontSize: 16,
+          maxWidth: "36rem",
+          margin: 0,
         },
       },
     },

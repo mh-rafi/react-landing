@@ -5,29 +5,29 @@ class Service7 extends Component {
   itemList = [
     {
       icon: "store_mall_directory",
-      text: "Online stores"
+      text: "Online stores",
     },
     {
       icon: "account_balance",
-      text: "Finance services"
+      text: "Finance services",
     },
     {
       icon: "home",
-      text: "Industry"
+      text: "Industry",
     },
     {
       icon: "fastfood",
-      text: "Churches"
+      text: "Churches",
     },
     {
       icon: "category",
-      text: "Logistics"
-    }
+      text: "Logistics",
+    },
   ];
   state = {};
   render() {
     return (
-      <div className="section section-service7 light-gray" id="service7">
+      <div className="section section-service7 bg-light-gray" id="service7">
         <div className="container">
           <Grid container alignItems="center" spacing={5}>
             <Grid item lg={6} md={6} sm={12} xs={12}>
