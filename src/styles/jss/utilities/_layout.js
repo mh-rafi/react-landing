@@ -5,7 +5,7 @@ export const layoutStyles = makeStyles(({ palette, ...theme }) => ({
     ".section": {
       padding: "5rem 0",
 
-      ".section__header": {
+      "& .section__header": {
         margin: "0 0 32px",
         h2: {
           fontSize: 32,

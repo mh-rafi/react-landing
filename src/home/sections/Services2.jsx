@@ -1,13 +1,31 @@
-import React, { Component } from "react";
+import React from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { Button, Icon } from "@material-ui/core";
 import Carousel from "../common/Carousel";
+import { makeStyles } from "@material-ui/core/styles";
+import clsx from "clsx";
 
-class Services2 extends Component {
-  state = {};
+const useStyles = makeStyles(({ palette, ...theme }) => ({
+  card: {
+    borderTop: "2px solid black",
+    "& .icon": {
+      fontSize: 64,
+    },
 
-  serviceList = [
+    "&:hover": {
+      borderTop: "2px solid rgba(var(--primary), 1)",
+      "& .icon": {
+        color: "rgba(var(--primary),1)",
+      },
+    },
+  },
+}));
+
+const Services2 = () => {
+  const classes = useStyles();
+
+  const serviceList = [
     {
       icon: "dashboard",
       title: "Business Application",
@@ -40,43 +58,38 @@ class Services2 extends Component {
     },
   ];
 
-  render() {
-    return (
-      <section className="section section-service1 bg-light-gray" id="service2">
-        <div className="container">
-          <div className="section__header">
-            <h2>Our Services</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-              unde inventore molestias ab adipisci eius nisi placeat at.
-            </p>
-          </div>
-
-          <Carousel>
-            {this.serviceList.map((service, index) => (
-              <Card
-                className="service1__card service__card px-6 card"
-                key={index}
-              >
-                <CardContent className="service1__card__content">
-                  <div>
-                    <div className="text-center">
-                      <Icon className="card__icon-64">{service.icon}</Icon>
-                    </div>
-                    <h3 className="font-light">{service.title}</h3>
-                    <p>{service.text}</p>
-                  </div>
-                  <div className="pt-4">
-                    <Button>READ MORE</Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </Carousel>
+  return (
+    <section className="section section-service1 bg-light-gray" id="service2">
+      <div className="container">
+        <div className="section__header">
+          <h2>Our Services</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+            unde inventore molestias ab adipisci eius nisi placeat at.
+          </p>
         </div>
-      </section>
-    );
-  }
-}
+
+        <Carousel carouselId="services-2">
+          {serviceList.map((service, index) => (
+            <Card key={index} className={clsx("card h-full", classes.card)}>
+              <CardContent className="flex-column justify-between min-h-full">
+                <div className="flex-grow">
+                  <div className="text-center mb-4">
+                    <Icon className="icon">{service.icon}</Icon>
+                  </div>
+                  <h3 className="font-light text-24">{service.title}</h3>
+                  <p>{service.text}</p>
+                </div>
+                <div className="pt-4">
+                  <Button>READ MORE</Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </Carousel>
+      </div>
+    </section>
+  );
+};
 
 export default Services2;

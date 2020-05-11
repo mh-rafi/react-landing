@@ -11,7 +11,7 @@ class Intro2 extends Component {
         id="intro2"
         style={{
           background:
-            "url(./assets/images/home-bg-black.png) center center/cover no-repeat"
+            "url(./assets/images/home-bg-black.png) center center/cover no-repeat",
         }}
       >
         <div className="container">
@@ -22,7 +22,7 @@ class Intro2 extends Component {
             <h1 className="section-intro1__title">
               Marketing Automation Redefined
             </h1>
-            <p className="intro1__description">
+            <p className="max-w-550 mx-auto mb-6">
               The most poerfull marketing automation platform you have ever
               used. No hidden charge, pay as you use!
             </p>

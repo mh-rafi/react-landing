@@ -1,16 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import Card from "@material-ui/core/Card";
 
 import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
+import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
-import { Icon } from "@material-ui/core";
-import Carousel from "../common/Carousel";
+import { Button, Icon } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-class Portfolio2 extends Component {
-  state = {};
+const useStyles = makeStyles(({ palette, ...theme }) => ({}));
 
-  portfoioList = [
+const Portfolio1 = () => {
+  const classes = useStyles();
+
+  const portfoioList = [
     {
       imageUrl: "./assets/images/sq-12.jpg",
       name: "Project One",
@@ -29,33 +32,21 @@ class Portfolio2 extends Component {
       description: `Adipisci quas repellat sed. Quasi quaerat aut nam
       possimus vitae dignissimos, sapiente est atque tenetur.`,
     },
-    {
-      imageUrl: "./assets/images/sq-11.jpg",
-      name: "Project Four",
-      description: `Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.`,
-    },
-    {
-      imageUrl: "./assets/images/sq-13.jpg",
-      name: "Project Five",
-      description: `Adipisci quas repellat sed. Quasi quaerat aut nam
-      possimus vitae dignissimos, sapiente est atque tenetur.`,
-    },
   ];
-  render() {
-    return (
-      <section className="section section-portfolio1" id="portfoli2">
-        <div className="container">
-          <div className="section__header">
-            <h2>Our Works</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-              unde inventore molestias ab adipisci eius nisi placeat at.
-            </p>
-          </div>
 
-          <Carousel>
-            {this.portfoioList.map((portfolio, index) => (
+  return (
+    <section className="section section-portfolio1" id="portfolio1">
+      <div className="container">
+        <div className="section__header">
+          <h2>Works & Case studies</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+            unde inventore molestias ab adipisci eius nisi placeat at.
+          </p>
+        </div>
+        <Grid container spacing={3}>
+          {portfoioList.map((portfolio, index) => (
+            <Grid item md={4} sm={4} key={index}>
               <Card className="relative h-full card" key={index}>
                 <img
                   className="w-full"
@@ -78,12 +69,18 @@ class Portfolio2 extends Component {
                   </div>
                 </div>
               </Card>
-            ))}
-          </Carousel>
-        </div>
-      </section>
-    );
-  }
-}
+            </Grid>
+          ))}
+        </Grid>
 
-export default Portfolio2;
+        <div className="text-center pt-9">
+          <Button variant="contained" size="large" color="secondary">
+            load more
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio1;

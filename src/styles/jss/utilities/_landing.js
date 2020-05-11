@@ -17,87 +17,15 @@ export const landingStyles = makeStyles(({ palette, ...theme }) => ({
       color: "#ffffff",
       overflow: "hidden",
     },
-    ".section-intro1 h1, .section-intro1 h2, .section-intro1 h3, .section-intro1 h4, .section-intro1 h5, .section-intro1 h6": {
-      color: "#ffffff",
-    },
-    ".section-intro1 .section-intro1__title": {
-      margin: "0 0 24px",
-      fontSize: "48px",
-      fontWeight: "900",
-      lineHeight: "52px",
-      textShadow: "0 4px 4px rgba(0, 0, 0, 0.22)",
-    },
-    ".section-intro1 .section-intro1__subtitle": {
-      margin: "0 0 40px",
-      fontSize: "22px",
-      fontWeight: "400",
-      lineHeight: "32px",
-    },
-    ".section-intro1 .section-intro1__list": { margin: "0 0 30px" },
-    ".section-intro1 .section-intro1__list .section-intro1__list__item": {
-      display: "flex",
-      alignItems: "center",
-      marginBottom: "1rem",
-    },
-    ".section-intro1 .section-intro1__list .section-intro1__list__item .material-icons": {
-      marginRight: "7px",
-    },
-    ".section-intro1 .section-intro1__product": {
-      position: "relative",
-      top: "100px",
-    },
-    ".section-intro1 .section-intro1__product img": {
-      width: "100%",
-      borderRadius: "0.5rem",
-      boxShadow:
-        "0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-    },
-    ".section-intro1 .section-intro1__product .section-intro1__product__link": {
-      position: "absolute",
-      top: "-100px",
-      left: "-30px",
-      textAlign: "center",
-      display: "block",
-      width: "160px",
-      height: "160px",
-      borderRadius: "50%",
-      background: "#ffffff",
-      color: "rgba(0, 0, 0, 0.87)",
-      padding: "37px 20px",
-      boxSizing: "border-box",
-      overflow: "hidden",
-      boxShadow: "0 14px 32px rgba(0, 0, 0, 0.2)",
-      transition: "all 0.3s ease",
-    },
-    ".section-intro1 .section-intro1__product .section-intro1__product__link:hover": {
-      boxShadow: "0 19px 32px rgba(0, 0, 0, 0.4)",
-    },
-    ".section-intro1 .section-intro1__product .section-intro1__product__link .price": {
-      fontSize: "32px",
-      fontWeight: "700",
-    },
-    ".section-intro1 .section-intro1__product .section-intro1__product__link .price__text": {
-      fontSize: "14px",
-    },
-    ".section-intro1 .intro1__description": {
-      maxWidth: "570px",
-      margin: "0 auto 24px",
-    },
+
     "@media only screen and (max-width: 767px)": {
       ".section-intro1": { padding: "100px 0 !important" },
     },
+
     "@media only screen and (max-width: 959px)": {
       ".section-intro1": { textAlign: "center" },
-      ".section-intro1 .section-intro1__list": {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      },
-      ".section-intro1 .section-intro1__product": { top: "0", left: "0" },
-      ".section-intro1 .section-intro1__product__link": {
-        display: "none !important",
-      },
     },
+
     ".section-intro2": {
       padding: "180px 0 0 !important",
       overflow: "visible !important",
@@ -133,47 +61,11 @@ export const landingStyles = makeStyles(({ palette, ...theme }) => ({
       paddingTop: "2.5rem",
     },
     ".section-intro3 .intro3__product img": { maxWidth: "65%" },
-    ".section-portfolio1 .portfolio1__card": {
-      position: "relative",
-      height: "100%",
-    },
-    ".section-portfolio1 .portfolio1__card img": {
-      width: "100%",
-      height: "auto",
-    },
-    ".section-portfolio1 .portfolio1__card h5": {
-      margin: "0px",
-      fontSize: "1rem",
-      fontWeight: "bold",
-    },
-    ".section-portfolio1 .portfolio1__card p": { marginBottom: "16px" },
-    ".section-portfolio1 .portfolio1__card .portfolio1__card__content": {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-    },
+
     ".card__icon-64": {
       fontSize: "64px !important",
       height: "64px",
       width: "64px",
-    },
-    ".service__card:hover .card__icon-64": { color: "rgba(var(--primary), 1)" },
-    ".section-service1 .service1__card": {
-      borderTop: "2px solid black",
-      height: "100%",
-    },
-    ".section-service1 .service1__card h3": {
-      fontSize: "1.5rem",
-      fontWeight: "normal",
-    },
-    ".section-service1 .service1__card .service1__card__content": {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-      minHeight: "100%",
-    },
-    ".section-service1 .service1__card:hover": {
-      borderTop: "2px solid rgba(var(--primary), 1)",
     },
     ".section-service4": { transition: "transform 400ms bezier()" },
     ".section-service4 .service4__card": {
@@ -252,22 +144,6 @@ export const landingStyles = makeStyles(({ palette, ...theme }) => ({
       height: "36px !important",
       width: "auto",
     },
-    ".section-testimonial1 .testimonial1__card-content > div:first-child p": {
-      fontSize: "1rem",
-      paddingBottom: "65px",
-    },
-    ".section-testimonial1 .testimonial1__card-content .card__user": {
-      display: "flex",
-      flexDirection: "row",
-      flexWrap: "wrap",
-      alignItems: "center",
-    },
-    ".section-testimonial1 .testimonial1__card-content .card__user img": {
-      width: "48px",
-      height: "48px",
-      borderRadius: "24px",
-      overflow: "hidden",
-    },
     ".section-testimonial3 img": {
       margin: "0px",
       padding: "0px",
@@ -294,26 +170,6 @@ export const landingStyles = makeStyles(({ palette, ...theme }) => ({
       lineHeight: "1.1",
     },
     ".section-cta1 p": { margin: "0" },
-    ".section-pricing1 .pricing1__card-header": {
-      padding: "12px",
-      background: "rgba(0, 0, 0, 0.024)",
-    },
-    ".section-pricing1 .pricing1__card-header span:first-child": {
-      fontSize: "1rem !important",
-    },
-    ".section-pricing1 .pricing1__card-header span:last-child": {
-      fontSize: "0.813rem",
-    },
-    ".section-pricing1 .pricing1__highlighted": {
-      background: "rgba(var(--primary), 1) !important",
-    },
-    ".section-pricing1 .pricing1__highlighted span": { color: "#fff" },
-    ".section-pricing1 .pricing1__card-content h1": {
-      margin: "0",
-      marginBottom: "0.5rem",
-      fontSize: "2rem",
-    },
-    ".section-pricing1 .pricing1__card-content div": { padding: "10px" },
     ".section-footer1 h4": {
       fontSize: "1.25rem",
       margin: "0 0 24px",

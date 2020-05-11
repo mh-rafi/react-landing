@@ -3,7 +3,7 @@ import { scrollTo } from "utils";
 import Intro1 from "./sections/Intro1";
 import TopBar from "./sections/TopBar1";
 import Services1 from "./sections/Services1";
-import Portfolio1 from "./sections/Protfolio1";
+import Portfolio1 from "./sections/Portfolio1";
 import Testimonial1 from "./sections/Testimonial1";
 import CallToAction1 from "./sections/CallToAction1";
 import Pricing1 from "./sections/Pricing1";
