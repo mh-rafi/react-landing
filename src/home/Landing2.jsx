@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { scrollTo } from "utils";
 import Intro2 from "./sections/Intro2";
 import Portfolio2 from "./sections/Portfolio2";
@@ -10,26 +10,24 @@ import Contact1 from "./sections/Contact1";
 import Footer1 from "./sections/Footer1";
 import TopBar2 from "./sections/TopBar2";
 
-class Landing2 extends Component {
-  state = {};
-  componentWillUnmount() {
+const Landing2 = () => {
+  useEffect(() => {
     scrollTo("root");
-  }
-  render() {
-    return (
-      <div className="landing">
-        <TopBar2 />
-        <Intro2 />
-        <Portfolio2 />
-        <Testimonial2 />
-        <Services2 />
-        <CallToAction1 bg="./assets/images/home-bg-black.png" />
-        <Pricing1 />
-        <Contact1 />
-        <Footer1 />
-      </div>
-    );
-  }
-}
+  }, [scrollTo]);
+
+  return (
+    <div className="landing">
+      <TopBar2 />
+      <Intro2 />
+      <Portfolio2 />
+      <Testimonial2 />
+      <Services2 />
+      <CallToAction1 bg="./assets/images/home-bg-black.png" />
+      <Pricing1 />
+      <Contact1 />
+      <Footer1 />
+    </div>
+  );
+};
 
 export default Landing2;

@@ -1,16 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import Card from "@material-ui/core/Card";
-
-import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import { Icon } from "@material-ui/core";
 import Carousel from "../common/Carousel";
 
-class Portfolio2 extends Component {
-  state = {};
-
-  portfoioList = [
+const Portfolio2 = () => {
+  const portfoioList = [
     {
       imageUrl: "./assets/images/sq-12.jpg",
       name: "Project One",
@@ -42,48 +38,47 @@ class Portfolio2 extends Component {
       possimus vitae dignissimos, sapiente est atque tenetur.`,
     },
   ];
-  render() {
-    return (
-      <section className="section section-portfolio1" id="portfoli2">
-        <div className="container">
-          <div className="section__header">
-            <h2>Our Works</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-              unde inventore molestias ab adipisci eius nisi placeat at.
-            </p>
-          </div>
 
-          <Carousel>
-            {this.portfoioList.map((portfolio, index) => (
-              <Card className="relative h-full card" key={index}>
-                <img
-                  className="w-full"
-                  src={portfolio.imageUrl}
-                  alt="portfolio"
-                />
-                <div className="flex-column justify-between">
-                  <div className="px-4 pt-4">
-                    <h5 className="m-0 text-16 font-bold">{portfolio.name}</h5>
-                    <p className="mb-4">{portfolio.description}</p>
-                    <Divider />
-                  </div>
-                  <div className="px-4 py-2">
-                    <IconButton>
-                      <Icon>link</Icon>
-                    </IconButton>
-                    <IconButton>
-                      <Icon>share</Icon>
-                    </IconButton>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </Carousel>
+  return (
+    <section className="section section-portfolio1" id="portfoli2">
+      <div className="container">
+        <div className="section__header">
+          <h2>Our Works</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+            unde inventore molestias ab adipisci eius nisi placeat at.
+          </p>
         </div>
-      </section>
-    );
-  }
-}
+
+        <Carousel carouselId="portfolio-2">
+          {portfoioList.map((portfolio, index) => (
+            <Card className="relative h-full card" key={index}>
+              <img
+                className="w-full"
+                src={portfolio.imageUrl}
+                alt="portfolio"
+              />
+              <div className="flex-column justify-between">
+                <div className="px-4 pt-4">
+                  <h5 className="m-0 text-16 font-bold">{portfolio.name}</h5>
+                  <p className="mb-4">{portfolio.description}</p>
+                  <Divider />
+                </div>
+                <div className="px-4 py-2">
+                  <IconButton>
+                    <Icon>link</Icon>
+                  </IconButton>
+                  <IconButton>
+                    <Icon>share</Icon>
+                  </IconButton>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </Carousel>
+      </div>
+    </section>
+  );
+};
 
 export default Portfolio2;

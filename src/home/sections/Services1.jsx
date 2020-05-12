@@ -53,7 +53,7 @@ const Services1 = () => {
   ];
 
   return (
-    <section className="section section-service1 bg-light-gray" id="service1">
+    <section className="section bg-light-gray" id="service1">
       <div className="container">
         <div className="section__header">
           <h2>Our Services</h2>

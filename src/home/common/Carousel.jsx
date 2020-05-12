@@ -25,11 +25,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   bulletActiveClass: {
     transform: "scale(1.8)",
   },
-  nextButton: {
+  prevButton: {
     left: 0,
     marginLeft: "-24px !important",
   },
-  prevButton: {
+  nextButton: {
     right: 0,
     marginRight: "-24px !important",
   },

@@ -1,17 +1,21 @@
 import React from "react";
 import { Grid, Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import clsx from "clsx";
+
+const useStyles = makeStyles(({ palette, ...theme }) => ({
+  sectionBG: ({ bg }) => ({
+    background: `url(${
+      bg || "./assets/images/home-bg.jpg"
+    }) center center/cover no-repeat`,
+  }),
+}));
 
 const CallToAction1 = ({ bg }) => {
+  const classes = useStyles({ bg });
+
   return (
-    <div
-      className="section section-cta1"
-      id="cta1"
-      style={{
-        background: `url(${
-          bg || "./assets/images/home-bg.jpg"
-        }) center center/cover no-repeat`,
-      }}
-    >
+    <div className={clsx("section text-white", classes.sectionBG)} id="cta1">
       <div className="container">
         <Grid
           container

@@ -4,11 +4,7 @@ import { Card, CardContent, Avatar } from "@material-ui/core";
 import Carousel from "../common/Carousel";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({}));
-
 const Testimonial1 = () => {
-  const classes = useStyles();
-
   const testimonialList = [
     {
       companyLogoUrl: "./assets/images/mock-logo-1.png",
@@ -45,7 +41,7 @@ const Testimonial1 = () => {
   ];
 
   return (
-    <div className="section section-testimonial1" id="testimonial1">
+    <div className="section" id="testimonial1">
       <div className="container">
         <div className="section__header">
           <h2>What our customers says</h2>

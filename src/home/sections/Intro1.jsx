@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Icon from "@material-ui/core/Icon";
 import Fab from "@material-ui/core/Fab";
@@ -6,18 +6,27 @@ import { makeStyles, darken } from "@material-ui/core/styles";
 import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
-  title: {
-    margin: "0 0 24px",
-    fontSize: "48px",
-    fontWeight: "900",
-    lineHeight: "52px",
-    textShadow: "0 4px 4px rgba(0, 0, 0, 0.22)",
+  introWrapper: {
+    padding: "6rem 0px !important",
+    overflow: "visible !important",
+    background:
+      "url(./assets/images/home-bg.jpg) center center/cover no-repeat",
+    "& h1, h2, h3, h4, h5, h6": {
+      color: "#fff",
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      padding: "100px 0 !important",
+      textAlign: "center",
+      "& .list": {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      },
+    },
   },
-  subTitle: {
-    margin: "0 0 40px",
-    fontSize: "22px",
-    fontWeight: "400",
-    lineHeight: "32px",
+  title: {
+    textShadow: "0 4px 4px rgba(0, 0, 0, 0.22)",
   },
   whiteButton: {
     background: "#fff !important",
@@ -69,81 +78,81 @@ const Intro1 = () => {
   const classes = useStyles();
 
   return (
-    <section
-      className="section section-intro1"
-      id="intro1"
-      style={{
-        background:
-          "url(./assets/images/home-bg.jpg) center center/cover no-repeat",
-      }}
-    >
-      <div className="container">
-        <Grid container spacing={3} justify="center">
-          <Grid item md={6}>
-            <h1 className={classes.title}>Better Management; Less Expense</h1>
-            <div className={classes.subTitle}>
-              Not sure about Pro? Try trial first!
-            </div>
-
-            <div className="mb-10">
-              <div className="flex items-center mb-4">
-                <Icon color="secondary" className="mr-2">
-                  check
-                </Icon>
-                Unlimited Projects.
+    <section className={clsx("section text-white")} id="intro1">
+      <div className={classes.introWrapper}>
+        <div className="container">
+          <Grid container spacing={3} justify="center">
+            <Grid item md={6}>
+              <h1 className={clsx("mb-6 text-48", classes.title)}>
+                Better Management; Less Expense
+              </h1>
+              <div className="text-22 mb-10">
+                Not sure about Pro? Try trial first!
               </div>
-              <div className="flex items-center mb-4">
-                <Icon color="secondary" className="mr-2">
-                  check
-                </Icon>
-                Unlimited Team Members.
-              </div>
-              <div className="flex items-center mb-4">
-                <Icon color="secondary" className="mr-2">
-                  check
-                </Icon>
-                Unlimited Disk Space.
-              </div>
-            </div>
 
-            <div>
-              <Fab
-                variant="extended"
-                size="large"
-                color="primary"
-                aria-label="Buy"
-                className="px-6 text-18 m-2"
-              >
-                <Icon className="mr-4">flight_takeoff</Icon>
-                Take off
-              </Fab>
+              <div className="mb-10 list">
+                <div className="flex items-center mb-4">
+                  <Icon color="secondary" className="mr-2">
+                    check
+                  </Icon>
+                  Unlimited Projects.
+                </div>
+                <div className="flex items-center mb-4">
+                  <Icon color="secondary" className="mr-2">
+                    check
+                  </Icon>
+                  Unlimited Team Members.
+                </div>
+                <div className="flex items-center mb-4">
+                  <Icon color="secondary" className="mr-2">
+                    check
+                  </Icon>
+                  Unlimited Disk Space.
+                </div>
+              </div>
 
-              <Fab
-                variant="extended"
-                size="large"
-                aria-label="Download"
-                className={clsx("px-6 text-18 m-2", classes.whiteButton)}
-              >
-                <Icon className="mr-4">alarm_on</Icon>
-                14 days free trial
-              </Fab>
-            </div>
+              <div>
+                <Fab
+                  variant="extended"
+                  size="large"
+                  color="primary"
+                  aria-label="Buy"
+                  className="px-6 text-18 m-2"
+                >
+                  <Icon className="mr-4">flight_takeoff</Icon>
+                  Take off
+                </Fab>
+
+                <Fab
+                  variant="extended"
+                  size="large"
+                  aria-label="Download"
+                  className={clsx("px-6 text-18 m-2", classes.whiteButton)}
+                >
+                  <Icon className="mr-4">alarm_on</Icon>
+                  14 days free trial
+                </Fab>
+              </div>
+            </Grid>
+            <Grid item md={6}>
+              <div className={classes.product}>
+                <a
+                  href="https://themeforest.net/user/mh_rafi/portfolio"
+                  className={classes.productLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="text-32 font-bold">$16</div>
+                  <span className="text-14">Buy On ThemeForest</span>
+                </a>
+                <img
+                  src="./assets/images/screenshots/landing-intro.png"
+                  alt=""
+                />
+              </div>
+            </Grid>
           </Grid>
-          <Grid item md={6}>
-            <div className={classes.product}>
-              <a
-                href="https://themeforest.net/user/mh_rafi/portfolio"
-                className={classes.productLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="text-32 font-bold">$16</div>
-                <span className="text-14">Buy On ThemeForest</span>
-              </a>
-              <img src="./assets/images/screenshots/landing-intro.png" alt="" />
-            </div>
-          </Grid>
-        </Grid>
+        </div>
       </div>
     </section>
   );
