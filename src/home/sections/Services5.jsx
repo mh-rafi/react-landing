@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Tabs, Tab, Grid, Icon } from "@material-ui/core";
 
-class Service5 extends Component {
-  state = {
+const Service5 = () => {
+  const [state, setState] = useState({
     value: 0,
-  };
+  });
 
-  featureList = [
+  const featureList = [
     {
       imageUrl: "./assets/images/screenshots/login.jpg",
       title: "Clean & minimal login UI",
@@ -27,62 +27,60 @@ class Service5 extends Component {
     },
   ];
 
-  handleChange = (event, value) => {
-    this.setState({ value });
+  const handleChange = (event, value) => {
+    setState({ value });
   };
 
-  render() {
-    const { value } = this.state;
-    let feature = this.featureList[value];
+  const { value } = state;
+  let feature = featureList[value];
 
-    return (
-      <div className="section section-service5 bg-light-gray" id="service5">
-        <div className="container">
-          {/* tab view */}
-          <Tabs
-            value={value}
-            onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            variant="standard"
-            scrollButtons="auto"
-          >
-            <Tab label="Login" />
-            <Tab label="Dashboard" />
-            <Tab label="Calendar" />
-          </Tabs>
+  return (
+    <div className="section bg-light-gray" id="service5">
+      <div className="container">
+        {/* tab view */}
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          variant="standard"
+          scrollButtons="auto"
+        >
+          <Tab label="Login" />
+          <Tab label="Dashboard" />
+          <Tab label="Calendar" />
+        </Tabs>
 
-          <Grid
-            container
-            spacing={4}
-            className="mt-4 fade-in"
-            alignItems="center"
-          >
-            <Grid item lg={5} md={7} sm={12} xs={12}>
-              <div className="service5__image-holder">
-                <img
-                  className="elevation-z3"
-                  src={feature.imageUrl}
-                  alt="building"
-                />
-              </div>
-            </Grid>
-            <Grid item lg={5} md={7} sm={12} xs={12}>
-              <div className="service5__details">
-                <h3>{feature.title}</h3>
-                <p>{feature.text}</p>
-
-                <a className="text-brand" href="#details">
-                  View details
-                  <Icon className="service5__link-icon">navigate_next</Icon>
-                </a>
-              </div>
-            </Grid>
+        <Grid
+          container
+          spacing={4}
+          className="mt-4 fade-in"
+          alignItems="center"
+        >
+          <Grid item lg={5} md={7} sm={12} xs={12}>
+            <div className="overflow-hidden">
+              <img
+                className="w-full elevation-z3"
+                src={feature.imageUrl}
+                alt="building"
+              />
+            </div>
           </Grid>
-        </div>
+          <Grid item lg={5} md={7} sm={12} xs={12}>
+            <div className="service5__details">
+              <h3>{feature.title}</h3>
+              <p className="whitespace-pre-wrap">{feature.text}</p>
+
+              <a className="text-primary flex items-center" href="#details">
+                View details
+                <Icon className="service5__link-icon">navigate_next</Icon>
+              </a>
+            </div>
+          </Grid>
+        </Grid>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Service5;

@@ -40,7 +40,7 @@ const Portfolio2 = () => {
   ];
 
   return (
-    <section className="section section-portfolio1" id="portfoli2">
+    <section className="section" id="portfoli2">
       <div className="container">
         <div className="section__header">
           <h2>Our Works</h2>

@@ -4,6 +4,23 @@ import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
+  introWrapper: {
+    padding: "5rem 0px !important",
+    overflow: "visible !important",
+
+    [theme.breakpoints.down("sm")]: {
+      padding: "1rem 0 !important",
+      textAlign: "center",
+      "& .list": {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      },
+    },
+  },
+  title: {
+    textShadow: "0 4px 4px rgba(0, 0, 0, 0.22)",
+  },
   button: {
     position: "absolute",
     right: 3,
@@ -15,63 +32,78 @@ const Intro3 = () => {
   const classes = useStyles();
 
   return (
-    <section className="section section-intro1 section-intro3" id="intro3">
-      <div className="container">
-        <Grid container spacing={3} justify="center">
-          <Grid item md={6}>
-            <h1 className="section-intro1__title">
-              Better Management; Less Expense
-            </h1>
-            <div className="section-intro1__subtitle">
-              Not sure about Pro? Try trial first!
-            </div>
+    <section className="section" id="intro3">
+      <div className={classes.introWrapper}>
+        <div className="container">
+          <Grid container spacing={3} justify="center" alignItems="center">
+            <Grid item md={6}>
+              <h1 className={clsx("text-48 mb-6 text-primary", classes.title)}>
+                Better Management; Less Expense
+              </h1>
+              <div className="text-22 mb-10">
+                Not sure about Pro? Try trial first!
+              </div>
 
-            <div className="section-intro1__list">
-              <div className="section-intro1__list__item text-muted">
-                <Icon color="secondary">check</Icon> Unlimited Projects.
+              <div className="list mb-10">
+                <div className="flex items-center mb-4 text-muted">
+                  <Icon className="mr-2" color="secondary">
+                    check
+                  </Icon>
+                  Unlimited Projects.
+                </div>
+                <div className="flex items-center mb-4 text-muted">
+                  <Icon className="mr-2" color="secondary">
+                    check
+                  </Icon>
+                  Unlimited Team Members.
+                </div>
+                <div className="flex items-center mb-4 text-muted">
+                  <Icon className="mr-2" color="secondary">
+                    check
+                  </Icon>
+                  Unlimited Disk Space.
+                </div>
               </div>
-              <div className="section-intro1__list__item text-muted">
-                <Icon color="secondary">check</Icon> Unlimited Team Members.
-              </div>
-              <div className="section-intro1__list__item text-muted">
-                <Icon color="secondary">check</Icon> Unlimited Disk Space.
-              </div>
-            </div>
 
-            <TextField
-              className="max-w-450"
-              variant="outlined"
-              size="small"
-              placeholder="Your Email:"
-              fullWidth
-              InputProps={{
-                style: {
-                  borderRadius: 300,
-                  paddingTop: 5,
-                  paddingBottom: 5,
-                  paddingLeft: "0.75rem",
-                  background: "rgba(255,255,255,0.87)",
-                },
-                endAdornment: (
-                  <Button
-                    className={clsx(
-                      "bg-secondary rounded text-13 px-7 py-11px",
-                      classes.button
-                    )}
-                  >
-                    <Icon fontSize="small">flight_takeoff</Icon>
-                    <span className="ml-2">SUBSCRIBE</span>
-                  </Button>
-                ),
-              }}
-            />
+              <TextField
+                className="max-w-450"
+                variant="outlined"
+                size="small"
+                placeholder="Your Email:"
+                fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 300,
+                    paddingTop: 5,
+                    paddingBottom: 5,
+                    paddingLeft: "0.75rem",
+                    background: "rgba(255,255,255,0.87)",
+                  },
+                  endAdornment: (
+                    <Button
+                      className={clsx(
+                        "bg-secondary rounded text-13 px-7 py-11px",
+                        classes.button
+                      )}
+                    >
+                      <Icon fontSize="small">flight_takeoff</Icon>
+                      <span className="ml-2">SUBSCRIBE</span>
+                    </Button>
+                  ),
+                }}
+              />
+            </Grid>
+            <Grid item md={6}>
+              <div className="flex justify-center items-center max-w-360 mx-auto">
+                <img
+                  className="w-full"
+                  src="./assets/images/illustrations/2.svg"
+                  alt=""
+                />
+              </div>
+            </Grid>
           </Grid>
-          <Grid item md={6}>
-            <div className="intro3__product">
-              <img src="./assets/images/illustrations/2.svg" alt="" />
-            </div>
-          </Grid>
-        </Grid>
+        </div>
       </div>
     </section>
   );

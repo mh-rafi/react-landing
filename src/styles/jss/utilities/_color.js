@@ -15,7 +15,7 @@ export const colorStyles = makeStyles(({ palette, ...theme }) => ({
     ".bg-white": { background: "#fff !important", color: "inherit" },
     ".bg-default": { background: `${palette.background.default} !important` },
     ".bg-paper": { background: `${palette.background.paper}` },
-    ".bg-light-gray": { background: "rgba(0, 0, 0, 0.08) !important" },
+    ".bg-light-gray": { background: "rgba(0, 0, 0, 0.03) !important" },
     ".bg-dark": { background: "#000000", color: "#fff" },
     ".bg-light-dark": { background: "#212121", color: "white" },
     ".hover-bg-primary": { transition: "all 250ms" },

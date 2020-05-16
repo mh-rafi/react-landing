@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   introWrapper: {
-    padding: "6rem 0px !important",
+    padding: "5rem 0px !important",
     overflow: "visible !important",
     background:
       "url(./assets/images/home-bg.jpg) center center/cover no-repeat",

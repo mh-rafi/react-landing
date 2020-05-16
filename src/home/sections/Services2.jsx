@@ -59,7 +59,7 @@ const Services2 = () => {
   ];
 
   return (
-    <section className="section section-service1 bg-light-gray" id="service2">
+    <section className="section bg-light-gray" id="service2">
       <div className="container">
         <div className="section__header">
           <h2>Our Services</h2>
