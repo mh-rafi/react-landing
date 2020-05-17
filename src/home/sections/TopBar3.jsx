@@ -1,26 +1,46 @@
 import React, { useState, useEffect } from "react";
 import { debounce, classList } from "utils";
 import Icon from "@material-ui/core/Icon";
-import { IconButton, Fab } from "@material-ui/core";
+import IconButton from "@material-ui/core/IconButton";
 import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
+import { useTheme, useMediaQuery, Fab } from "@material-ui/core";
 
-const TopBar3 = () => {
-  let handleScrollRef;
-  let scrollableElement;
+const TopBar3 = (props) => {
+  const [isTop, setIsTop] = useState(true);
+  const [isClosed, setIsClosed] = useState(true);
 
-  const [state, setState] = useState({
-    isTop: true,
-    isClosed: true,
-  });
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  let scrollableElement = document.querySelector(".scrollable-content");
+  if (!scrollableElement) scrollableElement = window;
+
+  let handleScrollRef = null;
+  let toggleIcon = isClosed ? "menu" : "close";
+
+  const handleScroll = () => {
+    return debounce(() => {
+      if (scrollableElement) {
+        let isCurrentTop = scrollableElement.scrollY < 100;
+
+        if (isCurrentTop !== isTop) {
+          setIsTop(isCurrentTop);
+        }
+      }
+    }, 20);
+  };
+  handleScrollRef = handleScroll();
+
+  const close = () => {
+    setIsClosed(false);
+  };
 
   useEffect(() => {
-    scrollableElement = document.querySelector(".scrollable-content");
-    if (!scrollableElement) scrollableElement = window;
     if (scrollableElement) {
-      handleScrollRef = handleScroll();
       scrollableElement.addEventListener("scroll", handleScrollRef);
     }
+
     return () => {
       if (scrollableElement) {
         scrollableElement.removeEventListener("scroll", handleScrollRef);
@@ -28,27 +48,13 @@ const TopBar3 = () => {
     };
   }, [scrollableElement, handleScrollRef]);
 
-  const handleScroll = () => {
-    return debounce(() => {
-      if (scrollableElement) {
-        let isTop = scrollableElement.scrollY < 100;
-        setState({ ...state, isTop });
-      }
-    }, 20);
-  };
-
-  const close = () => {
-    setState({ isClosed: true });
-  };
-
-  let toggleIcon = state.isClosed ? "menu" : "close";
-
   return (
     <section
       className={classList({
         header: true,
-        "header-fixed": !state.isTop,
-        closed: state.isClosed,
+        "bg-transparent": isTop && !isMobile,
+        "header-fixed": !isTop,
+        closed: isClosed,
       })}
     >
       <div className="container header-container">
@@ -100,7 +106,7 @@ const TopBar3 = () => {
         <IconButton
           className="header__toggle"
           onClick={() => {
-            setState({ isClosed: !state.isClosed });
+            setIsClosed(!isClosed);
           }}
         >
           <Icon>{toggleIcon}</Icon>
