@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { scrollTo } from "utils";
 import Footer2 from "./sections/Footer2";
-import { FooterTheme } from "../theme";
-import { ThemeProvider } from "@material-ui/core";
 import Intro6 from "./sections/Intro6";
 import Blog1 from "./sections/Blog1";
 import TopBar6 from "./sections/TopBar6";
@@ -27,9 +25,7 @@ const Landing6 = () => {
       <Pricing2 />
       <Blog1 />
       <Subscription1 />
-      <ThemeProvider theme={FooterTheme}>
-        <Footer2 />
-      </ThemeProvider>
+      <Footer2 />
     </div>
   );
 };

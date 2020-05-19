@@ -8,9 +8,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   intro: {
     padding: "180px 0 0 !important",
     overflow: "visible !important",
-    "& h1, h2, h3, h4, h5, h6": {
-      color: "#fff",
-    },
 
     [theme.breakpoints.down("sm")]: {
       padding: "100px 0 0 !important",
@@ -70,7 +67,7 @@ const Intro2 = () => {
           </p>
           <div>
             <Button
-              className="bg-white"
+              className="bg-white text-black"
               variant="contained"
               size="large"
               aria-label="Buy"

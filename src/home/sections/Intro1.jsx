@@ -30,7 +30,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
   whiteButton: {
     background: "#fff !important",
-    color: "rgba(var(--body)) !important",
     "&:hover": {
       background: `${darken("#ffffff", 0.1)} !important`,
     },

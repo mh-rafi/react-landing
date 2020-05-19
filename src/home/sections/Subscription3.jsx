@@ -1,25 +1,7 @@
 import React from "react";
 import { TextField, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  input: {
-    border: `1px solid ${palette.text.hint}`,
-    outline: "none",
-    paddingLeft: "1.25rem",
-    paddingRight: 145,
-  },
-  button: {
-    position: "absolute",
-    right: 3,
-    zIndex: 2,
-  },
-}));
 
 const Subscription3 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section bg-light-primary" id="subscription1">
       <div className="container">
@@ -41,18 +23,12 @@ const Subscription3 = () => {
               InputProps={{
                 style: {
                   borderRadius: 300,
-                  paddingTop: 5,
-                  paddingBottom: 5,
+                  padding: "2px 3px",
                   paddingLeft: "0.75rem",
                   background: "rgba(255,255,255,0.87)",
                 },
                 endAdornment: (
-                  <Button
-                    className={clsx(
-                      "bg-primary rounded text-13 text-white px-8 py-11px",
-                      classes.button
-                    )}
-                  >
+                  <Button className="bg-primary rounded text-13 text-white px-8 py-11px">
                     SUBSCRIBE
                   </Button>
                 ),

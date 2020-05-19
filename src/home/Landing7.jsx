@@ -1,7 +1,5 @@
 import React from "react";
 import Footer2 from "./sections/Footer2";
-import { FooterTheme } from "../theme";
-import { ThemeProvider } from "@material-ui/core";
 import TopBar7 from "./sections/TopBar7";
 import Intro7 from "./sections/Intro7";
 import Subscription3 from "./sections/Subscription3";
@@ -26,9 +24,7 @@ const Landing7 = () => {
       <Marketing2 />
       <Testimonial4 />
       <Subscription3 />
-      <ThemeProvider theme={FooterTheme}>
-        <Footer2 />
-      </ThemeProvider>
+      <Footer2 />
     </div>
   );
 };

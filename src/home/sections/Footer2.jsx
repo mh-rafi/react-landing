@@ -6,8 +6,8 @@ import {
   Button,
   TextField,
   InputAdornment,
-  darken,
 } from "@material-ui/core";
+import { darken } from "@material-ui/core/styles";
 import FacebookIcon from "../common/icons/FacebookIcon";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import InstagramIcon from "../common/icons/InstagramIcon";
@@ -129,13 +129,19 @@ const Footer2 = () => {
                 fullWidth
                 inputProps={{
                   style: {
-                    paddingLeft: 12,
+                    paddingLeft: 8,
+                    color: "#fff",
                   },
                 }}
                 InputProps={{
+                  style: {
+                    paddingLeft: 4,
+                  },
                   startAdornment: (
                     <InputAdornment position="end">
-                      <Icon fontSize="small">email</Icon>
+                      <Icon fontSize="small" className="text-white">
+                        email
+                      </Icon>
                     </InputAdornment>
                   ),
                 }}

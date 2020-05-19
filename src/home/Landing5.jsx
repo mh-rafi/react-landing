@@ -3,8 +3,6 @@ import { scrollTo } from "utils";
 import TopBar5 from "./sections/TopBar5";
 import Testimonial5 from "./sections/Testimonial5";
 import Footer2 from "./sections/Footer2";
-import { FooterTheme } from "../theme";
-import { ThemeProvider } from "@material-ui/core";
 import Intro5 from "./sections/Intro5";
 import About1 from "./sections/About1";
 import Gallery1 from "./sections/Gallery1";
@@ -27,9 +25,7 @@ const Landing5 = () => {
       <Testimonial5 />
       <Blog1 />
       <Contact2 />
-      <ThemeProvider theme={FooterTheme}>
-        <Footer2 />
-      </ThemeProvider>
+      <Footer2 />
     </div>
   );
 };

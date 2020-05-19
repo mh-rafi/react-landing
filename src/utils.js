@@ -1,10 +1,10 @@
 export function debounce(func, wait, immediate) {
   var timeout;
-  return function() {
+  return function () {
     var context = this,
       args = arguments;
     clearTimeout(timeout);
-    timeout = setTimeout(function() {
+    timeout = setTimeout(function () {
       timeout = null;
       if (!immediate) func.apply(context, args);
     }, wait);
@@ -12,10 +12,11 @@ export function debounce(func, wait, immediate) {
   };
 }
 
-function currentYPosition() {
-  if (!window) {
+function currentYPosition(elm) {
+  if (!window && !elm) {
     return;
   }
+  if (elm) return elm.scrollTop;
   // Firefox, Chrome, Opera, Safari
   if (window.pageYOffset) return window.pageYOffset;
   // Internet Explorer 6 - standards mode
@@ -38,11 +39,14 @@ function elmYPosition(elm) {
 
 export function scrollTo(scrollableElement, elmID) {
   var elm = document.getElementById(elmID);
+
   if (!elmID || !elm) {
     return;
   }
-  var startY = currentYPosition();
+
+  var startY = currentYPosition(scrollableElement);
   var stopY = elmYPosition(elm);
+
   var distance = stopY > startY ? stopY - startY : startY - stopY;
   if (distance < 100) {
     scrollTo(0, stopY);
@@ -56,7 +60,7 @@ export function scrollTo(scrollableElement, elmID) {
   if (stopY > startY) {
     for (var i = startY; i < stopY; i += step) {
       setTimeout(
-        (function(leapY) {
+        (function (leapY) {
           return () => {
             scrollableElement.scrollTo(0, leapY);
           };
@@ -71,7 +75,7 @@ export function scrollTo(scrollableElement, elmID) {
   }
   for (let i = startY; i > stopY; i -= step) {
     setTimeout(
-      (function(leapY) {
+      (function (leapY) {
         return () => {
           scrollableElement.scrollTo(0, leapY);
         };
@@ -87,7 +91,7 @@ export function scrollTo(scrollableElement, elmID) {
 
 export function classList(classes) {
   return Object.entries(classes)
-    .filter(entry => entry[1])
-    .map(entry => entry[0])
+    .filter((entry) => entry[1])
+    .map((entry) => entry[0])
     .join(" ");
 }

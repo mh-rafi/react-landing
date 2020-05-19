@@ -12,6 +12,7 @@
     "react-dynamic-swiper": "^2.0.2",
     "react-google-maps": "^9.4.5",
     "react-material-ui-form-validator": "^2.0.9",
+    "react-perfect-scrollbar": "^1.5.8",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.4.1",
     "swiper": "^4.5.0"

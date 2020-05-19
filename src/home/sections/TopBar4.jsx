@@ -4,7 +4,8 @@ import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
 import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
-import { Button, useTheme, useMediaQuery } from "@material-ui/core";
+import { Button, useMediaQuery } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
 
 const TopBar4 = (props) => {
   const [isTop, setIsTop] = useState(true);
@@ -20,16 +21,12 @@ const TopBar4 = (props) => {
   let toggleIcon = isClosed ? "menu" : "close";
 
   const handleScroll = () => {
-    return debounce(() => {
-      if (scrollableElement) {
-        let isCurrentTop = scrollableElement.scrollY < 100;
-
-        if (isCurrentTop !== isTop) {
-          setIsTop(isCurrentTop);
-        }
-      }
+    return debounce(({ target: { scrollTop } }) => {
+      let isCurrentTop = scrollTop < 100 || scrollableElement.scrollY < 100;
+      setIsTop(isCurrentTop);
     }, 20);
   };
+
   handleScrollRef = handleScroll();
 
   const close = () => {
@@ -63,7 +60,7 @@ const TopBar4 = (props) => {
         </div>
         <ul className="navigation">
           <li>
-            <NavLink to="/">Demos</NavLink>
+            <NavLink to="/demos">Demos</NavLink>
           </li>
           <li>
             <ScrollTo to="intro4" onScroll={close}>

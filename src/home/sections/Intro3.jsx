@@ -21,11 +21,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   title: {
     textShadow: "0 4px 4px rgba(0, 0, 0, 0.22)",
   },
-  button: {
-    position: "absolute",
-    right: 3,
-    zIndex: 2,
-  },
 }));
 
 const Intro3 = () => {
@@ -74,18 +69,12 @@ const Intro3 = () => {
                 InputProps={{
                   style: {
                     borderRadius: 300,
-                    paddingTop: 5,
-                    paddingBottom: 5,
+                    padding: "2px 3px",
                     paddingLeft: "0.75rem",
                     background: "rgba(255,255,255,0.87)",
                   },
                   endAdornment: (
-                    <Button
-                      className={clsx(
-                        "bg-secondary rounded text-13 px-7 py-11px",
-                        classes.button
-                      )}
-                    >
+                    <Button className="bg-secondary rounded text-13 px-7 py-11px">
                       <Icon fontSize="small">flight_takeoff</Icon>
                       <span className="ml-2">SUBSCRIBE</span>
                     </Button>

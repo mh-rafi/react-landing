@@ -17,16 +17,12 @@ const TopBar10 = (props) => {
   let toggleIcon = isClosed ? "menu" : "close";
 
   const handleScroll = () => {
-    return debounce(() => {
-      if (scrollableElement) {
-        let isCurrentTop = scrollableElement.scrollY < 100;
-
-        if (isCurrentTop !== isTop) {
-          setIsTop(isCurrentTop);
-        }
-      }
+    return debounce(({ target: { scrollTop } }) => {
+      let isCurrentTop = scrollTop < 100 || scrollableElement.scrollY < 100;
+      setIsTop(isCurrentTop);
     }, 20);
   };
+
   handleScrollRef = handleScroll();
 
   const close = () => {
@@ -59,7 +55,7 @@ const TopBar10 = (props) => {
         </div>
         <ul className="navigation">
           <li>
-            <NavLink to="/">Demos</NavLink>
+            <NavLink to="/demos">Demos</NavLink>
           </li>
           <li>
             <ScrollTo to="intro10" onScroll={close}>

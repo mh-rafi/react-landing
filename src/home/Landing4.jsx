@@ -9,8 +9,6 @@ import Pricing2 from "./sections/Pricing2";
 import Testimonial4 from "./sections/Testimonial4";
 import CallToAction3 from "./sections/CallToAction3";
 import Footer2 from "./sections/Footer2";
-import { FooterTheme } from "../theme";
-import { ThemeProvider } from "@material-ui/core";
 
 const Landing4 = () => {
   useEffect(() => {
@@ -27,9 +25,7 @@ const Landing4 = () => {
       <Pricing2 />
       <Testimonial4 />
       <CallToAction3 />
-      <ThemeProvider theme={FooterTheme}>
-        <Footer2 />
-      </ThemeProvider>
+      <Footer2 />
     </div>
   );
 };

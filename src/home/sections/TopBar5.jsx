@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
 import { Button } from "@material-ui/core";
 
-const TopBar5 = props => {
+const TopBar5 = (props) => {
   const [isTop, setIsTop] = useState(true);
   const [isClosed, setIsClosed] = useState(true);
 
@@ -17,14 +17,9 @@ const TopBar5 = props => {
   let toggleIcon = isClosed ? "menu" : "close";
 
   const handleScroll = () => {
-    return debounce(() => {
-      if (scrollableElement) {
-        let isCurrentTop = scrollableElement.scrollY < 100;
-
-        if (isCurrentTop !== isTop) {
-          setIsTop(isCurrentTop);
-        }
-      }
+    return debounce(({ target: { scrollTop } }) => {
+      let isCurrentTop = scrollTop < 100 || scrollableElement.scrollY < 100;
+      setIsTop(isCurrentTop);
     }, 20);
   };
   handleScrollRef = handleScroll();
@@ -50,7 +45,7 @@ const TopBar5 = props => {
       className={classList({
         header: true,
         "header-fixed": !isTop,
-        closed: isClosed
+        closed: isClosed,
       })}
     >
       <div className="container header-container">
@@ -59,7 +54,7 @@ const TopBar5 = props => {
         </div>
         <ul className="navigation">
           <li>
-            <NavLink to="/">Demos</NavLink>
+            <NavLink to="/demos">Demos</NavLink>
           </li>
           <li>
             <ScrollTo to="intro5" onScroll={close}>
