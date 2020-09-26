@@ -2,8 +2,9 @@ import React from "react";
 import {
   Route,
   Switch,
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   Redirect,
+  HashRouter as Router,
 } from "react-router-dom";
 import "react-perfect-scrollbar/dist/css/styles.css";
 import { MuiThemeProvider } from "@material-ui/core/styles";
