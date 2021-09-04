@@ -6,10 +6,13 @@ import {
   Redirect,
   HashRouter as Router,
 } from "react-router-dom";
-import "react-perfect-scrollbar/dist/css/styles.css";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider  } from "@mui/material/styles";
 import Scrollbar from "react-perfect-scrollbar";
+
 import { Theme } from "./theme";
+
+import "react-perfect-scrollbar/dist/css/styles.css";
+
 import GlobalCss from "./styles/jss/GlobalCss";
 import Demo from "./home/Demo";
 import Landing1 from "./home/Landing1";
@@ -27,7 +30,7 @@ import Landing12 from "./home/Landing12";
 
 function App() {
   return (
-    <MuiThemeProvider theme={Theme}>
+    <ThemeProvider theme={Theme}>
       <GlobalCss>
         <Scrollbar
           className="h-full-screen scrollable-content"
@@ -54,7 +57,7 @@ function App() {
           </Router>
         </Scrollbar>
       </GlobalCss>
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 }
 
