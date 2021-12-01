@@ -49,7 +49,6 @@ function App() {
               <Route path="/landing11" component={Landing11} />
               <Route path="/landing12" component={Landing12} />
               <Redirect path="/" exact to="demos" />
-              {/* <Route component={Error} /> */}
             </Switch>
           </Router>
         </Scrollbar>

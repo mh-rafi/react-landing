@@ -61,13 +61,8 @@ const Carousel = (props) => {
 
   globalBulletColor = bulletColor;
 
-  let {
-    bulletClass,
-    bulletActiveClass,
-    nextButton,
-    prevButton,
-    navButton,
-  } = useStyles();
+  let { bulletClass, bulletActiveClass, nextButton, prevButton, navButton } =
+    useStyles();
 
   const swiperOptions = {
     direction: "horizontal",
