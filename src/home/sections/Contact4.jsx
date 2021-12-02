@@ -7,7 +7,7 @@ import {
   MenuItem,
   FormControlLabel,
   Checkbox,
-} from "@material-ui/core";
+} from "@mui/material";
 import { Link } from "react-router-dom";
 
 const inputProps = {

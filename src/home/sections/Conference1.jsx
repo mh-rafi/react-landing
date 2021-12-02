@@ -1,10 +1,9 @@
 import React from "react";
-import { Grid, Icon, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Grid, Icon, Button } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  descriptionCard: {
+const Container = styled("div")(({ theme }) => ({
+  "& .descriptionCard": {
     padding: "1rem 4rem",
     [theme.breakpoints.down("md")]: {
       padding: "1rem 2rem",
@@ -13,30 +12,26 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       padding: "1rem",
     },
   },
-  borderRounded: {
+  "& .borderRounded": {
     borderRadius: 16,
   },
 }));
 
 const Conference1 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section" id="conference1">
-      <div className="container">
-        <div
-          className={clsx("section-bg-light-primary", classes.borderRounded)}
-        >
+      <Container className="container">
+        <div className="section-bg-light-primary borderRounded">
           <Grid container spacing={0} alignItems="center">
             <Grid item md={6} sm={12}>
               <img
                 src="/assets/images/microphone.jpg"
                 alt="microphone  "
-                className={clsx("w-full block", classes.borderRounded)}
+                className="w-full block borderRounded"
               />
             </Grid>
             <Grid item md={6} sm={12}>
-              <div className={classes.descriptionCard}>
+              <div className="descriptionCard">
                 <h1 className="mt-0 mb-16 text-48 font-medium">
                   Digital Conference
                 </h1>
@@ -67,7 +62,7 @@ const Conference1 = () => {
             </Grid>
           </Grid>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

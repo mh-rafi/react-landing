@@ -1,7 +1,5 @@
 import React from "react";
-import { Grid, Icon, IconButton } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Grid, Icon, IconButton } from "@mui/material";
 import {
   Wifi,
   Spa,
@@ -9,10 +7,11 @@ import {
   RestaurantMenu,
   AirlineSeatIndividualSuite,
   BeachAccess,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  iconWrapper: {
+const StyledBox = styled("div")(() => ({
+  "& .iconWrapper": {
     position: "relative",
     display: "inline-block",
     zIndex: 2,
@@ -29,7 +28,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       zIndex: -1,
     },
   },
-  doneIcon: {
+  "& .doneIcon": {
     position: "absolute",
     bottom: 0,
     right: "calc(50% - 32px)",
@@ -38,7 +37,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Services10 = () => {
-  const classes = useStyles();
   const serviceList = [
     {
       icon: Wifi,
@@ -80,17 +78,14 @@ const Services10 = () => {
           {serviceList.map((item, ind) => (
             <Grid key={ind} item md={4} sm={2} xs={12}>
               <div className="text-center max-w-252 mx-auto">
-                <div className="relative mb-8">
-                  <div className={classes.iconWrapper}>
+                <StyledBox className="relative mb-8">
+                  <div className="iconWrapper">
                     <item.icon className="text-62" />
                   </div>
-                  <IconButton
-                    size="small"
-                    className={clsx("bg-primary p-1", classes.doneIcon)}
-                  >
+                  <IconButton size="small" className="bg-primary p-1 doneIcon">
                     <Icon className="text-20 text-white">done</Icon>
                   </IconButton>
-                </div>
+                </StyledBox>
                 <h1 className="font-normal inline-block">{item.title}</h1>
                 <p className="text-center m-0">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed

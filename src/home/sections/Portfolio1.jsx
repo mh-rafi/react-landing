@@ -1,18 +1,7 @@
 import React from "react";
-import Card from "@material-ui/core/Card";
-
-import CardContent from "@material-ui/core/CardContent";
-import Divider from "@material-ui/core/Divider";
-import Grid from "@material-ui/core/Grid";
-import IconButton from "@material-ui/core/IconButton";
-import { Button, Icon } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles(({ palette, ...theme }) => ({}));
+import { Button, Icon, Card, Divider, IconButton, Grid } from "@mui/material";
 
 const Portfolio1 = () => {
-  const classes = useStyles();
-
   const portfoioList = [
     {
       imageUrl: "./assets/images/sq-12.jpg",

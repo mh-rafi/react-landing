@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button } from "@mui/material";
 import ExpertIcon from "../common/icons/ExpertIcon";
 import EducationIcon1 from "../common/icons/EducationIcon1";
 import EducationIcon2 from "../common/icons/EducationIcon2";

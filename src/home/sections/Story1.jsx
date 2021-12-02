@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid, Icon, Button, useMediaQuery } from "@material-ui/core";
-import { useTheme } from "@material-ui/core/styles";
+import { Grid, Icon, Button, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 const Story1 = () => {
   const theme = useTheme();

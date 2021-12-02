@@ -1,26 +1,22 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { TextField, IconButton, Icon } from "@material-ui/core";
+import { styled } from "@mui/system";
+import { TextField, IconButton, Icon } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  introWrapper: {
-    padding: "5rem 0rem",
-    backgroundImage: 'url("/assets/images/abstract-bg-1.png")',
-    backgroundPosition: "top",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    [theme.breakpoints.down("xs")]: {
-      padding: 0,
-    },
+const IntroWrapper = styled("div")(({ theme }) => ({
+  padding: "5rem 0rem",
+  backgroundImage: 'url("/assets/images/abstract-bg-1.png")',
+  backgroundPosition: "top",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  [theme.breakpoints.down("xs")]: {
+    padding: 0,
   },
 }));
 
 const Intro12 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section" id="intro12">
-      <div className={classes.introWrapper}>
+      <IntroWrapper>
         <div className="container">
           <div className="max-w-550 mx-auto text-center">
             <div className="flex justify-center items-center mb-14">
@@ -58,7 +54,7 @@ const Intro12 = () => {
             </div>
           </div>
         </div>
-      </div>
+      </IntroWrapper>
     </section>
   );
 };

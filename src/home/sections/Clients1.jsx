@@ -1,18 +1,13 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
-    background: "rgba(var(--primary),0.15)",
-  },
-}));
+import { Box } from "@mui/system";
 
 const Clients1 = () => {
-  const classes = useStyles();
-
   return (
-    <section className="section section-bg-light-primary" id="clients1">
+    <Box
+      sx={{ background: "rgba(var(--primary),0.15)" }}
+      className="section section-bg-light-primary"
+      id="clients1"
+    >
       <div className="container text-center">
         <h1 className="font-normal text-primary text-48 mb-4">
           Our Trusted Clients
@@ -50,7 +45,7 @@ const Clients1 = () => {
           />
         </div>
       </div>
-    </section>
+    </Box>
   );
 };
 

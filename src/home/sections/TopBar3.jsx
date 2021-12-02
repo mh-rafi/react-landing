@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { debounce, classList } from "utils";
-import Icon from "@material-ui/core/Icon";
-import IconButton from "@material-ui/core/IconButton";
+import Icon from "@mui/material/Icon";
+import IconButton from "@mui/material/IconButton";
 import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
-import { useMediaQuery, Fab } from "@material-ui/core";
-import { useTheme } from "@material-ui/core/styles";
+import { useMediaQuery, Fab } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 const TopBar3 = (props) => {
   const [isTop, setIsTop] = useState(true);

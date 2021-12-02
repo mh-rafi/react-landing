@@ -1,24 +1,19 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import { IconButton, Icon } from "@material-ui/core";
+import { styled } from "@mui/system";
+import { IconButton, Icon } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
-    background: "url(./assets/images/home-work.jpg) rgba(0,0,0, 0.67)",
-    backgroundSize: "cover",
-    backgroundBlendMode: "multiply",
-  },
-  buttonBorder: {
+const Section = styled("section")(() => ({
+  backgroundSize: "cover",
+  backgroundBlendMode: "multiply",
+  background: "url(./assets/images/home-work.jpg) rgba(0,0,0, 0.67)",
+  "& .buttonBorder": {
     border: "1px solid white",
   },
 }));
 
 const OnlineClass1 = () => {
-  const classes = useStyles();
-
   return (
-    <section className={clsx("section", classes.section)}>
+    <Section className="section">
       <div className="container">
         <div className="text-center text-white">
           <h1 className="m-0 text-44 font-normal inline-block mx-auto">
@@ -29,12 +24,12 @@ const OnlineClass1 = () => {
             nonumy eirmod tempor invidunt ut labore nonumy eirmod tempor
             invidunt ut labore
           </p>
-          <IconButton className={classes.buttonBorder}>
+          <IconButton className="buttonBorder">
             <Icon className="text-white">play_arrow</Icon>
           </IconButton>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

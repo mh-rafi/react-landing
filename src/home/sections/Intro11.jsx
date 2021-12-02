@@ -1,23 +1,18 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import { Button } from "@material-ui/core";
+import { styled } from "@mui/system";
+import { Button } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  container: {
-    backgroundImage: 'url("/assets/images/doted-bg-1.png")',
-    backgroundPosition: "center",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  },
+const Container = styled("div")(() => ({
+  backgroundImage: 'url("/assets/images/doted-bg-1.png")',
+  backgroundPosition: "center",
+  backgroundSize: "contain",
+  backgroundRepeat: "no-repeat",
 }));
 
 const Intro11 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section mt-16" id="intro11">
-      <div className={clsx("container", classes.container)}>
+      <Container className="container">
         <div className="max-w-550 mx-auto text-center">
           <img
             src="/assets/images/laptop-4.png"
@@ -51,7 +46,7 @@ const Intro11 = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

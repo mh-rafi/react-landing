@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import StrategyIcon from "../common/icons/StrategyIcon";
 import PenIcon from "../common/icons/PenIcon";
 import ManagementIcon from "../common/icons/ManagementIcon";

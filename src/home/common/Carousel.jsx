@@ -1,17 +1,15 @@
-import "swiper/dist/css/swiper.min.css";
-import React, { Children, useEffect } from "react";
 import Swiper from "swiper";
 import PropTypes from "prop-types";
-import { Fab } from "@material-ui/core";
-import NavigateNext from "@material-ui/icons/NavigateNext";
-import NavigateBefore from "@material-ui/icons/NavigateBefore";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Fab } from "@mui/material";
+import "swiper/dist/css/swiper.min.css";
+import { styled, useTheme } from "@mui/system";
+import React, { Children, useEffect } from "react";
+import { NavigateNext, NavigateBefore } from "@mui/icons-material";
 
 let globalBulletColor = "red";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  bulletClass: {
+const CarouselRoot = styled("div")(({ theme }) => ({
+  "& .bulletClass": {
     opacity: 1,
     background: globalBulletColor,
     transition: "transform 400ms cubic-bezier(0.17, 0.67, 0.83, 0.67)",
@@ -22,18 +20,18 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     cursor: "pointer",
     margin: "0 4px",
   },
-  bulletActiveClass: {
+  "& .bulletActiveClass": {
     transform: "scale(1.8)",
   },
-  prevButton: {
+  "& .prevButton": {
     left: 0,
     marginLeft: "-24px !important",
   },
-  nextButton: {
+  "& .nextButton": {
     right: 0,
     marginRight: "-24px !important",
   },
-  navButton: {
+  "& .navButton": {
     position: "absolute !important",
     top: "50%",
     transform: "translateY(calc(-50% - 50px))",
@@ -61,9 +59,6 @@ const Carousel = (props) => {
 
   globalBulletColor = bulletColor;
 
-  let { bulletClass, bulletActiveClass, nextButton, prevButton, navButton } =
-    useStyles();
-
   const swiperOptions = {
     direction: "horizontal",
     allowSlideNext,
@@ -88,14 +83,6 @@ const Carousel = (props) => {
       },
     },
 
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      bulletClass,
-      bulletActiveClass,
-      clickable: true,
-    },
-
     navigation: {
       nextEl: ".carousel__button-next",
       prevEl: ".carousel__button-prev",
@@ -107,7 +94,7 @@ const Carousel = (props) => {
   }, [swiperOptions]);
 
   return (
-    <div className="relative w-full">
+    <CarouselRoot className="relative w-full">
       <div className="swiper-container" id={carouselId}>
         <div className="swiper-wrapper">
           {Children.map(children, (child, index) => (
@@ -115,34 +102,21 @@ const Carousel = (props) => {
           ))}
         </div>
 
-        {/* pagination */}
-        <div className={clsx("swiper-pagination relative", paginationClass)} />
+        <div className="swiper-pagination relative paginationClass" />
       </div>
 
       {/* navigation */}
       {navigation && (
-        <Fab
-          className={clsx(
-            "carousel__button-prev bg-white",
-            prevButton,
-            navButton
-          )}
-        >
+        <Fab className="carousel__button-prev bg-white prevButton navButton">
           <NavigateBefore />
         </Fab>
       )}
       {navigation && (
-        <Fab
-          className={clsx(
-            "carousel__button-next bg-white",
-            nextButton,
-            navButton
-          )}
-        >
+        <Fab className="carousel__button-next bg-white nextButton navButton">
           <NavigateNext />
         </Fab>
       )}
-    </div>
+    </CarouselRoot>
   );
 };
 

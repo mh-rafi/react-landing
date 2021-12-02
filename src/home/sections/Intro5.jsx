@@ -1,19 +1,13 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
-import Icon from "@material-ui/core/Icon";
+import { Button, Grid, Icon } from "@mui/material";
+import { styled } from "@mui/system";
 
-import { makeStyles } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
-import clsx from "clsx";
-
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  introWrapper: {
-    position: "relative",
-    background:
-      "url(./assets/images/happy-face-1.png) center center/cover no-repeat",
-    height: "100%",
-  },
-  lightWhiteBG: {
+const IntroWrapper = styled("div")(({ theme }) => ({
+  height: "100%",
+  position: "relative",
+  background:
+    "url(./assets/images/happy-face-1.png) center center/cover no-repeat",
+  "& .lightWhiteBG": {
     position: "absolute",
     display: "block",
     top: 0,
@@ -25,7 +19,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     },
     background: "rgba(255,255,255,0.95)",
   },
-  intro: {
+  "& .intro": {
     position: "relative",
     padding: "5rem 0rem",
     [theme.breakpoints.down("sm")]: {
@@ -36,16 +30,15 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Intro5 = () => {
-  const classes = useStyles();
   const imageList = ["random-1", "random-2", "random-3"];
 
   return (
     <section className="section" id="intro5">
-      <div className={classes.introWrapper}>
+      <IntroWrapper>
         <div className="container">
           <Grid container spacing={0} alignItems="center">
             <Grid item sm={7} xs={12}>
-              <div className={classes.intro}>
+              <div className="intro">
                 <h1 className="font-bold text-48 mt-0">Evelynn Designs</h1>
                 <p className="max-w-400 text-18 my-6">
                   Looking for a{" "}
@@ -74,10 +67,7 @@ const Intro5 = () => {
                   </Grid>
                 </div>
                 <Button
-                  className={clsx(
-                    "rounded pl-6 pr-4 text-black mb-15",
-                    classes.themeText
-                  )}
+                  className="rounded pl-6 pr-4 text-black mb-15"
                   variant="outlined"
                   color="primary"
                 >
@@ -97,11 +87,11 @@ const Intro5 = () => {
                   </Button>
                 </div>
               </div>
-              <div className={classes.lightWhiteBG}></div>
+              <div className="lightWhiteBG"></div>
             </Grid>
           </Grid>
         </div>
-      </div>
+      </IntroWrapper>
     </section>
   );
 };

@@ -1,28 +1,25 @@
 import React from "react";
-import { Grid, Card, Avatar } from "@material-ui/core";
+import { Grid, Card, Avatar } from "@mui/material";
 import FacebookIcon from "../common/icons/FacebookIcon";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import InstagramIcon from "../common/icons/InstagramIcon";
 import LinkedinIcon from "../common/icons/LinkedinIcon";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
-    border: "1px solid transparent",
-    transition: "all 250ms ease-in-out",
-    "&:hover": {
-      border: "1px solid rgba(var(--primary), 1)",
-      color: palette.primary.main,
-      "& $iconContainer": {
-        opacity: 1,
-      },
-      "& .description": {
-        color: palette.primary.main,
-      },
+const StyledCard = styled(Card)(({ theme }) => ({
+  border: "1px solid transparent",
+  transition: "all 250ms ease-in-out",
+  "&:hover": {
+    border: "1px solid rgba(var(--primary), 1)",
+    color: theme.palette.primary.main,
+    "& $iconContainer": {
+      opacity: 1,
+    },
+    "& .description": {
+      color: theme.palette.primary.main,
     },
   },
-  iconContainer: {
+  "& .iconContainer": {
     position: "absolute",
     top: "calc(50% - 10px)",
     left: "50%",
@@ -42,7 +39,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       zIndex: -1,
     },
   },
-  iconWrapper: {
+  "& .iconWrapper": {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
@@ -50,13 +47,12 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     padding: 4,
     borderRadius: 4,
     marginRight: 4,
-    border: `1px solid ${palette.primary.contrastText}`,
+    border: `1px solid ${theme.palette.primary.contrastText}`,
     cursor: "pointer",
   },
 }));
 
 const Speakers1 = () => {
-  const classes = useStyles();
   const speakerList = [
     {
       name: "John Doe",
@@ -89,43 +85,35 @@ const Speakers1 = () => {
         <Grid container spacing={3}>
           {speakerList.map((item, ind) => (
             <Grid key={ind} item sm={3} xs={12}>
-              <Card
+              <StyledCard
                 elevation={3}
-                className={clsx(
-                  "border-radius-12 px-6 pt-8 pb-4 text-center",
-                  classes.card
-                )}
+                className="border-radius-12 px-6 pt-8 pb-4 text-center"
               >
                 <div className="mb-6 relative">
                   <Avatar
                     src={item.imgUrl}
                     className="h-128 w-128 inline-block"
                   ></Avatar>
-                  <div
-                    className={clsx(
-                      "flex flex-wrap justify-center",
-                      classes.iconContainer
-                    )}
-                  >
-                    <div className={classes.iconWrapper}>
+                  <div className="flex flex-wrap justify-center iconContainer">
+                    <div className="iconWrapper">
                       <FacebookIcon
                         className="text-13 text-white"
                         fontSize="small"
                       />
                     </div>
-                    <div className={classes.iconWrapper}>
+                    <div className="iconWrapper">
                       <TwitterIcon
                         className="text-13 text-white"
                         fontSize="small"
                       />
                     </div>
-                    <div className={classes.iconWrapper}>
+                    <div className="iconWrapper">
                       <InstagramIcon
                         className="text-13 text-white"
                         fontSize="small"
                       />
                     </div>
-                    <div className={classes.iconWrapper}>
+                    <div className="iconWrapper">
                       <LinkedinIcon
                         className="text-13 text-white"
                         fontSize="small"
@@ -137,7 +125,7 @@ const Speakers1 = () => {
                 <p className="description">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitrr
                 </p>
-              </Card>
+              </StyledCard>
             </Grid>
           ))}
         </Grid>

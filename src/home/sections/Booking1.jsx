@@ -1,19 +1,14 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import { Card, Grid, TextField, Fab, Icon } from "@material-ui/core";
-
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
-    background: "rgba(var(--primary),0.05)",
-  },
-}));
+import { Box } from "@mui/system";
+import { Card, TextField, Fab, Icon } from "@mui/material";
 
 const Booking1 = () => {
-  const classes = useStyles();
-
   return (
-    <section className={clsx("section", classes.section)} id="booking1">
+    <Box
+      id="booking1"
+      className="section"
+      sx={{ background: "rgba(var(--primary),0.05)" }}
+    >
       <div className="container">
         <Card elevation={0} className="p-12 border-radius-8">
           <h4 className="font-normal m-0 mb-8">Book Now !</h4>
@@ -29,7 +24,7 @@ const Booking1 = () => {
           </div>
         </Card>
       </div>
-    </section>
+    </Box>
   );
 };
 

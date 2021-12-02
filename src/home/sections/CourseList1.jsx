@@ -1,30 +1,26 @@
 import React from "react";
-import { Grid, Card, Icon, IconButton, Button } from "@material-ui/core";
+import { styled } from "@mui/system";
 import BookIcon from "../common/icons/BookIocn";
-import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Card, Icon, IconButton, Button } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
-    position: "relative",
-    borderRadius: 12,
-    border: "1px solid rgba(0,0,0,0.17)",
-    transition: "border 250ms ease-in-out",
-    "&:hover": {
-      // margin: "-1px !important",
-      border: "1px solid rgba(var(--primary), 1)",
-    },
-  },
-  nextButton: {
-    position: "absolute",
-    right: 0,
-    top: 0,
-    color: "white",
+const StyledCard = styled(Card)(() => ({
+  position: "relative",
+  borderRadius: 12,
+  border: "1px solid rgba(0,0,0,0.17)",
+  transition: "border 250ms ease-in-out",
+  "&:hover": {
+    border: "1px solid rgba(var(--primary), 1)",
   },
 }));
 
-const CourseList1 = () => {
-  const classes = useStyles();
+const StyledIconButton = styled(IconButton)(() => ({
+  position: "absolute",
+  right: 0,
+  top: 0,
+  color: "white",
+}));
 
+const CourseList1 = () => {
   return (
     <section className="section" id="courseList1">
       <div className="container">
@@ -39,15 +35,15 @@ const CourseList1 = () => {
             <Grid container spacing={4}>
               {[2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, ind) => (
                 <Grid key={ind} item md={4} sm={6} xs={12}>
-                  <Card elevation={3} className={classes.card}>
+                  <StyledCard elevation={3}>
                     <img
                       src={`/assets/images/study-${item}.jpg`}
                       alt="study"
                       className="h-352 min-w-full block"
                     />
-                    <IconButton className={classes.nextButton}>
+                    <StyledIconButton>
                       <Icon>navigate_next</Icon>
-                    </IconButton>
+                    </StyledIconButton>
 
                     <div className="text-left p-4">
                       <p className="mt-0 mb-4 font-semibold text-primary">
@@ -76,7 +72,7 @@ const CourseList1 = () => {
                         <p className="m-0 text-primary text-18">$220</p>
                       </div>
                     </div>
-                  </Card>
+                  </StyledCard>
                 </Grid>
               ))}
             </Grid>

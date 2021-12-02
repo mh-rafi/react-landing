@@ -1,21 +1,16 @@
 import React from "react";
-import { Grid, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Grid, Button } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  sectionBG: ({ bg }) => ({
-    background: `url(${
-      bg || "./assets/images/home-bg.jpg"
-    }) center center/cover no-repeat`,
-  }),
+const Container = styled("div")(({ bg }) => ({
+  background: `url(${
+    bg || "./assets/images/home-bg.jpg"
+  }) center center/cover no-repeat`,
 }));
 
 const CallToAction1 = ({ bg }) => {
-  const classes = useStyles({ bg });
-
   return (
-    <div className={clsx("section text-white", classes.sectionBG)} id="cta1">
+    <Container bg={bg} className="section text-white" id="cta1">
       <div className="container">
         <Grid
           container
@@ -38,7 +33,7 @@ const CallToAction1 = ({ bg }) => {
           </Grid>
         </Grid>
       </div>
-    </div>
+    </Container>
   );
 };
 

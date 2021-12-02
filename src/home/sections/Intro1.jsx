@@ -1,40 +1,36 @@
-import React from "react";
-import Grid from "@material-ui/core/Grid";
-import Icon from "@material-ui/core/Icon";
-import Fab from "@material-ui/core/Fab";
-import { makeStyles, darken } from "@material-ui/core/styles";
 import clsx from "clsx";
+import React from "react";
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
+import Fab from "@mui/material/Fab";
+import { darken, styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  introWrapper: {
-    padding: "5rem 0px !important",
-    overflow: "visible !important",
-    background:
-      "url(./assets/images/home-bg.jpg) center center/cover no-repeat",
-    "& h1, h2, h3, h4, h5, h6": {
-      color: "#fff",
-    },
-
-    [theme.breakpoints.down("sm")]: {
-      padding: "100px 0 !important",
-      textAlign: "center",
-      "& .list": {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      },
+const IntroWrapper = styled("div")(({ theme }) => ({
+  padding: "5rem 0px !important",
+  overflow: "visible !important",
+  background: "url(./assets/images/home-bg.jpg) center center/cover no-repeat",
+  "& h1, h2, h3, h4, h5, h6": {
+    color: "#fff",
+  },
+  [theme.breakpoints.down("sm")]: {
+    padding: "100px 0 !important",
+    textAlign: "center",
+    "& .list": {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
     },
   },
-  title: {
+  "& .title": {
     textShadow: "0 4px 4px rgba(0, 0, 0, 0.22)",
   },
-  whiteButton: {
+  "& .whiteButton": {
     background: "#fff !important",
     "&:hover": {
       background: `${darken("#ffffff", 0.1)} !important`,
     },
   },
-  product: {
+  "& .product": {
     position: "relative",
     top: "100px",
     "& img": {
@@ -48,7 +44,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       top: 0,
     },
   },
-  productLink: {
+  "& .productLink": {
     position: "absolute",
     top: "-100px",
     left: "-30px",
@@ -64,9 +60,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     overflow: "hidden",
     boxShadow: "0 14px 32px rgba(0, 0, 0, 0.2)",
     transition: "all 0.3s ease",
-
     "&:hover": { boxShadow: "0 19px 32px rgba(0, 0, 0, 0.4)" },
-
     [theme.breakpoints.down("md")]: {
       display: "none !important",
     },
@@ -74,15 +68,13 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Intro1 = () => {
-  const classes = useStyles();
-
   return (
     <section className={clsx("section text-white")} id="intro1">
-      <div className={classes.introWrapper}>
+      <IntroWrapper>
         <div className="container">
           <Grid container spacing={3} justify="center">
             <Grid item md={6}>
-              <h1 className={clsx("mb-6 text-48", classes.title)}>
+              <h1 className="mb-6 text-48 title">
                 Better Management; Less Expense
               </h1>
               <div className="text-22 mb-10">
@@ -126,7 +118,7 @@ const Intro1 = () => {
                   variant="extended"
                   size="large"
                   aria-label="Download"
-                  className={clsx("px-6 text-18 m-2", classes.whiteButton)}
+                  className="px-6 text-18 m-2 whiteButton"
                 >
                   <Icon className="mr-4">alarm_on</Icon>
                   14 days free trial
@@ -134,10 +126,10 @@ const Intro1 = () => {
               </div>
             </Grid>
             <Grid item md={6}>
-              <div className={classes.product}>
+              <div className="product">
                 <a
                   href="https://themeforest.net/user/mh_rafi/portfolio"
-                  className={classes.productLink}
+                  className="productLink"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -152,7 +144,7 @@ const Intro1 = () => {
             </Grid>
           </Grid>
         </div>
-      </div>
+      </IntroWrapper>
     </section>
   );
 };

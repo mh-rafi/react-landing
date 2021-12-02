@@ -1,25 +1,20 @@
 import React from "react";
-import { Grid, Icon } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Grid, Icon } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
+const IconBox = styled("div")(({ theme }) => ({
+  "& .card-icon": {
+    fontSize: 64,
+    transition: "all 250ms ease-in-out",
+  },
+  "&:hover": {
     "& .card-icon": {
-      fontSize: 64,
-      transition: "all 250ms ease-in-out",
-    },
-    "&:hover": {
-      "& .card-icon": {
-        color: palette.primary.main,
-      },
+      color: theme.palette.primary.main,
     },
   },
 }));
 
 const Service6 = () => {
-  const classes = useStyles();
-
   const cardList = [
     {
       icon: "account_balance",
@@ -57,14 +52,9 @@ const Service6 = () => {
               key={index}
               className="text-center"
             >
-              <div
-                className={clsx(
-                  "h-112 w-112 rounded overflow-hidden mx-auto p-6 card",
-                  classes.card
-                )}
-              >
+              <IconBox className="h-112 w-112 rounded overflow-hidden mx-auto p-6 card">
                 <Icon className="card-icon"> {card.icon} </Icon>
-              </div>
+              </IconBox>
               <p className="uppercase">{card.text}</p>
             </Grid>
           ))}

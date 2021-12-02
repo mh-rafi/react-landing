@@ -1,27 +1,22 @@
 import React from "react";
-import { Grid, Button, Icon } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Grid, Button, Icon } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  footerSection: {
-    "& h4:after": {
-      content: '" "',
-      position: "absolute",
-      bottom: -8,
-      left: 0,
-      height: 2,
-      width: 64,
-      background: palette.secondary.main,
-    },
+const FooterSection = styled("div")(({ theme }) => ({
+  "& h4:after": {
+    content: '" "',
+    position: "absolute",
+    bottom: -8,
+    left: 0,
+    height: 2,
+    width: 64,
+    background: theme.palette.secondary.main,
   },
 }));
 
 const Footer1 = () => {
-  const classes = useStyles();
-
   return (
-    <div className={clsx("bg-light-dark", classes.footerSection)} id="footer1">
+    <FooterSection className="bg-light-dark" id="footer1">
       <div className="container">
         <Grid container>
           <Grid item lg={6} md={6} sm={12}>
@@ -94,7 +89,7 @@ const Footer1 = () => {
           </Grid>
         </Grid>
       </div>
-    </div>
+    </FooterSection>
   );
 };
 

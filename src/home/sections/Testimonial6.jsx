@@ -1,26 +1,23 @@
 import React from "react";
-import { Card, Avatar, Divider, Icon, useMediaQuery } from "@material-ui/core";
-import { makeStyles, lighten, useTheme } from "@material-ui/core/styles";
+import { Avatar, Icon, useMediaQuery } from "@mui/material";
 import Carousel from "../common/Carousel";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import FacebookIcon from "../common/icons/FacebookIcon";
 import clsx from "clsx";
+import { styled, lighten, useTheme } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
-    background: `linear-gradient(45deg, ${palette.primary.main} 0%,${palette.primary.light} 100%)`,
-  },
-  card: {
+const Container = styled("div")(({ theme }) => ({
+  background: `linear-gradient(45deg, ${theme.palette.primary.main} 0%,${theme.palette.primary.light} 100%)`,
+  "& .card": {
     maxWidth: 700,
   },
-  review: {
+  "& .review": {
     transform: "skewY(0.75deg)",
     transformOrigin: "bottom left",
   },
 }));
 
 const Testimonial6 = () => {
-  const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
 
@@ -106,7 +103,7 @@ const Testimonial6 = () => {
   ];
 
   return (
-    <div className={clsx("section", classes.section)} id="testimonial6">
+    <Container className="section" id="testimonial6">
       <div className="container text-center">
         <h1 className="font-normal text-44 mt-0 text-white mx-auto mb-16">
           What our customers say
@@ -120,7 +117,7 @@ const Testimonial6 = () => {
           carouselId="swiper-6"
         >
           {testimonialList.map((testimonial, index) => (
-            <div className={clsx("mx-auto", classes.card)} key={index}>
+            <div className="mx-auto card" key={index}>
               <div
                 className={clsx({
                   "flex justify-center": true,
@@ -134,9 +131,8 @@ const Testimonial6 = () => {
                 />
                 <p
                   className={clsx({
-                    "text-white": true,
+                    "text-white review": true,
                     "text-left my-0 ml-8": !isMobile,
-                    [classes.review]: true,
                   })}
                 >
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
@@ -167,7 +163,7 @@ const Testimonial6 = () => {
           ))}
         </Carousel>
       </div>
-    </div>
+    </Container>
   );
 };
 

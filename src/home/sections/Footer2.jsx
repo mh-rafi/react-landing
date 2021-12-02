@@ -1,25 +1,15 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import {
-  Icon,
-  Grid,
-  Button,
-  TextField,
-  InputAdornment,
-} from "@material-ui/core";
-import { darken } from "@material-ui/core/styles";
-import FacebookIcon from "../common/icons/FacebookIcon";
+import { darken, styled } from "@mui/system";
 import TwitterIcon from "../common/icons/TwitterIcon";
-import InstagramIcon from "../common/icons/InstagramIcon";
+import FacebookIcon from "../common/icons/FacebookIcon";
 import LinkedinIcon from "../common/icons/LinkedinIcon";
-import clsx from "clsx";
+import InstagramIcon from "../common/icons/InstagramIcon";
+import { Icon, Grid, Button, TextField, InputAdornment } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
-    background: "#011C3A",
-    color: palette.primary.contrastText,
-  },
-  iconWrapper: {
+const Section = styled("section")(({ theme }) => ({
+  background: "#011C3A",
+  color: theme.palette.primary.contrastText,
+  "& .iconWrapper": {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
@@ -27,10 +17,10 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     padding: 4,
     borderRadius: 4,
     marginRight: 12,
-    border: `1px solid ${palette.primary.contrastText}`,
+    border: `1px solid ${theme.palette.primary.contrastText}`,
     cursor: "pointer",
   },
-  link: {
+  "& .link": {
     borderRadius: 4,
     "&:hover": {
       background: darken("#011C3A", 0.2),
@@ -49,10 +39,8 @@ const userfulLink = [
 ];
 
 const Footer2 = () => {
-  const classes = useStyles();
-
   return (
-    <section className={`section ${classes.section}`} id="contact4">
+    <Section className="section" id="contact4">
       <div className="container">
         <Grid container spacing={3}>
           <Grid item lg={3} md={3} sm={6} xs={12}>
@@ -64,16 +52,16 @@ const Footer2 = () => {
                 consectetur adipisicing elit consectetur adipisicing.
               </p>
               <div className="flex flex-wrap">
-                <div className={classes.iconWrapper}>
+                <div className="iconWrapper">
                   <FacebookIcon className="text-13" fontSize="small" />
                 </div>
-                <div className={classes.iconWrapper}>
+                <div className="iconWrapper">
                   <TwitterIcon className="text-13" fontSize="small" />
                 </div>
-                <div className={classes.iconWrapper}>
+                <div className="iconWrapper">
                   <InstagramIcon className="text-13" fontSize="small" />
                 </div>
-                <div className={classes.iconWrapper}>
+                <div className="iconWrapper">
                   <LinkedinIcon className="text-13" fontSize="small" />
                 </div>
               </div>
@@ -86,10 +74,7 @@ const Footer2 = () => {
                 {companyOption.map((item, ind) => (
                   <div
                     key={ind}
-                    className={clsx(
-                      "flex items-center py-2 cursor-pointer px-4 w-full",
-                      classes.link
-                    )}
+                    className="flex items-center py-2 cursor-pointer px-4 w-full link"
                   >
                     <Icon>navigate_next</Icon>
                     <span>{item}</span>
@@ -105,10 +90,7 @@ const Footer2 = () => {
                 {userfulLink.map((item, ind) => (
                   <div
                     key={ind}
-                    className={clsx(
-                      "flex items-center py-2 cursor-pointer px-4 w-full",
-                      classes.link
-                    )}
+                    className="flex items-center py-2 cursor-pointer px-4 w-full link"
                   >
                     <Icon>navigate_next</Icon>
                     <span>{item}</span>
@@ -153,7 +135,7 @@ const Footer2 = () => {
           </Grid>
         </Grid>
       </div>
-    </section>
+    </Section>
   );
 };
 

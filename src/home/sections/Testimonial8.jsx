@@ -1,30 +1,27 @@
+import clsx from "clsx";
 import React from "react";
-import { Avatar, Icon, useMediaQuery } from "@material-ui/core";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { Avatar, Icon, useMediaQuery } from "@mui/material";
 import Carousel from "../common/Carousel";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import FacebookIcon from "../common/icons/FacebookIcon";
-import clsx from "clsx";
+import { styled, useTheme } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
-    background: `linear-gradient(to left, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), 
+const Section = styled("section")(() => ({
+  background: `linear-gradient(to left, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), 
     url('./assets/images/scene-2.jpg')`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  },
-  card: {
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  "& .card": {
     maxWidth: 700,
   },
-  review: {
+  "& .review": {
     transform: "skewY(0.75deg)",
     transformOrigin: "bottom left",
   },
 }));
 
 const Testimonial8 = () => {
-  const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
 
@@ -110,7 +107,7 @@ const Testimonial8 = () => {
   ];
 
   return (
-    <div className={clsx("section", classes.section)} id="testimonial8">
+    <Section className="section" id="testimonial8">
       <div className="container text-center">
         <h1 className="font-normal text-44 mt-0 text-white mx-auto mb-16">
           What our guests have to say
@@ -123,7 +120,7 @@ const Testimonial8 = () => {
           paginationClass="mt-16"
         >
           {testimonialList.map((testimonial, index) => (
-            <div className={clsx("mx-auto", classes.card)} key={index}>
+            <div className="mx-auto card" key={index}>
               <div
                 className={clsx({
                   "flex justify-center": true,
@@ -137,9 +134,8 @@ const Testimonial8 = () => {
                 />
                 <p
                   className={clsx({
-                    "text-white": true,
+                    "text-white review": true,
                     "text-left my-0 ml-8": !isMobile,
-                    [classes.review]: true,
                   })}
                 >
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
@@ -170,7 +166,7 @@ const Testimonial8 = () => {
           ))}
         </Carousel>
       </div>
-    </div>
+    </Section>
   );
 };
 

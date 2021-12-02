@@ -1,38 +1,32 @@
 import React from "react";
-import { Grid, Icon, Button, TextField } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { styled } from "@mui/system";
+import { Grid, Icon, Button, TextField } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  introWrapper: {
-    padding: "5rem 0px !important",
-    overflow: "visible !important",
-
-    [theme.breakpoints.down("sm")]: {
-      padding: "1rem 0 !important",
-      textAlign: "center",
-      "& .list": {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      },
+const IntroWrapper = styled("div")(({ theme }) => ({
+  padding: "5rem 0px !important",
+  overflow: "visible !important",
+  [theme.breakpoints.down("sm")]: {
+    padding: "1rem 0 !important",
+    textAlign: "center",
+    "& .list": {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
     },
   },
-  title: {
+  "& .title": {
     textShadow: "0 4px 4px rgba(0, 0, 0, 0.22)",
   },
 }));
 
 const Intro3 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section" id="intro3">
-      <div className={classes.introWrapper}>
+      <IntroWrapper>
         <div className="container">
           <Grid container spacing={3} justify="center" alignItems="center">
             <Grid item md={6}>
-              <h1 className={clsx("text-48 mb-6 text-primary", classes.title)}>
+              <h1 className="text-48 mb-6 text-primary title">
                 Better Management; Less Expense
               </h1>
               <div className="text-22 mb-10">
@@ -93,7 +87,7 @@ const Intro3 = () => {
             </Grid>
           </Grid>
         </div>
-      </div>
+      </IntroWrapper>
     </section>
   );
 };

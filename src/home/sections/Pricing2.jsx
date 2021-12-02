@@ -1,47 +1,38 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import {
-  Grid,
-  Card,
-  IconButton,
-  Divider,
-  Icon,
-  Button,
-} from "@material-ui/core";
+import { styled } from "@mui/system";
 import EuroIcon from "../common/icons/EuroIcon";
 import StarterIcon from "../common/icons/StarterIcon";
 import TieIcon from "../common/icons/TieIcon";
 import CompanyIcon from "../common/icons/CompanyIcon";
+import { Grid, Card, IconButton, Divider, Icon, Button } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  cardWrapper: {
-    position: "relative",
-    "&:after": {
-      content: '" "',
-      display: "block",
-      position: "absolute",
-      height: "60%",
-      left: "-1000px",
-      right: "-1000px",
-      top: "20%",
-      background: palette.primary.main,
-      opacity: 0.1,
-      zIndex: -1,
-    },
+const CardWrapper = styled("div")(({ theme }) => ({
+  position: "relative",
+  "&:after": {
+    content: '" "',
+    display: "block",
+    position: "absolute",
+    height: "60%",
+    left: "-1000px",
+    right: "-1000px",
+    top: "20%",
+    background: theme.palette.primary.main,
+    opacity: 0.1,
+    zIndex: -1,
   },
-  card: {
+  "& .card": {
     padding: "2rem",
-    border: `1px solid ${palette.background.default}`,
+    border: `1px solid ${theme.palette.background.default}`,
     borderRadius: 8,
     zIndex: 1,
     transition: "all 400ms",
     "&:hover": {
-      border: `1px solid ${palette.primary.main}`,
+      border: `1px solid ${theme.palette.primary.main}`,
       boxShadow: theme.shadows[6],
       "& [class^='MuiButtonBase-']": {
-        background: palette.primary.main + "!important",
+        background: theme.palette.primary.main + "!important",
         "& [class^='MuiSvgIcon-']": {
-          fill: palette.primary.contrastText + "!important",
+          fill: theme.palette.primary.contrastText + "!important",
         },
       },
     },
@@ -49,7 +40,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Pricing2 = () => {
-  const classes = useStyles();
   const featureList = [
     "Full Access",
     "Source Files",
@@ -93,11 +83,11 @@ const Pricing2 = () => {
           </p>
         </div>
 
-        <div className={classes.cardWrapper}>
+        <CardWrapper>
           <Grid container spacing={2}>
             {planList.map((plan, ind) => (
               <Grid key={ind} item lg={3} md={3} sm={6} xs={12}>
-                <Card className={classes.card} elevation={2}>
+                <Card className="card" elevation={2}>
                   <div className="flex items-center mb-6">
                     <IconButton className="mr-4 p-3 bg-light-primary rounded hover-bg-primary">
                       <plan.icon color="primary" fontSize="large" />
@@ -138,7 +128,7 @@ const Pricing2 = () => {
               </Grid>
             ))}
           </Grid>
-        </div>
+        </CardWrapper>
       </div>
     </section>
   );

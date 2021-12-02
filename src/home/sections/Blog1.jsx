@@ -1,27 +1,18 @@
-import React from "react";
-import {
-  Grid,
-  Card,
-  Button,
-  Divider,
-  Icon,
-  IconButton,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
+import React from "react";
+import { styled } from "@mui/system";
+import { Grid, Card, Button, Divider, Icon, IconButton } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
-    borderRadius: 20,
-    border: `1px solid transparent`,
-    "&:hover": {
-      border: `1px solid ${palette.primary.main}`,
-    },
-    "&:hover $imageOverlay": {
-      opacity: 1,
-    },
+const StyledCard = styled(Card)(({ theme }) => ({
+  borderRadius: 20,
+  border: `1px solid transparent`,
+  "&:hover": {
+    border: `1px solid ${theme.palette.primary.main}`,
   },
-  imageOverlay: {
+  "&:hover $imageOverlay": {
+    opacity: 1,
+  },
+  "& .imageOverlay": {
     position: "absolute",
     display: "flex",
     justifyContent: "center",
@@ -35,7 +26,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     background: "rgba(0,0,0,0.67)",
     transition: "all 250ms ease",
   },
-  dateHolder: {
+  "& .dateHolder": {
     borderRadius: 4,
     padding: "0.3rem 0.6rem",
     background: "rgba(var(--primary),0.4)",
@@ -45,8 +36,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Blog1 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section section-bg-light-primary" id="blog1">
       <div className="container">
@@ -61,14 +50,14 @@ const Blog1 = () => {
         <Grid container spacing={2}>
           {[1, 2, 3, 4].map((item, ind) => (
             <Grid key={ind} item md={3} sm={2} xs={12}>
-              <Card elevation={3} className={clsx(classes.card, "card")}>
+              <StyledCard elevation={3} className="card">
                 <div className="relative">
                   <img
                     className="w-full block"
                     src={`/assets/images/sq-${item}.png`}
                     alt="sq-1"
                   />
-                  <div className={classes.imageOverlay}>
+                  <div className="imageOverlay">
                     <Button
                       className="text-white"
                       variant="text"
@@ -80,7 +69,7 @@ const Blog1 = () => {
                 </div>
                 <div className="px-4 pt-4">
                   <div className="flex items-center">
-                    <div className={classes.dateHolder}>
+                    <div className="dateHolder">
                       <p className="m-0 text-white">12</p>
                       <small className="m-0 text-primary">Feb</small>
                     </div>
@@ -109,7 +98,7 @@ const Blog1 = () => {
                     </IconButton>
                   </div>
                 </div>
-              </Card>
+              </StyledCard>
             </Grid>
           ))}
         </Grid>

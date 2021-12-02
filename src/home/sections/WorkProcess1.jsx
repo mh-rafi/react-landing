@@ -1,30 +1,27 @@
 import React from "react";
-import { Grid, Card, CardHeader, CardContent, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Grid, Card, Button } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
-    borderRadius: 8,
-    "&:hover $cardHeader": {
-      background: palette.primary.main,
-      color: "white",
-    },
-    "&:hover $largeText": {
-      color: "rgba(var(--primary),0.3)",
-    },
+const StyledCard = styled(Card)(({ theme }) => ({
+  borderRadius: 8,
+  "&:hover $cardHeader": {
+    background: theme.palette.primary.main,
+    color: "white",
   },
-  cardHeader: {
+  "&:hover $largeText": {
+    color: "rgba(var(--primary),0.3)",
+  },
+  "& .cardHeader": {
     padding: "1.25rem 2rem",
     fontSize: "1rem",
     fontWeight: 500,
     background: "rgba(var(--primary),0.3)",
     transition: "all 250ms ease",
   },
-  cardContent: {
+  "& .cardContent": {
     padding: "1.5rem 2rem",
   },
-  largeText: {
+  "& .largeText": {
     textAlign: "right",
     fontSize: "8rem",
     fontWeight: 400,
@@ -36,7 +33,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const WorkProcess1 = () => {
-  const classes = useStyles();
   const processList = [
     "Discuss The Project",
     "Working on The Project",
@@ -57,9 +53,9 @@ const WorkProcess1 = () => {
         <Grid container spacing={3}>
           {processList.map((item, ind) => (
             <Grid key={ind} item sm={4} xs={12}>
-              <Card elevation={3} className={clsx(classes.card, "card")}>
-                <div className={classes.cardHeader}>{item}</div>
-                <div className={classes.cardContent}>
+              <StyledCard elevation={3} className="card">
+                <div className="cardHeader">{item}</div>
+                <div className="cardContent">
                   <p className="mb-8 mt-0">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore e dolore magna
@@ -71,9 +67,9 @@ const WorkProcess1 = () => {
                   <Button variant="text" color="primary">
                     CLICK TO VIEW MORE
                   </Button>
-                  <div className={classes.largeText}>{ind + 1}</div>
+                  <div className="largeText">{ind + 1}</div>
                 </div>
-              </Card>
+              </StyledCard>
             </Grid>
           ))}
         </Grid>

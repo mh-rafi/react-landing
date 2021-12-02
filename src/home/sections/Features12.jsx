@@ -1,27 +1,23 @@
 import React from "react";
-import { makeStyles, lighten } from "@material-ui/core/styles";
+import { styled, lighten } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  buttonGroupBG: {
-    background: lighten(palette.primary.light, 0.9),
-    "&>div": {
-      transition: "all 250ms",
-      "&:hover": {
-        background: palette.primary.main,
-        color: palette.primary.contrastText,
-        borderRadius: 8,
-      },
-      [theme.breakpoints.down("sm")]: {
-        textAlign: "center",
-        width: "100%",
-      },
+const ButtonGroupBG = styled(({ theme }) => ({
+  background: lighten(theme.palette.primary.light, 0.9),
+  "&>div": {
+    transition: "all 250ms",
+    "&:hover": {
+      background: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText,
+      borderRadius: 8,
+    },
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      width: "100%",
     },
   },
 }));
 
 const Features12 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section bg-light-primary" id="features12">
       <div className="container text-center">
@@ -31,16 +27,13 @@ const Features12 = () => {
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et
         </p>
-
-        <div
-          className={`flex flex-wrap items-center border-radius-8 max-w-400 mx-auto ${classes.buttonGroupBG}`}
-        >
+        <ButtonGroupBG className="flex flex-wrap items-center border-radius-8 max-w-400 mx-auto">
           <div className="px-6 py-2 box-shadow-none flex-grow">Community</div>
           <div className="px-6 py-2 box-shadow-none flex-grow">
             Self Service
           </div>
           <div className="px-6 py-2 box-shadow-none flex-grow">Teamwork</div>
-        </div>
+        </ButtonGroupBG>
       </div>
     </section>
   );

@@ -1,17 +1,15 @@
 import React from "react";
-import { Grid, Button } from "@material-ui/core";
-import { makeStyles, lighten } from "@material-ui/core/styles";
+import { styled } from "@mui/system";
+import { Grid, Button } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  cardHolder: {
-    position: "relative",
-    borderRadius: 8,
-    overflow: "hidden",
-    "&:hover $cardOverlay": {
-      opacity: 1,
-    },
+const CardHolder = styled("div")(({ theme }) => ({
+  position: "relative",
+  borderRadius: 8,
+  overflow: "hidden",
+  "&:hover $cardOverlay": {
+    opacity: 1,
   },
-  cardOverlay: {
+  "& .cardOverlay": {
     padding: "0px 1rem",
     transition: "all 250ms ease",
     display: "flex",
@@ -24,15 +22,13 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     left: 0,
     right: 0,
     opacity: 0,
-    color: palette.primary.contrastText,
+    color: theme.palette.primary.contrastText,
     background: "rgba(0,0,0,0.67)",
     zIndex: 5,
   },
 }));
 
 const Gallery1 = () => {
-  const classes = useStyles();
-
   const imageList = [
     {
       title: "Firepox",
@@ -79,13 +75,13 @@ const Gallery1 = () => {
         <Grid container spacing={3}>
           {imageList.map((item, ind) => (
             <Grid key={ind} item lg={4} md={4} sm={4} xs={12}>
-              <div className={classes.cardHolder}>
+              <CardHolder>
                 <img className="w-full block" src={item.image} alt="random" />
-                <div className={classes.cardOverlay}>
+                <div className="cardOverlay">
                   <h3 className="m-0">{item.title}</h3>
                   <p className="text-inherit">{item.subtitle}</p>
                 </div>
-              </div>
+              </CardHolder>
             </Grid>
           ))}
         </Grid>

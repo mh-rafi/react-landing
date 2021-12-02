@@ -1,24 +1,14 @@
-import React, { useState } from "react";
-import {
-  Grid,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
-
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  bgLightGray: {
-    background: "rgba(0,0,0,0.05)",
-  },
-}));
+import { Grid } from "@mui/material";
+import React, { useState } from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import { Box } from "@mui/system";
 
 const FAQ1 = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const [expandedIndex, setExpandedIndex] = useState(null);
-
-  const classes = useStyles();
 
   const categoryList = [
     "About Our Product",
@@ -48,17 +38,17 @@ const FAQ1 = () => {
           <Grid item md={3} sm={4} xs={12}>
             <div>
               {categoryList.map((item, ind) => (
-                <div
+                <Box
                   key={ind}
                   className={clsx({
-                    "px-4 py-2 mb-3 text-center border-radius-8 hover-bg-primary cursor-pointer": true,
                     "bg-primary text-white": tabIndex === ind,
-                    [classes.bgLightGray]: true,
+                    "px-4 py-2 mb-3 text-center border-radius-8 hover-bg-primary cursor-pointer": true,
                   })}
                   onClick={() => setTabIndex(ind)}
+                  sx={{ background: "rgba(0,0,0,0.05)" }}
                 >
                   {item}
-                </div>
+                </Box>
               ))}
             </div>
           </Grid>
@@ -66,7 +56,7 @@ const FAQ1 = () => {
             {tabIndex === 0 && (
               <div>
                 {[1, 2, 3, 4, 5].map((item, ind) => (
-                  <ExpansionPanel
+                  <Accordion
                     key={ind}
                     className={clsx({
                       "border-radius-4 mb-6": true,
@@ -78,17 +68,17 @@ const FAQ1 = () => {
                     }
                     expanded={expandedIndex === ind}
                   >
-                    <ExpansionPanelSummary
+                    <AccordionSummary
                       className={clsx({
                         "hover-bg-primary": true,
-                        [classes.bgLightGray]: true,
                         "bg-primary text-white": expandedIndex === ind,
                       })}
+                      sx={{ background: "rgba(0,0,0,0.05)" }}
                     >
                       Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                       sed diam nonumy eirmod ?
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
+                    </AccordionSummary>
+                    <AccordionDetails>
                       <p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                         sed diam nonumy eirmod tempor invidunt ut labore et
@@ -103,8 +93,8 @@ const FAQ1 = () => {
                         eos et accusam et justo duo dolores et ea rebum. Stet
                         clita kasd
                       </p>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
+                    </AccordionDetails>
+                  </Accordion>
                 ))}
               </div>
             )}

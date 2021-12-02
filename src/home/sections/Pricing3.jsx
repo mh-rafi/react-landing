@@ -1,68 +1,59 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Card, Divider, Icon, Button } from "@material-ui/core";
+import { Grid, Card, Button } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
-    border: `1px solid ${palette.background.default}`,
-    borderRadius: 8,
-    textAlign: "center",
-    transition: "all 400ms ease-in-out",
+const StyledCard = styled(Card)(({ theme }) => ({
+  zIndex: 1,
+  borderRadius: 8,
+  textAlign: "center",
+  transition: "all 400ms ease-in-out",
+  border: `1px solid ${theme.palette.background.default}`,
+  "& .title-holder": {
+    position: "relative",
+    padding: "5rem 1.5rem",
+    transition: "opacity 400ms ease-in-out",
     zIndex: 1,
-
+    "&:after": {
+      content: '" "',
+      display: "block",
+      position: "absolute",
+      left: 0,
+      top: 0,
+      right: 0,
+      bottom: 0,
+      background: theme.palette.primary.main,
+      clipPath: "polygon(0 0, 100% 30%, 100% 100%, 0 70%)",
+      WebkitClipPath: "polygon(0 0, 100% 30%, 100% 100%, 0 70%)",
+      opacity: 0.23,
+      zIndex: -1,
+    },
+  },
+  "&:hover": {
+    border: `1px solid ${theme.palette.primary.main}`,
+    boxShadow: theme.shadows[6],
     "& .title-holder": {
-      position: "relative",
-      padding: "5rem 1.5rem",
-      transition: "opacity 400ms ease-in-out",
-      zIndex: 1,
+      color: theme.palette.primary.contrastText,
+      "& .price": {
+        color: `${theme.palette.primary.contrastText} !important`,
+      },
       "&:after": {
-        content: '" "',
-        display: "block",
-        position: "absolute",
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
-        background: palette.primary.main,
-        clipPath: "polygon(0 0, 100% 30%, 100% 100%, 0 70%)",
-        WebkitClipPath: "polygon(0 0, 100% 30%, 100% 100%, 0 70%)",
-        opacity: 0.23,
-        zIndex: -1,
+        opacity: 1,
       },
     },
-
-    "&:hover": {
-      border: `1px solid ${palette.primary.main}`,
-      boxShadow: theme.shadows[6],
-
-      "& .title-holder": {
-        color: palette.primary.contrastText,
-        "& .price": {
-          color: `${palette.primary.contrastText} !important`,
-        },
-        "&:after": {
-          opacity: 1,
-        },
-      },
-
-      "& .ticket-button": {
-        background: palette.primary.main,
-        color: palette.primary.contrastText,
-      },
-
-      "& [class^='MuiButtonBase-']": {
-        background: palette.primary.main + "!important",
-        "& [class^='MuiSvgIcon-']": {
-          fill: palette.primary.contrastText + "!important",
-        },
+    "& .ticket-button": {
+      background: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText,
+    },
+    "& [class^='MuiButtonBase-']": {
+      background: theme.palette.primary.main + "!important",
+      "& [class^='MuiSvgIcon-']": {
+        fill: theme.palette.primary.contrastText + "!important",
       },
     },
   },
 }));
 
 const Pricing3 = () => {
-  const classes = useStyles();
-
   const planList = [
     {
       title: "1 day ticket",
@@ -94,11 +85,11 @@ const Pricing3 = () => {
           </p>
         </div>
 
-        <div className={classes.cardWrapper}>
+        <div>
           <Grid container spacing={3}>
             {planList.map((plan, ind) => (
               <Grid key={ind} item lg={3} md={3} sm={6} xs={12}>
-                <Card className={classes.card} elevation={2}>
+                <StyledCard elevation={2}>
                   <div className="title-holder my-4">
                     <h4 className="font-normal capitalize m-0">{plan.title}</h4>
                     <p className="m-0 text-inherit text-18">
@@ -124,7 +115,7 @@ const Pricing3 = () => {
                       Buy Now
                     </Button>
                   </div>
-                </Card>
+                </StyledCard>
               </Grid>
             ))}
           </Grid>

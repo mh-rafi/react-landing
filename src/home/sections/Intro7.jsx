@@ -1,17 +1,14 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import { Button, Icon, Avatar } from "@material-ui/core";
+import { styled } from "@mui/system";
+import { Button, Icon, Avatar } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  introWrapper: {
-    backgroundImage: `linear-gradient(rgba(var(--primary), 0.3), rgba(var(--primary), 0.3)), 
+const IntroWrapper = styled("div")(() => ({
+  backgroundImage: `linear-gradient(rgba(var(--primary), 0.3), rgba(var(--primary), 0.3)), 
        url('./assets/images/study-1.png')`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    padding: "10rem 0px !important",
-  },
-  intro: {
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  padding: "10rem 0px !important",
+  "& .intro": {
     padding: "2rem 0px 1.5rem",
     textAlign: "center",
     position: "relative",
@@ -30,13 +27,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Intro7 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section" id="intro7">
-      <div className={classes.introWrapper}>
+      <IntroWrapper>
         <div className="container">
-          <div className={classes.intro}>
+          <div className="intro">
             <h1 className="font-normal text-center text-44 mt-0 mb-4">
               Find the best courses online
             </h1>
@@ -65,7 +60,7 @@ const Intro7 = () => {
             </div>
           </div>
         </div>
-      </div>
+      </IntroWrapper>
     </section>
   );
 };

@@ -1,31 +1,28 @@
 import React from "react";
-import { Grid, IconButton, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Grid, IconButton, Button } from "@mui/material";
 import ThicknessIcon from "../common/icons/ThicknessIcon";
 import WidthIcon from "../common/icons/WidthIcon";
 import WeightIcon from "../common/icons/WeightIcon";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  gridWrapper: {
-    position: "relative",
-    margin: "5rem auto",
-    maxWidth: 800,
-
-    "&:after": {
-      content: '" "',
-      position: "absolute",
-      top: 0,
-      right: 0,
-      height: 650,
-      width: 650,
-      background: "rgba(var(--primary), 0.1)",
-      transform: "rotate(30deg)",
-      transformOrigin: "63% top",
-      borderRadius: "15%",
-      zIndex: -1,
-    },
+const GridWrapper = styled("div")(({ theme }) => ({
+  position: "relative",
+  margin: "5rem auto",
+  maxWidth: 800,
+  "&:after": {
+    content: '" "',
+    position: "absolute",
+    top: 0,
+    right: 0,
+    height: 650,
+    width: 650,
+    background: "rgba(var(--primary), 0.1)",
+    transform: "rotate(30deg)",
+    transformOrigin: "63% top",
+    borderRadius: "15%",
+    zIndex: -1,
   },
-  image: {
+  "& .image": {
     float: "left",
     transform: "rotate(30deg)",
     maxHeight: 400,
@@ -39,12 +36,10 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Features8 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section" id="features8">
       <div className="container">
-        <div className={classes.gridWrapper}>
+        <GridWrapper>
           <Grid container spacing={6} alignItems="center">
             <Grid item sm={6} xs={12}>
               <div className="flex justify-between flex-wrap mb-6 max-w-320">
@@ -93,11 +88,11 @@ const Features8 = () => {
               <img
                 src="/assets/images/laptop-3.png"
                 alt="laptop"
-                className={classes.image}
+                className="image"
               />
             </Grid>
           </Grid>
-        </div>
+        </GridWrapper>
       </div>
     </section>
   );

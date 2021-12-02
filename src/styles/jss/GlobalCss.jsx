@@ -1,4 +1,5 @@
 import React from "react";
+import { styled } from "@mui/material";
 import { variableStyles } from "./_variables";
 import { positioningStyles } from "./utilities/_positionings";
 import { spacingStyles } from "./utilities/_spacing";
@@ -8,23 +9,23 @@ import { colorStyles } from "./utilities/_color";
 import { typographyStyles } from "./utilities/_typography";
 import { commonStyles } from "./utilities/_common";
 import { animationStyles } from "./utilities/_animations";
-import { layoutStyles } from "./utilities/_layout";
 import { landingStyles } from "./utilities/_landing";
 
-const GlobalCss = ({ children }) => {
-  variableStyles();
-  positioningStyles();
-  spacingStyles();
-  borderStyles();
-  colorStyles();
-  shadowStyles();
-  typographyStyles();
-  commonStyles();
-  animationStyles();
-  layoutStyles();
-  landingStyles();
+const GlobalStyle = styled("html")(({ theme }) => ({
+  ...variableStyles(theme),
+  ...positioningStyles(theme),
+  ...spacingStyles(theme),
+  ...borderStyles(theme),
+  ...shadowStyles(theme),
+  ...colorStyles(theme),
+  ...typographyStyles(theme),
+  ...commonStyles(theme),
+  ...animationStyles(theme),
+  ...landingStyles(theme),
+}));
 
-  return children;
+const GlobalCss = ({ children }) => {
+  return <GlobalStyle>{children}</GlobalStyle>;
 };
 
 export default GlobalCss;

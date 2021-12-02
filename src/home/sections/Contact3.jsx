@@ -5,42 +5,39 @@ import {
   Button,
   FormControlLabel,
   Checkbox,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+} from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
-    position: "relative",
-    overflow: "visible",
-    "&:before": {
-      content: '" "',
-      position: "absolute",
-      height: 350,
-      width: 350,
-      left: -450,
-      top: "75%",
-      background: "rgba(var(--primary), 0.1)",
-      transform: "translateY(-50%)",
-      transform: "rotate(40deg)",
-      transformOrigin: "top right",
-      borderRadius: "15%",
-      zIndex: -1,
-    },
-    "&:after": {
-      content: '" "',
-      position: "absolute",
-      height: 350,
-      width: 350,
-      right: -450,
-      top: "25%",
-      background: "rgba(var(--primary), 0.1)",
-      transform: "translateY(-50%)",
-      transform: "rotate(-60deg)",
-      transformOrigin: "top left",
-      borderRadius: "15%",
-      zIndex: -1,
-    },
+const StyledCard = styled(Card)(() => ({
+  position: "relative",
+  overflow: "visible",
+  "&:before": {
+    content: '" "',
+    position: "absolute",
+    height: 350,
+    width: 350,
+    left: -450,
+    top: "75%",
+    background: "rgba(var(--primary), 0.1)",
+    transform: "translateY(-50%)",
+    transform: "rotate(40deg)",
+    transformOrigin: "top right",
+    borderRadius: "15%",
+    zIndex: -1,
+  },
+  "&:after": {
+    content: '" "',
+    position: "absolute",
+    height: 350,
+    width: 350,
+    right: -450,
+    top: "25%",
+    background: "rgba(var(--primary), 0.1)",
+    transform: "translateY(-50%)",
+    transform: "rotate(-60deg)",
+    transformOrigin: "top left",
+    borderRadius: "15%",
+    zIndex: -1,
   },
 }));
 
@@ -51,8 +48,6 @@ const inputProps = {
 };
 
 const Contact3 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section" id="contact3">
       <div className="container text-center">
@@ -64,10 +59,7 @@ const Contact3 = () => {
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua.
         </p>
-        <Card
-          className={clsx("py-10 px-6 max-w-550 mx-auto", classes.card)}
-          elevation={3}
-        >
+        <StyledCard elevation={3} className="py-10 px-6 max-w-550 mx-auto">
           <form>
             <div className="flex">
               <TextField
@@ -149,7 +141,7 @@ const Contact3 = () => {
               SUBMIT
             </Button>
           </form>
-        </Card>
+        </StyledCard>
       </div>
     </section>
   );

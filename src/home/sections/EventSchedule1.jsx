@@ -1,58 +1,55 @@
 import React from "react";
 import { useState } from "react";
-import { makeStyles, lighten } from "@material-ui/core/styles";
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button } from "@mui/material";
+import { styled, lighten } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  buttonGroupBG: {
-    background: lighten(palette.primary.light, 0.9),
-    "&>div": {
-      transition: "all 250ms ease",
-      "&:hover": {
-        background: palette.primary.main,
-        color: palette.primary.contrastText,
-        borderRadius: 8,
-      },
-      [theme.breakpoints.down("sm")]: {
-        textAlign: "center",
-        width: "100%",
-      },
-    },
-  },
-
-  evenetCard: {
-    display: "flex",
-    padding: "1.5rem 3rem",
-    borderRadius: 12,
-    border: `1px solid rgba(0,0,0,0.14)`,
+const ButtonGroup = styled("div")(({ theme }) => ({
+  background: lighten(theme.palette.primary.light, 0.9),
+  "&>div": {
     transition: "all 250ms ease",
     "&:hover": {
-      border: `1px solid rgba(var(--primary),1)`,
-      background: "rgba(var(--primary),0.075)",
-      "& .buy-ticket-button": {
-        background: palette.primary.main,
-        color: palette.primary.contrastText,
-      },
-    },
-    "& .circle-holder": {
-      marginRight: "3rem",
-      border: "2px solid rgba(var(--primary),0.15)",
+      background: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText,
+      borderRadius: 8,
     },
     [theme.breakpoints.down("sm")]: {
-      padding: "1rem",
-      flexDirection: "column",
+      textAlign: "center",
+      width: "100%",
+    },
+  },
+}));
 
-      "& .circle-holder": {
-        margin: 0,
-        marginBottom: "1rem",
-      },
+const EventCard = styled("div")(({ theme }) => ({
+  display: "flex",
+  padding: "1.5rem 3rem",
+  borderRadius: 12,
+  border: `1px solid rgba(0,0,0,0.14)`,
+  transition: "all 250ms ease",
+  "&:hover": {
+    border: `1px solid rgba(var(--primary),1)`,
+    background: "rgba(var(--primary),0.075)",
+    "& .buy-ticket-button": {
+      background: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText,
+    },
+  },
+  "& .circle-holder": {
+    marginRight: "3rem",
+    border: "2px solid rgba(var(--primary),0.15)",
+  },
+  [theme.breakpoints.down("sm")]: {
+    padding: "1rem",
+    flexDirection: "column",
+
+    "& .circle-holder": {
+      margin: 0,
+      marginBottom: "1rem",
     },
   },
 }));
 
 const EventSchedule1 = () => {
   const [tabIndex, setTabIndex] = useState(0);
-  const classes = useStyles();
 
   return (
     <section className="section" id="schedule1">
@@ -64,9 +61,7 @@ const EventSchedule1 = () => {
             nonumy eirmod tempor invidunt ut labore et dolore
           </p>
           <div className="inline-block mb-10">
-            <div
-              className={`flex flex-wrap items-center border-radius-8 ${classes.buttonGroupBG}`}
-            >
+            <ButtonGroup className="flex flex-wrap items-center border-radius-8">
               <div
                 className="px-6 py-2 cursor-pointer"
                 onClick={() => setTabIndex(0)}
@@ -85,7 +80,7 @@ const EventSchedule1 = () => {
               >
                 Third Day
               </div>
-            </div>
+            </ButtonGroup>
           </div>
         </div>
 
@@ -93,7 +88,7 @@ const EventSchedule1 = () => {
           <Grid container spacing={2}>
             {[1, 2, 3, 4].map((item, ind) => (
               <Grid key={ind} item sm={6} xs={12}>
-                <div className={classes.evenetCard}>
+                <EventCard>
                   <div>
                     <div className="p-2px inline-block rounded circle-holder">
                       <div className="w-76 h-76 rounded bg-light-primary flex-column justify-center items-center text-primary">
@@ -131,7 +126,7 @@ const EventSchedule1 = () => {
                       BUY TICKET
                     </Button>
                   </div>
-                </div>
+                </EventCard>
               </Grid>
             ))}
           </Grid>

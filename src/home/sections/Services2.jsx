@@ -1,60 +1,47 @@
 import React from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import { Button, Icon } from "@material-ui/core";
+import { styled } from "@mui/system";
 import Carousel from "../common/Carousel";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Button, Icon, Card, CardContent } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
-    borderTop: "2px solid black",
+const StyledCard = styled(Card)(() => ({
+  borderTop: "2px solid black",
+  "& .icon": {
+    fontSize: 64,
+  },
+  "&:hover": {
+    borderTop: "2px solid rgba(var(--primary), 1)",
     "& .icon": {
-      fontSize: 64,
-    },
-
-    "&:hover": {
-      borderTop: "2px solid rgba(var(--primary), 1)",
-      "& .icon": {
-        color: "rgba(var(--primary),1)",
-      },
+      color: "rgba(var(--primary),1)",
     },
   },
 }));
 
 const Services2 = () => {
-  const classes = useStyles();
-
   const serviceList = [
     {
       icon: "dashboard",
       title: "Business Application",
-      text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+      text: "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
     },
     {
       icon: "perm_data_setting",
       title: "Custom System Integration",
-      text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+      text: "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
     },
     {
       icon: "storage",
       title: "Database Administration",
-      text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+      text: "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
     },
     {
       icon: "stay_primary_portrait",
       title: "Custom Mobile Application",
-      text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+      text: "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
     },
     {
       icon: "person",
       title: "Management Application",
-      text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+      text: "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
     },
   ];
 
@@ -71,7 +58,7 @@ const Services2 = () => {
 
         <Carousel carouselId="services-2">
           {serviceList.map((service, index) => (
-            <Card key={index} className={clsx("card h-full", classes.card)}>
+            <StyledCard key={index} className="card h-full">
               <CardContent className="flex-column justify-between min-h-full">
                 <div className="flex-grow">
                   <div className="text-center mb-4">
@@ -84,7 +71,7 @@ const Services2 = () => {
                   <Button>READ MORE</Button>
                 </div>
               </CardContent>
-            </Card>
+            </StyledCard>
           ))}
         </Carousel>
       </div>

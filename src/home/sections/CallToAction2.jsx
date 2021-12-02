@@ -1,19 +1,7 @@
 import React from "react";
-import { TextField, Button, Icon } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  button: {
-    position: "absolute",
-    right: 3,
-    zIndex: 2,
-  },
-}));
+import { TextField, Button, Icon } from "@mui/material";
 
 const CallToAction2 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section section-cta2 bg-light-gray" id="cta2">
       <div className="container text-center">
@@ -34,10 +22,8 @@ const CallToAction2 = () => {
               },
               endAdornment: (
                 <Button
-                  className={clsx(
-                    "bg-primary rounded text-13 text-white px-7 py-11px",
-                    classes.button
-                  )}
+                  className="bg-primary rounded text-13 text-white px-7 py-11px"
+                  sx={{ position: "absolute", right: 3, zIndex: 2 }}
                 >
                   <Icon fontSize="small">flight_takeoff</Icon>
                   <span className="ml-2">SUBSCRIBE</span>

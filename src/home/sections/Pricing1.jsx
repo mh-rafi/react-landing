@@ -1,27 +1,24 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import {
   Switch,
   FormControlLabel,
   Grid,
   Card,
-  CardHeader,
   CardContent,
   Button,
   Divider,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+} from "@mui/material";
 import clsx from "clsx";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
-    "& .card-header": {
-      background: "rgba(0, 0, 0, 0.024)",
-    },
-    "& .card-header-highlighted": {
-      background: "rgba(var(--primary),1)",
-      "& span": {
-        color: "#fff",
-      },
+const StyledCard = styled(Card)(() => ({
+  "& .card-header": {
+    background: "rgba(0, 0, 0, 0.024)",
+  },
+  "& .card-header-highlighted": {
+    background: "rgba(var(--primary),1)",
+    "& span": {
+      color: "#fff",
     },
   },
 }));
@@ -32,8 +29,6 @@ const Pricing1 = () => {
     plan: "Mo",
     off: 10,
   });
-
-  const classes = useStyles();
 
   const pricingList = [
     {
@@ -120,7 +115,7 @@ const Pricing1 = () => {
 
             return (
               <Grid item lg={3} md={3} sm={6} xs={12} key={title}>
-                <Card className={clsx("text-center card", classes.card)}>
+                <StyledCard className="text-center card">
                   <div
                     className={clsx({
                       "card-header flex-column items-center p-3": true,
@@ -156,7 +151,7 @@ const Pricing1 = () => {
                       </Button>
                     </div>
                   </CardContent>
-                </Card>
+                </StyledCard>
               </Grid>
             );
           })}

@@ -1,17 +1,8 @@
-import React, { Component } from "react";
-import { Grid, Card, Icon, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  borderedIcon: {
-    border: "2px solid rgba(var(--secondary),0.8)",
-  },
-}));
+import React from "react";
+import { Box } from "@mui/system";
+import { Grid, Card, Icon, Button } from "@mui/material";
 
 const Service3 = () => {
-  const classes = useStyles();
-
   const cardList = [
     {
       icon: "account_balance",
@@ -39,14 +30,12 @@ const Service3 = () => {
               {cardList.map((card, index) => (
                 <Grid item lg={6} md={6} sm={6} xs={12} key={index}>
                   <Card className="service__card p-6 card text-center h-full">
-                    <div
-                      className={clsx(
-                        "flex justify-center items-center rounded w-56 h-56 text-secondary bg-light-secondary mx-auto mb-4",
-                        classes.borderedIcon
-                      )}
+                    <Box
+                      className="flex justify-center items-center rounded w-56 h-56 text-secondary bg-light-secondary mx-auto mb-4"
+                      sx={{ border: "2px solid rgba(var(--secondary),0.8)" }}
                     >
                       <Icon>{card.icon}</Icon>
-                    </div>
+                    </Box>
                     <p className="m-0 uppercase">{card.text} </p>
                   </Card>
                 </Grid>

@@ -1,6 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Grid, IconButton, Icon, Button } from "@material-ui/core";
+import { Grid, IconButton, Icon, Button } from "@mui/material";
 import {
   LocalAirport,
   Extension,
@@ -11,33 +10,26 @@ import {
   Accessibility,
   CameraAlt,
   Alarm,
-} from "@material-ui/icons";
-import clsx from "clsx";
+} from "@mui/icons-material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  feature: {
-    border: "2px solid rgba(var(--primary),0.25)",
-
-    "&, & .icon-holder": {
-      transition: "all 250ms ease-in-out",
-    },
-
+const Feature = styled("div")(() => ({
+  border: "2px solid rgba(var(--primary),0.25)",
+  "&, & .icon-holder": {
+    transition: "all 250ms ease-in-out",
+  },
+  "& .icon-holder": {
+    background: "rgba(var(--primary),0.25) !important",
+  },
+  "&:hover": {
+    border: "2px solid rgba(var(--primary),1)",
     "& .icon-holder": {
-      background: "rgba(var(--primary),0.25) !important",
-    },
-
-    "&:hover": {
-      border: "2px solid rgba(var(--primary),1)",
-      "& .icon-holder": {
-        background: "rgba(var(--primary),1) !important",
-      },
+      background: "rgba(var(--primary),1) !important",
     },
   },
 }));
 
 const Features11 = () => {
-  const classes = useStyles();
-
   const featureList = [
     {
       icon: LocalAirport,
@@ -90,17 +82,12 @@ const Features11 = () => {
         <Grid container spacing={3}>
           {featureList.map((item, ind) => (
             <Grid key={ind} item md={4} sm={6} xs={12}>
-              <div
-                className={clsx(
-                  "p-6px rounded flex items-center",
-                  classes.feature
-                )}
-              >
+              <Feature className="p-6px rounded flex items-center">
                 <IconButton className="icon-holder bg-light-primary p-2">
                   <item.icon className="text-white" fontSize="small" />
                 </IconButton>
                 <div className="ml-8">{item.title}</div>
-              </div>
+              </Feature>
             </Grid>
           ))}
         </Grid>

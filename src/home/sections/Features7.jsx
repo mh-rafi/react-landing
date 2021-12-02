@@ -1,34 +1,32 @@
 import React from "react";
-import { Grid, IconButton, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { styled } from "@mui/system";
+import { Grid, IconButton, Button } from "@mui/material";
 import {
   FilterCenterFocus,
   CameraAlt,
   FlipCameraIos,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  gridWrapper: {
-    position: "relative",
-    margin: "2rem 0",
-    "&:after": {
-      content: '" "',
-      position: "absolute",
-      right: "20%",
-      top: 0,
-      height: 550,
-      width: 650,
-      background: "rgba(var(--primary), 0.1)",
-      transform: "rotate(-15deg)",
-      transformOrigin: "center top",
-      borderRadius: "20%",
-      zIndex: -1,
-    },
-    [theme.breakpoints.down("sm")]: {
-      right: 0,
-    },
+const GridWrapper = styled("div")(({ theme }) => ({
+  position: "relative",
+  margin: "2rem 0",
+  "&:after": {
+    content: '" "',
+    position: "absolute",
+    right: "20%",
+    top: 0,
+    height: 550,
+    width: 650,
+    background: "rgba(var(--primary), 0.1)",
+    transform: "rotate(-15deg)",
+    transformOrigin: "center top",
+    borderRadius: "20%",
+    zIndex: -1,
   },
-  image: {
+  [theme.breakpoints.down("sm")]: {
+    right: 0,
+  },
+  "& .image": {
     float: "right",
     width: "120%",
     [theme.breakpoints.down("xs")]: {
@@ -39,7 +37,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Features7 = () => {
-  const classes = useStyles();
   const featureList = [
     {
       icon: CameraAlt,
@@ -61,13 +58,13 @@ const Features7 = () => {
   return (
     <section className="section" id="features7">
       <div className="container">
-        <div className={classes.gridWrapper}>
+        <GridWrapper>
           <Grid container spacing={6} alignItems="center">
             <Grid item sm={6} xs={12}>
               <img
                 src="/assets/images/laptop-2.png"
                 alt="laptop"
-                className={classes.image}
+                className="image"
               />
             </Grid>
             <Grid item sm={6} xs={12}>
@@ -98,7 +95,7 @@ const Features7 = () => {
               </Button>
             </Grid>
           </Grid>
-        </div>
+        </GridWrapper>
       </div>
     </section>
   );

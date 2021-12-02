@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { Grid, Card, Avatar } from "@material-ui/core";
+import { Grid, Card, Avatar } from "@mui/material";
 
 const Testimonial3 = () => {
   const cardList = [
     {
       title: "Amazed by the product",
-      text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad.",
+      text: "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad.",
       user: {
         imageUrl: "./assets/images/face-1.jpg",
         name: "Dan Shwartz",
@@ -15,8 +14,7 @@ const Testimonial3 = () => {
     },
     {
       title: "Very nice support",
-      text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad.",
+      text: "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad.",
       user: {
         imageUrl: "./assets/images/face-4.jpg",
         name: "Hellen Miller",
@@ -25,8 +23,7 @@ const Testimonial3 = () => {
     },
     {
       title: "My tasks are now painless",
-      text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad.",
+      text: "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad.",
       user: {
         imageUrl: "./assets/images/face-3.jpg",
         name: "Jane Guzmann",
@@ -35,8 +32,7 @@ const Testimonial3 = () => {
     },
     {
       title: "My income has doubled",
-      text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad.",
+      text: "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte. Vis mutat altera percipit ad.",
       user: {
         imageUrl: "./assets/images/face-2.jpg",
         name: "Anthony Leblanc",

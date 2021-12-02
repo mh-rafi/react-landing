@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Card, TextField, Button } from "@material-ui/core";
+import { Grid, Card, TextField, Button } from "@mui/material";
 import ContactMap1 from "./ContactMap1";
 
 const Contact2 = () => {

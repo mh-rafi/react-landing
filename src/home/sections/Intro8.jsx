@@ -1,81 +1,71 @@
 import React from "react";
-import { Grid, Icon, Button, Avatar } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { styled } from "@mui/system";
+import { Grid, Icon, Button, Avatar } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  imageWrapper: {
-    position: "relative",
-    zIndex: 3,
-    "& .price": {
-      position: "absolute",
-      right: 24,
-      top: -12,
-      height: 100,
-      width: 100,
-      borderRadius: "50%",
-      boxShadow: "0px 10px 6px rgba(0,0,0,0.17)",
-    },
+const ImageWrapper = styled("div")(({ theme }) => ({
+  position: "relative",
+  zIndex: 3,
+  "& .price": {
+    position: "absolute",
+    right: 24,
+    top: -12,
+    height: 100,
+    width: 100,
+    borderRadius: "50%",
+    boxShadow: "0px 10px 6px rgba(0,0,0,0.17)",
+  },
+  "&:after": {
+    content: '" "',
+    position: "absolute",
+    display: "block",
+    height: 450,
+    width: 450,
+    background: "rgba(var(--primary),0.15)",
+    borderRadius: "50%",
+    zIndex: -1,
+  },
+  "&:before": {
+    content: '" "',
+    position: "absolute",
+    display: "block",
+    height: 390,
+    width: 390,
+    background: "rgba(var(--primary),0.2)",
+    borderRadius: "50%",
+    zIndex: -2,
+  },
+  [theme.breakpoints.down("sm")]: {
     "&:after": {
-      content: '" "',
-      position: "absolute",
-      display: "block",
-      height: 450,
-      width: 450,
-      background: "rgba(var(--primary),0.15)",
-      borderRadius: "50%",
-      zIndex: -1,
+      height: 350,
+      width: 350,
     },
     "&:before": {
-      content: '" "',
-      position: "absolute",
-      display: "block",
-      height: 390,
-      width: 390,
-      background: "rgba(var(--primary),0.2)",
-      borderRadius: "50%",
-      zIndex: -2,
+      height: 290,
+      width: 290,
     },
-    [theme.breakpoints.down("sm")]: {
-      "&:after": {
-        height: 350,
-        width: 350,
-      },
-      "&:before": {
-        height: 290,
-        width: 290,
-      },
-      "& .price": {
-        right: 0,
-      },
+    "& .price": {
+      right: 0,
     },
-    [theme.breakpoints.down("xs")]: {
-      "&:after": {
-        height: 300,
-        width: 300,
-      },
-      "&:before": {
-        height: 240,
-        width: 240,
-      },
+  },
+  [theme.breakpoints.down("xs")]: {
+    "&:after": {
+      height: 300,
+      width: 300,
+    },
+    "&:before": {
+      height: 240,
+      width: 240,
     },
   },
 }));
 
 const Intro8 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section mt-12" id="intro8">
       <div className="container">
         <Grid container spacing={10} justify="space-between">
           <Grid item sm={6} xs={12}>
-            <div
-              className={clsx(
-                "flex-column justify-center items-center h-full",
-                classes.imageWrapper
-              )}
-            >
+            <ImageWrapper className="flex-column justify-center items-center h-full">
               <div className="relative">
                 <img
                   src="/assets/images/Laptop-1.png"
@@ -86,7 +76,7 @@ const Intro8 = () => {
                   <h4 className="text-18 font-normal m-0">$ 499.99</h4>
                 </div>
               </div>
-            </div>
+            </ImageWrapper>
           </Grid>
           <Grid item sm={6} xs={12}>
             <h1 className="mt-0 mb-4 font-normal text-48">Evelynn Laptop</h1>

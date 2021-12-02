@@ -1,7 +1,7 @@
 import React from "react";
-import { SvgIcon } from "@material-ui/core";
+import { SvgIcon } from "@mui/material";
 
-const SSDIcon = props => {
+const SSDIcon = (props) => {
   return (
     <SvgIcon {...props} viewBox="0 0 63.14 88">
       <path

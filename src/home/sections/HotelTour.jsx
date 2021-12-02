@@ -1,19 +1,16 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import { Button, IconButton, Icon, Avatar } from "@material-ui/core";
+import { styled } from "@mui/system";
+import { IconButton, Icon } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
-    backgroundImage: `linear-gradient(rgba(0,0,0, 0.67), rgba(0,0,0, 0.67)), 
+const Section = styled("section")(() => ({
+  backgroundImage: `linear-gradient(rgba(0,0,0, 0.67), rgba(0,0,0, 0.67)), 
        url('./assets/images/scene-1.jpg')`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    padding: "160px 0px !important",
-    marginTop: "4.25rem",
-  },
-  intro: {
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  padding: "160px 0px !important",
+  marginTop: "4.25rem",
+  "& .intro": {
     padding: "2rem 0px 1.5rem",
     textAlign: "center",
     position: "relative",
@@ -32,12 +29,10 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const HotelTour = () => {
-  const classes = useStyles();
-
   return (
-    <section className={clsx("section", classes.section)} id="hotel-tour">
+    <Section className="section" id="hotel-tour">
       <div className="container">
-        <div className={classes.intro}>
+        <div className="intro">
           <h1 className="font-normal text-center text-36 text-white mt-0 mb-8">
             Take a Virtual Tour !
           </h1>
@@ -46,7 +41,7 @@ const HotelTour = () => {
           </IconButton>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

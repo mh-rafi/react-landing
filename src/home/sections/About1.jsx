@@ -1,39 +1,35 @@
-import React from "react";
-import { Grid, Button, IconButton, LinearProgress } from "@material-ui/core";
-
-import { makeStyles, withStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
+import React from "react";
+import { styled } from "@mui/system";
+import { Grid, Button, IconButton, LinearProgress } from "@mui/material";
 
-const RoundedLinearProgressbar = withStyles(({ palette }) => ({
-  root: {
+const RoundedLinearProgressbar = styled(LinearProgress)(({ palette }) => ({
+  "&.root": {
     borderRadius: 300,
     height: 6,
     background: "transparent",
   },
-  bar: {
+  "&.bar": {
     borderRadius: 300,
-  },
-}))(LinearProgress);
-
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  skillIcon: {
-    borderRadius: 4,
-    borderWidth: 2,
-    borderStyle: "solid",
-    borderColor: palette.primary.main,
-    color: palette.primary.main,
-    fontSize: 14,
-    fontWeight: 600,
-    height: 26,
-    width: 26,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
   },
 }));
 
+const SkillIconBox = styled("div")(({ theme }) => ({
+  borderRadius: 4,
+  borderWidth: 2,
+  borderStyle: "solid",
+  borderColor: theme.palette.primary.main,
+  color: theme.palette.primary.main,
+  fontSize: 14,
+  fontWeight: 600,
+  height: 26,
+  width: 26,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+}));
+
 const About1 = () => {
-  const classes = useStyles();
   const skillList = [
     {
       title: "Adobe Photoshop",
@@ -107,7 +103,7 @@ const About1 = () => {
                 })}
               >
                 <IconButton className="bg-light-primary mr-4 p-11px">
-                  <div className={classes.skillIcon}>{item.icon}</div>
+                  <SkillIconBox>{item.icon}</SkillIconBox>
                 </IconButton>
                 <div className="flex-grow">
                   <p className="mt-0 mb-2">{item.title}</p>

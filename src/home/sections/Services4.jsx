@@ -1,63 +1,51 @@
 import React from "react";
-import { Grid, Card, Icon, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Grid, Card, Icon, Button } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
+const StyledCard = styled(Card)(({ theme }) => ({
+  transition: "all 400ms ease-in-out",
+  "& .card-icon": {
+    position: "absolute",
+    fontSize: 200,
+    height: 200,
+    width: 200,
+    left: -80,
+    bottom: -80,
+    zIndex: 1,
+    opacity: 0.24,
     transition: "all 400ms ease-in-out",
-
+  },
+  "&:hover": {
+    transform: "translateY(-8px)",
     "& .card-icon": {
-      position: "absolute",
-      fontSize: 200,
-      height: 200,
-      width: 200,
-      left: -80,
-      bottom: -80,
-      zIndex: 1,
-      opacity: 0.24,
-      transition: "all 400ms ease-in-out",
-    },
-
-    "&:hover": {
       transform: "translateY(-8px)",
-
-      "& .card-icon": {
-        transform: "translateY(-8px)",
-        color: palette.secondary.main,
-        opacity: 0.6,
-      },
+      color: theme.palette.secondary.main,
+      opacity: 0.6,
     },
   },
 }));
 
 const Service4 = () => {
-  const classes = useStyles();
-
   const cardList = [
     {
       icon: "alarm",
       title: "Choose Technology",
-      text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.",
+      text: "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.",
     },
     {
       icon: "settings",
       title: "Setup Workflows",
-      text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.",
+      text: "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.",
     },
     {
       icon: "dvr",
       title: "Learn from Data",
-      text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.",
+      text: "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.",
     },
     {
       icon: "multiline_chart",
       title: "Scale Up",
-      text:
-        "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.",
+      text: "Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire incorrupte.",
     },
   ];
 
@@ -72,18 +60,13 @@ const Service4 = () => {
           <Grid container spacing={5}>
             {cardList.map((card, index) => (
               <Grid item lg={6} md={6} sm={12} xs={12} key={index}>
-                <Card
-                  className={clsx(
-                    "relative overflow-hidden card",
-                    classes.card
-                  )}
-                >
+                <StyledCard className="relative overflow-hidden card">
                   <Icon className="card-icon">{card.icon}</Icon>
                   <div className="max-w-372 text-left p-8 ml-24">
                     <h3>{card.title}</h3>
                     <p className="m-0">{card.text}</p>
                   </div>
-                </Card>
+                </StyledCard>
               </Grid>
             ))}
           </Grid>

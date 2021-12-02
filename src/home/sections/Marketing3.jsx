@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Icon, Button } from "@material-ui/core";
+import { Grid, Icon, Button } from "@mui/material";
 
 const Marketing3 = () => {
   return (

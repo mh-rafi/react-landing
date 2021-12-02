@@ -1,34 +1,31 @@
-import React from "react";
-import { Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
-import { BatteryChargingFull, LinkedCamera } from "@material-ui/icons";
+import React from "react";
+import { Grid } from "@mui/material";
+import { BatteryChargingFull, LinkedCamera } from "@mui/icons-material";
 import SSDIcon from "../common/icons/SSDIcon";
 import DesktopIcon from "../common/icons/DesktopIcon";
 import RAMIcon from "../common/icons/RAMIcon";
 import FingerPrintIcon from "../common/icons/FingerPrintIcon";
 import ProcessorIcon from "../common/icons/ProcessorIcon";
 import MetalicIcon from "../common/icons/MetalicIcon";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  iconWrapper: {
-    "&:after": {
-      content: '" "',
-      position: "absolute",
-      top: -12,
-      left: -4,
-      height: 88,
-      width: 88,
-      background: "rgba(var(--primary), 0.1)",
-      transform: "rotate(30deg)",
-      borderRadius: 12,
-      zIndex: -1,
-    },
+const IconWrapper = styled("div")(() => ({
+  "&:after": {
+    content: '" "',
+    position: "absolute",
+    top: -12,
+    left: -4,
+    height: 88,
+    width: 88,
+    background: "rgba(var(--primary), 0.1)",
+    transform: "rotate(30deg)",
+    borderRadius: 12,
+    zIndex: -1,
   },
 }));
 
 const Features6 = () => {
-  const classes = useStyles();
   const featureList = [
     {
       icon: SSDIcon,
@@ -80,14 +77,9 @@ const Features6 = () => {
           {featureList.map((item, ind) => (
             <Grid key={ind} item md={3} sm={6} xs={12}>
               <div className="text-center">
-                <div
-                  className={clsx(
-                    "mb-8 inline-block relative",
-                    classes.iconWrapper
-                  )}
-                >
+                <IconWrapper className="mb-8 inline-block relative">
                   <item.icon color="primary" className="text-72" />
-                </div>
+                </IconWrapper>
                 <h5 className="font-medium text-primary mt-0">{item.title}</h5>
                 <p className="max-w-400 text-center">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button } from "@mui/material";
 
 const Service7 = () => {
   return (

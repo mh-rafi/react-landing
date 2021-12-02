@@ -1,8 +1,8 @@
 import React from "react";
-import Card from "@material-ui/core/Card";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import { Icon } from "@material-ui/core";
+import Card from "@mui/material/Card";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import { Icon } from "@mui/material";
 import Carousel from "../common/Carousel";
 
 const Portfolio2 = () => {

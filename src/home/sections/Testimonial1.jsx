@@ -1,8 +1,6 @@
 import React from "react";
-
-import { Card, CardContent, Avatar } from "@material-ui/core";
+import { Card, CardContent, Avatar } from "@mui/material";
 import Carousel from "../common/Carousel";
-import { makeStyles } from "@material-ui/core/styles";
 
 const Testimonial1 = () => {
   const testimonialList = [

@@ -1,15 +1,12 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Button, Icon } from "@material-ui/core";
+import { styled } from "@mui/system";
+import { Button, Icon } from "@mui/material";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  introWrapper: {
-    position: "relative",
-    background:
-      "url(./assets/images/scene-3.jpg) center center/cover no-repeat",
-    padding: "2.5rem 0rem",
-  },
-  lightWhiteBG: {
+const IntroWrapper = styled("div")(({ theme }) => ({
+  position: "relative",
+  background: "url(./assets/images/scene-3.jpg) center center/cover no-repeat",
+  padding: "2.5rem 0rem",
+  "& .lightWhiteBG": {
     position: "absolute",
     display: "block",
     top: 0,
@@ -19,7 +16,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     minWidth: 800,
     background: "rgba(255,255,255,0.25)",
     clipPath: "polygon(0 0, 100% 0%, 75% 100%, 0% 100%)",
-
     "&:before": {
       content: '" "',
       position: "absolute",
@@ -34,14 +30,13 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       clipPath: "polygon(0 0, 100% 0%, 75% 100%, 0% 100%)",
       zIndex: -1,
     },
-
     [theme.breakpoints.down("xs")]: {
       right: 0,
       clipPath: "none",
       background: "rgba(255,255,255,0.7)",
     },
   },
-  intro: {
+  "& .intro": {
     position: "relative",
     padding: "5rem 0rem",
     maxWidth: 500,
@@ -53,13 +48,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Intro9 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section pb-0" id="intro9">
-      <div className={classes.introWrapper}>
+      <IntroWrapper>
         <div className="container">
-          <div className={classes.intro}>
+          <div className="intro">
             <h4 className="font-normal m-0 mb-6">
               Enjoy the best relaxation space with
             </h4>
@@ -96,9 +89,9 @@ const Intro9 = () => {
               </Button>
             </div>
           </div>
-          <div className={classes.lightWhiteBG}></div>
+          <div className="lightWhiteBG"></div>
         </div>
-      </div>
+      </IntroWrapper>
     </section>
   );
 };

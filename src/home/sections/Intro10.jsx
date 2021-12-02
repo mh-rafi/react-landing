@@ -1,17 +1,13 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
-import clsx from "clsx";
+import { Button } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  introWrapper: {
-    position: "relative",
-    background:
-      "url(./assets/images/event-1.jpg) center center/cover no-repeat",
-    height: "100%",
-    overflow: "hidden",
-  },
-  intro: {
+const IntroWrapper = styled("div")(({ theme }) => ({
+  position: "relative",
+  background: "url(./assets/images/event-1.jpg) center center/cover no-repeat",
+  height: "100%",
+  overflow: "hidden",
+  "& .intro": {
     padding: "7.5rem 0rem",
     maxWidth: 500,
     [theme.breakpoints.down("sm")]: {
@@ -19,7 +15,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     },
     zIndex: 5,
   },
-  lightWhiteBG: {
+  "& .lightWhiteBG": {
     position: "absolute",
     display: "block",
     top: 0,
@@ -28,7 +24,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     right: "calc(50% - 500px)",
     background: "rgba(255,255,255,0.75)",
     clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)",
-
     [theme.breakpoints.down("xs")]: {
       right: 0,
       left: 0,
@@ -39,18 +34,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Intro10 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section" id="intro10">
-      <div className={classes.introWrapper}>
+      <IntroWrapper>
         <div className="container">
-          <div
-            className={clsx(
-              "relative mx-auto text-center flex-column justify-center items-center",
-              classes.intro
-            )}
-          >
+          <div className="relative mx-auto text-center flex-column justify-center items-center intro">
             <h4 className="font-normal m-0 mb-4 text-black">
               30th April, 2020
             </h4>
@@ -88,9 +76,9 @@ const Intro10 = () => {
               Book Ticket
             </Button>
           </div>
-          <div className={classes.lightWhiteBG}></div>
+          <div className="lightWhiteBG"></div>
         </div>
-      </div>
+      </IntroWrapper>
       <div className="flex justify-center mt-4">
         <p>Next Event : 30th May, 2020</p>
       </div>

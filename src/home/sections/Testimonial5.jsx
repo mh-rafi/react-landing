@@ -1,24 +1,18 @@
 import React from "react";
-import { Card, Avatar, Divider, Icon, useMediaQuery } from "@material-ui/core";
-import { makeStyles, lighten, useTheme } from "@material-ui/core/styles";
+import { Avatar, Icon, useMediaQuery } from "@mui/material";
 import Carousel from "../common/Carousel";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import FacebookIcon from "../common/icons/FacebookIcon";
 import clsx from "clsx";
+import { Box, styled, useTheme } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
-    background: "url(./assets/images/bg-1.png) rgba(0,0,0, 0.67)",
-    backgroundSize: "cover",
-    backgroundBlendMode: "multiply",
-  },
-  card: {
-    maxWidth: 700,
-  },
+const Section = styled("div")(() => ({
+  backgroundSize: "cover",
+  backgroundBlendMode: "multiply",
+  background: "url(./assets/images/bg-1.png) rgba(0,0,0, 0.67)",
 }));
 
 const Testimonial5 = () => {
-  const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
 
@@ -104,7 +98,7 @@ const Testimonial5 = () => {
   ];
 
   return (
-    <div className={clsx("section", classes.section)} id="testimonial5">
+    <Section className="section" id="testimonial5">
       <div className="container text-center">
         <h1 className="font-normal text-44 mt-0 text-white mx-auto mb-16">
           Client Review
@@ -118,7 +112,7 @@ const Testimonial5 = () => {
           carouselId="swiper-5"
         >
           {testimonialList.map((testimonial, index) => (
-            <div className={clsx("mx-auto", classes.card)} key={index}>
+            <Box sx={{ maxWidth: 700 }} className="mx-auto" key={index}>
               <div
                 className={clsx({
                   "flex justify-center": true,
@@ -160,11 +154,11 @@ const Testimonial5 = () => {
               <h5 className="inline-block m-0 font-medium text-white">
                 {testimonial.user.name}, {testimonial.user.designation}
               </h5>
-            </div>
+            </Box>
           ))}
         </Carousel>
       </div>
-    </div>
+    </Section>
   );
 };
 

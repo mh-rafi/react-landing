@@ -1,26 +1,20 @@
 import React from "react";
-import { makeStyles, lighten } from "@material-ui/core/styles";
-import { Grid, useMediaQuery, Icon, Button } from "@material-ui/core";
+import { Grid, useMediaQuery, Icon, Button } from "@mui/material";
+import { styled, lighten } from "@mui/system";
 
-const useStyles = makeStyles((theme) => ({
-  feature: {
-    [theme.breakpoints.down("xs")]: {
-      textAlign: "center !important",
-    },
+const StyledGrid = styled(Grid)(({ theme }) => ({
+  [theme.breakpoints.down("xs")]: {
+    textAlign: "center !important",
   },
-
-  musicImage: {
+  "& .musicImage": {
     width: "362px",
     [theme.breakpoints.down("xs")]: {
       width: "100%",
     },
   },
-
-  musicImageWrapper: {
+  "& .musicImageWrapper": {
     position: "relative",
     textAlign: "right",
-
-    // marginLeft: "100px",
     "&::before": {
       content: '" "',
       position: "absolute",
@@ -81,9 +75,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Feature5 = () => {
-  const classes = useStyles();
+const ButtonGroupBG = styled("div")(({ theme }) => ({
+  background: lighten(theme.palette.primary.light, 0.9),
+  "&>div": {
+    transition: "all 250ms",
+    "&:hover": {
+      background: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText,
+      borderRadius: 8,
+    },
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      width: "100%",
+    },
+  },
+}));
 
+const Feature5 = () => {
   const isMobile = useMediaQuery("(max-width: 768px");
 
   return (
@@ -101,13 +109,11 @@ const Feature5 = () => {
             </div>
 
             <div className="mb-16 inline-block">
-              <div
-                className={`flex flex-wrap items-center border-radius-8 ${classes.buttonGroupBG}`}
-              >
+              <ButtonGroupBG className="flex flex-wrap items-center border-radius-8">
                 <div className="px-6 py-2 box-shadow-none">Community</div>
                 <div className="px-6 py-2 box-shadow-none">Self Service</div>
                 <div className="px-6 py-2 box-shadow-none">Teamwork</div>
-              </div>
+              </ButtonGroupBG>
             </div>
 
             <div>
@@ -136,15 +142,15 @@ const Feature5 = () => {
               </Button>
             </div>
           </Grid>
-          <Grid item lg={4} md={4} sm={6} xs={12} className={classes.feature}>
-            <div className={classes.musicImageWrapper}>
+          <StyledGrid item lg={4} md={4} sm={6} xs={12}>
+            <div className="musicImageWrapper">
               <img
-                className={classes.musicImage}
+                className="musicImage"
                 src="/assets/images/mobile-4.svg"
                 alt="mobile-1"
               />
             </div>
-          </Grid>
+          </StyledGrid>
         </Grid>
       </div>
     </section>

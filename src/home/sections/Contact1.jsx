@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
-import { Fab, Icon } from "@material-ui/core";
+import { Fab, Icon } from "@mui/material";
 
 const Contact1 = () => {
   const [state, setState] = useState({

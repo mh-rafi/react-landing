@@ -1,26 +1,17 @@
-import React from "react";
-import {
-  Grid,
-  Icon,
-  Button,
-  Card,
-  TextField,
-  IconButton,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
-import { School, PersonOutline } from "@material-ui/icons";
+import React from "react";
 import BookIcon from "../common/icons/BookIocn";
 import MessangerIcon from "../common/icons/MessengerIcon";
+import { School, PersonOutline } from "@mui/icons-material";
+import { Grid, Icon, Button, Card, TextField, IconButton } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  section: {
-    backgroundImage: `linear-gradient(rgba(var(--primary), 0.75 ), rgba(var(--primary), 0.75 )), 
+const Section = styled("section")(() => ({
+  backgroundImage: `linear-gradient(rgba(var(--primary), 0.75 ), rgba(var(--primary), 0.75 )), 
        url('./assets/images/study-bg-1.jpg')`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-  },
-  iconWrapper: {
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  "& .iconWrapper": {
     position: "relative",
     display: "inline-block",
     zIndex: 2,
@@ -37,7 +28,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       zIndex: -1,
     },
   },
-  doneIcon: {
+  "& .doneIcon": {
     position: "absolute",
     bottom: 0,
     right: "calc(50% - 32px)",
@@ -46,7 +37,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Marketing2 = () => {
-  const classes = useStyles();
   const achievementList = [
     {
       icon: School,
@@ -71,7 +61,7 @@ const Marketing2 = () => {
   ];
 
   return (
-    <section className={clsx("section", classes.section)} id="marketing2">
+    <Section className="section" id="marketing2">
       <div className="container text-white">
         <Grid container spacing={3} justify="space-between" alignItems="center">
           <Grid item md={9} sm={7} xs={12}>
@@ -87,12 +77,12 @@ const Marketing2 = () => {
                   <Grid key={ind} item md={3} sm={6} xs={6}>
                     <div className="text-center">
                       <div className="relative mb-8">
-                        <div className={classes.iconWrapper}>
+                        <div className="iconWrapper">
                           <item.icon className="text-62 text-white" />
                         </div>
                         <IconButton
                           size="small"
-                          className={clsx("bg-primary p-1", classes.doneIcon)}
+                          className="bg-primary p-1 doneIcon"
                         >
                           <Icon className="text-white text-20">done</Icon>
                         </IconButton>
@@ -159,7 +149,7 @@ const Marketing2 = () => {
           </Grid>
         </Grid>
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -1,30 +1,20 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
-import clsx from "clsx";
+import { Button } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  containerHolder: {
-    background: `linear-gradient(45deg, ${palette.primary.main} 0%,${palette.primary.light} 100%)`,
-  },
-  container: {
+const ContainerHolder = styled("div")(({ theme }) => ({
+  background: `linear-gradient(45deg, ${theme.palette.primary.main} 0%,${theme.palette.primary.light} 100%)`,
+  "& .container": {
     paddingTop: "6rem !important",
     paddingBottom: "6rem !important",
   },
 }));
 
 const Intro6 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section" id="intro6">
-      <div className={classes.containerHolder}>
-        <div
-          className={clsx(
-            "container flex-column justify-center items-center text-white",
-            classes.container
-          )}
-        >
+      <ContainerHolder>
+        <div className="container flex-column justify-center items-center text-white">
           <h1 className="font-normal text-center text-48 mb-4 mt-0">
             Evelynn Enterprise
           </h1>
@@ -40,7 +30,7 @@ const Intro6 = () => {
             LEARN MORE
           </Button>
         </div>
-      </div>
+      </ContainerHolder>
     </section>
   );
 };

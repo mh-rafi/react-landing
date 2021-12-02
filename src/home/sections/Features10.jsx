@@ -1,9 +1,8 @@
 import React from "react";
-import { Grid, Icon, Card } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import { SdCard } from "@material-ui/icons";
+import { Grid, Icon, Card } from "@mui/material";
+import { SdCard } from "@mui/icons-material";
 import RAMIcon from "../common/icons/RAMIcon";
+import { styled } from "@mui/system";
 
 const tubeStyle = {
   height: 64,
@@ -15,23 +14,21 @@ const tubeStyle = {
   transformOrigin: "center center",
 };
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  featureTitle: {},
-  tube1: {
+const Container = styled("div")(({ theme }) => ({
+  "& .tube1": {
     ...tubeStyle,
     background: "rgba(var(--primary),0.1)",
   },
-  tube2: {
+  "& .tube2": {
     ...tubeStyle,
     background: "rgba(var(--primary),0.18)",
   },
-  tube3: {
+  "& .tube3": {
     ...tubeStyle,
     background: "rgba(var(--primary),0.25)",
   },
-  card: {
+  "& .card": {
     border: "1px solid rgba(0,0,0,0.1)",
-
     "& .icon-wrapper": {
       position: "relative",
       zIndex: 3,
@@ -58,19 +55,14 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Features10 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section pt-0">
-      <div className="container">
+      <Container className="container">
         <Grid container spacing={4}>
           <Grid item sm={6} xs={12}>
             <Card
               elevation={0}
-              className={clsx(
-                "border-radius-8 p-6 mb-4 flex items-center",
-                classes.card
-              )}
+              className="border-radius-8 p-6 mb-4 flex items-center card"
             >
               <div className="max-w-400">
                 <h4 className="mt-0 mb-4 font-medium">16GB RAM</h4>
@@ -86,10 +78,7 @@ const Features10 = () => {
             </Card>
             <Card
               elevation={0}
-              className={clsx(
-                "border-radius-8 p-6 flex items-center",
-                classes.card
-              )}
+              className="border-radius-8 p-6 flex items-center card"
             >
               <div className="max-w-400">
                 <h4 className="mt-0 mb-4 font-medium">500GB MicroSD</h4>
@@ -113,9 +102,9 @@ const Features10 = () => {
                     Best Memory
                   </h1>
                   <div className="flex ml--4">
-                    <div className={classes.tube1}></div>
-                    <div className={classes.tube2}></div>
-                    <div className={classes.tube3}></div>
+                    <div className="tube1"></div>
+                    <div className="tube2"></div>
+                    <div className="tube3"></div>
                   </div>
                 </div>
 
@@ -140,7 +129,7 @@ const Features10 = () => {
             </div>
           </Grid>
         </Grid>
-      </div>
+      </Container>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
-import { SvgIcon } from "@material-ui/core";
+import { SvgIcon } from "@mui/material";
 
-const EducationIcon2 = props => {
+const EducationIcon2 = (props) => {
   return (
     <SvgIcon {...props} viewBox="0 0 76.612 73">
       <g id="Group_502" data-name="Group 502">

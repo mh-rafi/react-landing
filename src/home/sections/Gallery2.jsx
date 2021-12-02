@@ -1,18 +1,15 @@
 import React from "react";
-import { Grid, Button, Divider, Icon } from "@material-ui/core";
-import { makeStyles, lighten } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { Grid, Icon } from "@mui/material";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  cardHolder: {
-    position: "relative",
-    borderRadius: 8,
-    overflow: "hidden",
-    "&:hover $cardOverlay": {
-      opacity: 1,
-    },
+const CardHolder = styled("div")(({ theme }) => ({
+  position: "relative",
+  borderRadius: 8,
+  overflow: "hidden",
+  "&:hover $cardOverlay": {
+    opacity: 1,
   },
-  cardOverlay: {
+  "& .cardOverlay": {
     padding: "0px 1rem",
     transition: "all 250ms ease-in-out",
     display: "flex",
@@ -25,18 +22,16 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     left: 0,
     right: 0,
     opacity: 0,
-    color: palette.primary.contrastText,
+    color: theme.palette.primary.contrastText,
     background: "rgba(0,0,0,0.67)",
     zIndex: 5,
   },
-  cardTitle: {
+  "& .cardTitle": {
     borderBottom: "1px solid rgba(255,255,255,0.87)",
   },
 }));
 
 const Gallery2 = () => {
-  const classes = useStyles();
-
   return (
     <section className="section" id="gallery2">
       <div className="container">
@@ -50,20 +45,15 @@ const Gallery2 = () => {
         <Grid container spacing={3}>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, ind) => (
             <Grid key={ind} item lg={4} md={4} sm={4} xs={12}>
-              <div className={classes.cardHolder}>
+              <CardHolder>
                 <img
                   className="w-full block"
                   src={`/assets/images/room-${item}.jpg`}
                   alt="random"
                 />
-                <div className={classes.cardOverlay}>
+                <div className="cardOverlay">
                   <div>
-                    <h5
-                      className={clsx(
-                        "m-0 mb-2 pb-2 font-medium inline-block",
-                        classes.cardTitle
-                      )}
-                    >
+                    <h5 className="m-0 mb-2 pb-2 font-medium inline-block cardTitle">
                       Regular Room
                     </h5>
                   </div>
@@ -76,7 +66,7 @@ const Gallery2 = () => {
                   </div>
                   <span className="mb-3">$200/Night</span>
                 </div>
-              </div>
+              </CardHolder>
             </Grid>
           ))}
         </Grid>

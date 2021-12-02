@@ -1,41 +1,37 @@
+import clsx from "clsx";
 import React from "react";
-import { Card, Avatar, Divider, Icon, useMediaQuery } from "@material-ui/core";
-import { makeStyles, lighten, useTheme } from "@material-ui/core/styles";
 import Carousel from "../common/Carousel";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import FacebookIcon from "../common/icons/FacebookIcon";
-import clsx from "clsx";
+import { Avatar, Icon, useMediaQuery } from "@mui/material";
+import { styled, useTheme } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
-    maxWidth: 700,
-    "& .image-border": {
-      border: "3px solid rgba(var(--primary),0.3)",
-      background: palette.primary.contrastText,
-    },
-
-    "&:after": {
-      content: '" "',
-      position: "absolute",
-      display: "block",
-      top: 0,
-      bottom: 0,
-      left: "calc(50% - 120px)",
-      right: "calc(50% - 175px)",
-      background: "rgba(var(--primary),0.15)",
-      clipPath: "polygon(35% 0%, 100% 0%, 65% 100%, 0% 100%)",
-      zIndex: -1,
-      [theme.breakpoints.down("xs")]: {
-        right: 0,
-        left: 0,
-        clipPath: "none",
-      },
+const StyledBox = styled("div")(({ theme }) => ({
+  maxWidth: 700,
+  "& .image-border": {
+    border: "3px solid rgba(var(--primary),0.3)",
+    background: theme.palette.primary.contrastText,
+  },
+  "&:after": {
+    content: '" "',
+    position: "absolute",
+    display: "block",
+    top: 0,
+    bottom: 0,
+    left: "calc(50% - 120px)",
+    right: "calc(50% - 175px)",
+    background: "rgba(var(--primary),0.15)",
+    clipPath: "polygon(35% 0%, 100% 0%, 65% 100%, 0% 100%)",
+    zIndex: -1,
+    [theme.breakpoints.down("xs")]: {
+      right: 0,
+      left: 0,
+      clipPath: "none",
     },
   },
 }));
 
 const Testimonial9 = () => {
-  const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
 
@@ -133,7 +129,7 @@ const Testimonial9 = () => {
           carouselId="carousel-9"
         >
           {testimonialList.map((testimonial, index) => (
-            <div className={clsx("mx-auto pt-8", classes.card)} key={index}>
+            <StyledBox className="mx-auto pt-8 card" key={index}>
               <div
                 className={clsx({
                   "flex justify-center items-center": true,
@@ -172,7 +168,7 @@ const Testimonial9 = () => {
               <h5 className="inline-block m-0 font-medium">
                 {testimonial.user.name}, {testimonial.user.designation}
               </h5>
-            </div>
+            </StyledBox>
           ))}
         </Carousel>
       </div>

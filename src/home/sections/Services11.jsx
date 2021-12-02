@@ -1,20 +1,12 @@
 import React from "react";
-import {
-  Grid,
-  Icon,
-  Button,
-  Card,
-  TextField,
-  IconButton,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import { School, PersonOutline } from "@material-ui/icons";
+import { Grid, Icon, IconButton } from "@mui/material";
+import { School, PersonOutline } from "@mui/icons-material";
 import BookIcon from "../common/icons/BookIocn";
 import MessangerIcon from "../common/icons/MessengerIcon";
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  iconWrapper: {
+const StyledBox = styled("div")(() => ({
+  "& .iconWrapper": {
     position: "relative",
     display: "inline-block",
     "&::before": {
@@ -30,7 +22,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       zIndex: -1,
     },
   },
-  doneIcon: {
+  "& .doneIcon": {
     position: "absolute",
     bottom: 0,
     right: "calc(50% - 32px)",
@@ -39,7 +31,6 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 }));
 
 const Services11 = () => {
-  const classes = useStyles();
   const achievementList = [
     {
       icon: School,
@@ -79,17 +70,17 @@ const Services11 = () => {
             {achievementList.map((item, ind) => (
               <Grid key={ind} item md={3} sm={6} xs={12}>
                 <div className="text-center">
-                  <div className="relative mb-8">
-                    <div className={classes.iconWrapper}>
+                  <StyledBox className="relative mb-8">
+                    <div className="iconWrapper">
                       <item.icon className="text-62" />
                     </div>
                     <IconButton
                       size="small"
-                      className={clsx("bg-primary p-1", classes.doneIcon)}
+                      className="bg-primary p-1 doneIcon"
                     >
                       <Icon className="text-white text-20">done</Icon>
                     </IconButton>
-                  </div>
+                  </StyledBox>
                   <h1 className="font-normal inline-block">{item.title}</h1>
                   <p className="text-center m-0">{item.subtitle}</p>
                 </div>

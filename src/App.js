@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  Route,
-  Switch,
-  // BrowserRouter as Router,
-  Redirect,
-  HashRouter as Router,
-} from "react-router-dom";
-import "react-perfect-scrollbar/dist/css/styles.css";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-import Scrollbar from "react-perfect-scrollbar";
 import { Theme } from "./theme";
 import GlobalCss from "./styles/jss/GlobalCss";
+import Scrollbar from "react-perfect-scrollbar";
+import "react-perfect-scrollbar/dist/css/styles.css";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Demo from "./home/Demo";
 import Landing1 from "./home/Landing1";
 import Landing2 from "./home/Landing2";
@@ -24,36 +17,35 @@ import Landing9 from "./home/Landing9";
 import Landing10 from "./home/Landing10";
 import Landing11 from "./home/Landing11";
 import Landing12 from "./home/Landing12";
+import { ThemeProvider } from "@mui/material";
 
 function App() {
   return (
-    <MuiThemeProvider theme={Theme}>
+    <ThemeProvider theme={Theme}>
       <GlobalCss>
         <Scrollbar
           className="h-full-screen scrollable-content"
           option={{ suppressScrollX: true }}
         >
-          <Router basename="/">
-            <Switch>
-              <Route path="/demos" component={Demo} exact />
-              <Route path="/landing1" component={Landing1} />
-              <Route path="/landing2" component={Landing2} />
-              <Route path="/landing3" component={Landing3} />
-              <Route path="/landing4" component={Landing4} />
-              <Route path="/landing5" component={Landing5} />
-              <Route path="/landing6" component={Landing6} />
-              <Route path="/landing7" component={Landing7} />
-              <Route path="/landing8" component={Landing8} />
-              <Route path="/landing9" component={Landing9} />
-              <Route path="/landing10" component={Landing10} />
-              <Route path="/landing11" component={Landing11} />
-              <Route path="/landing12" component={Landing12} />
-              <Redirect path="/" exact to="demos" />
-            </Switch>
-          </Router>
+          <Routes>
+            <Route path="/demos" element={<Demo />} />
+            <Route path="/landing1" element={<Landing1 />} />
+            <Route path="/landing2" element={<Landing2 />} />
+            <Route path="/landing3" element={<Landing3 />} />
+            <Route path="/landing4" element={<Landing4 />} />
+            <Route path="/landing5" element={<Landing5 />} />
+            <Route path="/landing6" element={<Landing6 />} />
+            <Route path="/landing7" element={<Landing7 />} />
+            <Route path="/landing8" element={<Landing8 />} />
+            <Route path="/landing9" element={<Landing9 />} />
+            <Route path="/landing10" element={<Landing10 />} />
+            <Route path="/landing11" element={<Landing11 />} />
+            <Route path="/landing12" element={<Landing12 />} />
+            <Route path="/" element={<Navigate to="demos" />} />
+          </Routes>
         </Scrollbar>
       </GlobalCss>
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 }
 

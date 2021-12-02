@@ -1,42 +1,36 @@
 import React from "react";
-
-import { Card, Avatar, Divider, Icon } from "@material-ui/core";
-import { makeStyles, lighten } from "@material-ui/core/styles";
 import Carousel from "../common/Carousel";
 import TwitterIcon from "../common/icons/TwitterIcon";
 import FacebookIcon from "../common/icons/FacebookIcon";
-import clsx from "clsx";
+import { Card, Avatar, Divider, Icon } from "@mui/material";
+import { styled, lighten } from "@mui/system";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
-  card: {
+const StyledCard = styled(Card)(({ theme }) => ({
+  transition: "all 250ms ease-in-out",
+  border: `1px solid ${theme.palette.primary.contrastText}`,
+  "& [class^='MuiAvatar-root']": {
+    border: `1px solid ${theme.palette.primary.main}`,
+    background: theme.palette.primary.contrastText,
     transition: "all 250ms ease-in-out",
-    border: `1px solid ${palette.primary.contrastText}`,
-    "& [class^='MuiAvatar-root']": {
-      border: `1px solid ${palette.primary.main}`,
-      background: palette.primary.contrastText,
-      transition: "all 250ms ease-in-out",
+  },
+  "& .divider": {
+    transition: "all 250ms ease-in-out",
+  },
+  "&:hover": {
+    border: `1px solid ${theme.palette.primary.main}`,
+    "& [class^='MuiAvatar-']": {
+      background: lighten(theme.palette.primary.main, 0.75),
+    },
+    "& [class^='MuiSvgIcon-']": {
+      color: `${theme.palette.primary.main} !important`,
     },
     "& .divider": {
-      transition: "all 250ms ease-in-out",
-    },
-    "&:hover": {
-      border: `1px solid ${palette.primary.main}`,
-      "& [class^='MuiAvatar-']": {
-        background: lighten(palette.primary.main, 0.75),
-      },
-      "& [class^='MuiSvgIcon-']": {
-        color: `${palette.primary.main} !important`,
-      },
-      "& .divider": {
-        background: `rgba(var(--primary),0.54) !important`,
-      },
+      background: `rgba(var(--primary),0.54) !important`,
     },
   },
 }));
 
 const Testimonial4 = () => {
-  const classes = useStyles();
-
   const testimonialList = [
     {
       companyLogoUrl: "./assets/images/mock-logo-1.png",
@@ -140,12 +134,9 @@ const Testimonial4 = () => {
         >
           {testimonialList.map((testimonial, index) => (
             <div className="pt-13" key={index}>
-              <Card
-                className={clsx(
-                  classes.card,
-                  "h-full card px-6 overflow-visible border-radius-8"
-                )}
+              <StyledCard
                 elevation={3}
+                className="h-full card px-6 overflow-visible border-radius-8"
               >
                 <Avatar
                   className="w-108 h-108 mt--13 inline-block p-1"
@@ -179,7 +170,7 @@ const Testimonial4 = () => {
                     fontSize="small"
                   />
                 </div>
-              </Card>
+              </StyledCard>
             </div>
           ))}
         </Carousel>
