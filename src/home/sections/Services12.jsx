@@ -7,7 +7,7 @@ import {
   Drafts,
   ConfirmationNumber,
   HeadsetMic,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 import Feature4IconCreator from "../common/icons/Feature4IconCreator";
 
 const Services12 = () => {

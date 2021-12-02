@@ -1,7 +1,7 @@
 import React from "react";
 import { styled, lighten } from "@mui/system";
 
-const ButtonGroupBG = styled(({ theme }) => ({
+const ButtonGroupBG = styled("div")(({ theme }) => ({
   background: lighten(theme.palette.primary.light, 0.9),
   "&>div": {
     transition: "all 250ms",
